@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build this week's deck · Cub Scouts</title>
+<meta name="description" content="Build this week's deck: name it, choose the activities, and share it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="/site/manifest.webmanifest">
+<meta name="theme-color" content="#003F87">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=vffaf126a">
+</head>
+<body>
+
+<!--
+  Consola del líder · Documento · nav N9 · footer Ft2
+
+  El flujo que pidió la revisión del 14-ago: crear el mazo, ponerle nombre,
+  elegir cartas de VARIAS barajas y confirmar. Antes el líder compartía una
+  carta suelta desde su ficha, que es lo que se corrige acá.
+
+  Tres pasos en una sola página, no tres páginas: el líder arma esto cada
+  semana desde el teléfono y cada navegación es una oportunidad de perder lo
+  elegido. El estado vive en memoria hasta que confirma.
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="pagehead"></header>
+
+<main class="page page--glow" id="main" style="max-width:46rem">
+
+  <div id="pasos" class="rise" style="--i:0; margin-bottom:var(--space-5)"></div>
+
+  <!-- Paso 1 · nombre -->
+  <section class="progresscard rise" id="paso-nombre" style="--i:1; margin-bottom:var(--space-5)">
+    <p class="tile__label" style="color:var(--text-muted); margin:0 0 var(--space-2)">Step 1 · The name</p>
+    <h2 style="font-family:var(--font-display); color:var(--text-display); font-size:var(--step-2); margin:0 0 var(--space-2)">
+      What's this week's deck called?
+    </h2>
+    <p style="margin:0 0 var(--space-4); color:var(--text-muted)" id="nombre-ayuda">
+      This is what families will see when they open it. For example: “Pack 77 · week of the 18th”.
+    </p>
+    <form id="form-nombre">
+      <label class="field">
+        <span class="field__label">Deck name</span>
+        <input id="nombre" name="nombre" type="text" autocomplete="off" required
+               maxlength="60" aria-describedby="nombre-ayuda" placeholder="Pack 77">
+      </label>
+      <p class="form-msg" id="nombre-msg" aria-live="polite"></p>
+      <p class="actions">
+        <button class="btn btn--primary" type="submit">Choose activities →</button>
+      </p>
+    </form>
+  </section>
+
+  <!-- Paso 2 · cartas -->
+  <section class="progresscard rise" id="paso-cartas" hidden style="--i:0; margin-bottom:var(--space-5)">
+    <p class="tile__label" style="color:var(--text-muted); margin:0 0 var(--space-2)">Step 2 · The activities</p>
+    <h2 style="font-family:var(--font-display); color:var(--text-display); font-size:var(--step-2); margin:0 0 var(--space-2)">
+      Choose what they'll do
+    </h2>
+    <p style="margin:0 0 var(--space-4); color:var(--text-muted)">
+      1 to 15 activities, and you can mix decks: three from Lion, four from Bear,
+      whatever you need.
+    </p>
+    <div id="barajas"></div>
+    <p class="form-msg" id="cartas-msg" aria-live="polite"></p>
+  </section>
+
+  <!-- Paso 3 · confirmar -->
+  <section class="progresscard rise" id="paso-confirmar" hidden style="--i:0; margin-bottom:var(--space-5)">
+    <p class="tile__label" style="color:var(--text-muted); margin:0 0 var(--space-2)">Step 3 · Review</p>
+    <h2 style="font-family:var(--font-display); color:var(--text-display); font-size:var(--step-2); margin:0 0 var(--space-3)" id="resumen-titulo"></h2>
+    <ol id="resumen" style="margin:0 0 var(--space-4); padding-left:var(--space-4)"></ol>
+    <p class="actions">
+      <button class="btn btn--primary" id="guardar" type="button">Save the deck</button>
+      <button class="link-arrow" id="volver" type="button" style="background:none; border:0; cursor:pointer">
+        Keep choosing
+      </button>
+    </p>
+  </section>
+
+  <!-- barra fija con el conteo -->
+  <div id="barra" class="actionbar" hidden
+       style="justify-content:space-between">
+    <p style="margin:0" id="conteo" aria-live="polite">No activities chosen</p>
+    <button class="btn btn--primary" id="revisar" type="button" disabled
+            style="flex:none; white-space:nowrap">Review →</button>
+  </div>
+
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/site/assets/js/api.js?v=vffaf126a"></script>
+<script src="/site/assets/js/card.js?v=vffaf126a"></script>
+<script src="/site/assets/js/shell.js?v=vffaf126a"></script>
+<script>
+(async () => {
+  // Puerta del prototipo: sin sesión, a entrar. No es seguridad (ver api.js),
+  // pero evita que un papá caiga acá por un enlace y crea que se equivocó de app.
+  if (!API.haySesionLider()) {
+    location.replace('/site/lider/entrar.html?volver=' + encodeURIComponent(location.pathname + location.search));
+    return;
+  }
+
+  // Consola del líder en inglés siempre (pedido 20-ago) — ver mismo comentario
+  // en lider/index.html.
+  const lang = 'en';
+  const perfil = API.getProfile();
+
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: 'For den leaders',
+    title: "Build this week's deck",
+    accent: 'this week',
+    sub: 'Give it a name, choose activities from any decks you want, and share it on WhatsApp.',
+    back: '/site/lider/index.html',
+    crumbs: [{ label: 'My console', href: '/site/lider/index.html' }, { label: 'Build deck' }]
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+
+  // Estado del asistente. Vive acá y no en localStorage: un mazo a medio armar
+  // no es un mazo, y dejarlo guardado ensucia la lista de la consola.
+  const TOPE = 15;   // un mazo va de 1 a 15 actividades
+  const estado = { nombre: '', elegidas: new Map() };  // cardId -> {titulo, baraja}
+
+  const $ = id => document.getElementById(id);
+  const secciones = { nombre: $('paso-nombre'), cartas: $('paso-cartas'), confirmar: $('paso-confirmar') };
+
+  const ORDEN_PASOS = ['nombre', 'cartas', 'confirmar'];
+  const NOMBRE_PASO = { nombre: 'The name', cartas: 'The activities', confirmar: 'Review' };
+  const pintarPasos = activo => {
+    const i = ORDEN_PASOS.indexOf(activo);
+    $('pasos').innerHTML = `
+      <ol class="wizard-steps__track" aria-hidden="true">
+        ${ORDEN_PASOS.map((_, idx) => `<li class="${
+          idx < i ? 'is-done' : idx === i ? 'is-active' : ''}"></li>`).join('')}
+      </ol>
+      <p class="wizard-steps__label" aria-live="polite">
+        <span class="wizard-steps__n">Step ${i + 1} of ${ORDEN_PASOS.length}</span> · ${NOMBRE_PASO[activo]}
+      </p>`;
+  };
+
+  const ir = paso => {
+    for (const [k, el] of Object.entries(secciones)) el.hidden = k !== paso;
+    $('barra').hidden = paso !== 'cartas';
+    $('main').classList.toggle('has-actionbar', paso === 'cartas');
+    pintarPasos(paso);
+    $('main').scrollIntoView({ block: 'start' });
+  };
+
+  /* ---------- Paso 1 ---------- */
+  $('form-nombre').addEventListener('submit', async e => {
+    e.preventDefault();
+    const v = $('nombre').value.trim();
+    if (!v) {
+      // El error dice qué hacer, no solo que está mal.
+      $('nombre-msg').textContent = 'Write a name so families know what they got.';
+      $('nombre').focus();
+      return;
+    }
+    estado.nombre = v;
+    $('nombre-msg').textContent = '';
+    ir('cartas');
+    if (!$('barajas').dataset.listo) await pintarBarajas();
+  });
+
+  /* ---------- Paso 2 ---------- */
+  const conteo = () => {
+    const n = estado.elegidas.size;
+    const lleno = n >= TOPE;
+    $('conteo').textContent = n === 0
+      ? `None chosen · up to ${TOPE}`
+      : `${n} of ${TOPE} activities${lleno ? " · that's the max" : ''}`;
+    $('revisar').disabled = n === 0;
+
+    // Al llegar al tope se deshabilita lo NO elegido, en vez de dejar marcar y
+    // rechazar después: el límite se ve antes de chocar con él, y lo ya marcado
+    // sigue desmarcable para poder cambiar de idea.
+    document.querySelectorAll('#barajas input[type=checkbox]').forEach(i => {
+      i.disabled = lleno && !i.checked;
+      i.closest('label').style.opacity = (lleno && !i.checked) ? '.45' : '';
+    });
+  };
+
+  // Mismo trazo que el resto de los íconos de la app (viewBox 24, stroke 1.6).
+  const CHEVRON = `<svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none"
+    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+    aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
+  const EYE = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+    stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+    aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/>
+    <circle cx="12" cy="12" r="2.8"/></svg>`;
+
+  /* ---------- Previsualizar en pantalla completa ----------
+     Antes "Ver" abría la lámina sola, sin forma de elegir desde ahí — el
+     líder tenía que cerrar y volver a la fila para marcar el checkbox.
+     Ahora el visor trae su propio "Seleccionar"/"Quitar" abajo: se puede
+     decidir mirando la tarjeta entera, no una miniatura de fila (pedido
+     19-ago). Mismo <dialog> que Card.ampliar, pie propio. */
+  function montarPicker() {
+    if ($('picker-visor')) return $('picker-visor');
+    const d = document.createElement('dialog');
+    d.id = 'picker-visor';
+    d.className = 'visor';
+    d.innerHTML = `
+      <button class="visor__cerrar" type="button" aria-label="Close" data-cerrar>&times;</button>
+      <img class="visor__img" alt="">
+      <div class="visor__pie" style="display:flex; gap:var(--space-3)">
+        <button class="btn btn--ghost" type="button" data-cancelar style="flex:1; color:var(--sa-white); border-color:rgb(255 255 255 / .4)">Cancel</button>
+        <button class="btn btn--primary" type="button" data-elegir style="flex:1"></button>
+      </div>`;
+    document.body.appendChild(d);
+    d.addEventListener('click', e => {
+      if (e.target === d || e.target.closest('[data-cerrar]') || e.target.closest('[data-cancelar]')) d.close();
+    });
+    return d;
+  }
+
+  async function previsualizar(cardId) {
+    let card;
+    try {
+      ({ card } = await API.getCard(cardId));
+    } catch {
+      return;   // "Ver" no abrió: el checkbox de la fila sigue sirviendo igual.
+    }
+    const img = Card.lamina(card, 'en');
+    const d = montarPicker();
+    const titulo = Card.t(card.title, 'en');
+    d.querySelector('.visor__img').src = img?.src || '';
+    d.querySelector('.visor__img').alt = titulo;
+
+    const btnElegir = d.querySelector('[data-elegir]');
+    const sync = () => {
+      const elegida = estado.elegidas.has(cardId);
+      btnElegir.textContent = elegida ? 'Remove from selection' : 'Select';
+      btnElegir.className = elegida ? 'btn btn--accent' : 'btn btn--primary';
+      btnElegir.style.flex = '1';
+    };
+    sync();
+    btnElegir.onclick = () => {
+      const cb = document.querySelector(`#barajas input[value="${cardId}"]`);
+      if (cb) { cb.checked = !cb.checked; cb.dispatchEvent(new Event('change', { bubbles: true })); }
+      sync();
+    };
+    d.showModal();
+  }
+
+  async function pintarBarajas() {
+    const cont = $('barajas');
+    cont.innerHTML = '<div class="skel" style="min-height:8rem; border-radius:var(--radius-card)"></div>';
+    // Bug 20-ago: esto no tenía try/catch. Si un corte de red tumbaba
+    // getDecks() o CUALQUIERA de los siete getDeck() del loop, la función
+    // entera se cortaba a mitad de camino y dejaba el esqueleto de carga
+    // ahí para siempre — sin error, sin botón de reintentar, el líder se
+    // quedaba mirando una caja vacía sin saber si estaba cargando o rota.
+    let decks;
+    try {
+      decks = await API.getDecks();
+    } catch {
+      cont.innerHTML = Shell.estado({
+        titulo: "Couldn't load the decks",
+        texto: 'Check your connection and try again.',
+        accion: '<button class="btn btn--primary" type="button" data-reintentar>Try again</button>',
+        tono: 'error'
+      });
+      cont.querySelector('[data-reintentar]')?.addEventListener('click', pintarBarajas);
+      return;
+    }
+    const bloques = [];
+
+    for (const d of decks) {
+      let deck;
+      try {
+        deck = await API.getDeck(d.id);
+      } catch {
+        continue;   // una baraja que no cargó no debe tumbar las otras seis
+      }
+      // Solo actividades: una carta de instrucciones no es algo que un niño haga.
+      const actividades = deck.cards.filter(c => c.skin === 'activity');
+      if (!actividades.length) continue;
+
+      /* Dos niveles, baraja > Adventure. Una baraja tiene noventa y pico de
+         actividades: en una sola lista, elegir es imposible. Las Adventures son
+         la agrupación que ya trae el contenido oficial —lo que el líder llama
+         "categorías"— así que se navega por donde el material ya está cortado. */
+      const porAventura = new Map();
+      for (const c of actividades) {
+        const k = c.adventureId || '_';
+        if (!porAventura.has(k)) porAventura.set(k, []);
+        porAventura.get(k).push(c);
+      }
+
+      const aventuras = [...porAventura.entries()].map(([id, cartas]) => {
+        const adv = deck.adventures.find(a => a.id === id);
+        const nombre = adv ? Card.t(adv.name, 'en') : 'Other';
+        return `
+          <details class="adv">
+            <summary class="adv__sum">
+              <span>${nombre}</span>
+              <span style="display:flex; align-items:center; gap:var(--space-2)">
+                <span class="adv__n">${cartas.length}</span>
+                ${CHEVRON}
+              </span>
+            </summary>
+            <div class="acordeon"><div>
+            <ul class="adv__lista">
+              ${cartas.map(c => {
+                const req = c.requirement
+                  ? `Requirement ${c.requirement.index} of ${c.requirement.of}` : '';
+                const lugar = Card.PLACE?.[c.place]?.en || '';
+                return `
+                <li class="pick">
+                  <label class="pick__label">
+                    <input type="checkbox" value="${c.id}"
+                           data-titulo="${Card.t(c.title, 'en').replace(/"/g, '&quot;')}"
+                           data-baraja="${deck.name.en.replace(/"/g, '&quot;')}">
+                    <span>
+                      <span class="pick__titulo">${Card.t(c.title, 'en')}</span>
+                      ${(lugar || req) ? `<span class="pick__meta">${[lugar, req].filter(Boolean).join(' · ')}</span>` : ''}
+                    </span>
+                  </label>
+                  <button type="button" class="pick__ver"
+                          data-ver="${c.id}"
+                          aria-label="View card ${Card.t(c.title, 'en').replace(/"/g, '&quot;')} full screen">${EYE}</button>
+                </li>`;
+              }).join('')}
+            </ul>
+            </div></div>
+          </details>`;
+      }).join('');
+
+      bloques.push(`
+        <details class="baraja">
+          <summary class="baraja__sum">
+            <span class="baraja__head">
+              <span>${deck.name.en}</span>
+              <span class="baraja__n">${actividades.length} activities · ${porAventura.size} categories</span>
+            </span>
+            ${CHEVRON}
+          </summary>
+          <div class="acordeon"><div class="baraja__cuerpo">${aventuras}</div></div>
+        </details>`);
+    }
+
+    cont.innerHTML = bloques.join('');
+    cont.dataset.listo = '1';
+
+    /* "Ver" abre la lámina en grande AQUÍ, con su propio Seleccionar/Cancelar
+       (ver previsualizar() arriba). Antes iba a la vista individual en otra
+       pestaña; el 14-ago se decidió que no habrá enlace de visualización por
+       tarjeta, y además navegar a mitad de armar el mazo perdería la
+       selección, que vive en memoria. */
+    // Guardado contra el reintento (data-reintentar de arriba): sin esto,
+    // cada vez que pintarBarajas() se vuelve a llamar sobre el mismo #barajas
+    // se apilaba un listener más y un checkbox terminaba disparando el
+    // conteo() varias veces.
+    if (!cont.dataset.listenersListo) {
+      cont.dataset.listenersListo = '1';
+      cont.addEventListener('click', e => {
+        const b = e.target.closest('[data-ver]');
+        if (!b) return;
+        previsualizar(b.dataset.ver);
+      });
+
+      cont.addEventListener('change', e => {
+        const i = e.target;
+        if (i.type !== 'checkbox') return;
+        if (i.checked) {
+          if (estado.elegidas.size >= TOPE) { i.checked = false; return; }
+          estado.elegidas.set(i.value, { titulo: i.dataset.titulo, baraja: i.dataset.baraja });
+        } else estado.elegidas.delete(i.value);
+        conteo();
+      });
+    }
+    conteo();
+  }
+
+  $('revisar').addEventListener('click', () => {
+    $('resumen-titulo').textContent = `${estado.nombre} · ${estado.elegidas.size} ${
+      estado.elegidas.size === 1 ? 'activity' : 'activities'}`;
+    $('resumen').innerHTML = [...estado.elegidas.values()].map(c =>
+      `<li style="margin-bottom:var(--space-2)">${c.titulo}
+         <span style="color:var(--text-muted)">· ${c.baraja}</span></li>`).join('');
+    ir('confirmar');
+  });
+
+  $('volver').addEventListener('click', () => ir('cartas'));
+
+  /* ---------- Paso 3 ---------- */
+  $('guardar').addEventListener('click', () => {
+    const mazo = API.createMazo({
+      nombre: estado.nombre,
+      cardIds: [...estado.elegidas.keys()],
+      packId: perfil.pack || null,
+      lang
+    });
+    // Guardar y compartir son dos gestos: se va derecho a la pantalla que
+    // manda, sin pasar por un mensaje de "listo" que no hace nada.
+    location.href = `/site/lider/index.html?mazo=${mazo.id}`;
+  });
+
+  ir('nombre');
+})();
+</script>
+</body>
+</html>

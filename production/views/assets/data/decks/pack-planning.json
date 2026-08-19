@@ -1,0 +1,21 @@
+{
+  "$status": "EN PREPARACIÓN — el contenido llega cuando el cliente entregue el PDF de esta baraja.",
+  "id": "pack-planning",
+  "rank": null,
+  "grade": null,
+  "order": 7,
+  "audience": "leader",
+  "translation": "lista",
+  "estado": "en-preparacion",
+  "name": {
+    "es": "Planificación del Pack",
+    "en": "Pack Program Planning"
+  },
+  "intro": {
+    "es": "La baraja de planeación anual del pack: reuniones, ceremonias y eventos del año.",
+    "en": ""
+  },
+  "copyright": "©2025 Scouting America · Traducción al español",
+  "adventures": [],
+  "cards": []
+}

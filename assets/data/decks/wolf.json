@@ -1,0 +1,3754 @@
+{
+ "$status": "107 tarjetas extraídas del PDF oficial. Español en 0/10 Adventures y 0/92 actividades; el resto cae a inglés con aviso.",
+ "id": "wolf",
+ "rank": "Wolf",
+ "grade": "2.º grado",
+ "order": 3,
+ "audience": "family",
+ "translation": "pendiente",
+ "name": {
+  "es": "Wolf",
+  "en": "Wolf"
+ },
+ "intro": {
+  "es": "Actividades al aire libre, seguridad personal y trabajo en equipo dentro del den.",
+  "en": ""
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [
+  {
+   "id": "bobcat",
+   "name": {
+    "es": "",
+    "en": "Bobcat"
+   },
+   "category": {
+    "es": "",
+    "en": "Character & Leadership"
+   },
+   "required": true,
+   "requirementCount": 7,
+   "summary": {
+    "es": "",
+    "en": "The Bobcat Adventure is the first required Adventure on your trail and will get you and your den off to a great start. Once you have completed the Bobcat Adventure, you can work on the other Adventures in any order. Bobcat is focused on character and introducing the values of Scouting America."
+   }
+  },
+  {
+   "id": "paws-on-the-path",
+   "name": {
+    "es": "",
+    "en": "Paws on the Path"
+   },
+   "category": {
+    "es": "",
+    "en": "Outdoors"
+   },
+   "required": true,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "It is time to go outside! Every journey begins with just one step, and that first step can take you on a fun-filled adventure. It starts by simply going outside for a walk, just like the one you and your Wolf den are about to take. Where you take your walk is up to your den. It may be a walk around the center of your city or town; it may be at a local park with a trail; or it may be a trail in a forest. No matter where you take your walk, you will see signs of nature in different forms."
+   }
+  },
+  {
+   "id": "running-with-the-pack",
+   "name": {
+    "es": "",
+    "en": "Running with the Pack"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Fitness"
+   },
+   "required": true,
+   "requirementCount": 6,
+   "summary": {
+    "es": "",
+    "en": "A Cub Scout knows how to stay healthy. Eating foods that give you proper nutrition, exercising regularly, and getting proper rest are the best ways for you to always be at your best."
+   }
+  },
+  {
+   "id": "council-fire",
+   "name": {
+    "es": "",
+    "en": "Council Fire"
+   },
+   "category": {
+    "es": "",
+    "en": "Citizenship"
+   },
+   "required": true,
+   "requirementCount": 6,
+   "summary": {
+    "es": "",
+    "en": "A real wolf pack works like a large family where everyone works together to keep the members of the pack safe, healthy, and happy. Working together is part of being a good citizen. In this Adventure, you will build a model community and become an active member in your community."
+   }
+  },
+  {
+   "id": "safety-in-numbers",
+   "name": {
+    "es": "",
+    "en": "Safety In Numbers"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Safety Awareness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Your parent(s) or legal guardian is an important part of this Adventure, as you will do most of the requirements with them. Part of the Scout Law is to be brave. Knowing what to do when you think you are in danger helps you to be brave. In this Adventure, you will learn about the “Protect Yourself Rules” and the things that you can do to keep yourself safe."
+   }
+  },
+  {
+   "id": "footsteps",
+   "name": {
+    "es": "",
+    "en": "Footsteps"
+   },
+   "category": {
+    "es": "",
+    "en": "Family & Reverence"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "In this Adventure, you are encouraged to learn more about your family’s faith traditions. You will complete most of these requirements at home with your family. Faith means having complete trust or confidence in someone or something. “Trustworthy” is the first part of the Scout Law. Through Aesop’s fable, you will learn why being trustworthy is so important. This Adventure is commonly done at home with the Cub Scout’s family. If it is being done as a den, ensure that every parent or guardian is aware of the content and the activities that the den will do, and allow for parents to opt out of doing it as a den activity and choose to complete the requirement at home. This Adventure may be earned by completing the requirements OR by completing a Religious Emblem of the Cub Scout’s family’s choosing."
+   }
+  },
+  {
+   "id": "computing-wolves",
+   "name": {
+    "es": "",
+    "en": "Computing Wolves"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "A computer is a machine that can be programmed to carry out sequences of arithmetic or logical operations automatically. Most electronic computers use a simple code based on an electronic switch being on or off. This is known as binary. In this Adventure, get ready to see the inside of a computer and the main parts that make it work."
+   }
+  },
+  {
+   "id": "let-s-camp",
+   "name": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "You are about to go on an overnight campout. Sleeping in a tent, roasting marshmallows, and exploring nature are some of the best parts of being a Cub Scout. Before you go, make a list of what you need to bring. Your den leader and parent(s) will help you get ready. Each time you go camping, you can show you are a Wolf Scout by doing more on your own."
+   }
+  },
+  {
+   "id": "race-time",
+   "name": {
+    "es": "",
+    "en": "Race Time"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "This Adventure is the highlight for many Cub Scouts. The Pinewood Derby ® and Raingutter Regatta™ are two popular Cub Scout races. The best part about these races is getting to design and build your own car or boat. You may want to design your car or boat for looks, or you may want to go for speed. Either way, have fun spending time with your family making your car or boat or both."
+   }
+  },
+  {
+   "id": "summertime-fun",
+   "name": {
+    "es": "",
+    "en": "Summertime Fun"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 1,
+   "summary": {
+    "es": "",
+    "en": "The summertime is a great time to get together with your den or pack. The requirement for this Adventure is simple. Participate in three Cub Scout activities during the summer months. This can be at council-organized camps like day camp or resident camp, or it can be a den or pack get-together for a summertime picnic. To earn this Adventure as a Wolf, you participate in summer activities during the summer after you’ve completed the 1st grade."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "wolf-r-instructions",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Instructions"
+   },
+   "body": {
+    "es": "",
+    "en": "This deck contains cards to help den leaders deliver a program to complete all requirements for earning the Wolf rank. How to use this deck 1. Review the other resource cards (black border) in this deck, and review the contents. 2. Pick the Adventure you want to work on in your next den meeting. 3. Remove all cards associated with that Adventure. 4. Scan the Adventure card, and review the webpage for the Adventure you chose. Read and follow the Safety Moment for the Adventure. 5. Select one activity card for each requirement to do in your meeting. 6. Scan the QR code for each activity you selected, and follow the directions on the activity page. 7. When conducting your den meeting, have your cards on hand to use as a quick guide. Scan here for a video that shows you how to use this deck. ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p001.webp",
+    "width": 413,
+    "height": 563,
+    "page": 1,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-r-getting-started",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Getting Started"
+   },
+   "body": {
+    "es": "",
+    "en": "What is a den leader? What are we supposed to be doing? Where can I find more information?"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p003.webp",
+    "width": 413,
+    "height": 563,
+    "page": 3,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-r-welcome-new-den-leader",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Welcome, New Den Leader"
+   },
+   "body": {
+    "es": "",
+    "en": "WELCOME! NEW WOLF, BEAR OR WEBELOS DEN LEADER B SCOUT CU LEADE R D EN There are actual instructions for this? ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p005.webp",
+    "width": 413,
+    "height": 563,
+    "page": 5,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-r-safeguarding-youth",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Safeguarding Youth"
+   },
+   "body": {
+    "es": "",
+    "en": "Safeguarding Youth Training — all leaders are required to complete the training. Parents should too. Keeping everyone safe! Check the Guide to Safe Scouting. G U I D E TO SAFE SCOUTING Februar y 2022 Revision Four simple things to do before each activity: SAFE Checklist."
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p007.webp",
+    "width": 413,
+    "height": 563,
+    "page": 7,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-r-den-leader-training",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Den Leader Training"
+   },
+   "body": {
+    "es": "",
+    "en": "DONE IN TWO HOURS! Log on to my.scouting.org. If you don’t already have an account, you can create one to access training. This is the same place Safeguarding Youth training is located. Den leader position-specific training consists of 16 video modules that are, on average, 71/2 minutes long. Complete the training to earn your first patch!"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p009.webp",
+    "width": 413,
+    "height": 563,
+    "page": 9,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-bobcat",
+   "skin": "adventure",
+   "adventureId": "bobcat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p011.webp",
+    "width": 413,
+    "height": 563,
+    "page": 11,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-01-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Doodle"
+   },
+   "originalTitle": "Den Doodle",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "A den doodle is a way to record advancement progress and other accomplishments of the Cub Scouts, as well as a colorful decoration for the den meeting place."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p013.webp",
+    "width": 413,
+    "height": 563,
+    "page": 13,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-01-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Flag"
+   },
+   "originalTitle": "Den Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Making a den flag together allows Cub Scouts to show their personalites and creativity while they’re getting to know each other."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p015.webp",
+    "width": 413,
+    "height": 563,
+    "page": 15,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-01-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "“Get to Know You” Bingo"
+   },
+   "originalTitle": "“Get to Know You” Bingo",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "“Get to Know You” bingo is a great icebreaker activity that can help members of a den get to know each other better in a fun and interactive way."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p017.webp",
+    "width": 413,
+    "height": 563,
+    "page": 17,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-02-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Recite the Scout Oath and the Scout Law with your den and den leader."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Recite the Oath and Law"
+   },
+   "originalTitle": "Recite the Oath and Law",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Learn and reinforce the Scout Oath and the Scout Law by reciting it with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p019.webp",
+    "width": 413,
+    "height": 563,
+    "page": 19,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-03-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Clothespin Quest"
+   },
+   "originalTitle": "Scout Law Clothespin Quest",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Search for all the points of the Scout Law in this fun game using clothespins."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p021.webp",
+    "width": 413,
+    "height": 563,
+    "page": 21,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-03-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Emoji Game"
+   },
+   "originalTitle": "Scout Law Emoji Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will learn the Scout Law by playing the Scout Law emoji game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p023.webp",
+    "width": 413,
+    "height": 563,
+    "page": 23,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-03-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Word Search"
+   },
+   "originalTitle": "Scout Law Word Search",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "The points of the Scout Law are reinforced as the Cub Scouts search for them in this word search puzzle."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p025.webp",
+    "width": 413,
+    "height": 563,
+    "page": 25,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-04-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "With your den create a den code of conduct."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Code of Conduct"
+   },
+   "originalTitle": "Code of Conduct",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will be invested in their own conduct when they help create their den code of conduct."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p027.webp",
+    "width": 413,
+    "height": 563,
+    "page": 27,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-05-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bobcat Relay"
+   },
+   "originalTitle": "Bobcat Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "In this Cub Scout relay game, teams show the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p029.webp",
+    "width": 413,
+    "height": 563,
+    "page": 29,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-05-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Sign Sound of Silence"
+   },
+   "originalTitle": "Scout Sign Sound of Silence",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Practice the Cub Scout sign by playing the Scout Sign Sound of Silence game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p031.webp",
+    "width": 413,
+    "height": 563,
+    "page": 31,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-05-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Simon Says"
+   },
+   "originalTitle": "Simon Says",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play Simon Says to learn the Cub Scout sign, handshake, and salute."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p033.webp",
+    "width": 413,
+    "height": 563,
+    "page": 33,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-06-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Share with your den, or family, a time when you demonstrated the Cub Scout motto “Do Your Best.”"
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Do Your Best Showcase"
+   },
+   "originalTitle": "Do Your Best Showcase",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts share a time when they did their best."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p035.webp",
+    "width": 413,
+    "height": 563,
+    "page": 35,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-bobcat-07-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 7,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "At home, with your parent or legal guardian do the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Child Abuse Protection Review"
+   },
+   "originalTitle": "Child Abuse Protection Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Review the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p037.webp",
+    "width": 413,
+    "height": 563,
+    "page": 37,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-paws-on-the-path",
+   "skin": "adventure",
+   "adventureId": "paws-on-the-path",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p039.webp",
+    "width": 413,
+    "height": 563,
+    "page": 39,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-01-1",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Scout Six Essentials Clue"
+   },
+   "originalTitle": "Cub Scout Six Essentials Clue",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts attempt to guess which of the Cub Scout Six Essentials is being described by one-word clues."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p041.webp",
+    "width": 413,
+    "height": 563,
+    "page": 41,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-01-2",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Scout Six Essentials Scavenger Hunt"
+   },
+   "originalTitle": "Cub Scout Six Essentials Scavenger Hunt",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Go around your home and find as many essentials as possible that you can, and put them in your pack or bag."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p043.webp",
+    "width": 413,
+    "height": 563,
+    "page": 43,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-01-3",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Cub Scout Essential Am I?"
+   },
+   "originalTitle": "What Cub Scout Essential Am I?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will guess the Cub Scout Six Essentials by giving word clues to their buddy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p045.webp",
+    "width": 413,
+    "height": 563,
+    "page": 45,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-02-1",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors. Pick a buddy for your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "1–2 Buddies"
+   },
+   "originalTitle": "1–2 Buddies",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Arrange Cub Scouts in alphabetical order and give them numbers 1-2 in sequence to quickly select buddies."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p047.webp",
+    "width": 413,
+    "height": 563,
+    "page": 47,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-02-2",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors. Pick a buddy for your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Circle Game"
+   },
+   "originalTitle": "Buddy Circle Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts find their buddy in this enjoyable circle game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p049.webp",
+    "width": 413,
+    "height": 563,
+    "page": 49,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-02-3",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors. Pick a buddy for your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Popsicle Stick Buddies"
+   },
+   "originalTitle": "Popsicle Stick Buddies",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Popsicle sticks are used to pair buddies."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p051.webp",
+    "width": 413,
+    "height": 563,
+    "page": 51,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-03-1",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify appropriate clothes and shoes for your walk outside. Do your best to wear them on your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Clothing Store Visit"
+   },
+   "originalTitle": "Clothing Store Visit",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Visit an outdoor clothing store to understand the importance of selecting appropriate attire for different outdoor occasions and weather conditions."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p053.webp",
+    "width": 413,
+    "height": 563,
+    "page": 53,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-03-2",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify appropriate clothes and shoes for your walk outside. Do your best to wear them on your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Seasonal Clothing Relay"
+   },
+   "originalTitle": "Seasonal Clothing Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Play a relay game to identify the right clothes and shoes to wear on a walk during different seasons."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p055.webp",
+    "width": 413,
+    "height": 563,
+    "page": 55,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-03-3",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify appropriate clothes and shoes for your walk outside. Do your best to wear them on your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sketchy Weather Wardrobe"
+   },
+   "originalTitle": "Sketchy Weather Wardrobe",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts draw pictures of clothes they would wear when it rains or snows or is sunny or windy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p057.webp",
+    "width": 413,
+    "height": 563,
+    "page": 57,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-04-1",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the Outdoor Code and Leave No Trace Principles for Kids."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Code and Leave No Trace Booklet"
+   },
+   "originalTitle": "Outdoor Code and Leave No Trace Booklet",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Create a booklet that illustrates the Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p059.webp",
+    "width": 413,
+    "height": 563,
+    "page": 59,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-04-2",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the Outdoor Code and Leave No Trace Principles for Kids."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Code and Leave No Trace emojis"
+   },
+   "originalTitle": "Outdoor Code and Leave No Trace emojis",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use emojis to learn the Outdoor Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p061.webp",
+    "width": 413,
+    "height": 563,
+    "page": 61,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-04-3",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the Outdoor Code and Leave No Trace Principles for Kids."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Code and Leave No Trace Song"
+   },
+   "originalTitle": "Outdoor Code and Leave No Trace Song",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use music and hand signals to learn the Outdoor Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p063.webp",
+    "width": 413,
+    "height": 563,
+    "page": 63,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-paws-on-the-path-05-1",
+   "skin": "activity",
+   "adventureId": "paws-on-the-path",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 30 minutes to explore nature in your surroundings. Describe four different animals, domestic or wild, that you could see on your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Scavenger Hunt"
+   },
+   "originalTitle": "Outdoor Scavenger Hunt",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Take a walk for 30 minutes or more. Describe four animals that you might see on your walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p065.webp",
+    "width": 413,
+    "height": 563,
+    "page": 65,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-running-with-the-pack",
+   "skin": "adventure",
+   "adventureId": "running-with-the-pack",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p067.webp",
+    "width": 413,
+    "height": 563,
+    "page": 67,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-01-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Sample three different foods that are naturally three different colors. Each one must be a protein, vegetable, fruit, dairy, or grain."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tasting Colors"
+   },
+   "originalTitle": "Tasting Colors",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Experience a burst of deliciousness with natural-colored foods."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p069.webp",
+    "width": 413,
+    "height": 563,
+    "page": 69,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-02-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the proper way to brush your teeth."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Giant’s Toothbrush"
+   },
+   "originalTitle": "A Giant’s Toothbrush",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Draw a giant mouth and use a broom to practice brushing teeth."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p071.webp",
+    "width": 413,
+    "height": 563,
+    "page": 71,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-02-2",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the proper way to brush your teeth."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Clean Chompers"
+   },
+   "originalTitle": "Clean Chompers",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Turn your daily teeth-brushing routine into a fun and exciting activity."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p073.webp",
+    "width": 413,
+    "height": 563,
+    "page": 73,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-02-3",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the proper way to brush your teeth."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tooth Experts"
+   },
+   "originalTitle": "Tooth Experts",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Invite a dental care professional to a Cub Scout den meeting to discuss the importance of oral hygiene."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p075.webp",
+    "width": 413,
+    "height": 563,
+    "page": 75,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-03-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person. That includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Kickball"
+   },
+   "originalTitle": "Kickball",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of kickball."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p077.webp",
+    "width": 413,
+    "height": 563,
+    "page": 77,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-03-2",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person. That includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Ride a Bike"
+   },
+   "originalTitle": "Ride a Bike",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Take a bike ride."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p079.webp",
+    "width": 413,
+    "height": 563,
+    "page": 79,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-03-3",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person. That includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Toss and Catch"
+   },
+   "originalTitle": "Toss and Catch",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Find a ball and play a game of catch."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p081.webp",
+    "width": 413,
+    "height": 563,
+    "page": 81,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-04-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 10 minutes doing personal exercises."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Chat with a Personal Trainer"
+   },
+   "originalTitle": "Chat with a Personal Trainer",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Invite a fitness professional to your Cub Scout den meeting to discuss the importance of exercise."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p083.webp",
+    "width": 413,
+    "height": 563,
+    "page": 83,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-04-2",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 10 minutes doing personal exercises."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Circuit Exercises"
+   },
+   "originalTitle": "Circuit Exercises",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Create a short workout to explore different exercises."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p085.webp",
+    "width": 413,
+    "height": 563,
+    "page": 85,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-04-3",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Be active for 10 minutes doing personal exercises."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Go for a Walk"
+   },
+   "originalTitle": "Go for a Walk",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Take a walk outside."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p087.webp",
+    "width": 413,
+    "height": 563,
+    "page": 87,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-05-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 5,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Listen to Music"
+   },
+   "originalTitle": "Listen to Music",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Some music can relax us by engaging our senses and creating a calming effect."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p089.webp",
+    "width": 413,
+    "height": 563,
+    "page": 89,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-05-2",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 5,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Story Time"
+   },
+   "originalTitle": "Story Time",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Read an article from Scout Life magazine to the Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p091.webp",
+    "width": 413,
+    "height": 563,
+    "page": 91,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-running-with-the-pack-06-1",
+   "skin": "activity",
+   "adventureId": "running-with-the-pack",
+   "requirement": {
+    "index": 6,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Review your Scouting America Annual Health and Medical Record with your parent or guardian. Discuss your ability to participate in den and pack activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scouting America Annual Health and Medical Record"
+   },
+   "originalTitle": "Scouting America Annual Health and Medical Record",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review their Scouting America Annual Health and Medical Record with their parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p093.webp",
+    "width": 413,
+    "height": 563,
+    "page": 93,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-council-fire",
+   "skin": "adventure",
+   "adventureId": "council-fire",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p095.webp",
+    "width": 413,
+    "height": 563,
+    "page": 95,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-01-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Learn how to properly care for and fold the United States flag. With your den or pack, participate in a flag ceremony."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Fold the Flag"
+   },
+   "originalTitle": "Fold the Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn how to properly fold the United States flag."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p097.webp",
+    "width": 413,
+    "height": 563,
+    "page": 97,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-02-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Identify three points of the Scout Law that are important to being a good neighbor."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law in Song"
+   },
+   "originalTitle": "Scout Law in Song",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Compose a song about the three points of the Scout Law that are important to being a good neighbor."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p099.webp",
+    "width": 413,
+    "height": 563,
+    "page": 99,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-02-2",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Identify three points of the Scout Law that are important to being a good neighbor."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Skit Showcase"
+   },
+   "originalTitle": "Scout Skit Showcase",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Create and perform a skit demonstrating the three points of the Scout Law that are important to being a good neighbor."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p101.webp",
+    "width": 413,
+    "height": 563,
+    "page": 101,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-02-3",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Identify three points of the Scout Law that are important to being a good neighbor."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sketching the Scout Law"
+   },
+   "originalTitle": "Sketching the Scout Law",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Draw pictures that demonstrate the three points of the Scout Law that are important to being a good neighbor."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p103.webp",
+    "width": 413,
+    "height": 563,
+    "page": 103,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-03-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Build a model of your home."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Building My Home with Cardboard"
+   },
+   "originalTitle": "Building My Home with Cardboard",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use household items to build a model of your home."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p105.webp",
+    "width": 413,
+    "height": 563,
+    "page": 105,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-03-2",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Build a model of your home."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Building My Home with Toys"
+   },
+   "originalTitle": "Building My Home with Toys",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use Lego ® bricks, Lincoln Logs ® , Tinker Toys ® sets, or other building toys to build a model of your home."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p107.webp",
+    "width": 413,
+    "height": 563,
+    "page": 107,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-04-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Using the same materials from requirement 3, create a model of a building in your community."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Community Buildings"
+   },
+   "originalTitle": "Community Buildings",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Build a model of a building in your community."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p109.webp",
+    "width": 413,
+    "height": 563,
+    "page": 109,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-05-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 5,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Using the models built in requirements 3 and 4, create a neighborhood."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Building My Neighborhood"
+   },
+   "originalTitle": "Building My Neighborhood",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using the models that your den built, create a neighborhood."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p111.webp",
+    "width": 413,
+    "height": 563,
+    "page": 111,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-06-1",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 6,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project. Explain how your volunteering is helpful to your neighborhood."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Helping our Four–Legged Friends"
+   },
+   "originalTitle": "Helping our Four–Legged Friends",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "With your den, host a pet food drive to support a local pet shelter."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p113.webp",
+    "width": 413,
+    "height": 563,
+    "page": 113,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-06-2",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 6,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project. Explain how your volunteering is helpful to your neighborhood."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scouting for Food"
+   },
+   "originalTitle": "Scouting for Food",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in your council-sponsored Scouting for Food event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p115.webp",
+    "width": 413,
+    "height": 563,
+    "page": 115,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-council-fire-06-3",
+   "skin": "activity",
+   "adventureId": "council-fire",
+   "requirement": {
+    "index": 6,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project. Explain how your volunteering is helpful to your neighborhood."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Toys for Tots Toy Drive"
+   },
+   "originalTitle": "Toys for Tots Toy Drive",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "With your pack, organize a toy drive to support Toys for Tots or another organization."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p117.webp",
+    "width": 413,
+    "height": 563,
+    "page": 117,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-safety-in-numbers",
+   "skin": "adventure",
+   "adventureId": "safety-in-numbers",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p119.webp",
+    "width": 413,
+    "height": 563,
+    "page": 119,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-01-1",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With permission from your parent or legal guardian, watch the “Protect Yourself Rules” video for the Wolf rank."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Protect Yourself Video"
+   },
+   "originalTitle": "Protect Yourself Video",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Watch the “Protect Yourself Rules” video with your parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p121.webp",
+    "width": 413,
+    "height": 563,
+    "page": 121,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-02-1",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discuss “safe touch” as seen in the “Protect Yourself Rules” video."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Shout, Run, and Tell Relay"
+   },
+   "originalTitle": "Shout, Run, and Tell Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "In this relay, Cub Scouts will practice what they would say to a stranger who is making them feel uncomfortable."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p123.webp",
+    "width": 413,
+    "height": 563,
+    "page": 123,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-02-2",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discuss “safe touch” as seen in the “Protect Yourself Rules” video."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Safe Touch Poster"
+   },
+   "originalTitle": "Safe Touch Poster",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Create a poster of “safe touches.”"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p125.webp",
+    "width": 413,
+    "height": 563,
+    "page": 125,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-03-1",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system, and demonstrate how it works."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Check Game"
+   },
+   "originalTitle": "Buddy Check Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Learn about the buddy system by playing a buddy check game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p127.webp",
+    "width": 413,
+    "height": 563,
+    "page": 127,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-03-2",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system, and demonstrate how it works."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Games"
+   },
+   "originalTitle": "Buddy Games",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play catch with a buddy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p129.webp",
+    "width": 413,
+    "height": 563,
+    "page": 129,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-03-3",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system, and demonstrate how it works."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy–legged Race"
+   },
+   "originalTitle": "Buddy–legged Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using a buddy, participate in a race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p131.webp",
+    "width": 413,
+    "height": 563,
+    "page": 131,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-safety-in-numbers-04-1",
+   "skin": "activity",
+   "adventureId": "safety-in-numbers",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Review common safety rules, and demonstrate the proper use of playground equipment."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Playground Rules"
+   },
+   "originalTitle": "Playground Rules",
+   "place": "outing",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Review playground safety rules, and have Cub Scouts demonstrate the proper use of playground equipment."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p133.webp",
+    "width": 413,
+    "height": 563,
+    "page": 133,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-footsteps",
+   "skin": "adventure",
+   "adventureId": "footsteps",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p135.webp",
+    "width": 413,
+    "height": 563,
+    "page": 135,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-01-1",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft or work of art of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Holiday Mosaic"
+   },
+   "originalTitle": "Holiday Mosaic",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a construction-paper mosaic using your family’s favorite holiday tradition symbol. With your holid fami of ar holid"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p137.webp",
+    "width": 413,
+    "height": 563,
+    "page": 137,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-01-2",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft or work of art of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sun Catcher"
+   },
+   "originalTitle": "Sun Catcher",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a sun catcher of a holiday symbol that can be hung in your home."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p139.webp",
+    "width": 413,
+    "height": 563,
+    "page": 139,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-02-1",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service OR other gathering that shows how your family expresses reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Attend a Religious Service"
+   },
+   "originalTitle": "Attend a Religious Service",
+   "place": "outing",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a religious service based on your family’s choosing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p141.webp",
+    "width": 413,
+    "height": 563,
+    "page": 141,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-02-2",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service OR other gathering that shows how your family expresses reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Let’s Celebrate Together"
+   },
+   "originalTitle": "Let’s Celebrate Together",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a celebration at your chartered partner based on a faith tradition."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p143.webp",
+    "width": 413,
+    "height": 563,
+    "page": 143,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-03-1",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Kindness Jar"
+   },
+   "originalTitle": "Kindness Jar",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Create an act of kindness jar, and complete at least two tasks in the jar."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p145.webp",
+    "width": 413,
+    "height": 563,
+    "page": 145,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-03-2",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sing with the Elderly"
+   },
+   "originalTitle": "Sing with the Elderly",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Sing a song at a retirement community."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p147.webp",
+    "width": 413,
+    "height": 563,
+    "page": 147,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-footsteps-04-1",
+   "skin": "activity",
+   "adventureId": "footsteps",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Listen to or read Aesop’s fable “The Boy Who Cried Wolf.” With your den or family, discuss why being truthful is important."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Boy Who Cried Wolf"
+   },
+   "originalTitle": "Boy Who Cried Wolf",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Read aloud to your den Aesop’s fable “The Boy Who Cried Wolf.”"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p149.webp",
+    "width": 413,
+    "height": 563,
+    "page": 149,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-computing-wolves",
+   "skin": "adventure",
+   "adventureId": "computing-wolves",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p151.webp",
+    "width": 413,
+    "height": 563,
+    "page": 151,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-01-1",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover the basic components of a computer."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Computer Components Fidget Spinner"
+   },
+   "originalTitle": "Computer Components Fidget Spinner",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn about computer components with a fidget spinner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p153.webp",
+    "width": 413,
+    "height": 563,
+    "page": 153,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-01-2",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover the basic components of a computer."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Computer Matching Game"
+   },
+   "originalTitle": "Computer Matching Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a computer matching game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p155.webp",
+    "width": 413,
+    "height": 563,
+    "page": 155,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-01-3",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover the basic components of a computer."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Inside a Computer"
+   },
+   "originalTitle": "Inside a Computer",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Take apart a computer."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p157.webp",
+    "width": 413,
+    "height": 563,
+    "page": 157,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-02-1",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Determine how to properly dispose of computer components."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Visit Electronics Recycling Center"
+   },
+   "originalTitle": "Visit Electronics Recycling Center",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Visit an electronics recycling center, and learn how they take apart items to recycle and reuse."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p159.webp",
+    "width": 413,
+    "height": 563,
+    "page": 159,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-03-1",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Using a digital device application of your choice, create a story that you can share with others."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Digital Story Building"
+   },
+   "originalTitle": "Digital Story Building",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Use a computer-based program such as PowerPoint or Google Slides to create a digital story using pictures."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p161.webp",
+    "width": 413,
+    "height": 563,
+    "page": 161,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-computing-wolves-04-1",
+   "skin": "activity",
+   "adventureId": "computing-wolves",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, set up a policy for safely using digital devices."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Digital Safety Pledge"
+   },
+   "originalTitle": "Digital Safety Pledge",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts create digital usage contract with their parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p163.webp",
+    "width": 413,
+    "height": 563,
+    "page": 163,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-let-s-camp",
+   "skin": "adventure",
+   "adventureId": "let-s-camp",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p165.webp",
+    "width": 413,
+    "height": 563,
+    "page": 165,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-01-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Calls"
+   },
+   "originalTitle": "Buddy Calls",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts find their buddy using animal sounds."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p167.webp",
+    "width": 413,
+    "height": 563,
+    "page": 167,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-01-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Walk"
+   },
+   "originalTitle": "Buddy Walk",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn buddy teamwork during this relay game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p169.webp",
+    "width": 413,
+    "height": 563,
+    "page": 169,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-02-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Know the Cub Scout Six Essentials."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Scout Six Essentials: Kim’s Game"
+   },
+   "originalTitle": "Cub Scout Six Essentials: Kim’s Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Play Kim’s game to learn the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p171.webp",
+    "width": 413,
+    "height": 563,
+    "page": 171,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-02-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Know the Cub Scout Six Essentials."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Make a Cub Scout Six Essentials Kit"
+   },
+   "originalTitle": "Make a Cub Scout Six Essentials Kit",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts create their own Cub Scout Six Essentials kit."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p173.webp",
+    "width": 413,
+    "height": 563,
+    "page": 173,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-03-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "In addition to your Cub Scout Six Essentials, list the personal items you need for your campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Packing Relay"
+   },
+   "originalTitle": "Packing Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scout teams pack a backpack for a camping trip."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p175.webp",
+    "width": 413,
+    "height": 563,
+    "page": 175,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-03-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "In addition to your Cub Scout Six Essentials, list the personal items you need for your campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Would You Bring?"
+   },
+   "originalTitle": "What Would You Bring?",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts determine what is a “need” or “want” for a campout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p177.webp",
+    "width": 413,
+    "height": 563,
+    "page": 177,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-04-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn a camping skill."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Nothing But Knots"
+   },
+   "originalTitle": "Nothing But Knots",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about square knots."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p179.webp",
+    "width": 413,
+    "height": 563,
+    "page": 179,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-04-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn a camping skill."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Stuff Sack Relay"
+   },
+   "originalTitle": "Stuff Sack Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will learn about storing their sleeping bags in this fast-paced relay."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p181.webp",
+    "width": 413,
+    "height": 563,
+    "page": 181,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-05-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend a campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council Camping"
+   },
+   "originalTitle": "Council Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Go camping at your local council camp."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p183.webp",
+    "width": 413,
+    "height": 563,
+    "page": 183,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-let-s-camp-05-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend a campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack Camping"
+   },
+   "originalTitle": "Pack Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Go camping with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p185.webp",
+    "width": 413,
+    "height": 563,
+    "page": 185,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-race-time",
+   "skin": "adventure",
+   "adventureId": "race-time",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p187.webp",
+    "width": 413,
+    "height": 563,
+    "page": 187,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-01-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Car Build Day"
+   },
+   "originalTitle": "Pinewood Derby ® Car Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p189.webp",
+    "width": 413,
+    "height": 563,
+    "page": 189,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-01-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Boat Build Day"
+   },
+   "originalTitle": "Raingutter Regatta™ Boat Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p191.webp",
+    "width": 413,
+    "height": 563,
+    "page": 191,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-02-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Rules Scramble"
+   },
+   "originalTitle": "Pinewood Rules Scramble",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn the race rules for the Pinewood Derby ® ."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p193.webp",
+    "width": 413,
+    "height": 563,
+    "page": 193,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-02-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Rules Scramble"
+   },
+   "originalTitle": "Raingutter Rules Scramble",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn the race rules for the Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p195.webp",
+    "width": 413,
+    "height": 563,
+    "page": 195,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-03-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify how you could increase the speed of your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pace Car Speed"
+   },
+   "originalTitle": "Pace Car Speed",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will identify three ways to make their Pinewood Derby ® car go faster."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p197.webp",
+    "width": 413,
+    "height": 563,
+    "page": 197,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-03-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify how you could increase the speed of your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Speed Boat"
+   },
+   "originalTitle": "Speed Boat",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts identify three ways to make Raingutter Regatta™ boats go faster."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p199.webp",
+    "width": 413,
+    "height": 563,
+    "page": 199,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-04-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sportsmanship"
+   },
+   "originalTitle": "Sportsmanship",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review good sportsmanship before the race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p201.webp",
+    "width": 413,
+    "height": 563,
+    "page": 201,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-05-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Race"
+   },
+   "originalTitle": "Pinewood Derby ® Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Pinewood Derby ® race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p203.webp",
+    "width": 413,
+    "height": 563,
+    "page": 203,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-race-time-05-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™"
+   },
+   "originalTitle": "Raingutter Regatta™",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p205.webp",
+    "width": 413,
+    "height": 563,
+    "page": 205,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-adv-summertime-fun",
+   "skin": "adventure",
+   "adventureId": "summertime-fun",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p207.webp",
+    "width": 413,
+    "height": 563,
+    "page": 207,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-summertime-fun-01-1",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council activity"
+   },
+   "originalTitle": "Council activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your council."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p209.webp",
+    "width": 413,
+    "height": 563,
+    "page": 209,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-summertime-fun-01-2",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den activity"
+   },
+   "originalTitle": "Den activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p211.webp",
+    "width": 413,
+    "height": 563,
+    "page": 211,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "wolf-a-summertime-fun-01-3",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack activity"
+   },
+   "originalTitle": "Pack activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/wolf/p213.webp",
+    "width": 413,
+    "height": 563,
+    "page": 213,
+    "lang": "en"
+   }
+  }
+ ]
+}

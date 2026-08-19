@@ -1,0 +1,3892 @@
+{
+ "$status": "111 tarjetas extraídas del PDF oficial. Español en 0/11 Adventures y 0/95 actividades; el resto cae a inglés con aviso.",
+ "id": "webelos",
+ "rank": "Webelos",
+ "grade": "4.º grado",
+ "order": 5,
+ "audience": "family",
+ "translation": "pendiente",
+ "name": {
+  "es": "Webelos",
+  "en": "Webelos"
+ },
+ "intro": {
+  "es": "Aventuras más largas, herramientas, campamento y preparación para Arrow of Light.",
+  "en": ""
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [
+  {
+   "id": "bobcat",
+   "name": {
+    "es": "",
+    "en": "Bobcat"
+   },
+   "category": {
+    "es": "",
+    "en": "Character & Leadership"
+   },
+   "required": true,
+   "requirementCount": 7,
+   "summary": {
+    "es": "",
+    "en": "The Bobcat Adventure is the first required Adventure on your trail and will get you and your den off to a great start. Once you have completed the Bobcat Adventure, you can work on the other Adventures in any order. Bobcat is focused on character and introducing the values of Scouting America."
+   }
+  },
+  {
+   "id": "webelos-walkabout",
+   "name": {
+    "es": "",
+    "en": "Webelos Walkabout"
+   },
+   "category": {
+    "es": "",
+    "en": "Outdoors"
+   },
+   "required": true,
+   "requirementCount": 7,
+   "summary": {
+    "es": "",
+    "en": "Some places you can only get to if you walk. Walking is great exercise and a fun activity to do with your den or family. In the Webelos Walkabout Adventure, you’ll learn how to prepare for a two-mile walk, what you should bring along, and what you should do if there is an emergency. And when you are ready, take your walk!"
+   }
+  },
+  {
+   "id": "stronger-faster-higher",
+   "name": {
+    "es": "",
+    "en": "Stronger, Faster, Higher"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Fitness"
+   },
+   "required": true,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "The Stronger, Faster, Higher Adventure will help you understand how to eat well, how to exercise, and the importance of rest. Personal fitness is a balance of these three things. What you eat is what your body is able to turn into energy and can keep your body working to keep you healthy. Exercise not only keeps your body working, it also is good for your mind. Your body needs rest, and so does your mind."
+   }
+  },
+  {
+   "id": "my-community",
+   "name": {
+    "es": "",
+    "en": "My Community"
+   },
+   "category": {
+    "es": "",
+    "en": "Citizenship"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "This Adventure is all about being a good citizen. You’ll learn about the different types of voting and how our national government maintains the balance of power. You’ll meet with a local politician and discuss how they were elected and their role in government."
+   }
+  },
+  {
+   "id": "my-safety",
+   "name": {
+    "es": "",
+    "en": "My Safety"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Safety Awareness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "In this Adventure, you will strengthen your ability to keep yourself safe with the Protect Yourself Rules and learn ways to keep your home and meeting space safe."
+   }
+  },
+  {
+   "id": "my-family",
+   "name": {
+    "es": "",
+    "en": "My Family"
+   },
+   "category": {
+    "es": "",
+    "en": "Family & Reverence"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "This Adventure is commonly done at home with the Cub Scout’s family. If it is being done as a den, ensure that every parent and guardian is aware of the content and the activities that the den will do, and allow for parents to opt out of doing it as a den activity and choose to complete the requirement at home. This Adventure may be earned by completing the requirements below OR by completing a religious emblem of the Cub Scout’s family’s choosing."
+   }
+  },
+  {
+   "id": "build-it",
+   "name": {
+    "es": "",
+    "en": "Build It"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "If you visit a lumber store, you’ll see rows and rows of all sorts of wood: boards, dowel rods, sheets of plywood, cedar shingles, and more. With some tools and time, a skilled craftsperson can turn that wood into toys, bookcases, or even an entire house. You won’t build a house in this Adventure, but you will build a smaller carpentry project. You’ll also learn about the tools you could use to build just about anything you can dream up. So grab your tool belt, and let’s get started."
+   }
+  },
+  {
+   "id": "chef-s-knife",
+   "name": {
+    "es": "",
+    "en": "Chef’s Knife"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "The most common use of a knife is in the kitchen. In this Adventure, you will learn the safety rules about using a knife in the kitchen and some basic instructions on how to use a kitchen knife. This Adventure is required in order for you to use any knife during a Cub Scout activity. Even if you earned the Whittling Adventure as a Bear, you must earn the Chef’s Knife Adventure as a Webelos to earn the privilege of using a knife during a Cub Scout activity."
+   }
+  },
+  {
+   "id": "let-s-camp",
+   "name": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 9,
+   "summary": {
+    "es": "",
+    "en": "There’s nothing like the great outdoors! In this Adventure, you will get the chance to plan and participate in a campout or other outdoor activity. You’ll learn how to be prepared for extreme weather events, and you’ll also demonstrate how to Leave No Trace when you’re outdoors."
+   }
+  },
+  {
+   "id": "race-time",
+   "name": {
+    "es": "",
+    "en": "Race Time"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "Propulsion is what gives an object (such as a plane, car, or boat) the power to move. Friction is what causes an object to stop. In this Adventure, you’ll learn different ways to make and propel vehicles. Think about how the shapes of cars, boats, and planes affect the distance they can go. You’ll explore how you can use the air in your lungs, the force of gravity, and the power of your imagination to make things go."
+   }
+  },
+  {
+   "id": "summertime-fun",
+   "name": {
+    "es": "",
+    "en": "Summertime Fun"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 1,
+   "summary": {
+    "es": "",
+    "en": "The summertime is a great time to get together with your den or pack. The requirement for this Adventure is simple. Participate in three Cub Scout activities during the summer months. This can be at council-organized camps like day camp or resident camp, or it can be a den or pack get-together for a summertime picnic. To earn this Adventure as a Webelos, you participate in summer activities during the summer after you completed the third grade."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "webelos-r-instructions",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Instructions"
+   },
+   "body": {
+    "es": "",
+    "en": "This deck contains cards to help den leaders deliver a program to complete all requirements for earning the Webelos rank. How to use this deck 1. Review the other resource cards (black border) in this deck, and review the contents. 2. Pick the Adventure you want to work on in your next den meeting. 3. Remove all cards associated with that Adventure. 4. Scan the Adventure card, and review the webpage for the Adventure you chose. Read and follow the Safety Moment for the Adventure. 5. Select one activity card for each requirement to do in your meeting. 6. Scan the QR code for each activity you selected, and follow the directions on the activity page. 7. When conducting your den meeting, have your cards on hand to use as a quick guide. Scan here for a video that shows you how to use this deck. ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p001.webp",
+    "width": 413,
+    "height": 563,
+    "page": 1,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-r-getting-started",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Getting Started"
+   },
+   "body": {
+    "es": "",
+    "en": "What is a den leader? What are we supposed to be doing? Where can I find this information?"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p003.webp",
+    "width": 413,
+    "height": 563,
+    "page": 3,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-r-welcome-new-den-leader",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Welcome, New Den Leader"
+   },
+   "body": {
+    "es": "",
+    "en": "WELCOME! NEW WOLF, BEAR OR WEBELOS DEN LEADER B SCOUT CU LEADE R D EN There are actual instructions for this? ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p005.webp",
+    "width": 413,
+    "height": 563,
+    "page": 5,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-r-safeguarding-youth",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Safeguarding Youth"
+   },
+   "body": {
+    "es": "",
+    "en": "Safeguarding Youth Training — all leaders are required to complete the training. Parents should too. Keeping everyone safe! Check the Guide to Safe Scouting. G U I D E TO SAFE SCOUTING Februar y 2022 Revision Four simple things to do before each activity: SAFE Checklist."
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p007.webp",
+    "width": 413,
+    "height": 563,
+    "page": 7,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-r-den-leader-training",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Den Leader Training"
+   },
+   "body": {
+    "es": "",
+    "en": "DONE IN TWO HOURS! Log on to my.scouting.org. If you don’t already have an account, you can create one to access training. This is the same place Safeguarding Youth training is located. Den leader position-specific training consists of 16 video modules that are, on average, 71/2 minutes long. Complete the training to earn your first patch!"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p009.webp",
+    "width": 413,
+    "height": 563,
+    "page": 9,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-bobcat",
+   "skin": "adventure",
+   "adventureId": "bobcat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p011.webp",
+    "width": 413,
+    "height": 563,
+    "page": 11,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-01-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Doodle"
+   },
+   "originalTitle": "Den Doodle",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts make a den doodle to help get to know their den members."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p013.webp",
+    "width": 413,
+    "height": 563,
+    "page": 13,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-01-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Flag"
+   },
+   "originalTitle": "Den Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts make a den flag that shows something about each member."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p015.webp",
+    "width": 413,
+    "height": 563,
+    "page": 15,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-01-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Toy Hoop Pass"
+   },
+   "originalTitle": "Toy Hoop Pass",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts play the toy hoop pass game to learn about teamwork."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p017.webp",
+    "width": 413,
+    "height": 563,
+    "page": 17,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-01-4",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Silent Line Up"
+   },
+   "originalTitle": "Silent Line Up",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "In this activity, Cub Scouts will learn some facts about each other without saying a word."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p019.webp",
+    "width": 413,
+    "height": 563,
+    "page": 19,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-02-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Recite the Scout Oath and the Scout Law with your den and den leader. Describe the three points of the Scout Oath."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Recite the Oath and Law"
+   },
+   "originalTitle": "Recite the Oath and Law",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "In this activity, Cub Scouts recite the Scout Oath and Scout Law and learn about the three points of the Scout Oath."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p021.webp",
+    "width": 413,
+    "height": 563,
+    "page": 21,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-03-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Detective"
+   },
+   "originalTitle": "Scout Law Detective",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "The points of the Scout Law are reinforced to Cub Scouts while they try to determine which point is missing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p023.webp",
+    "width": 413,
+    "height": 563,
+    "page": 23,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-03-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Impersonation Game"
+   },
+   "originalTitle": "Scout Law Impersonation Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts impersonate points of the Scout Law then try to guess who was impersonating each point."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p025.webp",
+    "width": 413,
+    "height": 563,
+    "page": 25,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-03-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the Scout Law."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Relay"
+   },
+   "originalTitle": "Scout Law Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the Scout Law in this fun relay race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p027.webp",
+    "width": 413,
+    "height": 563,
+    "page": 27,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-04-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "With your den, create a den code of conduct."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Code of Conduct"
+   },
+   "originalTitle": "Code of Conduct",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will be invested in their own conduct when they help create their den code of conduct."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p029.webp",
+    "width": 413,
+    "height": 563,
+    "page": 29,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-05-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the denner position and responsibilities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lead Opening and Closing Ceremonies"
+   },
+   "originalTitle": "Lead Opening and Closing Ceremonies",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how to lead opening and closing ceremonies."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p031.webp",
+    "width": 413,
+    "height": 563,
+    "page": 31,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-05-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the denner position and responsibilities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Does a Denner Do?"
+   },
+   "originalTitle": "What Does a Denner Do?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the denner’s responsibilities by making a list."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p033.webp",
+    "width": 413,
+    "height": 563,
+    "page": 33,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-05-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Learn about the denner position and responsibilities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Who’s the Denner?"
+   },
+   "originalTitle": "Who’s the Denner?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts prepare a calendar of the dates that each person will serve as the denner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p035.webp",
+    "width": 413,
+    "height": 563,
+    "page": 35,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-06-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Roll a Cub Scout Fundamental"
+   },
+   "originalTitle": "Roll a Cub Scout Fundamental",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts demonstrate the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p037.webp",
+    "width": 413,
+    "height": 563,
+    "page": 37,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-06-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Teach the Cub Scout Sign, Salute, and Handshake"
+   },
+   "originalTitle": "Teach the Cub Scout Sign, Salute, and Handshake",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts help younger Cub Scouts learn the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p039.webp",
+    "width": 413,
+    "height": 563,
+    "page": 39,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-06-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Using Cub Scout Fundamentals"
+   },
+   "originalTitle": "Using Cub Scout Fundamentals",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts use the Cub Scout sign, salute, and handshake while leading an opening and closing ceremony."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p041.webp",
+    "width": 413,
+    "height": 563,
+    "page": 41,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-bobcat-07-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 7,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "At home, with your parent or legal guardian do the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Child Abuse Protection Review"
+   },
+   "originalTitle": "Child Abuse Protection Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Review the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p043.webp",
+    "width": 413,
+    "height": 563,
+    "page": 43,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-webelos-walkabout",
+   "skin": "adventure",
+   "adventureId": "webelos-walkabout",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p045.webp",
+    "width": 413,
+    "height": 563,
+    "page": 45,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-01-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 1,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Prepare for a two-mile walk outside. Gather your Cub Scout Six Essentials and weather- appropriate clothing and shoes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Scout Essential Six Review"
+   },
+   "originalTitle": "Cub Scout Essential Six Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will review the Cub Scout Six Essentials and appropriate clothing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p047.webp",
+    "width": 413,
+    "height": 563,
+    "page": 47,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-02-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 2,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Plan a two-mile route for your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Digital Map"
+   },
+   "originalTitle": "Digital Map",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts plan a route for a two- mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p049.webp",
+    "width": 413,
+    "height": 563,
+    "page": 49,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-02-2",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 2,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Plan a two-mile route for your walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Plan A Route"
+   },
+   "originalTitle": "Plan A Route",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will plan a route for the two-mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p051.webp",
+    "width": 413,
+    "height": 563,
+    "page": 51,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-03-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 3,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Check the weather forecast for the time of your planned two-mile walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What’s The Forecast?"
+   },
+   "originalTitle": "What’s The Forecast?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts check the weather forecast for the two-mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p053.webp",
+    "width": 413,
+    "height": 563,
+    "page": 53,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-04-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 4,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Review the four points of the Scouting America SAFE Checklist and how you will apply them on your two-mile walk."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Safety First"
+   },
+   "originalTitle": "Safety First",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review the four points of the Scouting America SAFE Checklist."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p055.webp",
+    "width": 413,
+    "height": 563,
+    "page": 55,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-05-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate first aid for each of the following events that could occur on your two-mile walk: blister, sprained ankle, sunburn, dehydration, and heat-related illness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "First Aid Demonstration"
+   },
+   "originalTitle": "First Aid Demonstration",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts invite members from a Scouts BSA troop, Venturing crew, or Sea Scouts ship to a den meeting and allow them to demonstrate first aid."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p057.webp",
+    "width": 413,
+    "height": 563,
+    "page": 57,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-05-2",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate first aid for each of the following events that could occur on your two-mile walk: blister, sprained ankle, sunburn, dehydration, and heat-related illness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "First Responder Visit"
+   },
+   "originalTitle": "First Responder Visit",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts visit a first responder to learn about first aid."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p059.webp",
+    "width": 413,
+    "height": 563,
+    "page": 59,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-05-3",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 5,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "Demonstrate first aid for each of the following events that could occur on your two-mile walk: blister, sprained ankle, sunburn, dehydration, and heat-related illness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Trail First Aid"
+   },
+   "originalTitle": "Trail First Aid",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn first aid for blisters, sprained ankles, sunburns, and dehydration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p061.webp",
+    "width": 413,
+    "height": 563,
+    "page": 61,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-06-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 6,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, go on your two- mile walk while practicing the Leave No Trace Principles for Kids and the Outdoor Code."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "The Two–Mile Walk"
+   },
+   "originalTitle": "The Two–Mile Walk",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts go on a two-mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p063.webp",
+    "width": 413,
+    "height": 563,
+    "page": 63,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-webelos-walkabout-07-1",
+   "skin": "activity",
+   "adventureId": "webelos-walkabout",
+   "requirement": {
+    "index": 7,
+    "of": 7,
+    "text": {
+     "es": "",
+     "en": "After your two-mile walk, discuss with your den what went well and what you would do differently next time."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Stop–Start–Continue"
+   },
+   "originalTitle": "Stop–Start–Continue",
+   "place": "outdoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts assess their two-mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p065.webp",
+    "width": 413,
+    "height": 563,
+    "page": 65,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-stronger-faster-higher",
+   "skin": "adventure",
+   "adventureId": "stronger-faster-higher",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p067.webp",
+    "width": 413,
+    "height": 563,
+    "page": 67,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-01-1",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den or family, plan, cook, and eat a balanced meal."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Camp Cuisine"
+   },
+   "originalTitle": "Cub Camp Cuisine",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts prepare a meal on a pack campout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p069.webp",
+    "width": 413,
+    "height": 563,
+    "page": 69,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-01-2",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den or family, plan, cook, and eat a balanced meal."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Culinary Creations"
+   },
+   "originalTitle": "Culinary Creations",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts prepare a meal as a den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p071.webp",
+    "width": 413,
+    "height": 563,
+    "page": 71,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-01-3",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den or family, plan, cook, and eat a balanced meal."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Family Feast"
+   },
+   "originalTitle": "Family Feast",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts plan a meal for a family dinner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p073.webp",
+    "width": 413,
+    "height": 563,
+    "page": 73,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-02-1",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person in a way that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Flying Disc Frenzy"
+   },
+   "originalTitle": "Flying Disc Frenzy",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Ultimate."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p075.webp",
+    "width": 413,
+    "height": 563,
+    "page": 75,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-02-2",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person in a way that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Soccer and Scouting"
+   },
+   "originalTitle": "Soccer and Scouting",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts play a game of soccer."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p077.webp",
+    "width": 413,
+    "height": 563,
+    "page": 77,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-02-3",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes with your den or at least one other person in a way that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Volleyball Voyage"
+   },
+   "originalTitle": "Volleyball Voyage",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of volleyball."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p079.webp",
+    "width": 413,
+    "height": 563,
+    "page": 79,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-03-1",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 15 minutes doing personal exercises that boost your heart rate, use your muscles, and work on flexibility."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Climb and Conquer"
+   },
+   "originalTitle": "Climb and Conquer",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts go climbing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p081.webp",
+    "width": 413,
+    "height": 563,
+    "page": 81,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-03-2",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 15 minutes doing personal exercises that boost your heart rate, use your muscles, and work on flexibility."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Fit and Fun"
+   },
+   "originalTitle": "Fit and Fun",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Invite a professional trainer to your Cub Scout den meeting to lead a 15-minute activity."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p083.webp",
+    "width": 413,
+    "height": 563,
+    "page": 83,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-03-3",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Be active for 15 minutes doing personal exercises that boost your heart rate, use your muscles, and work on flexibility."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Fit Challenge"
+   },
+   "originalTitle": "Scout Fit Challenge",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts create a short workout to explore different exercises."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p085.webp",
+    "width": 413,
+    "height": 563,
+    "page": 85,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-04-1",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Book Bliss"
+   },
+   "originalTitle": "Book Bliss",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts read a book."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p087.webp",
+    "width": 413,
+    "height": 563,
+    "page": 87,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-04-2",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Musical Tranquility"
+   },
+   "originalTitle": "Musical Tranquility",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Listen to relaxing music to create a calming effect."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p089.webp",
+    "width": 413,
+    "height": 563,
+    "page": 89,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-04-3",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Trailblazing Trek"
+   },
+   "originalTitle": "Trailblazing Trek",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Go on a walk with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p091.webp",
+    "width": 413,
+    "height": 563,
+    "page": 91,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-stronger-faster-higher-05-1",
+   "skin": "activity",
+   "adventureId": "stronger-faster-higher",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Review your Scouting America Annual Health and Medical Record with your parent or legal guardian. Discuss your ability to participate in den and pack activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Annual Health and Medical Record"
+   },
+   "originalTitle": "Annual Health and Medical Record",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review their Scouting America Annual Health and Medical Records with their parents or legal guardians."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p093.webp",
+    "width": 413,
+    "height": 563,
+    "page": 93,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-my-community",
+   "skin": "adventure",
+   "adventureId": "my-community",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p095.webp",
+    "width": 413,
+    "height": 563,
+    "page": 95,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-01-1",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about majority and plurality types of voting."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Denner Election"
+   },
+   "originalTitle": "Denner Election",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Demonstrate plurality voting and majority voting to determine your next denner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p097.webp",
+    "width": 413,
+    "height": 563,
+    "page": 97,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-01-2",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about majority and plurality types of voting."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Snack–lections"
+   },
+   "originalTitle": "Snack–lections",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using a variety of voting, select the snack for your next den meeting."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p099.webp",
+    "width": 413,
+    "height": 563,
+    "page": 99,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-02-1",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Speak with someone who is elected to their position. Discover the type of voting that was used to elect them and why."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Our Elected Official"
+   },
+   "originalTitle": "Our Elected Official",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Invite a community-elected official to learn about the type of voting used in their election."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p101.webp",
+    "width": 413,
+    "height": 563,
+    "page": 101,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-03-1",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Choose a federal law and create a timeline of the history of the law. Include the involvement of the three branches of government."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "History of the Americans with Disabilities Act"
+   },
+   "originalTitle": "History of the Americans with Disabilities Act",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the history of the Americans with Disabilities Act."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p103.webp",
+    "width": 413,
+    "height": 563,
+    "page": 103,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-04-1",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Diaper and Formula Drive"
+   },
+   "originalTitle": "Diaper and Formula Drive",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "With your den, host a diaper and formula drive to donate to an organization that gives them to those in need."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p105.webp",
+    "width": 413,
+    "height": 563,
+    "page": 105,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-04-2",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Happy Birthday Bag Project"
+   },
+   "originalTitle": "Happy Birthday Bag Project",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts help those less fortunate have a happy birthday by making birthday bags for a local food pantry."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p107.webp",
+    "width": 413,
+    "height": 563,
+    "page": 107,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-community-04-3",
+   "skin": "activity",
+   "adventureId": "my-community",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scouting for Food"
+   },
+   "originalTitle": "Scouting for Food",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in your council-sponsored Scouting for Food event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p109.webp",
+    "width": 413,
+    "height": 563,
+    "page": 109,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-my-safety",
+   "skin": "adventure",
+   "adventureId": "my-safety",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p111.webp",
+    "width": 413,
+    "height": 563,
+    "page": 111,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-01-1",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Webelos rank."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Protect Yourself Video"
+   },
+   "originalTitle": "Protect Yourself Video",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Watch the Protect Yourself Rules video with your parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p113.webp",
+    "width": 413,
+    "height": 563,
+    "page": 113,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-02-1",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify items in your house that are hazardous, and make sure they are stored properly. Identify on the package where it describes what to do if someone is accidentally exposed to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Hazard Labels"
+   },
+   "originalTitle": "Hazard Labels",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Walk around your home and identify items that are hazardous. Post the Poison Control information in a central place to have available should it be needed."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p115.webp",
+    "width": 413,
+    "height": 563,
+    "page": 115,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-02-2",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify items in your house that are hazardous, and make sure they are stored properly. Identify on the package where it describes what to do if someone is accidentally exposed to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Safe Hazardous Material Storage"
+   },
+   "originalTitle": "Safe Hazardous Material Storage",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Create a safe place in your meeting space to store hazardous items."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p117.webp",
+    "width": 413,
+    "height": 563,
+    "page": 117,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-03-1",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify ways you and your family keep your home or your meeting space safe."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Safe Den Meeting Checklist"
+   },
+   "originalTitle": "Safe Den Meeting Checklist",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using the safety checklist, identify ways to keep your meeting space safe."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p119.webp",
+    "width": 413,
+    "height": 563,
+    "page": 119,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-03-2",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify ways you and your family keep your home or your meeting space safe."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Safe Home Safety Checklist"
+   },
+   "originalTitle": "Safe Home Safety Checklist",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using the safety checklist, identify ways to keep your home safe."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p121.webp",
+    "width": 413,
+    "height": 563,
+    "page": 121,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-safety-04-1",
+   "skin": "activity",
+   "adventureId": "my-safety",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Complete the “Be Prepared for Natural Events” worksheet. Complete a worksheet for at least two natural events most likely to happen near where you live."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Be Prepared for Natural Events"
+   },
+   "originalTitle": "Be Prepared for Natural Events",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Complete the “Be Prepared for Natural Events” worksheet."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p123.webp",
+    "width": 413,
+    "height": 563,
+    "page": 123,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-my-family",
+   "skin": "adventure",
+   "adventureId": "my-family",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p125.webp",
+    "width": 413,
+    "height": 563,
+    "page": 125,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-01-1",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s faith traditions."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Multimedia Collage"
+   },
+   "originalTitle": "Multimedia Collage",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Create a multimedia collage celebrating your family’s faith traditions."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p127.webp",
+    "width": 413,
+    "height": 563,
+    "page": 127,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-01-2",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s faith traditions."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Wood Crafting"
+   },
+   "originalTitle": "Wood Crafting",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Make a wood craft that can be used as part of your favorite family faith tradition, holiday, or celebration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p129.webp",
+    "width": 413,
+    "height": 563,
+    "page": 129,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-02-1",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Dish of Kindness"
+   },
+   "originalTitle": "A Dish of Kindness",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Clean up the dishes after dinner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p131.webp",
+    "width": 413,
+    "height": 563,
+    "page": 131,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-02-2",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Helping Hands"
+   },
+   "originalTitle": "Helping Hands",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Help your family members with a chore."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p133.webp",
+    "width": 413,
+    "height": 563,
+    "page": 133,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-02-3",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Neighborly Kindness"
+   },
+   "originalTitle": "Neighborly Kindness",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Help a neighbor with yard work."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p135.webp",
+    "width": 413,
+    "height": 563,
+    "page": 135,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-03-1",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, identify a religion or faith that is different from your own. Identify two things that it has in common with your family’s beliefs."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Exploring Faith"
+   },
+   "originalTitle": "Exploring Faith",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn about a religion different from your own, and name two things that it has in common with your family’s beliefs."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p137.webp",
+    "width": 413,
+    "height": 563,
+    "page": 137,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-my-family-04-1",
+   "skin": "activity",
+   "adventureId": "my-family",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discuss with your parent or legal guardian what it means to be reverent. Tell how you practice being reverent in your daily life."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Reverence Reflection"
+   },
+   "originalTitle": "Reverence Reflection",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Discuss what it means to be reverent and how you practice being reverent in your daily life."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p139.webp",
+    "width": 413,
+    "height": 563,
+    "page": 139,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-build-it",
+   "skin": "adventure",
+   "adventureId": "build-it",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p141.webp",
+    "width": 413,
+    "height": 563,
+    "page": 141,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-01-1",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about some basic tools and the proper use of each tool. Learn about and understand the need for safety when you work with tools."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tool Safety and Practice"
+   },
+   "originalTitle": "Tool Safety and Practice",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Introduce Cub Scouts to basic tools, and teach them use the tools safely."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p143.webp",
+    "width": 413,
+    "height": 563,
+    "page": 143,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-02-1",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate how to check for plumb, level, and square when building."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Doorway Plumb, Level, and Square"
+   },
+   "originalTitle": "Doorway Plumb, Level, and Square",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts check a doorframe for plumb, level, and square."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p145.webp",
+    "width": 413,
+    "height": 563,
+    "page": 145,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-02-2",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate how to check for plumb, level, and square when building."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Table Plumb, Level, and Square"
+   },
+   "originalTitle": "Table Plumb, Level, and Square",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts check a wooden table for plumb, level, and square."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p147.webp",
+    "width": 413,
+    "height": 563,
+    "page": 147,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-03-1",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With the guidance of your Webelos den leader, parent, or legal guardian, select a carpentry project that requires it to be either plumb, level, and/or square. Create a list of materials and tools you will need to complete the project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Build Project Prep"
+   },
+   "originalTitle": "Build Project Prep",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Pick a project from the Webelos handbook, and put together a list of materials and tools needed to complete it."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p149.webp",
+    "width": 413,
+    "height": 563,
+    "page": 149,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-04-1",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Build your carpentry project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Project Build — Step Stool"
+   },
+   "originalTitle": "Project Build — Step Stool",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts build a step stool."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p151.webp",
+    "width": 413,
+    "height": 563,
+    "page": 151,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-04-2",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Build your carpentry project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Project Build — Paper Towel Holder"
+   },
+   "originalTitle": "Project Build — Paper Towel Holder",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts build a paper towel holder."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p153.webp",
+    "width": 413,
+    "height": 563,
+    "page": 153,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-build-it-04-3",
+   "skin": "activity",
+   "adventureId": "build-it",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Build your carpentry project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Project Build — Wall Shelf"
+   },
+   "originalTitle": "Project Build — Wall Shelf",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts build a wall shelf."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p155.webp",
+    "width": 413,
+    "height": 563,
+    "page": 155,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-chef-s-knife",
+   "skin": "adventure",
+   "adventureId": "chef-s-knife",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p157.webp",
+    "width": 413,
+    "height": 563,
+    "page": 157,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-chef-s-knife-01-1",
+   "skin": "activity",
+   "adventureId": "chef-s-knife",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Read, understand, and promise to follow the Cub Scout knife safety rules."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Knife Safety Rules Crossword"
+   },
+   "originalTitle": "Knife Safety Rules Crossword",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn and explain the knife safety rules."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p159.webp",
+    "width": 413,
+    "height": 563,
+    "page": 159,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-chef-s-knife-02-1",
+   "skin": "activity",
+   "adventureId": "chef-s-knife",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the knife safety circle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Knife Safety Circle"
+   },
+   "originalTitle": "Knife Safety Circle",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice the knife safety circle."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p161.webp",
+    "width": 413,
+    "height": 563,
+    "page": 161,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-chef-s-knife-03-1",
+   "skin": "activity",
+   "adventureId": "chef-s-knife",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate that you know how to care for and use a kitchen knife safely."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Kitchen Knife Care and Use"
+   },
+   "originalTitle": "Kitchen Knife Care and Use",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts demonstrate proper care of a kitchen knife."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p163.webp",
+    "width": 413,
+    "height": 563,
+    "page": 163,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-chef-s-knife-04-1",
+   "skin": "activity",
+   "adventureId": "chef-s-knife",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Choose the correct cooking knife, and demonstrate how to properly slice, dice, and mince."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Make Fruit Salad"
+   },
+   "originalTitle": "Make Fruit Salad",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice their knife skills by making fruit salad."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p165.webp",
+    "width": 413,
+    "height": 563,
+    "page": 165,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-chef-s-knife-04-2",
+   "skin": "activity",
+   "adventureId": "chef-s-knife",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Choose the correct cooking knife, and demonstrate how to properly slice, dice, and mince."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Make Salsa"
+   },
+   "originalTitle": "Make Salsa",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice their knife skills by making salsa."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p167.webp",
+    "width": 413,
+    "height": 563,
+    "page": 167,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-let-s-camp",
+   "skin": "adventure",
+   "adventureId": "let-s-camp",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p169.webp",
+    "width": 413,
+    "height": 563,
+    "page": 169,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-01-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, plan and participate in a campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "originalTitle": "Let’s Camp",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts attend an overnight campout with your pack or at a council or district event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p171.webp",
+    "width": 413,
+    "height": 563,
+    "page": 171,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-02-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Upon arrival at the campground, determine where to set up a tent."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Home Tent Home"
+   },
+   "originalTitle": "Home Tent Home",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn where to set up a tent at the campground."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p173.webp",
+    "width": 413,
+    "height": 563,
+    "page": 173,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-03-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Set up your tent without help from an adult."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Indoor Tent Setup Practice"
+   },
+   "originalTitle": "Indoor Tent Setup Practice",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice setting up a tent indoors before the campout without help from an adult."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p175.webp",
+    "width": 413,
+    "height": 563,
+    "page": 175,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-03-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Set up your tent without help from an adult."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "We Got This!"
+   },
+   "originalTitle": "We Got This!",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts compete in a relay race to set up a tent with no adult assistance."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p177.webp",
+    "width": 413,
+    "height": 563,
+    "page": 177,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-04-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Identify a potential weather hazard that could occur in your area. Determine the action you will take if you experience the weather hazard during the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Weather Emergency Preparedness Drill Game"
+   },
+   "originalTitle": "Weather Emergency Preparedness Drill Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts play a game to learn what to do during a weather hazard."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p179.webp",
+    "width": 413,
+    "height": 563,
+    "page": 179,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-05-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Show how to tie a bowline. Explain when this knot should be used and why."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bowline Just In Time"
+   },
+   "originalTitle": "Bowline Just In Time",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the bowline knot and compete to tie one the fastest."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p181.webp",
+    "width": 413,
+    "height": 563,
+    "page": 181,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-05-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Show how to tie a bowline. Explain when this knot should be used and why."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bowline Knot"
+   },
+   "originalTitle": "Bowline Knot",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how to tie a bowline knot and when it should be used."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p183.webp",
+    "width": 413,
+    "height": 563,
+    "page": 183,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-06-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 6,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Know the fire safety rules. Using those rules, locate a safe area to build a campfire."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Fire Safety Rule Review"
+   },
+   "originalTitle": "Fire Safety Rule Review",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review fire safety rules and locate a safe area for a campfire."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p185.webp",
+    "width": 413,
+    "height": 563,
+    "page": 185,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-07-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 7,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Using tinder, kindling, and fuel wood, properly build a teepee fire lay. If circumstances permit, and there is no local restriction on fires, show how to safely light the fire while under adult supervision. After allowing the fire to burn safely, extinguish the flames with minimal impact to the fire site."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Build A Fire"
+   },
+   "originalTitle": "Build A Fire",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how to build a teepee fire and properly extinguish it."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p187.webp",
+    "width": 413,
+    "height": 563,
+    "page": 187,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-08-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 8,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Recite the Outdoor Code and Leave No Trace Principles for Kids from memory."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cut and Paste"
+   },
+   "originalTitle": "Cut and Paste",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts unscramble phrases and place them in order to learn the Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p189.webp",
+    "width": 413,
+    "height": 563,
+    "page": 189,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-08-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 8,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "Recite the Outdoor Code and Leave No Trace Principles for Kids from memory."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Telephone"
+   },
+   "originalTitle": "Telephone",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts play telephone while learning the Outdoor Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p191.webp",
+    "width": 413,
+    "height": 563,
+    "page": 191,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-let-s-camp-09-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 9,
+    "of": 9,
+    "text": {
+     "es": "",
+     "en": "After your campout, share the things you did to follow the Code and Leave No Trace Principles for Kids with your den or family."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Following the Outdoor Code and Leave No Trace Principles for Kids"
+   },
+   "originalTitle": "Following the Outdoor Code and Leave No Trace Principles for Kids",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review their ability to follow the Outdoor Code and Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p193.webp",
+    "width": 413,
+    "height": 563,
+    "page": 193,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-race-time",
+   "skin": "adventure",
+   "adventureId": "race-time",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p195.webp",
+    "width": 413,
+    "height": 563,
+    "page": 195,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-01-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, build either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Car Build Day"
+   },
+   "originalTitle": "Pinewood Derby ® Car Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p197.webp",
+    "width": 413,
+    "height": 563,
+    "page": 197,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-01-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, build either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Boat Build Day"
+   },
+   "originalTitle": "Raingutter Regatta™ Boat Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p199.webp",
+    "width": 413,
+    "height": 563,
+    "page": 199,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-02-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Rules Jeopardy"
+   },
+   "originalTitle": "Pinewood Derby ® Rules Jeopardy",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Learn the rules of the Pinewood Derby ® with a game of Jeopardy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p201.webp",
+    "width": 413,
+    "height": 563,
+    "page": 201,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-02-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Rules Jeopardy"
+   },
+   "originalTitle": "Raingutter Regatta™ Rules Jeopardy",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Learn the rules of the Raingutter Regatta™ with a game of Jeopardy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p203.webp",
+    "width": 413,
+    "height": 563,
+    "page": 203,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-03-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Explore the properties of friction and how it impacts your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Boat Friction"
+   },
+   "originalTitle": "Boat Friction",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how friction impacts their boat."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p205.webp",
+    "width": 413,
+    "height": 563,
+    "page": 205,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-03-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Explore the properties of friction and how it impacts your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Wheel Friction"
+   },
+   "originalTitle": "Wheel Friction",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how friction impacts their race car."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p207.webp",
+    "width": 413,
+    "height": 563,
+    "page": 207,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-04-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Scout is Kind"
+   },
+   "originalTitle": "A Scout is Kind",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts discuss good sportsmanship and how to demonstrate it during their racing event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p209.webp",
+    "width": 413,
+    "height": 563,
+    "page": 209,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-05-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Race"
+   },
+   "originalTitle": "Pinewood Derby ® Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Pinewood Derby ® car race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p211.webp",
+    "width": 413,
+    "height": 563,
+    "page": 211,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-race-time-05-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™"
+   },
+   "originalTitle": "Raingutter Regatta™",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p213.webp",
+    "width": 413,
+    "height": 563,
+    "page": 213,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-adv-summertime-fun",
+   "skin": "adventure",
+   "adventureId": "summertime-fun",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p215.webp",
+    "width": 413,
+    "height": 563,
+    "page": 215,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-summertime-fun-01-1",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council activity"
+   },
+   "originalTitle": "Council activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your council."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p217.webp",
+    "width": 413,
+    "height": 563,
+    "page": 217,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-summertime-fun-01-2",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den activity"
+   },
+   "originalTitle": "Den activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p219.webp",
+    "width": 413,
+    "height": 563,
+    "page": 219,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "webelos-a-summertime-fun-01-3",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack activity"
+   },
+   "originalTitle": "Pack activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/webelos/p221.webp",
+    "width": 413,
+    "height": 563,
+    "page": 221,
+    "lang": "en"
+   }
+  }
+ ]
+}

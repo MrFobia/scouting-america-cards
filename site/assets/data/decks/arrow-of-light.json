@@ -1,0 +1,21 @@
+{
+  "$status": "EN PREPARACIÓN — el contenido llega cuando el cliente entregue el PDF de esta baraja.",
+  "id": "arrow-of-light",
+  "rank": "Arrow of Light",
+  "grade": "5.º grado",
+  "order": 6,
+  "audience": "family",
+  "translation": "pendiente",
+  "estado": "en-preparacion",
+  "name": {
+    "es": "Arrow of Light",
+    "en": "Arrow of Light"
+  },
+  "intro": {
+    "es": "La última baraja de Cub Scouts: liderazgo, campamento y el paso a Scouts BSA.",
+    "en": ""
+  },
+  "copyright": "©2025 Scouting America · Traducción al español",
+  "adventures": [],
+  "cards": []
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las barajas · Cub Scouts</title>
+<meta name="description" content="Las siete barajas de tarjetas de reunión Cub Scout, por rank.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="/site/manifest.webmanifest">
+<meta name="theme-color" content="#003F87">
+<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+</head>
+<body>
+
+<!--
+  Familia Índice · macroestructura 13 Index-First · nav N9 · footer Ft2
+  Sin hero, sin narrativa. La página es la lista. Un líder apurado navega, no lee.
+-->
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header id="pagehead"></header>
+
+<main class="page page--glow" id="main">
+  <div class="photoband rise" style="--i:0; margin-bottom:var(--space-6)">
+    <img src="/projects/scouting-america/assets/img/photos/sendero.webp" alt="" aria-hidden="true"
+         width="1200" height="800" loading="eager" decoding="async">
+    <span class="photoband__label">Cub Scouts</span>
+    <span class="photoband__title" id="pb-t">Seis ranks, uno por grado escolar</span>
+  </div>
+  <h2 class="page__label rise" style="--i:1" id="lista-titulo">Sus barajas</h2>
+  <ul class="bento rise" style="--i:2" id="decks"></ul>
+  <div id="decks-estado"></div>
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america/assets/js/app.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script>
+(async () => {
+  // La cabecera también cambia según quién mira: al papá no le sirve saber que
+  // el catálogo tiene seis ranks y la baraja de planeación — él ve las suyas.
+  // Pedido 20-ago: si mira el líder, esta parada del tab bar es tan "consola
+  // del líder" como cualquier página bajo /site/lider/ — inglés fijo, sin
+  // selector — aunque el archivo viva fuera de esa carpeta.
+  const esLiderCab = API.getMode() === 'lider' && API.haySesionLider();
+  const lang = esLiderCab ? 'en' : API.getLang();
+  document.documentElement.lang = lang;
+  const es = lang === 'es';
+
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: es ? 'Cub Scouts · en español' : 'Cub Scouts · in English',
+    title: esLiderCab ? (es ? 'Las barajas' : 'The decks')
+                      : (es ? 'Sus barajas' : 'Your decks'),
+    accent: es ? 'barajas' : 'decks',
+    sub: esLiderCab
+      ? (es ? 'Seis ranks de Cub Scouts y la baraja de planeación del pack.'
+            : 'Six Cub Scout ranks plus the pack planning deck.')
+      : (es ? 'Las tarjetas que su líder ya le mandó, y cuántas lleva de cada baraja.'
+            : 'The cards your leader has sent you, and how many you have of each deck.'),
+    soloIngles: esLiderCab,
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+
+  const cont = document.getElementById('decks');
+  cont.innerHTML = Array.from({length:6},()=>'<li><div class="skel" style="min-height:10.5rem;border-radius:var(--radius-card)"></div></li>').join('');
+  try {
+    const decks = await API.getDecks();
+    if (!decks.length) {
+      // El estado va FUERA del <ul>: dentro de la grilla de dos columnas
+      // ocupaba media pantalla y el texto se apilaba en una tira estrecha,
+      // además de ser HTML inválido (un div suelto dentro de un ul).
+      cont.innerHTML = '';
+      cont.hidden = true;
+      document.getElementById('decks-estado').innerHTML = Shell.estado({
+        titulo: es ? 'Todavía no hay barajas' : 'No decks yet',
+        texto: es ? 'En cuanto se carguen, aparecen acá.' : 'They will show up here.'
+      });
+      return;
+    }
+    /* Una foto oficial por baraja (brandbook 2024, design.md § Fotografía).
+       El velo de .tile--foto garantiza el contraste del nombre encima. */
+    const FOTO = {
+      lion: 'pesca', tiger: 'bicis', wolf: 'brujula', bear: 'agua',
+      webelos: 'cascos', 'arrow-of-light': 'canoa', 'pack-planning': 'derby'
+    };
+    const GLYPH = {
+      lion: 'L', tiger: 'T', wolf: 'W', bear: 'B',
+      webelos: 'W', 'arrow-of-light': 'A', 'pack-planning': 'P'
+    };
+    /* Quién ve qué:
+       - El LÍDER ve las siete: es quien elige de dónde saca las cartas del mazo.
+       - La FAMILIA ve solo las barajas de las que ya le llegaron tarjetas, con
+         cuántas lleva. Enseñarle las siete no tenía gracia: seis no son de su
+         hijo y ninguna la eligió él. */
+    const esLider = API.getMode() === 'lider' && API.haySesionLider();
+    const suyas = esLider ? [] : await API.getRecibidasPorBaraja();
+    const recibidasPorId = new Map(suyas.map(x => [x.deck.id, x]));
+
+    const visibles = esLider
+      ? decks
+      : decks.filter(d => recibidasPorId.has(d.id));
+
+    if (!esLider) {
+      document.getElementById('lista-titulo').textContent = es ? 'Sus barajas' : 'Your decks';
+      document.getElementById('pb-t').textContent = es
+        ? 'Lo que su líder le ha mandado'
+        : 'What your leader has sent you';
+    } else {
+      document.getElementById('lista-titulo').textContent = es ? 'Las siete barajas' : 'The seven decks';
+      document.getElementById('pb-t').textContent = es
+        ? 'Seis ranks, uno por grado escolar'
+        : 'Six ranks, one per school grade';
+    }
+
+    if (!visibles.length) {
+      cont.innerHTML = '';
+      cont.hidden = true;
+      document.getElementById('decks-estado').innerHTML = Shell.estado({
+        titulo: es ? 'Todavía no tiene tarjetas' : 'No cards yet',
+        texto: es
+          ? 'Cuando su líder le mande las actividades de la semana, la baraja de su hijo aparece acá.'
+          : 'Once your leader sends the week’s activities, your child’s deck shows up here.'
+      });
+      return;
+    }
+
+    cont.innerHTML = visibles.map(d => {
+      // Tres estados, no dos: el papá tiene que saber si el baraja está en su
+      // idioma, a medias, o todavía no. "Solo inglés" en un baraja traducido al
+      // 70 % es tan engañoso como no decir nada en uno que no lo está.
+      const sello = { pendiente: es ? 'Solo inglés' : 'English only',
+                      parcial:   es ? 'Español parcial' : 'Partly translated' }[d.translation];
+      const foto = FOTO[d.id];
+      return `<li>
+        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/site/baraja.html?d=${d.id}&lang=${lang}">
+          ${foto ? `<img src="/projects/scouting-america/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
+                width="1200" height="800" loading="lazy" decoding="async">` : ''}
+          <span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>
+          ${sello ? `<span class="tile__pill">${sello}</span>` : '<span></span>'}
+          <span>
+            <span class="tile__name" style="display:block">${d.name[lang] || d.name.es}</span>
+            <span class="tile__label">${(() => {
+              const r = recibidasPorId.get(d.id);
+              if (!r) return d.grade ?? (es ? 'Para líderes' : 'For leaders');
+              // Para la familia manda cuántas lleva, no en qué grado va: el
+              // grado ya lo sabe, el conteo es lo que no puede ver en otro lado.
+              return `${r.recibidas} ${es ? 'de' : 'of'} ${r.total}`;
+            })()}</span>
+          </span>
+        </a></li>`;
+    }).join('');
+    cont.querySelectorAll('[data-rank]').forEach(a =>
+      a.addEventListener('click', () => API.setRank(a.dataset.rank)));
+  } catch (err) {
+    App.fail(cont, err);
+  }
+})();
+</script>
+</body>
+</html>

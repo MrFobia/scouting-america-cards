@@ -1,0 +1,3 @@
+{
+  "$comment": "Mapa vista → preview id de ai.backbone. Se llena DESPUÉS de subir las vistas y correr 'Scan for new files'. Con esto, build_views.py reescribe los links internos a /preview/{id}, que es la única forma de navegar entre vistas en la plataforma. Ejemplo: { \"index.html\": 901, \"baraja.html\": 902, \"carta.html\": 903 }"
+}

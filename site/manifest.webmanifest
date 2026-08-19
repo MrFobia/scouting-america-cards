@@ -1,0 +1,33 @@
+{
+  "name": "Tarjetas de Reunión Cub Scout",
+  "short_name": "Cub Scouts",
+  "description": "Las tarjetas de actividades de Cub Scouts, en español. Sin cuenta y sin instalar nada.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "/site/index.html",
+  "scope": "/site/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFFFF",
+  "theme_color": "#003F87",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    { "src": "/site/assets/img/app-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/site/assets/img/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/site/assets/img/app-icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Las barajas",
+      "short_name": "Barajas",
+      "url": "/site/barajas.html",
+      "icons": [{ "src": "/site/assets/img/app-icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Consola del líder",
+      "short_name": "Líder",
+      "url": "/site/lider/index.html",
+      "icons": [{ "src": "/site/assets/img/app-icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

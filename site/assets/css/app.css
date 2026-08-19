@@ -1,0 +1,2328 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5
+ * genre: editorial · design-system: design.md · designed-as-app
+ * families: Vitrina (08 Photographic) · Índice (13 Index-First) · Documento (02 Long Document)
+ * nav: N9 edge-aligned + tabbar de app · footer: Ft1 mast-headed · Ft2 inline
+ * motion: POR CAPAS (17-ago-2026) — A: vista del papá, solo estados ≤160ms ·
+ * B: resto de la app, entrada orquestada + number tick + press físico +
+ * hover lift + acordeón animado. Máximo tres primitivas por página.
+ *
+ * Depende de tokens.css. Ningún color ni font-family literal acá: todo por token.
+ *
+ * slop test: 57/58 · contrast: pass (40-41) · nav/footer: pass (42-45)
+ * honest: pass (46) · chrome: pass (47) · tokens: pass (48) · mobile: pass (34, 49-57)
+ * gate 7 (blanco puro) — anulado a propósito: el manual de Scouting America
+ * declara #FFFFFF el quinto color de la paleta. La marca del cliente manda.
+ */
+
+html, body { overflow-x: clip; }
+
+/* ================================================================
+   Base
+   ================================================================ */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  background: var(--sa-blue);
+  color: var(--sa-white);
+  padding: var(--space-3);
+  font-family: var(--font-ui);
+}
+.skip-link:focus { left: var(--space-4); top: var(--space-4); z-index: 20; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: var(--space-5) var(--page-gutter) var(--space-7);
+}
+
+/* Los titulares largos se parten dentro de la palabra antes que desbordar. */
+.display, h1, h2, h3, .mast-name, .fold__lede {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+/* Lo mismo para el texto que vive dentro de una caja. No son encabezados
+   —son spans dentro de tiles y fichas— así que la regla de arriba no los
+   alcanzaba: "Planificación del Pack" y "10 Adventures" se salían del padding
+   y quedaban cortados contra el borde, porque .tile lleva overflow:hidden.
+   `break-word` y no `anywhere`: parte solo cuando la palabra sola no cabe. */
+.tile > *, .tile__name, .tile__label,
+.progresscard > *, .progresscard__top > div > *,
+.photoband__label, .photoband__title, .photoband__text,
+.deckcard__name, .installbar__text, .notice, .card__band {
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+/* Si hay que partir una palabra, que sea con guion y por sílabas. El idioma
+   del documento lo fija shell.js, así que el navegador silabea en español o
+   en inglés según toque. "Planifica-ción" se lee; "Planifica ción", no. */
+.tile__name, .deckcard__name, .photoband__title, .progresscard__top p {
+  hyphens: auto;
+}
+
+/* Las versalitas con letter-spacing no se parten nunca: "KINDERGARTE / N"
+   no es una palabra rota, es un error de composición. */
+.tile__label, .tile__pill, .page__label {
+  hyphens: none;
+  overflow-wrap: normal;
+}
+
+/* Un grid o un flex no encoge a sus hijos por debajo de su contenido salvo que
+   se le diga. Sin esto, partir la palabra no basta: la caja crece igual. */
+.tile, .bento > li, .progresscard, .progresscard__top,
+.deckcard, .cardgrid > * {
+  min-width: 0;
+}
+
+a { color: var(--sa-blue); text-underline-offset: 0.18em; }
+
+/* ================================================================
+   N6 · Newspaper masthead — solo la portada
+   La línea de fecha no es decoración: este producto ES la tarjeta de
+   esta semana, y decirlo orienta al líder que entra el lunes.
+   ================================================================ */
+
+.nav-mast {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--page-gutter) 0;
+  text-align: center;
+}
+.nav-mast__logo { height: 26px; width: auto; }
+.mast-line {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+.mast-name {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  color: var(--text-display);
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 0.98;
+  margin: 0;
+}
+.mast-nav ul {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  list-style: none; padding: 0; margin: 0;
+}
+.mast-nav a {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;           /* un enlace de nav nunca parte en dos líneas */
+  display: inline-flex; align-items: center;
+  min-height: var(--tap-min);
+}
+.mast-rule {
+  border: 0;
+  border-top: var(--rule-hair) solid var(--sa-tan);
+  border-bottom: var(--rule-hair) solid var(--sa-tan);
+  height: 4px;
+  width: 100%;
+  margin: var(--space-4) 0 0;
+}
+
+/* ================================================================
+   N9 · Edge-aligned — el resto de las páginas
+   Wordmark izquierda, una acción derecha, nada en el medio.
+   El vacío es el diseño; llenarlo lo convierte en otra barra genérica.
+   ================================================================ */
+
+.nav-edge {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--page-gutter);
+  border-bottom: var(--rule-hair) solid var(--sa-tan);
+}
+.nav-edge__brand {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  text-decoration: none; color: var(--text-strong);
+  min-height: var(--tap-min);
+  min-width: 0;
+  flex: 0 1 auto;      /* la marca cede antes que empujar la acción fuera de pantalla */
+  overflow: hidden;
+}
+.nav-edge__logo { height: 22px; width: auto; max-width: 100%; display: block; }
+.nav-edge__title {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 42vw;
+}
+.nav-edge__back {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex; align-items: center;
+  min-height: var(--tap-min);
+}
+
+/* Toggle de idioma — siempre visible, nunca dentro de un menú.
+   Es la función más importante de la app para un papá hispanohablante.
+   Se estiliza como un segmented control de app nativa. */
+.lang {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--sa-light-tan);
+  border-radius: var(--radius-pill);
+  box-shadow: inset 0 1px 3px rgb(0 51 102 / 0.08);
+}
+.lang__btn {
+  min-height: 34px;
+  min-width: 2.75rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out),
+              color var(--dur-short) var(--ease-out);
+}
+.lang__btn:hover { color: var(--text-strong); }
+.lang__btn:active { transform: scale(0.96); transition-duration: var(--dur-micro); }
+.lang__btn[aria-pressed="true"] {
+  background: var(--sa-white);
+  color: var(--sa-blue);
+  box-shadow: 0 1px 4px rgb(0 51 102 / 0.12);
+}
+.lang__btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* ------------------------------------------------------- avatar */
+
+/* Círculo con foto o inicial — mismo lenguaje que .newsitem__icon.
+   Sin foto: inicial del nombre sobre azul de marca, nunca un ícono
+   genérico de persona (eso no dice de quién es la cuenta). */
+.avatar {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; border-radius: var(--radius-pill);
+  padding: 0; margin: 0;
+  overflow: hidden;
+  background: var(--sa-blue);
+  color: var(--sa-white);
+  font-family: var(--font-display);
+  text-decoration: none;
+  cursor: pointer;
+  flex: none;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar--sm { inline-size: 2.75rem; block-size: 2.75rem; font-size: var(--step--1); font-weight: var(--fw-bold); }
+.avatar--lg { inline-size: 5.5rem; block-size: 5.5rem; font-size: var(--step-3); }
+
+/* La cámara flota sobre el borde del avatar grande, como en cualquier app
+   con foto de perfil — la afordancia de "esto se toca para cambiar". */
+.avatar-edit { position: relative; display: inline-block; }
+.avatar-edit__btn {
+  position: absolute; inset-block-end: -2px; inset-inline-end: -2px;
+  inline-size: 2rem; block-size: 2rem;
+  display: grid; place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 2px solid var(--canvas);
+  box-shadow: var(--shadow-paper);
+  color: var(--sa-blue);
+  cursor: pointer;
+}
+.avatar-edit__btn:active { transform: scale(0.94); }
+
+/* ================================================================
+   Vitrina · 08 Photographic
+   El campo llega a los bordes; la lámina va entera encima.
+   No se recorta contenido oficial del programa.
+   ================================================================ */
+
+.fold {
+  background: var(--sa-light-tan);
+  border-block: var(--rule-hair) solid var(--sa-tan);
+  padding-block: var(--space-6) var(--space-8);
+  padding-inline: var(--page-gutter);
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+}
+.fold--warm { background: var(--sa-tan); }
+.fold__card {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  height: auto;
+}
+.fold__caption {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+  max-width: var(--measure-note);
+}
+
+/* La banda de texto entre folds: angosta, anotación, no titular. */
+.band { padding: var(--space-7) var(--page-gutter); }
+.band__inner { max-width: var(--measure); margin-inline: auto; }
+.band__inner--wide { max-width: 58rem; margin-inline: auto; }
+.band--warm { background: var(--sa-light-tan); }
+
+.fold__lede {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  line-height: 1.25;
+  color: var(--text-strong);
+  margin: 0 0 var(--space-4);
+  max-width: 24ch;
+}
+
+/* ================================================================
+   Índice · 13 Index-First
+   Filas con regla fina. Sin tarjetas, sin sombras, sin cajas.
+   ================================================================ */
+
+.index-intro {
+  max-width: var(--measure);
+  color: var(--text);
+  margin: 0 0 var(--space-6);
+}
+
+.index-list { list-style: none; margin: 0; padding: 0; border-top: var(--rule-hair) solid var(--sa-tan); }
+.index-list li { border-bottom: var(--rule-hair) solid var(--sa-tan); }
+
+.index-row {
+  display: flex; align-items: baseline; gap: var(--space-4);
+  padding: var(--space-4) 0;
+  min-height: var(--tap-min);
+  text-decoration: none;
+  color: var(--text-strong);
+}
+.index-row:hover .index-row__name { text-decoration: underline; }
+.index-row__name {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  line-height: 1.2;
+  flex: 1;
+  min-width: 0;
+}
+.index-row__meta {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.index-row[aria-disabled="true"] { color: var(--text-muted); }
+
+.index-group { margin-top: var(--space-6); }
+.index-group__label {
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sa-red);
+  margin: 0 0 var(--space-2);
+}
+.index-group__req {
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  color: var(--text);
+  margin: 0 0 var(--space-3);
+  max-width: var(--measure);
+}
+
+/* ================================================================
+   Documento · 02 Long Document
+   Una columna, medida de lectura, encabezados que emergen del flujo.
+   ================================================================ */
+
+.prose { max-width: var(--measure); margin-inline: auto; }
+.prose > * + * { margin-top: var(--space-4); }
+.prose h2 {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  color: var(--text-display);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-3);
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  color: var(--text-strong);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+.prose p { margin: 0; }
+.prose ol, .prose ul { margin: 0; padding-left: 1.4em; }
+.prose li + li { margin-top: var(--space-2); }
+.prose__lede {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--text-strong);
+}
+
+/* Ícono + texto, como .state y .newsitem — el borde de color a la izquierda
+   dejaba una esquina rota donde se cruzaba con el radio de la tarjeta
+   (bug visual real, 19-ago-2026). El tono se lee en el ícono, no en un filo. */
+.aside {
+  display: grid; grid-template-columns: auto 1fr; gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+  margin-block: var(--space-5);
+}
+.aside p { margin: 0; }
+.aside p + p { margin-top: var(--space-3); }
+.aside__title { font-weight: var(--fw-bold); margin: 0 0 var(--space-2); }
+
+/* ================================================================
+   CTA — un primario por pantalla, el resto enlaces tipográficos
+   ================================================================ */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: var(--tap-min);
+  padding: var(--space-3) var(--space-5);
+  border: 2px solid transparent;
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step-0);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out),
+              transform var(--dur-micro) var(--ease-out);
+}
+.btn--primary { background: var(--sa-blue); color: var(--sa-white); }
+.btn--primary:hover { background: var(--sa-dark-blue); }
+.btn--accent { background: var(--sa-red); color: var(--sa-white); }
+.btn--ghost { background: transparent; color: var(--sa-blue); border-color: var(--sa-blue); }
+.btn--block { width: 100%; }
+/* Press físico: entra rápido y en ease-in, vuelve en ease-out. Se siente
+   apretado, no animado. */
+.btn:active { transform: translateY(1px) scale(0.99); transition-duration: var(--dur-micro); }
+.btn:disabled, .btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  background: var(--sa-pale-gray);
+  color: var(--sa-white);
+}
+
+/* El secundario no es un botón. Es un enlace con flecha.
+   El subrayado engrosa con text-decoration-thickness: no mueve layout,
+   a diferencia de cambiar border-bottom-width. */
+.link-arrow {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  min-height: var(--tap-min);
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  font-size: var(--step-0);
+  letter-spacing: 0.04em;
+  color: var(--sa-blue);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  white-space: nowrap;
+  transition: text-decoration-thickness var(--dur-micro) var(--ease-out),
+              color var(--dur-short) var(--ease-out);
+}
+.link-arrow:hover { text-decoration-thickness: 2px; }
+.link-arrow:active { color: var(--sa-dark-blue); }
+.link-arrow[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; }
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+
+/* ================================================================
+   La tarjeta — consumida por card.js. No cambiar nombres de clase.
+   ================================================================ */
+
+.card { background: var(--surface); border: var(--rule-hair) solid var(--sa-tan); }
+.card--art { border: 0; }
+.card__art { margin: 0; background: var(--sa-light-tan); }
+.card__art img { display: block; width: 100%; height: auto; }
+
+/* Banda de personalización: de quién viene. El brief la pide explícita. */
+.card__band {
+  display: flex; align-items: center; gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--sa-blue);
+  color: var(--sa-white);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+}
+.card__band svg { flex: none; color: var(--sa-pale-blue); }
+.card__band span {
+  color: var(--sa-pale-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: var(--space-2);
+}
+
+.card__head { padding: var(--space-4); background: var(--sa-blue); color: var(--sa-white); }
+.card__kicker {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-1);
+  color: var(--sa-pale-blue);
+}
+.card__title { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.15; margin: 0; }
+.card__rank { font-family: var(--font-display); font-size: var(--step-3); margin: 0; }
+.card__original { font-size: var(--step--1); margin: var(--space-2) 0 0; opacity: 0.85; }
+.card__body { padding: var(--space-4); }
+.card__desc { margin: 0 0 var(--space-4); }
+.card__foot {
+  padding: var(--space-3) var(--space-4);
+  border-top: var(--rule-hair) solid var(--sa-tan);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.card__text { margin-top: var(--space-4); border-top: var(--rule-hair) solid var(--sa-tan); padding-top: var(--space-3); }
+.card__text summary {
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-weight: var(--fw-bold);
+  color: var(--sa-blue);
+  min-height: var(--tap-min);
+  display: flex; align-items: center;
+}
+.card__text[open] summary { margin-bottom: var(--space-3); }
+
+.reqdots { display: flex; flex-wrap: wrap; gap: var(--space-1); list-style: none; margin: 0 0 var(--space-3); padding: 0; }
+.reqdots li {
+  min-width: 1.7rem; height: 1.7rem;
+  display: grid; place-items: center;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+  font-variant-numeric: tabular-nums;
+  background: var(--ink-veil);
+}
+.reqdots li[aria-current="step"] { background: var(--sa-white); color: var(--sa-blue); }
+
+.requirement {
+  border-left: var(--rule-w) solid var(--sa-red);
+  padding-left: var(--space-4);
+  margin: 0 0 var(--space-4);
+}
+.requirement__label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.meters { display: grid; gap: var(--space-3); margin: 0 0 var(--space-4); }
+.meter { display: grid; grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr) auto; align-items: center; gap: var(--space-2); }
+.meter__label { font-family: var(--font-ui); font-size: var(--step--1); }
+.meter__track { display: flex; gap: 3px; }
+.meter__pip { flex: 1; height: 0.5rem; background: var(--sa-light-tan); border: var(--rule-hair) solid var(--sa-tan); }
+.meter__pip[data-on="true"] { background: var(--sa-blue); border-color: var(--sa-blue); }
+.meter__value { font-family: var(--font-ui); font-size: var(--step--1); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+.place {
+  display: inline-flex; align-items: center;
+  border: var(--rule-hair) solid var(--sa-tan);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.legend-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.legend-list strong { display: block; }
+.legend-hint { color: var(--text-muted); font-size: var(--step--1); }
+
+.card--resource { border: 2px solid var(--sa-dark-gray); }
+.card--resource .card__head { background: var(--sa-dark-gray); }
+.card--resource ol { margin: 0; padding-left: 1.2rem; display: grid; gap: var(--space-2); }
+.card--adventure .card__head { background: var(--sa-tan); color: var(--text-strong); }
+.card--adventure .card__kicker { color: var(--sa-blue); }
+.card--cover .card__head { padding-block: var(--space-7); text-align: center; }
+
+.badge {
+  display: inline-block;
+  background: var(--sa-blue); color: var(--sa-white);
+  font-family: var(--font-ui);
+  font-size: var(--step--1); font-weight: var(--fw-bold);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: var(--space-1) var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* Rediseño 20-ago: la barra plana a la izquierda era el patrón de hace unos
+   años. Ahora es tarjeta con sombra suave + ícono-círculo (Shell.notice()),
+   mismo lenguaje que .newsitem__icon/Shell.estado — nada nuevo que aprender,
+   solo mejor terminado. Radio grande + sombra difusa en vez de borde duro. */
+.notice {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+  margin-bottom: var(--space-4);
+}
+.notice__icon {
+  flex: none;
+  inline-size: 2.25rem; block-size: 2.25rem;
+  /* Halo suave detrás del chip — el toque 2026: el acento vive en un
+     resplandor difuso, no en un borde recto. rgba fija (no color-mix): el
+     público de la app incluye Android viejo, y color-mix no corre ahí. */
+  box-shadow: 0 0 0 6px rgb(0 0 0 / 0.045);
+}
+.notice__icon svg { inline-size: 1.05rem; block-size: 1.05rem; }
+.notice__text {
+  margin: 0;
+  align-self: center;
+  font-size: var(--step--1);
+  line-height: 1.5;
+}
+.notice__text strong { color: var(--text-strong); }
+.notice__text a, .notice__text button.linklike {
+  color: var(--sa-blue);
+  font-weight: var(--fw-bold);
+  text-underline-offset: 0.15em;
+}
+
+/* ================================================================
+   Formulario — consola del líder
+   ================================================================ */
+
+.field { display: grid; gap: var(--space-2); margin-bottom: var(--space-4); max-width: 24rem; }
+.field label {
+  font-family: var(--font-ui); font-weight: var(--fw-bold);
+  font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.field input {
+  min-height: var(--tap-min);
+  padding: var(--space-3);
+  border: var(--rule-hair) solid var(--sa-gray);
+  background: var(--surface);
+  font-family: var(--font-display);
+  font-size: var(--step-0);
+  color: var(--text-strong);
+}
+.field input:hover { background: var(--sa-light-tan); }
+.field input:focus-visible { border-color: var(--sa-blue); }
+.field input:disabled { opacity: 0.55; cursor: not-allowed; }
+/* El hueco del mensaje existe aunque esté vacío. */
+.form-msg { min-height: 1lh; margin: var(--space-3) 0 0; font-size: var(--step--1); color: var(--text-muted); }
+
+/* ================================================================
+   Migas
+   ================================================================ */
+
+.crumbs {
+  display: flex; flex-wrap: wrap; gap: var(--space-2);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--space-5); padding: 0;
+  list-style: none;
+  color: var(--text-muted);
+}
+.crumbs li + li::before { content: "/"; margin-right: var(--space-2); color: var(--text-muted); }
+
+/* ================================================================
+   Ft1 · Mast-headed  ·  Ft2 · Inline single line
+   ================================================================ */
+
+.foot-mast {
+  border-top: var(--rule-hair) solid var(--sa-tan);
+  padding: var(--space-7) var(--page-gutter);
+  text-align: center;
+  display: grid; justify-items: center; gap: var(--space-2);
+}
+.foot-mast__logo { height: 26px; width: auto; margin-bottom: var(--space-2); }
+.foot-mast__tagline {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  color: var(--text-display);
+  margin: 0;
+}
+.foot-mast__meta, .foot-line p {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  margin: 0;
+  max-width: var(--measure);
+}
+
+.foot-line {
+  border-top: var(--rule-hair) solid var(--sa-tan);
+  padding: var(--space-5) var(--page-gutter);
+  display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4);
+  align-items: baseline;
+}
+.foot-line a { font-family: var(--font-ui); font-size: var(--step--1); white-space: nowrap; }
+
+/* ================================================================
+   Guía de estilos — solo documentación interna
+   ================================================================ */
+
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr)); gap: var(--space-3); }
+.swatch { border: var(--rule-hair) solid var(--sa-tan); }
+.swatch__chip { height: 5rem; display: grid; place-items: center; font-family: var(--font-ui); font-weight: var(--fw-bold); }
+.swatch__meta { padding: var(--space-3); font-size: var(--step--1); font-family: var(--font-ui); }
+.swatch__meta span { display: block; color: var(--text-muted); }
+.specimens { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr)); gap: var(--space-5); }
+.specimen__label {
+  font-family: var(--font-ui);
+  font-size: var(--step--1); font-weight: var(--fw-bold);
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-muted); margin: 0 0 var(--space-2);
+}
+.scroller { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-family: var(--font-ui); font-size: var(--step--1); }
+caption { text-align: left; color: var(--text-muted); padding-bottom: var(--space-2); }
+th, td { text-align: left; padding: var(--space-2) var(--space-3); border-bottom: var(--rule-hair) solid var(--sa-tan); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.pass { color: var(--ok-green); font-weight: var(--fw-bold); }
+.fail { color: var(--sa-red); font-weight: var(--fw-bold); }
+.dont { display: grid; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.dont li { padding-left: 1.6rem; position: relative; color: var(--text); font-size: var(--step--1); }
+.dont li::before { content: "\2715" / ""; position: absolute; left: 0; color: var(--sa-red); font-weight: var(--fw-bold); }
+.logo-box { background: var(--sa-light-tan); padding: var(--space-6); display: grid; place-items: center; }
+.logo-box img { max-width: 100%; height: auto; }
+.cols { display: grid; gap: var(--space-6); }
+@media (min-width: 48rem) { .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+/* ================================================================
+   Foco — instantáneo, nunca animado
+   ================================================================ */
+
+:where(a, button, summary, input, [tabindex]):focus-visible {
+  outline: 3px solid var(--sa-blue);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ================================================================
+   Teléfono — 320 / 375 / 414
+   ================================================================ */
+
+@media (max-width: 40rem) {
+  /* En el teléfono solo caben marca e idioma. El título y el "volver" se van:
+     las migas de pan que están justo debajo hacen ese trabajo, y son enlaces
+     reales, no una flecha sin nombre accesible. */
+  .nav-edge__title,
+  .nav-edge__back { display: none; }
+  .nav-edge__logo { height: 18px; }
+  .nav-edge { gap: var(--space-3); padding-inline: var(--space-4); }
+  .fold { padding-inline: var(--space-4); }
+  .meter { grid-template-columns: minmax(0, 6rem) minmax(0, 1fr) auto; }
+  .actions { gap: var(--space-3); }
+  .actions .btn, .actions .link-arrow { width: 100%; }
+}
+
+/* ================================================================
+   APP SHELL
+   Lo que convierte páginas sueltas en algo que se usa como app.
+   ================================================================ */
+
+:root {
+  --z-content: 1;
+  --z-sticky: 200;
+  --z-nav: 300;
+  --z-overlay: 400;
+  --tabbar-h: 60px;
+  /* Alto real del pie desde el borde de la pantalla hasta el TOPE de la
+     barra de pestañas. En desktop/tablet (bottom:0, sin dock) es solo
+     --tabbar-h. El dock flotante de mobile (ver "dock de app nativa" más
+     abajo) se redefine ahí mismo: agrega su padding+borde propios y el
+     hueco que lo separa del borde — sin esto, cualquier barra que se
+     apoye en --tabbar-h a solas queda por debajo del dock real (bug real,
+     19-ago-2026: el installbar quedaba tapado). */
+  --tabbar-clearance: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px));
+}
+
+/* La barra superior se queda: en una app siempre sabés dónde estás y cómo salir. */
+.nav-edge, .netbar { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--surface); }
+
+/* Reserva para la barra inferior + el gesto del sistema. Sin esto el último
+   elemento de cada lista queda tapado y parece que la página se cortó. */
+.has-tabbar { padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px)); }
+
+/* Reserva para .actionbar, SOLO mientras está visible — puesta fija en
+   <main> dejaba un hueco enorme en los pasos sin barra (bug real, 19-ago).
+   ir() en mazo-nuevo.html prende y apaga esta clase según el paso. */
+.has-actionbar { padding-bottom: calc(var(--tabbar-clearance) + 90px); }
+
+/* ---------------------------------------------------- barra de pestañas */
+
+.tabbar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: var(--z-nav);
+  background: var(--surface);
+  border-top: var(--rule-hair) solid var(--sa-tan);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+/* Las columnas salen de CUANTAS pestañas haya, no de un 4 escrito a mano: la
+   familia tiene tres (Inicio, Barajas, Guía) y el líder cuatro. Con repeat(4)
+   fijo, la navegación de familia dejaba una columna fantasma y las tres
+   pestañas quedaban apretadas contra la izquierda. */
+.tabbar__list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  list-style: none; margin: 0; padding: 0;
+  max-width: 46rem; margin-inline: auto;
+}
+.tab {
+  display: grid; justify-items: center; align-content: center; gap: 3px;
+  min-height: var(--tabbar-h);
+  padding: var(--space-2) var(--space-1);
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.03em;
+  touch-action: manipulation;        /* mata el retardo de 300 ms */
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--dur-short) var(--ease-out),
+              background-color var(--dur-short) var(--ease-out);
+}
+.tab__icon { width: 24px; height: 24px; }
+.tab__label { line-height: 1; white-space: nowrap; }
+
+/* Presionado: cambia el fondo, no el tamaño. Escalar mueve el layout. */
+.tab:hover { color: var(--text-strong); }
+.tab:active { background: var(--sa-light-tan); }
+.tab[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+
+/* El estado activo no se marca solo con color — también con peso y una barra.
+   Color solo no le sirve a quien no distingue azul de gris. */
+.tab[aria-current="page"] {
+  color: var(--sa-blue);
+  font-weight: var(--fw-bold);
+  box-shadow: inset 0 3px 0 0 var(--sa-blue);
+}
+
+/* ---------------------------------------------------- aviso de conexión */
+
+.netbar {
+  margin: 0;
+  padding: var(--space-2) var(--page-gutter);
+  background: var(--sa-red);
+  color: var(--sa-white);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  text-align: center;
+}
+/* El atributo hidden tiene que ganarle a display:grid/flex. Sin esto, un
+   elemento con display puesto por clase ignora [hidden] —la regla del
+   navegador es display:none con especificidad de tipo— y se sigue viendo.
+   Pasó de verdad: los seis esqueletos de barajas.html seguían en pantalla
+   debajo del aviso de "todavía no tiene tarjetas". */
+[hidden] { display: none !important; }
+
+.netbar[hidden] { display: none; }
+
+/* ---------------------------------------------------- instalar */
+
+.installbar {
+  position: fixed;
+  inset-inline: var(--space-4);
+  bottom: calc(var(--tabbar-clearance) + var(--space-4));
+  z-index: var(--z-overlay);
+  transition: bottom var(--dur-short) var(--ease-out);
+  display: flex; align-items: center; gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--sa-dark-blue);
+  color: var(--sa-white);
+  box-shadow: var(--shadow-lift);
+  max-width: 34rem; margin-inline: auto;
+}
+.installbar__text {
+  margin: 0; flex: 1; min-width: 0;
+  font-family: var(--font-ui); font-size: var(--step--1);
+}
+.installbar .btn { padding-inline: var(--space-4); }
+.installbar__close {
+  min-width: var(--tap-min); min-height: var(--tap-min);
+  background: none; border: 0; color: var(--sa-pale-blue);
+  font-size: var(--step-0); cursor: pointer;
+}
+/* Bug 20-ago: en el paso 2 de armar el mazo, .actionbar (el conteo + "Review →")
+   y .installbar caían casi en el mismo bottom, y como el installbar tiene
+   z-index más alto (es overlay, el actionbar es sticky) tapaba entero el
+   único botón para avanzar — el líder se quedaba sin cómo seguir hasta que
+   cerraba el aviso de instalar. Con :has() el installbar se corre arriba del
+   todo SOLO cuando el actionbar está visible; navegadores sin :has() (raros
+   a esta altura) se quedan con el comportamiento de antes, no empeora nada. */
+body:has(#main.has-actionbar) .installbar {
+  bottom: calc(var(--tabbar-clearance) + var(--space-3) + 5.75rem);
+}
+
+/* ---------------------------------------------------- esqueletos */
+
+/* Del alto real del contenido: cuando llega el dato nada salta (CLS). */
+.skel { background: var(--sa-light-tan); border: var(--rule-hair) solid var(--sa-tan); }
+.skel--row { height: 3.5rem; }
+.skel--card { width: 100%; max-width: 28rem; aspect-ratio: 413 / 563; margin-inline: auto; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .skel { animation: skel-pulse 1.4s var(--ease-out) infinite; }
+  @keyframes skel-pulse { 50% { opacity: 0.55; } }
+}
+
+/* ---------------------------------------------------- vacío y error */
+
+/* La CAJA ocupa el ancho disponible; lo que se limita a la medida de lectura
+   es el TEXTO. Con max-width en la caja, un aviso quedaba en una tira estrecha
+   con medio contenedor vacío al lado y las frases partidas en tres palabras
+   por línea. La medida sirve para leer, no para encoger el recuadro. */
+/* Misma tarjeta que .newsitem: ícono + texto, sin la regla de color a la
+   izquierda (leía "alerta de sitio viejo" incluso para el caso vacío,
+   que no es un error). El tono lo da el color del ícono, no un borde. */
+.state {
+  display: grid; grid-template-columns: auto 1fr; gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-5);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+}
+.state__title, .state__text { max-width: var(--measure); }
+.state__title { font-family: var(--font-display); font-size: var(--step-1); color: var(--text-strong); margin: 0 0 var(--space-2); }
+.state__text { margin: 0 0 var(--space-4); color: var(--text-muted); }
+
+/* ---------------------------------------------------- pantalla grande */
+
+/* ≥64rem la barra inferior no tiene sentido: el pulgar no llega ahí con mouse.
+   Sube y se vuelve una fila horizontal bajo la cabecera. */
+@media (min-width: 64rem) {
+  .has-tabbar { padding-bottom: 0; }
+  /* Un solo elemento pegado arriba, no dos: si la cabecera y las pestañas se
+     quedan las dos en top:0 se pisan al hacer scroll. Manda la navegación. */
+  .nav-edge { position: static; }
+  .tabbar {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    border-top: 0;
+    border-bottom: var(--rule-hair) solid var(--sa-tan);
+    padding-bottom: 0;
+  }
+  .tabbar__list { grid-auto-columns: max-content; justify-content: center; gap: var(--space-6); }
+  .tab { grid-auto-flow: column; grid-template-columns: auto auto; gap: var(--space-2); align-items: center; min-height: 52px; }
+  .tab[aria-current="page"] { box-shadow: inset 0 -3px 0 0 var(--sa-blue); }
+}
+
+/* ================================================================
+   CAPA DE DISEÑO 2026
+   Cuatro ideas, todas atadas a lo que el producto ES:
+
+   1. Fotografía a sangre con tipografía encima — no foto dentro de caja.
+      La foto es oficial de Scouting America (su propio brandbook).
+   2. Profundidad por CAPAS, no por sombra. Elementos que se salen de su
+      caja y se montan sobre la de al lado. El manual prohíbe sombras;
+      el solape da la misma jerarquía sin romper la marca.
+   3. Carrusel con scroll-snap: es una BARAJA. Se pasan cartas con el dedo.
+      La metáfora no es decorativa, es la del objeto real.
+   4. Campos de color alternados dando ritmo — navy, tan, blanco.
+   ================================================================ */
+
+/* ------------------------------------------------------------ hero */
+
+/* La foto se ve arriba; el texto vive abajo, sobre la parte densa del velo.
+   Así la fotografía respira y el contraste del titular queda garantizado. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  background: var(--sa-dark-blue);
+  color: var(--sa-white);
+  min-height: min(78svh, 34rem);
+  display: grid;
+  align-content: end;
+  padding: calc(var(--space-8) * 2) var(--page-gutter) calc(var(--space-6) + 5rem);
+  overflow: hidden;
+}
+.hero__photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 32%;   /* las caras quedan en el tercio alto */
+  z-index: -2;
+}
+/* El velo garantiza el contraste del texto sobre CUALQUIER zona de la foto.
+   Sin esto el titular depende de dónde caiga una nube. */
+.hero::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg,
+    var(--scrim-top) 0%,
+    var(--scrim-top) 22%,
+    var(--scrim-mid) 58%,
+    var(--scrim-bottom) 100%);
+}
+.hero__inner { max-width: 46rem; margin-inline: auto; }
+.hero__kicker {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sa-pale-blue);
+  margin: 0 0 var(--space-3);
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-regular);
+  font-size: var(--step-4);
+  line-height: 1.02;
+  color: var(--sa-white);
+  margin: 0 0 var(--space-4);
+  max-width: 16ch;
+  overflow-wrap: anywhere;
+}
+.hero__lede {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--sa-white);
+  margin: 0 0 var(--space-6);
+  max-width: 40ch;
+}
+
+/* La carta se sale del hero y se monta sobre la sección siguiente.
+   Ese solape es la profundidad — no hay una sola sombra en la página. */
+.hero__card {
+  position: relative;
+  display: block;
+  width: min(15rem, 46vw);
+  margin: 0 auto -9rem;
+  border: 3px solid var(--sa-white);
+  transform: rotate(-2.5deg);
+}
+.hero + * { padding-top: calc(var(--space-8) + 4rem); }
+
+/* ------------------------------------------------- baraja deslizable */
+
+.deckstrip { padding: var(--space-6) 0 var(--space-7); }
+.deckstrip__head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: var(--space-4);
+  padding-inline: var(--page-gutter);
+  margin-bottom: var(--space-4);
+  max-width: 60rem; margin-inline: auto;
+}
+.deckstrip__title { font-family: var(--font-display); font-size: var(--step-2); color: var(--text-strong); margin: 0; }
+
+/* Snap por ítem: el dedo suelta y la carta queda encuadrada, como una baraja. */
+.deckstrip__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(14rem, 62vw);
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--page-gutter);
+  padding: var(--space-2) var(--page-gutter) var(--space-4);
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.deckcard {
+  scroll-snap-align: start;
+  display: grid; gap: var(--space-2);
+  text-decoration: none;
+  color: var(--text-strong);
+}
+.deckcard img {
+  display: block; width: 100%; height: auto;
+  border: var(--rule-hair) solid var(--sa-tan);
+  transition: transform var(--dur-short) var(--ease-out);
+}
+.deckcard:hover img { transform: translateY(-4px); }
+.deckcard:active img { transform: translateY(0); }
+.deckcard__name { font-family: var(--font-display); font-size: var(--step-0); line-height: 1.2; }
+.deckcard__meta {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted);
+}
+
+/* --------------------------------------------------- fichas de rank */
+
+.ranktiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(13rem, 100%), 1fr));
+  gap: var(--space-3);
+  list-style: none; margin: 0; padding: 0;
+}
+.ranktile {
+  position: relative; isolation: isolate;
+  display: grid; align-content: end; gap: var(--space-1);
+  min-height: 9.5rem;
+  padding: var(--space-4);
+  background: var(--sa-dark-blue);
+  color: var(--sa-white);
+  text-decoration: none;
+  overflow: hidden;
+}
+.ranktile__photo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; z-index: -2;
+  transition: transform 240ms var(--ease-out);
+}
+.ranktile::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, var(--scrim-tile-a), var(--scrim-tile-b));
+}
+.ranktile:hover .ranktile__photo { transform: scale(1.04); }
+.ranktile__name { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.05; }
+.ranktile__meta {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--sa-pale-blue);
+}
+.ranktile__flag {
+  position: absolute; inset-block-start: 0; inset-inline-end: 0; z-index: 1;
+  background: var(--sa-red); color: var(--sa-white);
+  font-family: var(--font-ui); font-size: var(--step--1); font-weight: var(--fw-bold);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+}
+
+/* ------------------------------------------------------ banda-foto */
+
+.figband {
+  display: grid;
+  gap: 0;
+  background: var(--sa-light-tan);
+}
+@media (min-width: 52rem) {
+  .figband { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+  .figband--flip .figband__media { order: 2; }
+}
+.figband__media { position: relative; min-height: 16rem; }
+.figband__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.figband__body { padding: var(--space-7) var(--page-gutter); display: grid; align-content: center; gap: var(--space-3); }
+.figband__title { font-family: var(--font-display); font-size: var(--step-2); color: var(--text-display); margin: 0; }
+.figband__body p { margin: 0; max-width: 42ch; }
+
+/* -------------------------------------------------- carta apilada */
+
+/* La carta sobre dos capas desplazadas: se lee como un mazo, no como una
+   imagen suelta. Profundidad por geometría, cero sombras. */
+.cardstack { position: relative; width: 100%; max-width: 26rem; margin-inline: auto; touch-action: pan-y; }
+.cardstack::before,
+.cardstack::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  border: var(--rule-hair) solid var(--sa-tan);
+  background: var(--sa-white);
+}
+.cardstack::before { transform: rotate(-3deg) translateY(6px); }
+.cardstack::after  { transform: rotate(2.2deg) translateY(3px); }
+
+/* ------------------------------------------- barra de acción fija */
+
+/* La acción principal del líder no debe buscarse: vive al alcance del pulgar. */
+/* fixed, no sticky: sticky nunca se pegaba — cualquier ancestro con overflow
+   distinto de visible (html/body ya lo tienen, por el bloqueo de scroll
+   horizontal de arriba) rompe el cálculo de contención de sticky, y esta
+   barra vive "al alcance del pulgar" TODO el paso, no solo cuando el
+   scroll cae justo en su lugar del documento (bug real, 19-ago-2026 —
+   la barra de conteo de mazo-nuevo.html nunca se pegaba al fondo). */
+/* Tarjeta flotante, no una franja pegada al dock — mismo lenguaje que
+   .installbar: separada del nav con su propio hueco, esquinas redondeadas,
+   sombra. Antes tocaba el dock sin aire (pedido 19-ago). */
+.actionbar {
+  position: fixed;
+  inset-inline: var(--space-4);
+  bottom: calc(var(--tabbar-clearance) + var(--space-3));
+  z-index: var(--z-sticky);
+  display: flex; gap: var(--space-3); align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-lift);
+  max-width: 34rem; margin-inline: auto;
+}
+.actionbar .btn { flex: 1; }
+
+@media (min-width: 64rem) {
+  .actionbar { bottom: var(--space-4); }
+}
+
+
+/* --------------------------------------------------------- stats */
+
+.factrow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
+  gap: var(--space-5);
+  padding: var(--space-6) var(--page-gutter);
+  max-width: 60rem; margin-inline: auto;
+}
+.fact { display: grid; gap: var(--space-1); }
+.fact__n {
+  font-family: var(--font-display); font-size: var(--step-3);
+  line-height: 1; color: var(--text-display); font-variant-numeric: tabular-nums;
+}
+.fact__t { font-family: var(--font-ui); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .deckcard img, .ranktile__photo { transition: none; }
+  .deckstrip__track { scroll-snap-type: none; }
+}
+
+/* Grilla de miniaturas — la misma carta del carrusel, en retícula. */
+.cardgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(9.5rem, 100%), 1fr));
+  gap: var(--space-4);
+}
+.deckcard__ph {
+  display: block; aspect-ratio: 413 / 563;
+  background: var(--sa-light-tan);
+  border: var(--rule-hair) solid var(--sa-tan);
+}
+
+/* ================================================================
+   LENGUAJE 2026 · extraído de las referencias que mandó el cliente
+   Lienzo claro · todo redondeado · auras de gradiente · bento
+   irregular · nav en píldora flotante · chips · tipografía grande
+   con pesos mezclados. Los colores de las auras salen de la paleta
+   de marca, no de un degradado genérico.
+   ================================================================ */
+
+body { background: var(--canvas); }
+
+/* Redondeo general — reemplaza la regla de esquinas rectas. */
+.card, .card--art, .btn, .field input, .notice, .state,
+.skel, .swatch, .deckcard img, .deckcard__ph { border-radius: var(--radius); }
+.btn, .lang, .lang__btn, .place, .reqdots li, .tag, .badge { border-radius: var(--radius-pill); }
+
+/* ------------------------------------------------------ aura hero */
+
+.aura {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: var(--space-7) var(--page-gutter) var(--space-8);
+  background: var(--canvas);
+}
+/* Dos blooms desenfocados, uno azul y uno tan. No es una malla genérica:
+   son los colores del manual, y sustituyen a los recortes de foto malos. */
+.aura::before,
+.aura::after {
+  content: ""; position: absolute; z-index: -1;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+.aura::before {
+  inline-size: 78vw; block-size: 78vw;
+  inset-block-start: -22vw; inset-inline-start: -18vw;
+  background: radial-gradient(circle, var(--aura-blue), transparent 70%);
+}
+.aura::after {
+  inline-size: 66vw; block-size: 66vw;
+  inset-block-start: 6vw; inset-inline-end: -24vw;
+  background: radial-gradient(circle, var(--aura-tan), transparent 68%);
+}
+
+/* Flota transparente sobre el hero en vez de una franja propia — la foto
+   llega hasta el borde real de la pantalla (pedido 19-ago, solo el home).
+   z-index explícito: sin él, al pintarse ANTES que .hero en el DOM
+   quedaría detrás (mismo nivel de stacking, gana el que viene después). */
+.pagehead--sobre-foto {
+  position: absolute; inset-inline: 0; inset-block-start: 0;
+  z-index: 2;
+  background: transparent;
+  padding-block: var(--space-4) var(--space-3);
+}
+.pagehead--sobre-foto::before,
+.pagehead--sobre-foto::after { display: none; }
+
+.aura__greet {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-4); margin-bottom: var(--space-6);
+}
+.aura__hello { font-family: var(--font-ui); font-size: var(--step--1); letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); margin: 0; }
+
+/* Titular con pesos mezclados: una palabra fuerte, el resto en regular.
+   Es el gesto tipográfico que se repite en las cuatro referencias. */
+.bigtype {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 11vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  font-weight: var(--fw-regular);
+  margin: 0 0 var(--space-4);
+  overflow-wrap: anywhere;
+}
+.bigtype em { font-style: normal; font-weight: var(--fw-medium); color: var(--sa-blue); }
+.bigtype .ghost { color: var(--text-faint); }
+
+.aura__sub { font-size: var(--step-1); color: var(--text-muted); margin: 0 0 var(--space-6); max-width: 34ch; }
+
+/* --------------------------------------------------------- chips */
+
+.chiprow {
+  display: flex; gap: var(--space-2);
+  overflow-x: auto; scrollbar-width: none;
+  padding-block: var(--space-2);
+  margin-inline: calc(var(--page-gutter) * -1);
+  padding-inline: var(--page-gutter);
+  scroll-snap-type: x proximity;
+}
+.chiprow::-webkit-scrollbar { display: none; }
+.chip {
+  flex: 0 0 auto; scroll-snap-align: start;
+  display: inline-flex; align-items: center;
+  min-height: var(--tap-min);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  border: var(--rule-hair) solid var(--sa-tan);
+  background: var(--surface);
+  font-family: var(--font-ui); font-weight: var(--fw-bold);
+  font-size: var(--step--1); letter-spacing: .04em;
+  color: var(--text); text-decoration: none;
+  white-space: nowrap;
+}
+.chip[aria-current="true"] { background: var(--sa-dark-gray); color: var(--sa-white); border-color: var(--sa-dark-gray); }
+
+/* ---------------------------------------------------------- bento */
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  list-style: none; margin: 0; padding: 0;
+}
+.bento > li { display: grid; }
+.bento > li.is-wide { grid-column: span 2; }
+
+/* Bento irregular en el índice de barajas: cada tercera ficha ocupa dos
+   columnas, lo que rompe la cuadrícula aburrida y da jerarquía. */
+.bento#decks > li:nth-child(3n+1),
+.bento#decks > li:last-child:nth-child(odd) { grid-column: span 2; }
+.bento#decks > li:nth-child(3n+1) .tile__name,
+.bento#decks > li:last-child:nth-child(odd) .tile__name { font-size: var(--step-3); }
+
+/* Con un número impar de barajas, la última quedaba sola en su fila y con
+   medio ancho: "Planificación del Pack" se partía con guion al lado de un
+   hueco vacío. Que ocupe la fila entera resuelve las dos cosas. */
+#ranks > li:last-child:nth-child(odd),
+#decks > li:last-child:nth-child(odd) { grid-column: span 2; }
+
+.tile {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; align-content: space-between; gap: var(--space-4);
+  min-height: 10.5rem;
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  text-decoration: none;
+  color: var(--text-strong);
+  box-shadow: var(--shadow-paper);
+  transition: transform var(--dur-short) var(--ease-out),
+              box-shadow var(--dur-short) var(--ease-out);
+}
+.tile:active { transform: scale(0.985); }
+/* El lift solo existe con mouse de verdad. En táctil no hay hover y un estado
+   que no se puede alcanzar es ruido. */
+@media (hover: hover) and (pointer: fine) {
+  a.tile:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+}
+.tile--blue { background: var(--sa-blue); color: var(--sa-white); }
+.tile--navy { background: linear-gradient(135deg, var(--sa-dark-blue), var(--sa-blue)); color: var(--sa-white); }
+.tile--tan  { background: var(--sa-tan); }
+.tile--pale { background: var(--sa-pale-blue); }
+.tile--red  { background: var(--sa-red); color: var(--sa-white); }
+
+.tile__label {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .08em; text-transform: uppercase; opacity: .8;
+}
+.tile__name { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.05; }
+.tile.is-wide .tile__name { font-size: var(--step-3); }
+.tile__glyph {
+  position: absolute; z-index: -1;
+  inset-block-end: -12%; inset-inline-end: -6%;
+  inline-size: 58%; max-inline-size: 8rem;
+  opacity: .16;
+}
+.tile__glyph--text {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 22vw, 7rem);
+  line-height: 1;
+  color: var(--sa-white);
+  opacity: .10;
+  inset-block-end: -6%; inset-inline-end: -2%;
+  inline-size: auto; max-inline-size: none;
+}
+.tile--foto { min-height: 12.5rem; }
+.tile__pill {
+  justify-self: start;
+  display: inline-flex; align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--sa-red); color: var(--sa-white);
+  font-family: var(--font-ui); font-size: var(--step--1); font-weight: var(--fw-bold);
+  letter-spacing: .04em;
+}
+
+/* --------------------------------------------- tarjeta de progreso */
+
+.progresscard {
+  display: grid; gap: var(--space-3);
+  padding: var(--space-5);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+}
+.progresscard__top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-4); }
+.progresscard__n { font-family: var(--font-display); font-size: var(--step-3); line-height: 1; color: var(--sa-blue); font-variant-numeric: tabular-nums; }
+.progresscard__bar { block-size: 0.5rem; border-radius: var(--radius-pill); background: var(--sa-light-tan); overflow: hidden; }
+/* El relleno se anima con transform, no con width: scaleX no dispara layout.
+   El JS escribe --p (0..1), nunca un ancho. */
+.progresscard__fill {
+  block-size: 100%; inline-size: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--sa-blue);
+  transform: scaleX(var(--p, 0));
+  transform-origin: left center;
+}
+
+/* ------------------------------------ nav compacta de mazo.html
+   Pedido 20-ago: la vieja (.progresscard + botones de ancho completo) se
+   veía "muy debajo" de la tarjeta y ocupaba media pantalla. Esta va pegada
+   arriba de .card__meta: dos flechas circulares 44px + "1 / 3" en el medio,
+   una sola fila que nunca envuelve. */
+.cardnav {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--space-4);
+  margin-block: var(--space-3);
+}
+.cardnav__arrow {
+  display: grid; place-items: center;
+  inline-size: 44px; block-size: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--sa-tan);
+  background: var(--surface);
+  color: var(--sa-blue);
+  flex: none;
+  transition: transform .12s ease, opacity .12s ease;
+}
+.cardnav__arrow--primary {
+  border-color: var(--sa-blue);
+  background: var(--sa-blue);
+  color: #fff;
+}
+.cardnav__arrow:active { transform: scale(0.92); }
+.cardnav__arrow:disabled { opacity: .4; }
+.cardnav__pos {
+  min-inline-size: 4.5em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+.cardnav__pos strong { color: var(--sa-blue); font-family: var(--font-display); }
+
+/* -------------------------------------------------- últimas noticias
+   Lista de anuncios editoriales, formato feed de app: insignia de
+   categoría, título, resumen a dos líneas, fecha y chevron. Reusa la
+   paleta de .tile por categoría en vez de inventar tono nuevo. */
+
+.newsfeed {
+  display: grid; gap: var(--space-3);
+  list-style: none; margin: 0; padding: 0;
+}
+/* Es informativa, no un link a ningún lado todavía: sin :active ni :hover
+   de tile — esos estados prometen una acción que acá no existe. */
+.newsitem {
+  display: grid; grid-template-columns: auto 1fr auto;
+  align-items: start; gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-strong);
+  box-shadow: var(--shadow-paper);
+}
+.newsitem__icon {
+  display: grid; place-items: center;
+  inline-size: 2.75rem; block-size: 2.75rem;
+  border-radius: var(--radius-pill);
+  color: var(--sa-white);
+}
+.newsitem__icon svg { inline-size: 1.25rem; block-size: 1.25rem; }
+.newsitem__icon--blue { background: var(--sa-blue); }
+.newsitem__icon--navy { background: var(--sa-dark-blue); }
+.newsitem__icon--tan  { background: var(--sa-dark-tan); }
+.newsitem__icon--red  { background: var(--sa-red); }
+.newsitem__body { display: grid; gap: var(--space-1); min-width: 0; }
+.newsitem__cat {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  font-weight: var(--fw-bold); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--sa-blue);
+}
+.newsitem__title {
+  font-family: var(--font-display); font-size: var(--step-1);
+  line-height: 1.2; margin: 0;
+}
+.newsitem__excerpt {
+  margin: 0; color: var(--text-muted); font-size: var(--step--1);
+  line-height: 1.45;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.newsitem__meta {
+  display: grid; justify-items: end; gap: var(--space-2);
+  color: var(--text-faint);
+}
+.newsitem__date {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  white-space: nowrap;
+}
+.newsitem__chevron { inline-size: 1rem; block-size: 1rem; }
+
+/* ------------------------------------------ dock de app nativa */
+
+@media (max-width: 63.99rem) {
+  :root {
+    /* +5px de padding y +1px de borde por lado (10+2) del dock, más el
+       espacio de --space-3 que lo separa del borde de la pantalla. */
+    --tabbar-clearance: calc(var(--tabbar-h) + 12px + var(--space-3) + env(safe-area-inset-bottom, 0px));
+  }
+  .tabbar {
+    inset-inline: var(--space-4);
+    inset-block-end: calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+    background: rgb(30 38 47 / 0.92);
+    border: 1px solid rgb(255 255 255 / 0.08);
+    border-radius: 28px;
+    padding: 5px;
+    max-inline-size: 26rem;
+    margin-inline: auto;
+    box-shadow: 0 10px 34px rgb(0 0 0 / 0.28), 0 2px 8px rgb(0 0 0 / 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .tabbar__list {
+    max-inline-size: none;
+    gap: 4px;
+  }
+  .tab {
+    position: relative;
+    color: rgb(255 255 255 / 0.68);
+    min-height: 56px;
+    border-radius: 22px;
+    gap: 4px;
+    transition: color var(--dur-short) var(--ease-out),
+                background-color var(--dur-short) var(--ease-out),
+                transform var(--dur-micro) var(--ease-out);
+  }
+  .tab__icon { width: 27px; height: 27px; stroke-width: 1.7; }
+  .tab__label { font-size: calc(var(--step--1) - 0.02rem); letter-spacing: 0.01em; }
+  .tab:hover { color: rgb(255 255 255 / 0.9); }
+  .tab:active { background: rgb(255 255 255 / 0.10); transform: scale(0.96); transition-duration: var(--dur-micro); }
+  .tab[aria-current="page"] {
+    color: var(--sa-dark-gray);
+    background: var(--sa-white);
+    font-weight: var(--fw-bold);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.22);
+  }
+  .tab[aria-current="page"] .tab__icon { stroke-width: 2; }
+  .tab[aria-current="page"]:active { transform: scale(0.96); }
+  .has-tabbar { padding-bottom: calc(var(--tabbar-h) + var(--space-8) + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* Botón circular de icono, como en las referencias. */
+.iconbtn {
+  display: inline-grid; place-items: center;
+  inline-size: var(--tap-min); block-size: var(--tap-min);
+  border-radius: 50%;
+  border: var(--rule-hair) solid var(--sa-tan);
+  background: var(--surface);
+  color: var(--text-strong);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) { .tile { transition: none; } }
+
+/* Los avisos siguen el mismo lenguaje que los tiles. .requirement es parte
+   del skin impreso de la tarjeta (no se rediseña) y .notice vive en el
+   flujo de texto — ninguno de los dos pasó a ícono-forward, solo .aside. */
+.notice, .requirement {
+  background: var(--surface);
+  border-radius: var(--radius-card);
+  padding: var(--space-4);
+  border-left-width: var(--rule-w);
+}
+.card--art { border-radius: var(--radius-card); overflow: hidden; }
+.card__art img { border-radius: 0; }
+.cardstack::before, .cardstack::after { border-radius: var(--radius-card); }
+
+/* ================================================================
+   Cabecera y pie únicos para toda la app.
+   Antes el home tenía aura + titular grande y las internas una barra
+   blanca distinta: se leían como dos productos. Ahora hay una sola.
+   ================================================================ */
+
+.pagehead { padding-block: var(--space-4) var(--space-5); }
+.pagehead__logo { height: 20px; width: auto; display: block; }
+.aura--compact { padding-block: var(--space-4) var(--space-4); }
+.aura--compact::before { inline-size: 58vw; block-size: 58vw; inset-block-start: -24vw; }
+.aura--compact::after  { inline-size: 48vw; block-size: 48vw; inset-block-start: -6vw; }
+.pagehead .bigtype { font-size: clamp(2rem, 8.5vw, 3.2rem); margin-bottom: var(--space-3); }
+.pagehead .aura__sub { margin-bottom: var(--space-4); font-size: var(--step-0); }
+.pagehead .chiprow { margin-bottom: 0; }
+@media (min-width: 48rem) {
+  .pagehead { padding-block: var(--space-5) var(--space-6); }
+  .pagehead__logo { height: 24px; }
+  .aura--compact { padding-block: var(--space-5) var(--space-5); }
+}
+
+.pagefoot {
+  /* Pedido 20-ago: este padding-top se sumaba al padding-bottom de .page
+     (los dos en space-7) y dejaba ~96px de nada antes del copyright en
+     CADA página — familia y líder por igual, porque las dos comparten
+     estos mismos dos componentes. Bajado a space-5: sigue leyéndose
+     como cierre, ya no como un salto vacío. */
+  padding: var(--space-5) var(--page-gutter) var(--space-7);
+  display: grid; gap: var(--space-1);
+  max-width: 60rem; margin-inline: auto;
+}
+.pagefoot p {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+/* El cuerpo de cada página comparte medida y aire con el home. */
+.page {
+  padding: 0 var(--page-gutter) var(--space-6);
+  max-width: 60rem;
+  margin-inline: auto;
+}
+.page__label {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: var(--fw-bold);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--space-7) 0 var(--space-4);
+}
+.page__label:first-child { margin-top: 0; }
+
+/* Botón de volver — 44 px reales, con nombre accesible. */
+.backbtn {
+  display: inline-grid; place-items: center;
+  inline-size: var(--tap-min); block-size: var(--tap-min);
+  border-radius: 50%;
+  background: var(--surface);
+  border: var(--rule-hair) solid var(--sa-tan);
+  color: var(--text-strong);
+  text-decoration: none;
+  flex: 0 0 auto;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+.backbtn:hover { background: var(--sa-light-tan); }
+.backbtn:active { background: var(--sa-tan); }
+.aura__greet { gap: var(--space-3); }
+.pagehead__brand { display: inline-flex; align-items: center; min-height: var(--tap-min); flex: 1 1 auto; min-width: 0; }
+.pagehead__logo { max-width: 100%; }
+
+/* Banda de fotografía — imagen a sangre con esquinas del sistema. */
+.photoband {
+  position: relative; isolation: isolate; overflow: hidden;
+  border-radius: var(--radius-card);
+  display: grid; align-content: end; gap: var(--space-3);
+  min-height: 17rem;
+  padding: var(--space-5);
+  color: var(--sa-white);
+  background: var(--sa-dark-blue);
+}
+.photoband img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.photoband::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, transparent 8%, var(--scrim-tile-a) 46%, var(--scrim-tile-b));
+}
+.photoband__label {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--sa-pale-blue);
+}
+.photoband__title { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.1; margin: 0; }
+.photoband__text { margin: 0; font-size: var(--step--1); max-width: 40ch; }
+
+/* ---------- Hero editorial (home) ----------
+   Foto a sangre, titular grande, acción clara. Rompe la monotonía de la
+   pila de tarjetas sin salirse de la paleta de marca. */
+.hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: grid; align-content: end; gap: var(--space-2);
+  min-height: 48vh;
+  /* El padding-top ya no lo "usa" nadie visualmente arriba — el header
+     flota encima (.pagehead--sobre-foto) y ese espacio queda ocupado por
+     el logo/ES-EN, no vacío. El de abajo, en cambio, es aire puro sin
+     nada adentro: iguales en CSS se veían desbalanceados (pedido 19-ago).
+     Menos abajo, mismo arriba. */
+  padding: var(--space-8) var(--page-gutter) var(--space-6);
+  margin: 0 0 var(--space-6);
+  /* Sigue "a sangre" (ancho completo, sin margen lateral) pero el borde
+     inferior redondeado la separa del lienzo como una tarjeta flotante,
+     no una franja de sitio web — el mismo --radius-card que usa el resto
+     de tarjetas de la app. */
+  border-radius: 0 0 var(--radius-card) var(--radius-card);
+  color: var(--sa-white);
+  background: var(--sa-dark-blue);
+}
+.hero img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+  object-position: 42% 35%;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(0 51 102 / 0.78) 0%, rgb(0 51 102 / 0.48) 48%, rgb(0 51 102 / 0.16) 74%, transparent 88%),
+    linear-gradient(180deg, rgb(0 51 102 / 0.32) 0%, transparent 20%, var(--scrim-tile-a) 54%, var(--scrim-tile-b));
+}
+.hero__eyebrow {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .12em; text-transform: uppercase; color: var(--sa-pale-blue);
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 9.2vw, 4.8rem);
+  line-height: 1.05;
+  margin: 0;
+  max-width: 18ch;
+  text-shadow: 0 2px 14px rgb(0 51 102 / 0.55);
+}
+.hero__title em { color: var(--sa-pale-blue); font-style: normal; }
+@media (max-width: 47.99rem) {
+  .hero__line { display: block; }
+  /* El velo de escritorio se apoya en el degradé horizontal (sujeto a la
+     izquierda, foto respira a la derecha) y se debilita mucho en el 20%
+     superior. En mobile el titular ocupa casi todo el ancho y el eyebrow
+     vive justo en esa franja de arriba: medido con capturas reales
+     (script casero, mismo criterio que scripts/contrast.py), el texto
+     pálido caía a ~1:1 de contraste sobre las zonas claras de la foto
+     (cielo, follaje). Acá el velo no depende de la posición del texto —
+     cubre parejo, sin dejarle un hueco a la foto. */
+  .hero::after {
+    background:
+      linear-gradient(180deg,
+        rgb(0 51 102 / 0.74) 0%,
+        rgb(0 51 102 / 0.64) 30%,
+        rgb(0 51 102 / 0.74) 62%,
+        rgb(0 51 102 / 0.96) 100%);
+  }
+  /* Aun con el velo reforzado, el pálido de marca (--sa-pale-blue) no
+     llega a pasar 3:1 en ningún punto medido — es un azul demasiado
+     cercano en luminancia al velo navy para garantizar contraste sobre
+     foto. En mobile (donde vive casi toda la lectura) el eyebrow y el
+     acento del titular pasan a blanco; el acento se distingue por peso
+     de fuente en vez de color. Sobre superficie sólida (.tile--navy,
+     etc.) el pálido sigue siendo válido — el problema es solo foto. */
+  .hero__eyebrow, .hero__title em { color: var(--sa-white); }
+  .hero__title em { font-weight: var(--fw-medium); }
+  .hero__sub { color: var(--sa-white); opacity: 0.92; }
+}
+.hero__sub {
+  font-family: var(--font-text); font-size: var(--step-1);
+  color: var(--sa-pale-blue); margin: var(--space-3) 0 0;
+  max-width: var(--measure);
+  text-shadow: 0 1px 10px rgb(0 51 102 / 0.55);
+}
+.hero__cta { margin-top: var(--space-5); }
+@media (max-width: 24.99rem) {
+  .hero__title { font-size: clamp(2rem, 10.5vw, 2.5rem); }
+}
+@media (min-width: 48rem) {
+  .hero { min-height: 52vh; padding-block-end: var(--space-8); }
+  .hero img { object-position: 50% 35%; }
+  .hero__title { max-width: 18ch; font-size: clamp(2.8rem, 7vw, 4.8rem); }
+}
+
+/* ================================================================
+   Migas de pan — texto, no píldoras.
+   Las píldoras se leen como filtros y repetían los destinos de la
+   barra inferior. Las migas dicen DÓNDE ESTÁS, que es otra cosa.
+   ================================================================ */
+
+.pagehead .crumbs {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--space-1) var(--space-2);
+  list-style: none; margin: 0 0 var(--space-3); padding: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: .02em;
+}
+.pagehead .crumbs li { display: flex; align-items: center; gap: var(--space-2); }
+.pagehead .crumbs li + li::before {
+  content: "\203A" / ""; color: var(--sa-dark-tan); font-size: 1.1em; line-height: 1;
+}
+.pagehead .crumbs a { color: var(--text-muted); text-decoration: none; }
+.pagehead .crumbs a:hover { color: var(--sa-blue); text-decoration: underline; }
+.pagehead .crumbs [aria-current="page"] { color: var(--text-strong); font-weight: var(--fw-bold); }
+
+/* Pasos numerados en texto — sin círculos decorativos en fila.
+   El li va en bloque con sangría francesa: con display:grid los nodos de texto
+   sueltos caen en la celda del número y se parte todo. */
+.steps-lite { list-style: none; margin: 0; padding: 0; counter-reset: sl; display: grid; gap: var(--space-3); }
+.steps-lite li {
+  counter-increment: sl;
+  position: relative;
+  padding-left: 1.9rem;
+}
+.steps-lite li::before {
+  content: counter(sl) ".";
+  position: absolute; left: 0; top: 0;
+  font-family: var(--font-ui); font-weight: var(--fw-bold);
+  color: var(--sa-red);
+}
+.steps-lite b { display: block; }
+
+/* Botón que se comporta como enlace — cambiar de modo en el pie. */
+.linklike {
+  background: none; border: 0; padding: 0;
+  font: inherit; color: var(--sa-blue);
+  text-decoration: underline; text-underline-offset: .18em;
+  cursor: pointer; min-height: var(--tap-min);
+}
+
+/* Nota que explica la equivalencia QR impreso → enlace digital. */
+.card__qrnote {
+  margin: var(--space-3) 0 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--text-muted);
+}
+
+
+/* Botón de confirmación: la actividad ya se hizo. Verde propio para que el
+   estado se lea de un vistazo sin depender solo del texto. */
+.btn--ok {
+  background: var(--ok-green);
+  color: var(--sa-white);
+  border-color: var(--ok-green);
+}
+.btn--ok:hover { filter: brightness(0.94); }
+
+
+/* ----------------------------------------------------------------
+   Teléfonos angostos (iPhone SE y menores).
+   El bento de dos columnas deja tiles de ~136 px: ahí no cabe ni
+   "Planificación del Pack" ni "KINDERGARTEN" sin partirse. Una sola
+   columna les devuelve el ancho y el nombre entra entero.
+   ---------------------------------------------------------------- */
+@media (max-width: 23.5rem) {
+  .bento { grid-template-columns: minmax(0, 1fr); }
+  /* Con una sola columna, cualquier `span 2` inventa una columna implícita y
+     empuja la tile fuera de la pantalla. Acá no hay huérfanos que rellenar. */
+  .bento > li.is-wide,
+  #ranks > li:last-child:nth-child(odd),
+  #decks > li:last-child:nth-child(odd) { grid-column: auto; }
+  .tile { min-height: 8rem; }
+}
+
+/* ===== Elector de modo =====
+   Son dos decisiones, no dos tarjetas de catálogo: en un teléfono de 390 px,
+   dos columnas dejan ~165 px útiles y "Ver las actividades" se parte en
+   "activida-des". Se apilan hasta que haya ancho de verdad, y ahí sí conviven.
+   El silabeo automático se apaga acá: en un botón de decisión, un guion en
+   mitad de la palabra se lee como error, no como composición. */
+#elector .bento { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+#elector .tile { min-height: 0; padding: var(--space-5); gap: var(--space-3); }
+#elector .tile__name { hyphens: none; overflow-wrap: normal; line-height: 1.15; }
+#elector .tile__label { opacity: .9; }
+
+@media (min-width: 34rem) {
+  #elector .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* El aviso de "todavía no le ha llegado nada" es una FRASE, no un título: con
+   la tipografía display de .tile__name se partía en "las activi-dades". Cuerpo
+   de texto, medida corta y sin silabeo. */
+.vacio__texto {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-ui);
+  font-size: var(--step-0);
+  line-height: 1.45;
+  max-inline-size: 34ch;
+  hyphens: none;
+  overflow-wrap: normal;
+}
+/* Mismo lenguaje visual que .newsitem (ícono + texto) en vez de un bloque
+   de alerta plano — es un estado de espera, no una advertencia. */
+.vacio { display: grid; grid-template-columns: auto 1fr; gap: var(--space-3); align-items: start; }
+.vacio .newsitem__icon { margin-top: 2px; }
+
+/* --------------------------------------------- fondo con blooms de marca
+   Dos blobs desenfocados detrás de "Esta semana" / "Noticias" — mismos
+   colores que .aura (SOLO paleta, ver design.md § Anti-patrones), pero
+   acá el contenido es cards blancas encima, no texto directo sobre el
+   degradé. overflow:hidden clava los blobs dentro de la sección para que
+   no metan scroll horizontal.
+
+   El offset negativo de cada blob tiene que quedar DENTRO de lo que el
+   propio degradé ya desvaneció a "transparent" antes de llegar al borde
+   recortado — si no, overflow:hidden corta el círculo a mitad de opacidad
+   y el corte se ve como una costura recta (bug real, 19-ago-2026). Regla:
+   offset ≤ radio × (1 − fadeStop). Con fadeStop=.65 y radio=30vw eso da
+   ≤10.5vw; se deja margen y se usa bastante menos. */
+/* clip-path, no overflow:hidden: mazo-nuevo.html y otras páginas tienen un
+   .actionbar con position:sticky adentro, y overflow:hidden en un ancestro
+   rompe el sticky de cualquier descendiente (bug real, 19-ago-2026 — la
+   barra de conteo dejó de pegarse al fondo). clip-path recorta el blob
+   igual, sin crear un contenedor de scroll que lo bloquee. */
+.page--glow { position: relative; isolation: isolate; clip-path: inset(0); }
+.page--glow::before, .page--glow::after {
+  content: ""; position: absolute; z-index: -1;
+  border-radius: 50%; filter: blur(54px); pointer-events: none;
+}
+.page--glow::before {
+  inline-size: 60vw; block-size: 60vw;
+  inset-block-start: 2vw; inset-inline-end: -6vw;
+  /* --aura-blue trae su propio alpha (.30) pensado para vivir DETRÁS de
+     texto; acá vive detrás de cards blancas opacas, así que no hay riesgo
+     de contraste y puede ser mucho más fuerte para que en verdad se note. */
+  background: radial-gradient(circle, rgb(0 63 135 / 0.55), transparent 65%);
+}
+.page--glow::after {
+  inline-size: 52vw; block-size: 52vw;
+  inset-block-start: 44vh; inset-inline-start: -5vw;
+  background: radial-gradient(circle, rgb(173 157 123 / 0.5), transparent 65%);
+}
+
+/* ===== Barra de "lo que lleva" =====
+   El sistema ya tiene .meter con pips segmentados, pero una baraja puede tener
+   veinticuatro actividades y veinticuatro pips no se leen. Misma paleta y mismo
+   trazo que .meter__pip, en una barra continua. */
+.llevadas {
+  block-size: 0.5rem;
+  background: var(--sa-light-tan);
+  border: var(--rule-hair) solid var(--sa-tan);
+  overflow: hidden;
+}
+.llevadas > span {
+  display: block;
+  block-size: 100%; inline-size: 100%;
+  background: var(--sa-blue);
+  transform: scaleX(var(--p, 0));
+  transform-origin: left center;
+}
+
+/* ===== Barra de pasos del asistente (armar mazo) =====
+   Segmentos rellenos, no círculos numerados en fila — ese patrón es
+   justo el tell de IA que design.md prohíbe (§ Anti-patrones). Se lee
+   "Paso 2 de 3" igual, con una barra de progreso real. */
+.wizard-steps__track {
+  display: flex; gap: var(--space-2);
+  list-style: none; margin: 0 0 var(--space-3); padding: 0;
+}
+.wizard-steps__track li {
+  flex: 1; block-size: 6px; border-radius: var(--radius-pill);
+  background: var(--sa-light-tan);
+  transition: background-color var(--dur-mid) var(--ease-out);
+}
+.wizard-steps__track li.is-done,
+.wizard-steps__track li.is-active { background: var(--sa-blue); }
+.wizard-steps__label {
+  margin: 0; font-family: var(--font-ui); font-size: var(--step--1);
+  color: var(--text-muted);
+}
+.wizard-steps__n { font-weight: var(--fw-bold); color: var(--text-strong); letter-spacing: .02em; }
+
+/* ===== Selector de cartas del mazo (consola del líder) =====
+   Dos niveles: baraja > Adventure > cartas. Una baraja tiene noventa y pico de
+   actividades y en lista plana no se puede elegir; las Adventures son la
+   agrupación que ya trae el contenido oficial.
+
+   Cada nivel es una tarjeta propia (radio + sombra, como el resto de la
+   app) en vez de filas separadas por líneas finas — eso era lo que se veía
+   "sin diseñar" (pedido 19-ago). El <summary> nativo pierde su marcador y
+   usa un chevron propio que rota al abrir. */
+.baraja {
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+  margin-bottom: var(--space-3);
+  overflow: hidden;
+}
+.baraja__sum {
+  cursor: pointer; padding: var(--space-4);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  font-family: var(--font-display); font-size: var(--step-1);
+  min-height: 44px;
+  list-style: none;
+}
+.baraja__sum::-webkit-details-marker { display: none; }
+.baraja__head {
+  display: flex; flex: 1; flex-wrap: wrap;
+  align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-3);
+  min-width: 0;
+}
+.baraja__n, .adv__n {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  color: var(--text-muted); font-variant-numeric: tabular-nums;
+  flex: none;
+}
+.baraja__cuerpo { padding: 0 var(--space-4) var(--space-3); }
+
+.chevron {
+  flex: none; color: var(--text-muted);
+  transition: transform var(--dur-short) var(--ease-out);
+}
+details[open] > summary .chevron { transform: rotate(180deg); }
+
+.adv {
+  border-radius: var(--radius);
+  background: var(--canvas);
+  margin: var(--space-2) 0;
+}
+.adv__sum {
+  cursor: pointer; padding: var(--space-3);
+  display: flex; gap: var(--space-3); align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-ui); font-weight: 700;
+  min-height: 44px;
+  list-style: none;
+}
+.adv__sum::-webkit-details-marker { display: none; }
+.adv__lista { list-style: none; margin: 0; padding: 0 var(--space-3) var(--space-3); }
+
+/* La fila tiene DOS acciones: marcar y ver. Separadas, porque tocar para
+   mirar la tarjeta no puede seleccionarla sin querer — y al revés. */
+.pick {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+  border-radius: var(--radius);
+}
+.pick:hover { background: var(--surface); }
+.pick__label {
+  display: flex; gap: var(--space-3); align-items: flex-start;
+  padding: var(--space-2); min-height: 44px; cursor: pointer; flex: 1;
+}
+/* Checkbox propio: cuadrado con radio, no el nativo del sistema operativo,
+   que no comparte ni color ni forma con el resto de los controles. */
+.pick__label input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none;
+  position: relative;
+  inline-size: 1.375rem; block-size: 1.375rem; flex: none; margin-top: .1rem;
+  border: 2px solid var(--sa-tan); border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out),
+              border-color var(--dur-short) var(--ease-out);
+}
+.pick__label input[type="checkbox"]::after {
+  content: ""; position: absolute; inset: 0; margin: auto;
+  inline-size: .4rem; block-size: .7rem;
+  border: solid var(--sa-white); border-width: 0 2px 2px 0;
+  transform: rotate(38deg) translate(-1px, -2px) scale(0);
+  transition: transform var(--dur-micro) var(--ease-out);
+}
+.pick__label input[type="checkbox"]:checked { background: var(--sa-blue); border-color: var(--sa-blue); }
+.pick__label input[type="checkbox"]:checked::after { transform: rotate(38deg) translate(-1px, -2px) scale(1); }
+.pick__label input[type="checkbox"]:disabled { opacity: .5; cursor: not-allowed; }
+.pick__label input[type="checkbox"]:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+.pick__titulo { display: block; }
+.pick__meta {
+  display: block; font-family: var(--font-ui); font-size: var(--step--1);
+  color: var(--text-muted);
+}
+/* Ícono, no texto: "Ver" en texto competía por ancho con el título largo
+   y lo mandaba a 2-3 líneas (bug real, 19-ago-2026). Ancho fijo: nunca
+   empuja el layout sin importar cuánto mida el título. */
+.pick__ver {
+  flex: none; align-self: center; background: none; cursor: pointer;
+  inline-size: 2.75rem; block-size: 2.75rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; border-radius: var(--radius-pill);
+  color: var(--sa-blue);
+}
+.pick__ver:hover { background: var(--sa-light-tan); }
+.pick__ver:active { transform: scale(0.94); }
+
+/* ===== Acciones de la lámina y visor a pantalla completa =====
+   Rediseño 20-ago: de links de texto subrayado a botones píldora con
+   ícono — mismo lenguaje que el resto de los controles secundarios de
+   la app (.btn--ghost), no un texto suelto debajo de la imagen.
+
+   Separado de la caja de la lámina (pedido 20-ago): antes vivían dentro
+   de .card--art, pegados a la imagen. Ahora son su propia tarjeta, con
+   su propio aire — overflow:hidden nomás para que la banda azul de abajo
+   (.card__band, a sangre) respete el radio en las esquinas inferiores. */
+.card__meta {
+  margin-top: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+  overflow: hidden;
+}
+.card__acciones {
+  display: flex; flex-wrap: wrap; gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  margin: 0;
+}
+.card__accion {
+  flex: 1 1 auto; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--sa-tan);
+  font-family: var(--font-ui); font-weight: var(--fw-bold); font-size: var(--step--1);
+  color: var(--sa-blue); background: var(--surface);
+  text-decoration: none; cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out),
+              border-color var(--dur-short) var(--ease-out),
+              transform var(--dur-micro) var(--ease-out);
+}
+.card__accion svg { flex: none; }
+.card__accion:hover { background: var(--sa-light-tan); border-color: var(--sa-dark-tan); }
+.card__accion:active { transform: scale(0.96); }
+/* --sa-red es acento oficial y el manual pide usarlo sólido, no en tintes
+   (tokens.css: "NO crear tintes ni sombras") — el hover invierte a sólido
+   en vez de mezclar un fondo rosado. */
+.card__accion--danger { color: var(--sa-red); }
+.card__accion--danger:hover { background: var(--sa-red); border-color: var(--sa-red); color: var(--sa-white); }
+
+/* ---------------------------------------- tarjeta de "Mis mazos" (líder)
+   Pedido 20-ago: era una .progresscard genérica con un botón primario ancho
+   completo y dos links subrayados apilados debajo — se veía como un
+   formulario, no como una tarjeta de producto. Cabecera propia + la misma
+   familia de botón-pastilla que ya usa el visor de la carta (.card__accion),
+   para que "borrar" y "copiar" se sientan del mismo sitio que todo lo demás. */
+.mazocard {
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+  margin-bottom: var(--space-3);
+}
+.mazocard--nuevo { box-shadow: var(--shadow-paper), 0 0 0 2px var(--sa-blue); }
+.mazocard__head {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+}
+.mazocard__nombre {
+  margin: 0;
+  font-family: var(--font-display); font-weight: var(--fw-bold);
+  font-size: var(--step-1); color: var(--text-display);
+}
+.mazocard__badge {
+  flex: none;
+  padding: 0.2em 0.7em;
+  border-radius: var(--radius-pill);
+  background: var(--sa-light-tan); color: var(--sa-dark-blue);
+  font-family: var(--font-ui); font-weight: var(--fw-bold); font-size: var(--step--2);
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.mazocard__meta {
+  margin: var(--space-1) 0 var(--space-4);
+  color: var(--text-muted); font-size: var(--step--1);
+}
+.mazocard__primaria { margin: 0 0 var(--space-3); }
+.mazocard__secundarias {
+  display: flex; gap: var(--space-2);
+  margin: 0;
+}
+.mazocard__secundarias .card__accion { flex: 1 1 auto; }
+
+.visor {
+  border: 0; padding: 0; max-inline-size: 100vw; max-block-size: 100dvh;
+  inline-size: 100%; block-size: 100%;
+  background: var(--sa-dark-gray);
+  color: var(--sa-white);
+}
+/* display:flex tiene que vivir en [open]: puesto sin escopear en .visor
+   pisaba el "dialog:not([open]) { display:none }" nativo — el modal
+   quedaba visible después de close() (bug real, 19-ago-2026). */
+.visor:not([open]) { display: none; }
+.visor[open] { display: flex; flex-direction: column; justify-content: center; }
+.visor::backdrop { background: rgb(0 0 0 / .85); }
+.visor__img {
+  display: block; margin: 0 auto;
+  max-inline-size: 100%; max-block-size: 82dvh;
+  object-fit: contain;
+}
+.visor__cerrar {
+  position: absolute; inset-block-start: var(--space-3); inset-inline-end: var(--space-3);
+  min-inline-size: 44px; min-block-size: 44px;
+  font-size: var(--step-2); line-height: 1;
+  background: none; border: 0; color: var(--sa-white); cursor: pointer;
+}
+.visor__pie { text-align: center; padding: var(--space-3); margin: 0; }
+/* .card__accion es blanco sobre blanco por diseño (vive en tarjetas claras);
+   acá el fondo del visor es oscuro — sin este reset el botón se pintaba
+   blanco sobre blanco, texto invisible (bug real, 20-ago-2026). */
+.visor__pie .card__accion { color: var(--sa-white); background: transparent; border-color: rgb(255 255 255 / .4); }
+.visor__pie .card__accion:hover { background: rgb(255 255 255 / .12); border-color: rgb(255 255 255 / .6); }
+
+/* ================================================================
+   CAPA DE MOTION 2026  (enmienda 17-ago-2026, design.md § Motion)
+
+   Todo lo de esta sección corre solo cuando se cumplen DOS condiciones:
+   el navegador ejecutó shell.js (que pone html.fx) y el usuario no pidió
+   reduced-motion. Sin JS o con reduced-motion la página es estática y
+   completa — el contenido nunca queda oculto esperando una animación.
+
+   Capa A (carta.html, la vista del papá) no usa nada de esto: allá solo
+   hay transiciones de estado de ≤160 ms. Capa B: el resto de la app.
+   ================================================================ */
+
+/* La selección de texto habla en los colores de la marca. */
+::selection { background: var(--sa-pale-blue); color: var(--sa-dark-gray); }
+
+/* Los titulares display se balancean: ninguna línea queda con una palabra
+   sola colgando. */
+.bigtype, .hero__title, .tile__name, .photoband__title, .figband__title {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ---------- Entrada orquestada (una por página) ----------
+     La página la marca con class="rise" y --i en el DOM. `both` mantiene al
+     elemento en su fotograma inicial durante el delay, así el stagger no
+     muestra contenido a medias. Techo: 500 ms de stagger total. */
+  html.fx .rise {
+    animation: rise-in var(--dur-long) var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* ---------- Reveal one-shot bajo el fold ----------
+     Para listas largas (retícula de cartas). JS + IntersectionObserver,
+     una sola vez, nunca se re-dispara. El estado inicial solo existe con
+     html.fx: sin JS el contenido se ve normal. */
+  html.fx .rise-io { opacity: 0; transform: translateY(10px); }
+  html.fx .rise-io.is-in {
+    animation: rise-in var(--dur-long) var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 50ms);
+  }
+
+  /* ---------- Navegación entre páginas ----------
+     Cross-fade corto con View Transitions donde exista la API (Chrome/Edge
+     hoy). Donde no, la navegación es la instantánea de siempre. */
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: vt-out var(--dur-short) var(--ease-in) both; }
+  ::view-transition-new(root) { animation: vt-in var(--dur-mid) var(--ease-out) both; }
+  @keyframes vt-out { to { opacity: 0; } }
+  @keyframes vt-in { from { opacity: 0; } }
+
+  /* ---------- Barras de progreso ---------- */
+  .progresscard__fill, .llevadas > span {
+    transition: transform var(--dur-long) var(--ease-out);
+  }
+
+  /* ---------- Diálogo (visor de lámina) ---------- */
+  .visor[open] { animation: dlg-in var(--dur-long) var(--ease-out) both; }
+  .visor[open]::backdrop { animation: dlg-bd var(--dur-short) var(--ease-out) both; }
+  @keyframes dlg-in { from { opacity: 0; transform: scale(0.96); } }
+  @keyframes dlg-bd { from { opacity: 0; } }
+
+  /* ---------- Barra de instalación ---------- */
+  html.fx .installbar { animation: rise-in var(--dur-long) var(--ease-out) both; }
+}
+
+/* ---------- Acordeón animado ----------
+   El contenido del <details> va envuelto en .acordeon; la altura se anima
+   con grid-template-rows, que es la única "altura animable" sin reflow de
+   contenido ni JS de medición. */
+.acordeon { display: grid; grid-template-rows: 0fr; }
+.acordeon > * { overflow: hidden; min-block-size: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .acordeon { transition: grid-template-rows var(--dur-mid) var(--ease-in-out); }
+}
+details[open] > .acordeon { grid-template-rows: 1fr; }
+
+/* Press en chips: el mismo lenguaje físico que .btn. */
+.chip { transition: transform var(--dur-micro) var(--ease-out),
+                    background-color var(--dur-short) var(--ease-out); }
+.chip:active { transform: scale(0.96); }
+
+/* La miniatura de la baraja se levanta con sombra de papel al hover,
+   no solo se traslada. */
+@media (hover: hover) and (pointer: fine) {
+  .deckcard:hover img { box-shadow: var(--shadow-lift); }
+  .photoband:hover img { transform: scale(1.02); }
+}
+.photoband img { transition: transform var(--dur-long) var(--ease-out); }
+
+/* El number tick se hace por rAF en shell.js; acá solo se garantiza que el
+   número no salte de ancho mientras cuenta. */
+.tick { font-variant-numeric: tabular-nums; display: inline-block; }
+
+/* ---------- Ficha con fotografía ----------
+   La foto oficial va a sangre dentro de la ficha, con el velo encima para
+   que el nombre se lea sobre cualquier zona de la imagen. El velo no es
+   decorativo: es el contraste. Las fotos salen del brandbook del cliente
+   (design.md § Fotografía); nunca de bancos de imágenes. */
+.tile--foto { color: var(--sa-white); border: 0; background: var(--sa-dark-blue); }
+.tile--foto img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.tile--foto::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, var(--scrim-tile-a) 0%, var(--scrim-tile-b) 100%);
+}
+.tile--foto .tile__label { color: var(--sa-pale-blue); opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .tile--foto img { transition: transform var(--dur-long) var(--ease-out); }
+}
+@media (hover: hover) and (pointer: fine) {
+  /* En la ficha con foto el gesto es el zoom de la imagen, no el lift:
+     una ficha no acumula dos efectos de hover a la vez. */
+  a.tile--foto:hover { transform: none; box-shadow: var(--shadow-paper); }
+  a.tile--foto:hover img { transform: scale(1.03); }
+}

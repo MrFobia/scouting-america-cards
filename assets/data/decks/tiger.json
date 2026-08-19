@@ -1,0 +1,3682 @@
+{
+ "$status": "105 tarjetas extraídas del PDF oficial. Español en 0/10 Adventures y 0/90 actividades; el resto cae a inglés con aviso.",
+ "id": "tiger",
+ "rank": "Tiger",
+ "grade": "1.er grado",
+ "order": 2,
+ "audience": "family",
+ "translation": "pendiente",
+ "name": {
+  "es": "Tiger",
+  "en": "Tiger"
+ },
+ "intro": {
+  "es": "Aventuras para explorar el barrio, la naturaleza cercana y las primeras responsabilidades.",
+  "en": ""
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [
+  {
+   "id": "bobcat",
+   "name": {
+    "es": "",
+    "en": "Bobcat"
+   },
+   "category": {
+    "es": "",
+    "en": "Character & Leadership"
+   },
+   "required": true,
+   "requirementCount": 6,
+   "summary": {
+    "es": "",
+    "en": "The Bobcat Adventure is the first required Adventure on the trail to earn the Tiger badge of rank. Once the Bobcat Adventure is completed, Tigers can start any other of the Adventures in any order. Bobcat is focused on character and introducing the values of Scouting America."
+   }
+  },
+  {
+   "id": "tigers-in-the-wild",
+   "name": {
+    "es": "",
+    "en": "Tigers in the Wild"
+   },
+   "category": {
+    "es": "",
+    "en": "Outdoors"
+   },
+   "required": true,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "The natural environment continues to be the best place for children to learn and discover. Being outdoors has proven benefits for both youth and adults. For Tigers, this means taking opportunities to simply take a walk outside. Tigers and adult partners will take a walk to explore the outdoors. Along the way, they can learn about domesticated and wild animals."
+   }
+  },
+  {
+   "id": "tiger-bites",
+   "name": {
+    "es": "",
+    "en": "Tiger Bites"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Fitness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Personal fitness is learning about proper nutrition, hygiene, exercise, and rest. Children who develop habits at an early age are more likely to continue those habits into adulthood. In this Adventure, Tigers will explore the different food groups, have fun being active, and learn about the importance of rest."
+   }
+  },
+  {
+   "id": "team-tiger",
+   "name": {
+    "es": "",
+    "en": "Team Tiger"
+   },
+   "category": {
+    "es": "",
+    "en": "Citizenship"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Citizenship is one of the four aims of the Scouting America program. For Tigers citizenship begins at home and in their den. Citizenship is being part of a team. Learning that they, too, can contribute and have a part is the objective."
+   }
+  },
+  {
+   "id": "tiger-s-roar",
+   "name": {
+    "es": "",
+    "en": "Tiger’s Roar"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Safety Awareness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "With world-leading experts in the field, this powerful Adventure will introduce you and your child to the Protect Yourself Rules."
+   }
+  },
+  {
+   "id": "tiger-circles",
+   "name": {
+    "es": "",
+    "en": "Tiger Circles"
+   },
+   "category": {
+    "es": "",
+    "en": "Family & Reverence"
+   },
+   "required": true,
+   "requirementCount": 3,
+   "summary": {
+    "es": "",
+    "en": "In this Adventure, the Tigers learn about their family by exploring the faith traditions and celebrations that make being part of their family special. Tigers may earn this Adventure by completing the requirements for the Adventure OR by earning the religious emblem of their choosing. This Adventure is commonly done at home with the Cub Scout’s family. If it is being done as a den, ensure that every parent and guardian is aware of the content and the activities that the den will do, and allow for parents to opt out of doing it as a den activity and choose to complete the requirement at home."
+   }
+  },
+  {
+   "id": "let-s-camp",
+   "name": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "Here is the opportunity for Tigers and their adult partners to go on an overnight campout."
+   }
+  },
+  {
+   "id": "race-time",
+   "name": {
+    "es": "",
+    "en": "Race Time"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "The most popular events in Cub Scouting are found in this Adventure: the Pinewood Derby ® and the Raingutter Regatta™. Tigers and adult partners work together to build and race either a car or boat."
+   }
+  },
+  {
+   "id": "sky-is-the-limit",
+   "name": {
+    "es": "",
+    "en": "Sky Is the Limit"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Astronomy is the focus of this Adventure as Tigers explore the night sky and discover constellations."
+   }
+  },
+  {
+   "id": "summertime-fun",
+   "name": {
+    "es": "",
+    "en": "Summertime Fun"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 1,
+   "summary": {
+    "es": "",
+    "en": "This Adventure is for the summer after a Cub Scout has completed kindergarten and is now considered a Tiger. Stay active in the summertime by attending den or pack events, Cub Scout day camp, or resident camp."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "tiger-r-instructions",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Instructions"
+   },
+   "body": {
+    "es": "",
+    "en": "This deck contains cards to help den leaders deliver a program to complete all requirements for earning the Tiger rank. How to use this deck 1. Review the other resource cards (black border) in this deck, and review the contents. 2. Pick the Adventure you want to work on in your next den meeting. 3. Remove all cards associated with that Adventure. 4. Scan the Adventure card, and review the webpage for the Adventure you chose. Read and follow the Safety Moment for the Adventure. 5. Select one activity card for each requirement to do in your meeting. 6. Scan the QR code for each activity you selected, and follow the directions on the activity page. 7. When conducting your den meeting, have your cards on hand to use as a quick guide. Scan here for a video that shows you how to use this deck. ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p001.webp",
+    "width": 413,
+    "height": 563,
+    "page": 1,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-r-getting-started",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Getting Started"
+   },
+   "body": {
+    "es": "",
+    "en": "TIGER What is a den leader? What are we supposed to be doing? Where can I find this information?"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p003.webp",
+    "width": 413,
+    "height": 563,
+    "page": 3,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-r-welcome-new-den-leader",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Welcome, New Den Leader"
+   },
+   "body": {
+    "es": "",
+    "en": "WELCOME! NEW LION OR TIGER DEN LEADER B SCOUT CU LEADE R D EN There are actual instructions for this? ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p005.webp",
+    "width": 413,
+    "height": 563,
+    "page": 5,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-r-safeguarding-youth",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Safeguarding Youth"
+   },
+   "body": {
+    "es": "",
+    "en": "Safeguarding Youth Training — all leaders are required to complete the training. Parents should too. Keeping everyone safe! Check the Guide to Safe Scouting. G U I D E TO SAFE SCOUTING Februar y 2022 Revision Four simple things to do before each activity: SAFE Checklist."
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p007.webp",
+    "width": 413,
+    "height": 563,
+    "page": 7,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-r-den-leader-training",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Den Leader Training"
+   },
+   "body": {
+    "es": "",
+    "en": "DONE IN TWO HOURS! Log on to my.scouting.org. If you don’t already have an account, you can create one to access training. This is the same place Safeguarding Youth training is located. Den leader position-specific training consists of 16 video modules that are, on average, 71/2 minutes long. Complete the training to earn your first patch!"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p009.webp",
+    "width": 413,
+    "height": 563,
+    "page": 9,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-bobcat",
+   "skin": "adventure",
+   "adventureId": "bobcat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p011.webp",
+    "width": 413,
+    "height": 563,
+    "page": 11,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-01-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Time to Talk — A Time to Listen"
+   },
+   "originalTitle": "A Time to Talk — A Time to Listen",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "The Cub Scout sign is a way to help Cub Scouts learn good manners and communication skills."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p013.webp",
+    "width": 413,
+    "height": 563,
+    "page": 13,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-01-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Doodle"
+   },
+   "originalTitle": "Den Doodle",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "The den doodle is a craft project that can be used to track attendance and completion of requirements and to reward good behavior."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p015.webp",
+    "width": 413,
+    "height": 563,
+    "page": 15,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-01-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Flag"
+   },
+   "originalTitle": "Den Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "A den flag is a craft that can bring your den together by getting to know everyone’s name and having a symbol that everyone has a part in making."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p017.webp",
+    "width": 413,
+    "height": 563,
+    "page": 17,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-01-4",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Me Too Name Game"
+   },
+   "originalTitle": "Me Too Name Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Learn how much everyone in the den has in common."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p019.webp",
+    "width": 413,
+    "height": 563,
+    "page": 19,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-02-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Recite the Scout Oath with your den, including your Tiger adult partner."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Chatterbox"
+   },
+   "originalTitle": "Chatterbox",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Fold a piece of paper into a chatterbox/fortune teller to introduce the Scout Oath to your Cub Scout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p021.webp",
+    "width": 413,
+    "height": 563,
+    "page": 21,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-02-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Recite the Scout Oath with your den, including your Tiger adult partner."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Oath Puzzle"
+   },
+   "originalTitle": "Scout Oath Puzzle",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Introduce the Scout Oath to Cub Scouts by making a puzzle out of Popsicle sticks."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p023.webp",
+    "width": 413,
+    "height": 563,
+    "page": 23,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-03-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Have your Tiger adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being trustworthy, helpful, and friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Don’t Wake the Dragon"
+   },
+   "originalTitle": "Don’t Wake the Dragon",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "In this game, Cub Scouts have to work together and demonstrate being trustworthy, helpful, and friendly."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p025.webp",
+    "width": 413,
+    "height": 563,
+    "page": 25,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-03-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Have your Tiger adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being trustworthy, helpful, and friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tiger Maze"
+   },
+   "originalTitle": "Tiger Maze",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts help their adult partner navigate a maze."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p027.webp",
+    "width": 413,
+    "height": 563,
+    "page": 27,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-03-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Have your Tiger adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being trustworthy, helpful, and friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Law Bingo"
+   },
+   "originalTitle": "Scout Law Bingo",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use a bingo card to act out values of the Scout Law."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p029.webp",
+    "width": 413,
+    "height": 563,
+    "page": 29,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-04-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each are used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "If You’re Happy, Show the Cub Scout Sign"
+   },
+   "originalTitle": "If You’re Happy, Show the Cub Scout Sign",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Sing the interactive song “If You’re Happy and You Know It” using the Cub Scout sign, handshake, and salute as the actions."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p031.webp",
+    "width": 413,
+    "height": 563,
+    "page": 31,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-04-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each are used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sign, Salute, and Handshake Relay"
+   },
+   "originalTitle": "Sign, Salute, and Handshake Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Use a relay race to get Cub Scouts moving and learning the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p033.webp",
+    "width": 413,
+    "height": 563,
+    "page": 33,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-04-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each are used."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Simon Says"
+   },
+   "originalTitle": "Simon Says",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Simon Says using the actions of the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p035.webp",
+    "width": 413,
+    "height": 563,
+    "page": 35,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-05-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Share with your Tiger adult partner, at a den meeting or at home, a time when you have demonstrated the Cub Scout motto “Do Your Best.”"
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Do Your Best Handbook Activity"
+   },
+   "originalTitle": "Do Your Best Handbook Activity",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "This activity is in the Tiger handbook where Cub Scouts will identify actions that demonstrate the Cub Scout motto “Do Your Best.”"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p037.webp",
+    "width": 413,
+    "height": 563,
+    "page": 37,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-05-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "Share with your Tiger adult partner, at a den meeting or at home, a time when you have demonstrated the Cub Scout motto “Do Your Best.”"
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Do Your Best Handbook Sharing"
+   },
+   "originalTitle": "Do Your Best Handbook Sharing",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts share with their adult partner a time when they did their best."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p039.webp",
+    "width": 413,
+    "height": 563,
+    "page": 39,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-bobcat-06-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 6,
+    "text": {
+     "es": "",
+     "en": "At home, with your parent or legal guardian, do the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Child Abuse Protection Review"
+   },
+   "originalTitle": "Child Abuse Protection Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Review the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p041.webp",
+    "width": 413,
+    "height": 563,
+    "page": 41,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-tigers-in-the-wild",
+   "skin": "adventure",
+   "adventureId": "tigers-in-the-wild",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p043.webp",
+    "width": 413,
+    "height": 563,
+    "page": 43,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-01-1",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Grab the Six Essentials"
+   },
+   "originalTitle": "Grab the Six Essentials",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Relay race for Cub Scouts to identify the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p045.webp",
+    "width": 413,
+    "height": 563,
+    "page": 45,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-01-2",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Is It a Cub Scout Essential?"
+   },
+   "originalTitle": "Is It a Cub Scout Essential?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts pick out the Cub Scout Six Essentials from a mix of outdoor equipment."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p047.webp",
+    "width": 413,
+    "height": 563,
+    "page": 47,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-02-1",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den leader or Tiger adult partner, learn about the Code."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Code in a Flash"
+   },
+   "originalTitle": "Outdoor Code in a Flash",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Flash card activity to introduce Cub Scouts to the Outdoor Code."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p049.webp",
+    "width": 413,
+    "height": 563,
+    "page": 49,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-02-2",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den leader or Tiger adult partner, learn about the Code."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Code Puzzle"
+   },
+   "originalTitle": "Outdoor Code Puzzle",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts use their Tiger handbook to create an Outdoor Code puzzle."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p051.webp",
+    "width": 413,
+    "height": 563,
+    "page": 51,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-02-3",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den leader or Tiger adult partner, learn about the Code."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "The Four C’s of the Outdoor Code"
+   },
+   "originalTitle": "The Four C’s of the Outdoor Code",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "The four C’s is a method of introducing the Outdoor Code."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p053.webp",
+    "width": 413,
+    "height": 563,
+    "page": 53,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-03-1",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Tiger adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "5–Step Seek"
+   },
+   "originalTitle": "5–Step Seek",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Adult partners give a clue to something they see outside as Cub Scouts guess what it is and if it is natural or man-made."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p055.webp",
+    "width": 413,
+    "height": 563,
+    "page": 55,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-03-2",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Tiger adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "I Spy Natural or Man–made"
+   },
+   "originalTitle": "I Spy Natural or Man–made",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "A game of I Spy that includes objects that are natural or man-made."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p057.webp",
+    "width": 413,
+    "height": 563,
+    "page": 57,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-03-3",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Tiger adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Natural or Man–made by the Numbers"
+   },
+   "originalTitle": "Natural or Man–made by the Numbers",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts and adult partners work together to identify as many things they can that are natural and man- made."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p059.webp",
+    "width": 413,
+    "height": 563,
+    "page": 59,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-04-1",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify common animals that are found where you live. Learn which of those animals are domesticated and which animals are wild. Draw a picture of your favorite animal."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "My Favorite Animals"
+   },
+   "originalTitle": "My Favorite Animals",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts draw their favorite domesticated and wild animals."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p061.webp",
+    "width": 413,
+    "height": 563,
+    "page": 61,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-04-2",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify common animals that are found where you live. Learn which of those animals are domesticated and which animals are wild. Draw a picture of your favorite animal."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Stuffed Animal Relay Race"
+   },
+   "originalTitle": "Stuffed Animal Relay Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Using stuffed animals, Cub Scouts identify if the animals are wild or domesticated."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p063.webp",
+    "width": 413,
+    "height": 563,
+    "page": 63,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-05-1",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Look for a tree where you live. Describe how this tree is helpful."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Leaf and Bark Rubbing"
+   },
+   "originalTitle": "Leaf and Bark Rubbing",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a leaf and bark rubbing of a tree."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p065.webp",
+    "width": 413,
+    "height": 563,
+    "page": 65,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-05-2",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Look for a tree where you live. Describe how this tree is helpful."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinecone Bird Feeder"
+   },
+   "originalTitle": "Pinecone Bird Feeder",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Make a pinecone bird feeder and place it in a tree."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p067.webp",
+    "width": 413,
+    "height": 563,
+    "page": 67,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tigers-in-the-wild-05-3",
+   "skin": "activity",
+   "adventureId": "tigers-in-the-wild",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Look for a tree where you live. Describe how this tree is helpful."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tree Planting"
+   },
+   "originalTitle": "Tree Planting",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Plant a tree."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p069.webp",
+    "width": 413,
+    "height": 563,
+    "page": 69,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-tiger-bites",
+   "skin": "adventure",
+   "adventureId": "tiger-bites",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p071.webp",
+    "width": 413,
+    "height": 563,
+    "page": 71,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-01-1",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Food Group Relay"
+   },
+   "originalTitle": "Food Group Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Relay race to identify food items and the food group they belong to."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p073.webp",
+    "width": 413,
+    "height": 563,
+    "page": 73,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-01-2",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "My Favorite Foods"
+   },
+   "originalTitle": "My Favorite Foods",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts draw their favorite food for each of the five good groups."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p075.webp",
+    "width": 413,
+    "height": 563,
+    "page": 75,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-01-3",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "My Favorite Snack"
+   },
+   "originalTitle": "My Favorite Snack",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts bring and share their favorite food from one of the five food groups."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p077.webp",
+    "width": 413,
+    "height": 563,
+    "page": 77,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-02-1",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice hand-washing. Point out when you should wash your hands."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scout Oath and Law Hand–Washing"
+   },
+   "originalTitle": "Scout Oath and Law Hand–Washing",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Proper hand-washing and learning how long it takes to do a good job."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p079.webp",
+    "width": 413,
+    "height": 563,
+    "page": 79,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-03-1",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Obstacle Course"
+   },
+   "originalTitle": "Obstacle Course",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Obstacle course."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p081.webp",
+    "width": 413,
+    "height": 563,
+    "page": 81,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-03-2",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Red Light, Green Light"
+   },
+   "originalTitle": "Red Light, Green Light",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play Red Light, Green Light."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p083.webp",
+    "width": 413,
+    "height": 563,
+    "page": 83,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-03-3",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 30 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tiger Soccer"
+   },
+   "originalTitle": "Tiger Soccer",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play soccer with the den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p085.webp",
+    "width": 413,
+    "height": 563,
+    "page": 85,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-04-1",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice methods that help you sleep."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Get Ready for Bed"
+   },
+   "originalTitle": "Get Ready for Bed",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a bedtime routine to help get enough sleep using the activity in the Tiger handbook."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p087.webp",
+    "width": 413,
+    "height": 563,
+    "page": 87,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-bites-04-2",
+   "skin": "activity",
+   "adventureId": "tiger-bites",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice methods that help you sleep."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Time to Sleep"
+   },
+   "originalTitle": "Time to Sleep",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts with their parent or legal guardian establish a good bedtime."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p089.webp",
+    "width": 413,
+    "height": 563,
+    "page": 89,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-team-tiger",
+   "skin": "adventure",
+   "adventureId": "team-tiger",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p091.webp",
+    "width": 413,
+    "height": 563,
+    "page": 91,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-01-1",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den, or family members, that has a set of rules. Discuss why rules are important to the game you are playing."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Card Game — Go Fish"
+   },
+   "originalTitle": "Card Game — Go Fish",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Go Fish!"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p093.webp",
+    "width": 413,
+    "height": 563,
+    "page": 93,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-01-2",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den, or family members, that has a set of rules. Discuss why rules are important to the game you are playing."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tigers Play Cornhole"
+   },
+   "originalTitle": "Tigers Play Cornhole",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of cornhole."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p095.webp",
+    "width": 413,
+    "height": 563,
+    "page": 95,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-01-3",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den, or family members, that has a set of rules. Discuss why rules are important to the game you are playing."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tigers Play Kickball"
+   },
+   "originalTitle": "Tigers Play Kickball",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of kickball."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p097.webp",
+    "width": 413,
+    "height": 563,
+    "page": 97,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-02-1",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, choose a job that will help your team. Follow through by doing that job at least once."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Flag Ceremony"
+   },
+   "originalTitle": "Flag Ceremony",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in a flag-raising ceremony for your school."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p099.webp",
+    "width": 413,
+    "height": 563,
+    "page": 99,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-02-2",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, choose a job that will help your team. Follow through by doing that job at least once."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tiger Greeter"
+   },
+   "originalTitle": "Tiger Greeter",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Tiger den serves as greeters for the pack meeting."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p101.webp",
+    "width": 413,
+    "height": 563,
+    "page": 101,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-02-3",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, choose a job that will help your team. Follow through by doing that job at least once."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tigers Help Clean Up"
+   },
+   "originalTitle": "Tigers Help Clean Up",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Help set up and clean up for a pack meeting."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p103.webp",
+    "width": 413,
+    "height": 563,
+    "page": 103,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-03-1",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game that requires at least two teams with your den or two family members. Afterward, discuss what it means to be part of a team and what makes a good team member."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Charades"
+   },
+   "originalTitle": "Charades",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of charades with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p105.webp",
+    "width": 413,
+    "height": 563,
+    "page": 105,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-03-2",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game that requires at least two teams with your den or two family members. Afterward, discuss what it means to be part of a team and what makes a good team member."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tiger Volleyball"
+   },
+   "originalTitle": "Tiger Volleyball",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Tiger volleyball."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p107.webp",
+    "width": 413,
+    "height": 563,
+    "page": 107,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-03-3",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Play a game that requires at least two teams with your den or two family members. Afterward, discuss what it means to be part of a team and what makes a good team member."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Whiffle Ball"
+   },
+   "originalTitle": "Whiffle Ball",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Whiffle ball with the den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p109.webp",
+    "width": 413,
+    "height": 563,
+    "page": 109,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-04-1",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Board Game Collection"
+   },
+   "originalTitle": "Board Game Collection",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Collect game boards for a community center."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p111.webp",
+    "width": 413,
+    "height": 563,
+    "page": 111,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-04-2",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Sock Drive"
+   },
+   "originalTitle": "Sock Drive",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Sock drive service project."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p113.webp",
+    "width": 413,
+    "height": 563,
+    "page": 113,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-team-tiger-04-3",
+   "skin": "activity",
+   "adventureId": "team-tiger",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scouting for Food"
+   },
+   "originalTitle": "Scouting for Food",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in your council-sponsored Scouting for Food event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p115.webp",
+    "width": 413,
+    "height": 563,
+    "page": 115,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-tiger-s-roar",
+   "skin": "adventure",
+   "adventureId": "tiger-s-roar",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p117.webp",
+    "width": 413,
+    "height": 563,
+    "page": 117,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-01-1",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Tiger rank."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Protect Yourself Rules Video"
+   },
+   "originalTitle": "Protect Yourself Rules Video",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Watch the Protect Yourself Rules video with your parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p119.webp",
+    "width": 413,
+    "height": 563,
+    "page": 119,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-02-1",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate Shout, Run, Tell as explained in the Protect Yourself Rules video."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Shout, Run, Tell Relay"
+   },
+   "originalTitle": "Shout, Run, Tell Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "A relay race where Cub Scouts will demonstrate Shout, Run, Tell."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p121.webp",
+    "width": 413,
+    "height": 563,
+    "page": 121,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-03-1",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate how to access emergency services."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Emergency Services 911 Relay Race"
+   },
+   "originalTitle": "Emergency Services 911 Relay Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Emergency services 911 safety relay."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p123.webp",
+    "width": 413,
+    "height": 563,
+    "page": 123,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-03-2",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate how to access emergency services."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "SmartPhone Emergency Services"
+   },
+   "originalTitle": "SmartPhone Emergency Services",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Teach Cub Scouts how to use a smartphone to reach emergency services (911)."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p125.webp",
+    "width": 413,
+    "height": 563,
+    "page": 125,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-03-3",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate how to access emergency services."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Voice–Activated Devices Emergency Services"
+   },
+   "originalTitle": "Voice–Activated Devices Emergency Services",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Teach your Cub Scout how to use your home voice-activated devices to contact emergency services."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p127.webp",
+    "width": 413,
+    "height": 563,
+    "page": 127,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-04-1",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate that you know what to do if you get lost or separated."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Emergency Whistle Testing"
+   },
+   "originalTitle": "Emergency Whistle Testing",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will blow whistles and demonstrate how to use the whistles if they get lost."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p129.webp",
+    "width": 413,
+    "height": 563,
+    "page": 129,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-04-2",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate that you know what to do if you get lost or separated."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Hide–and–Seek"
+   },
+   "originalTitle": "Hide–and–Seek",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "A twist on Hide-and-Seek where, after five minutes, Cub Scouts use the methods they learned to be found."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p131.webp",
+    "width": 413,
+    "height": 563,
+    "page": 131,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-s-roar-04-3",
+   "skin": "activity",
+   "adventureId": "tiger-s-roar",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, demonstrate that you know what to do if you get lost or separated."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Driver’s License"
+   },
+   "originalTitle": "Pinewood Derby ® Driver’s License",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts create a Pinewood Derby ® driver’s license that doubles as an ID card."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p133.webp",
+    "width": 413,
+    "height": 563,
+    "page": 133,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-tiger-circles",
+   "skin": "adventure",
+   "adventureId": "tiger-circles",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p135.webp",
+    "width": 413,
+    "height": 563,
+    "page": 135,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-01-1",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Draw a picture of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Holiday Drawing"
+   },
+   "originalTitle": "Holiday Drawing",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Draw and color a favorite faith tradition, holiday, or celebration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p137.webp",
+    "width": 413,
+    "height": 563,
+    "page": 137,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-02-1",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Religious Celebration"
+   },
+   "originalTitle": "Religious Celebration",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts attend a religious celebration with their family."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p139.webp",
+    "width": 413,
+    "height": 563,
+    "page": 139,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-02-2",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Religious Service"
+   },
+   "originalTitle": "Religious Service",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a religious service with your family."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p141.webp",
+    "width": 413,
+    "height": 563,
+    "page": 141,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-02-3",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Veterans Day"
+   },
+   "originalTitle": "Veterans Day",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a Veterans Day event with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p143.webp",
+    "width": 413,
+    "height": 563,
+    "page": 143,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-03-1",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Note of Kindness"
+   },
+   "originalTitle": "A Note of Kindness",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a card of kindness to give to someone special."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p145.webp",
+    "width": 413,
+    "height": 563,
+    "page": 145,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-03-2",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Be Kind at Home"
+   },
+   "originalTitle": "Be Kind at Home",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts perform an act of kindness at home."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p147.webp",
+    "width": 413,
+    "height": 563,
+    "page": 147,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-tiger-circles-03-3",
+   "skin": "activity",
+   "adventureId": "tiger-circles",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Be Kind at School"
+   },
+   "originalTitle": "Be Kind at School",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts show kindness at school by inviting someone who is alone to join them."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p149.webp",
+    "width": 413,
+    "height": 563,
+    "page": 149,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-let-s-camp",
+   "skin": "adventure",
+   "adventureId": "let-s-camp",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p151.webp",
+    "width": 413,
+    "height": 563,
+    "page": 151,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-01-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Back–to–Back Buddies"
+   },
+   "originalTitle": "Back–to–Back Buddies",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scout buddies work together to stand up while sitting on the floor back-to-back."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p153.webp",
+    "width": 413,
+    "height": 563,
+    "page": 153,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-01-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Who is Being A Buddy?"
+   },
+   "originalTitle": "Who is Being A Buddy?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using an activity sheet, identify who is using the buddy system."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p155.webp",
+    "width": 413,
+    "height": 563,
+    "page": 155,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-02-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What is the Weather Like There?"
+   },
+   "originalTitle": "What is the Weather Like There?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts look at a weather report for the campout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p157.webp",
+    "width": 413,
+    "height": 563,
+    "page": 157,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-02-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What to Wear? What to Wear? When Camping"
+   },
+   "originalTitle": "What to Wear? What to Wear? When Camping",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts pick out clothes that are appropriate for different types of weather."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p159.webp",
+    "width": 413,
+    "height": 563,
+    "page": 159,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-03-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Pack up your Cub Scout Six Essentials for the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Six Essentials Scavenger Hunt"
+   },
+   "originalTitle": "Six Essentials Scavenger Hunt",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts go on a scavenger hunt to collect the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p161.webp",
+    "width": 413,
+    "height": 563,
+    "page": 161,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-03-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Pack up your Cub Scout Six Essentials for the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Six Essentials Shopping Spree"
+   },
+   "originalTitle": "Six Essentials Shopping Spree",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Provide Cub Scouts their own Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p163.webp",
+    "width": 413,
+    "height": 563,
+    "page": 163,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-04-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn a camping skill."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Flashlight Tiger Hunt"
+   },
+   "originalTitle": "Flashlight Tiger Hunt",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn about different flashlights and flashlight etiquette."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p165.webp",
+    "width": 413,
+    "height": 563,
+    "page": 165,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-04-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn a camping skill."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "My First Knot"
+   },
+   "originalTitle": "My First Knot",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will learn about the square knot and attempt to tie it."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p167.webp",
+    "width": 413,
+    "height": 563,
+    "page": 167,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-04-3",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn a camping skill."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tent Time!"
+   },
+   "originalTitle": "Tent Time!",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts and adult partners will practice setting up a tent."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p169.webp",
+    "width": 413,
+    "height": 563,
+    "page": 169,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-05-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend a campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council Camping"
+   },
+   "originalTitle": "Council Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Go camping at your local council camp."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p171.webp",
+    "width": 413,
+    "height": 563,
+    "page": 171,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-let-s-camp-05-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend a campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack Camping"
+   },
+   "originalTitle": "Pack Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Go camping with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p173.webp",
+    "width": 413,
+    "height": 563,
+    "page": 173,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-race-time",
+   "skin": "adventure",
+   "adventureId": "race-time",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p175.webp",
+    "width": 413,
+    "height": 563,
+    "page": 175,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-01-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Car Build Day"
+   },
+   "originalTitle": "Pinewood Derby ® Car Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p177.webp",
+    "width": 413,
+    "height": 563,
+    "page": 177,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-01-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Boat Build Day"
+   },
+   "originalTitle": "Raingutter Regatta™ Boat Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p179.webp",
+    "width": 413,
+    "height": 563,
+    "page": 179,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-02-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Race Memory"
+   },
+   "originalTitle": "Race Memory",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Memory game using Pinewood Derby ® or Raingutter Regatta™ rules."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p181.webp",
+    "width": 413,
+    "height": 563,
+    "page": 181,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-03-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Before the race, discuss with your Tiger adult partner how you will demonstrate good sportsmanship during the race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Act Like a Good Sport"
+   },
+   "originalTitle": "Act Like a Good Sport",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will act out through role playing how to be a good sport during the race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p183.webp",
+    "width": 413,
+    "height": 563,
+    "page": 183,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-04-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Race"
+   },
+   "originalTitle": "Pinewood Derby ® Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Pinewood Derby ® race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p185.webp",
+    "width": 413,
+    "height": 563,
+    "page": 185,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-race-time-04-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Tiger adult partner, participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™"
+   },
+   "originalTitle": "Raingutter Regatta™",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p187.webp",
+    "width": 413,
+    "height": 563,
+    "page": 187,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-sky-is-the-limit",
+   "skin": "adventure",
+   "adventureId": "sky-is-the-limit",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p189.webp",
+    "width": 413,
+    "height": 563,
+    "page": 189,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-01-1",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Observe the night sky with your den or Tiger adult partner. Talk about the items you see or might see there."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Night Sky Scavenger Hunt"
+   },
+   "originalTitle": "Night Sky Scavenger Hunt",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a scavenger hunt of what is in the night sky."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p191.webp",
+    "width": 413,
+    "height": 563,
+    "page": 191,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-02-1",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Look at distant objects through a telescope, binoculars, or camera. Show how to focus the device you choose."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "I Can See the Stars"
+   },
+   "originalTitle": "I Can See the Stars",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Learn the basics of how to use a telescope."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p193.webp",
+    "width": 413,
+    "height": 563,
+    "page": 193,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-03-1",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Observe in the sky or select from a book, chart, computer, or electronic device, two constellations that are easy to see in the night sky. With your den or Tiger adult partner, find out the constellation names and how to identify them. Create a picture of one of the constellations."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pictures in the Sky"
+   },
+   "originalTitle": "Pictures in the Sky",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Identify and observe two constellations in the night sky."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p195.webp",
+    "width": 413,
+    "height": 563,
+    "page": 195,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-04-1",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Create a homemade model of a constellation."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Can–stellation"
+   },
+   "originalTitle": "Can–stellation",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Make a model constellation out of a tin can."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p197.webp",
+    "width": 413,
+    "height": 563,
+    "page": 197,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-04-2",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Create a homemade model of a constellation."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Edible Constellation"
+   },
+   "originalTitle": "Edible Constellation",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make an edible model of a constellation."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p199.webp",
+    "width": 413,
+    "height": 563,
+    "page": 199,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-sky-is-the-limit-04-3",
+   "skin": "activity",
+   "adventureId": "sky-is-the-limit",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Create a homemade model of a constellation."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Glowing Constellation"
+   },
+   "originalTitle": "Glowing Constellation",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Create a glow-in-the-dark painting of a constellation."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p201.webp",
+    "width": 413,
+    "height": 563,
+    "page": 201,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-adv-summertime-fun",
+   "skin": "adventure",
+   "adventureId": "summertime-fun",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p203.webp",
+    "width": 413,
+    "height": 563,
+    "page": 203,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-summertime-fun-01-1",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council activity"
+   },
+   "originalTitle": "Council activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your council."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p205.webp",
+    "width": 413,
+    "height": 563,
+    "page": 205,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-summertime-fun-01-2",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den activity"
+   },
+   "originalTitle": "Den activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p207.webp",
+    "width": 413,
+    "height": 563,
+    "page": 207,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "tiger-a-summertime-fun-01-3",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack activity"
+   },
+   "originalTitle": "Pack activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/tiger/p209.webp",
+    "width": 413,
+    "height": 563,
+    "page": 209,
+    "lang": "en"
+   }
+  }
+ ]
+}

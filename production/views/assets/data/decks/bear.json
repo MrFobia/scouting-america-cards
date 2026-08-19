@@ -1,0 +1,3902 @@
+{
+ "$status": "111 tarjetas extraídas del PDF oficial. Español en 6/10 Adventures y 67/96 actividades; el resto cae a inglés con aviso.",
+ "id": "bear",
+ "rank": "Bear",
+ "grade": "3.er grado",
+ "order": 4,
+ "audience": "family",
+ "translation": "parcial",
+ "name": {
+  "es": "Bear",
+  "en": "Bear"
+ },
+ "subtitle": {
+  "es": "Baraja de Cartas de Reunión · Versión en español para padres y líderes de den",
+  "en": "Meeting Cards Deck"
+ },
+ "intro": {
+  "es": "Una herramienta para que las familias hispanas conozcan, semana a semana, las actividades en las que participan sus hijos en el Scouting.",
+  "en": "A tool for families to follow, week by week, the activities their children take part in."
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [
+  {
+   "id": "bobcat",
+   "name": {
+    "es": "Bobcat (Gato Montés)",
+    "en": "Bobcat"
+   },
+   "category": {
+    "es": "CARÁCTER Y LIDERAZGO",
+    "en": "Character & Leadership"
+   },
+   "required": true,
+   "requirementCount": 8,
+   "summary": {
+    "es": "La Aventura Bobcat es la primera Aventura obligatoria de tu camino y hará que tú y tu den comiencen muy bien. Una vez completada la Aventura Bobcat, puedes trabajar en las demás Aventuras en el orden que desees. Bobcat se centra en el carácter y en presentar los valores de Scouting America.",
+    "en": "The Bobcat Adventure is the first required Adventure on your trail and will get you and your den off to a great start. Once you have completed the Bobcat Adventure, you can work on the other Adventures in any order. Bobcat is focused on character and introducing the values of Scouting America."
+   }
+  },
+  {
+   "id": "bear-habitat",
+   "name": {
+    "es": "Bear Habitat (Hábitat del Oso)",
+    "en": "Bear Habitat"
+   },
+   "category": {
+    "es": "AIRE LIBRE",
+    "en": "Outdoors"
+   },
+   "required": true,
+   "requirementCount": 9,
+   "summary": {
+    "es": "Un oso está en su hogar al aire libre, y también lo está un Bear Cub Scout. En esta Aventura, aprenderás a planear una caminata de una milla con tu den. Cuando estamos afuera, también tenemos la responsabilidad de asegurarnos de que otros puedan disfrutar del aire libre.",
+    "en": "A bear is at home in the outdoors, and so is a Bear Cub Scout. In this Adventure, you’ll learn how to plan a one-mile walk with your den. Your walk may be around where you live, it may be on a historical trail that has been in use for hundreds of years, or it may be on a nature trail. When we are outside, we also have responsibilities to make sure that others can enjoy the outdoors too. Knowing and following the Leave No Trace Principles for Kids helps us do just that."
+   }
+  },
+  {
+   "id": "bear-strong",
+   "name": {
+    "es": "Bear Strong (Oso Fuerte)",
+    "en": "Bear Strong"
+   },
+   "category": {
+    "es": "CONDICIÓN FÍSICA PERSONAL",
+    "en": "Personal Fitness"
+   },
+   "required": true,
+   "requirementCount": 5,
+   "summary": {
+    "es": "En el Scout Oath (Juramento Scout), los Cub Scouts prometen mantenerse físicamente fuertes y mentalmente despiertos. La condición física personal consiste en mantener el cuerpo fuerte comiendo bien y haciendo ejercicio, pero también significa descansar lo suficiente y ejercitar la mente.",
+    "en": "In the Scout Oath, Cub Scouts promise to keep themselves physically strong and mentally awake. Personal fitness is about keeping your body strong by eating right and exercising, but it also means getting enough rest and exercising your mind by reading, solving problems, or even listening to music."
+   }
+  },
+  {
+   "id": "paws-for-action",
+   "name": {
+    "es": "Paws for Action (Patas en Acción)",
+    "en": "Paws for Action"
+   },
+   "category": {
+    "es": "CIUDADANÍA",
+    "en": "Citizenship"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "Esta Aventura trata sobre los Estados Unidos y los poderosos símbolos que representan lo mejor de nuestro país, y sobre cómo las comunidades se unen para resolver los problemas que enfrentan. La ciudadanía en Estados Unidos se trata de participar.",
+    "en": "This Adventure is about America and the powerful symbols that represent the best of our country and how communities come together to help solve problems they are facing. Citizenship in America is about participation. One way to show citizenship is by making an impact locally through nonprofit organizations. Nonprofit organizations are places for people to give their time, talents, and resources to make a difference in their community. You, too, can make an impact by participating in a service project that makes your community a better place."
+   }
+  },
+  {
+   "id": "standing-tall",
+   "name": {
+    "es": "Standing Tall (De Pie y Firme)",
+    "en": "Standing Tall"
+   },
+   "category": {
+    "es": "SEGURIDAD PERSONAL",
+    "en": "Personal Safety Awareness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "En esta Aventura, las Protect Yourself Rules (Reglas para Protegerte) te darán orientación para mantenerte seguro. También identificarás maneras de usar los aparatos electrónicos de forma responsable y maneras de proteger tu cuerpo cuando juegas o trabajas.",
+    "en": "In this Adventure, the Protect Yourself Rules will give you guidance on keeping yourself safe. You will also identify ways to use electronics responsibly and ways to protect your body when you’re playing or working. When bears feel they are in danger, they may stand on their back legs, standing tall to let the danger know that they are brave and know how to keep themselves safe."
+   }
+  },
+  {
+   "id": "fellowship",
+   "name": {
+    "es": "Fellowship (Compañerismo)",
+    "en": "Fellowship"
+   },
+   "category": {
+    "es": "FAMILIA Y REVERENCIA",
+    "en": "Family & Reverence"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "Esta Aventura suele realizarse en casa con la familia del Cub Scout. Si se hace como den, asegúrese de que todos los padres y tutores conozcan el contenido y las actividades. Se puede obtener completando los requisitos O completando un emblema religioso de la elección de la familia.",
+    "en": "This Adventure is commonly done at home with the Cub Scout’s family. If it is being done as a den, ensure that every parent and guardian is aware of the content and the activities that the den will do, and allow for parents to opt out of doing it as a den activity and choose to complete the requirement at home. This Adventure may be earned by completing the requirements below OR by completing a religious emblem of the Cub Scout’s family’s choosing."
+   }
+  },
+  {
+   "id": "let-s-camp",
+   "name": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "Camping is a fun way to spend time with family and friends. Prepare for your campout by gathering what you will bring with you and setting up a tent. Your den leader and parents will help you get ready. Find the best spot to pitch your tent, and make it your home for the campout."
+   }
+  },
+  {
+   "id": "race-time",
+   "name": {
+    "es": "",
+    "en": "Race Time"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 5,
+   "summary": {
+    "es": "",
+    "en": "There are many ways to make things go — electricity, fuel, and batteries, to name a few. Did you know that you have the power to make a boat sail in the water or that a car can move using the force of gravity? Propulsion is what gives an object (such as a plane, car, or boat) the power to move. You will learn different ways to make and propel vehicles. Think about how the shapes of cars, boats, and planes affect the distance they can go. In this Adventure, you’ll explore how you can use the air in your lungs, the force of gravity, and the power of your imagination to make things go."
+   }
+  },
+  {
+   "id": "summertime-fun",
+   "name": {
+    "es": "",
+    "en": "Summertime Fun"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 1,
+   "summary": {
+    "es": "",
+    "en": "The summertime is a great time to get together with your den or pack. The requirement for this Adventure is simple. Participate in three Cub Scout activities during the summer months. This can be at council-organized camps like day camp or resident camp, or it can be a den or pack get-together for a summertime picnic. To earn this Adventure as a Bear, you participate in summer activities during the summer after you completed the second grade."
+   }
+  },
+  {
+   "id": "whittling",
+   "name": {
+    "es": "",
+    "en": "Whittling"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "A pocketknife is a useful tool to have for Scouting activities. It can also be dangerous if you don’t use it the right way. In this Adventure, you will learn how to use a pocketknife safely. You will also get to learn the basics of carving. This Adventure is required in order for you to use any knife during a Cub Scout activity as a third-grade Bear. Next year, you will need to earn the Chef’s Knife Webelos Adventure to earn the privilege of using a knife during a Cub Scout activity as a fourth-grade Webelos."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "bear-r-instructions",
+   "skin": "resource",
+   "title": {
+    "es": "Instrucciones CÓMO USAR ESTA BARAJA",
+    "en": "Instructions"
+   },
+   "body": {
+    "es": "Esta baraja contiene cartas que ayudan a los líderes de den (grupo pequeño de Cub Scouts) a ofrecer un programa para completar todos los requisitos del rango Bear.",
+    "en": "This deck contains cards to help den leaders deliver a program to complete all requirements for earning the Bear rank. How to use this deck 1. Review the other resource cards (black border) in this deck, and review the contents. 2. Pick the Adventure you want to work on in your next den meeting. 3. Remove all cards associated with that Adventure. 4. Scan the Adventure card, and review the webpage for the Adventure you chose. Read and follow the Safety Moment for the Adventure. 5. Select one activity card for each requirement to do in your meeting. 6. Scan the QR code for each activity you selected, and follow the directions on the activity page. 7. When conducting your den meeting, have your cards on hand to use as a quick guide. Scan here for a video that shows you how to use this deck. ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p001.webp",
+    "width": 413,
+    "height": 563,
+    "page": 1,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-r-getting-started",
+   "skin": "resource",
+   "title": {
+    "es": "Para Empezar",
+    "en": "Getting Started"
+   },
+   "body": {
+    "es": "GETTING STARTED. Preguntas frecuentes que responde esta baraja: ¿Qué es un líder de den? ¿Qué se supone que debemos hacer? ¿Dónde puedo encontrar esta información?",
+    "en": "What is a den leader? What are we supposed to be doing? Where can I find this information?"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p003.webp",
+    "width": 413,
+    "height": 563,
+    "page": 3,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-r-welcome-new-den-leader",
+   "skin": "resource",
+   "title": {
+    "es": "Bienvenido(a), Nuevo(a) Líder de Den",
+    "en": "Welcome, New Den Leader"
+   },
+   "body": {
+    "es": "WELCOME, NEW DEN LEADER. ¡BIENVENIDO(A)! Es usted un(a) nuevo(a) líder de den. ¿De verdad hay instrucciones para esto? ¡Sí! Esta baraja lo guía paso a paso.",
+    "en": "WELCOME! NEW WOLF, BEAR OR WEBELOS DEN LEADER B SCOUT CU LEADE R D EN There are actual instructions for this? ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p005.webp",
+    "width": 413,
+    "height": 563,
+    "page": 5,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-r-safeguarding-youth",
+   "skin": "resource",
+   "title": {
+    "es": "Protección de los Jóvenes",
+    "en": "Safeguarding Youth"
+   },
+   "body": {
+    "es": "SAFEGUARDING YOUTH. Capacitación de Protección de los Jóvenes: todos los líderes deben completarla. Los padres también deberían hacerlo.",
+    "en": "Safeguarding Youth Training — all leaders are required to complete the training. Parents should too. Keeping everyone safe! Check the Guide to Safe Scouting. G U I D E TO SAFE SCOUTING Februar y 2022 Revision Four simple things to do before each activity: SAFE Checklist."
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p007.webp",
+    "width": 413,
+    "height": 563,
+    "page": 7,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-r-den-leader-training",
+   "skin": "resource",
+   "title": {
+    "es": "Capacitación del Líder de Den",
+    "en": "Den Leader Training"
+   },
+   "body": {
+    "es": "DEN LEADER TRAINING. ¡LISTO EN DOS HORAS! Ingrese a my.scouting.org. La capacitación específica del puesto consta de 16 módulos de video.",
+    "en": "DONE IN TWO HOURS! Log on to my.scouting.org. If you don’t already have an account, you can create one to access training. This is the same place Safeguarding Youth training is located. Den leader position-specific training consists of 16 video modules that are, on average, 71/2 minutes long. Complete the training to earn your first patch!"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p009.webp",
+    "width": 413,
+    "height": 563,
+    "page": 9,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-bobcat",
+   "skin": "adventure",
+   "adventureId": "bobcat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p011.webp",
+    "width": 413,
+    "height": 563,
+    "page": 11,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-01-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 8,
+    "text": {
+     "es": "Conoce a los miembros de tu den.",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "En Fila",
+    "en": "Line Up"
+   },
+   "originalTitle": "Line Up",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "Con este juego para romper el hielo, haz que tu den se comunique mientras trabajan juntos para ponerse en fila.",
+    "en": "With this icebreaker game, get your den communicating as they work together to put themselves in line."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p013.webp",
+    "width": 413,
+    "height": 563,
+    "page": 13,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-01-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 8,
+    "text": {
+     "es": "Conoce a los miembros de tu den.",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "Garabato del Den (Den Doodle)",
+    "en": "Den Doodle"
+   },
+   "originalTitle": "Den Doodle",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "Crea un den doodle para registrar el progreso de avance y otros logros.",
+    "en": "Create a den doodle to record advancement progress and other accomplishments."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p015.webp",
+    "width": 413,
+    "height": 563,
+    "page": 15,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-01-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 8,
+    "text": {
+     "es": "Conoce a los miembros de tu den.",
+     "en": "Get to know members of your den."
+    }
+   },
+   "title": {
+    "es": "Bandera del Den",
+    "en": "Den Flag"
+   },
+   "originalTitle": "Den Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "Crea una bandera del den que permita a los Cub Scouts mostrar su personalidad y creatividad mientras se conocen.",
+    "en": "Create a den flag that allows Cub Scouts to show their personality and creativity while getting to know each other."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p017.webp",
+    "width": 413,
+    "height": 563,
+    "page": 17,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-02-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 8,
+    "text": {
+     "es": "Recita el Scout Oath (Juramento Scout) y la Scout Law (Ley Scout) con tu den y tu líder de den.",
+     "en": "Recite the Scout Oath and Law with your den and den leader."
+    }
+   },
+   "title": {
+    "es": "Lanzamiento de Bolsitas Bobcat",
+    "en": "Bobcat Beanbag Toss"
+   },
+   "originalTitle": "Bobcat Beanbag Toss",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Mientras lanzan bolsitas de frijol, los Cub Scouts se mueven mientras aprenden la Scout Law (Ley Scout).",
+    "en": "While tossing beanbags, Cub Scouts are moving while learning the Scout Law."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p019.webp",
+    "width": 413,
+    "height": 563,
+    "page": 19,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-02-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 8,
+    "text": {
+     "es": "Recita el Scout Oath (Juramento Scout) y la Scout Law (Ley Scout) con tu den y tu líder de den.",
+     "en": "Recite the Scout Oath and Law with your den and den leader."
+    }
+   },
+   "title": {
+    "es": "Recita el Juramento y la Ley",
+    "en": "Recite the Oath and Law"
+   },
+   "originalTitle": "Recite the Oath and Law",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "Recita el Scout Oath (Juramento Scout) y la Scout Law (Ley Scout) con el den.",
+    "en": "Recite the Scout Oath and Scout Law with the den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p021.webp",
+    "width": 413,
+    "height": 563,
+    "page": 21,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-02-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 8,
+    "text": {
+     "es": "Recita el Scout Oath (Juramento Scout) y la Scout Law (Ley Scout) con tu den y tu líder de den.",
+     "en": "Recite the Scout Oath and Law with your den and den leader."
+    }
+   },
+   "title": {
+    "es": "Salto de la Scout Law",
+    "en": "Scout Law Hop"
+   },
+   "originalTitle": "Scout Law Hop",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts aprenden la Scout Law (Ley Scout) jugando a saltar.",
+    "en": "Cub Scouts learn the Scout Law by playing a hopping game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p023.webp",
+    "width": 413,
+    "height": 563,
+    "page": 23,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-03-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 8,
+    "text": {
+     "es": "Aprende sobre el Scout Oath (Juramento Scout). Identifica los tres puntos del Scout Oath.",
+     "en": "Learn about the Scout Oath. Identify the three points of the Scout Oath."
+    }
+   },
+   "title": {
+    "es": "Charadas",
+    "en": "Charades"
+   },
+   "originalTitle": "Charades",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Con charadas, los Cub Scouts representan los tres puntos del Scout Oath (Juramento Scout).",
+    "en": "Using charades, Cub Scouts act out the three points of the Scout Oath."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p025.webp",
+    "width": 413,
+    "height": 563,
+    "page": 25,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-03-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 8,
+    "text": {
+     "es": "Aprende sobre el Scout Oath (Juramento Scout). Identifica los tres puntos del Scout Oath.",
+     "en": "Learn about the Scout Oath. Identify the three points of the Scout Oath."
+    }
+   },
+   "title": {
+    "es": "Luces, Cámara, Acción",
+    "en": "Lights, Camera, Action"
+   },
+   "originalTitle": "Lights, Camera, Action",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts trabajan juntos para crear una foto o video que demuestre uno de los tres puntos del Scout Oath.",
+    "en": "Cub Scouts work together to create a photo or video demonstrating one of the three points of the Scout Oath."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p027.webp",
+    "width": 413,
+    "height": 563,
+    "page": 27,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-03-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 8,
+    "text": {
+     "es": "Aprende sobre el Scout Oath (Juramento Scout). Identifica los tres puntos del Scout Oath.",
+     "en": "Learn about the Scout Oath. Identify the three points of the Scout Oath."
+    }
+   },
+   "title": {
+    "es": "Cartel del Scout Oath",
+    "en": "Scout Oath Poster"
+   },
+   "originalTitle": "Scout Oath Poster",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "Crea un cartel del Scout Oath (Juramento Scout).",
+    "en": "Create a poster of the Scout Oath."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p029.webp",
+    "width": 413,
+    "height": 563,
+    "page": 29,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-04-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 8,
+    "text": {
+     "es": "Con tu den, crea un código de conducta del den.",
+     "en": "With your den, create a den code of conduct."
+    }
+   },
+   "title": {
+    "es": "Código de Conducta",
+    "en": "Code of Conduct"
+   },
+   "originalTitle": "Code of Conduct",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts se comprometerán con su propia conducta al ayudar a crear el código de conducta de su den.",
+    "en": "Cub Scouts will be invested in their own conduct when they help create their den code of conduct."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p031.webp",
+    "width": 413,
+    "height": 563,
+    "page": 31,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-05-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 8,
+    "text": {
+     "es": "Aprende sobre el puesto de denner (jefe de den) y sus responsabilidades.",
+     "en": "Learn about the denner position and responsibilities."
+    }
+   },
+   "title": {
+    "es": "Un Denner Bear",
+    "en": "A Bear Denner"
+   },
+   "originalTitle": "A Bear Denner",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Usen palitos de paleta para elegir al denner (jefe de den) de la reunión.",
+    "en": "Use popsicle sticks to pick the den meeting denner."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p033.webp",
+    "width": 413,
+    "height": 563,
+    "page": 33,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-05-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 5,
+    "of": 8,
+    "text": {
+     "es": "Aprende sobre el puesto de denner (jefe de den) y sus responsabilidades.",
+     "en": "Learn about the denner position and responsibilities."
+    }
+   },
+   "title": {
+    "es": "Tareas del Denner",
+    "en": "Denner Jobs"
+   },
+   "originalTitle": "Denner Jobs",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Trabajando juntos, los Cub Scouts hacen una tabla de las responsabilidades del denner (jefe de den).",
+    "en": "Working together, Cub Scouts make a chart of denner responsibilities."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p035.webp",
+    "width": 413,
+    "height": 563,
+    "page": 35,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-06-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 8,
+    "text": {
+     "es": "Demuestra la seña, el saludo y el apretón de manos del Cub Scout. Muestra cómo se usa cada uno.",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "Relevo Bobcat",
+    "en": "Bobcat Relay"
+   },
+   "originalTitle": "Bobcat Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "En este juego de relevos Cub Scout, los equipos muestran la seña, el saludo y el apretón de manos del Cub Scout.",
+    "en": "In this Cub Scout relay game, teams show the Cub Scout sign, salute, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p037.webp",
+    "width": 413,
+    "height": 563,
+    "page": 37,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-06-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 6,
+    "of": 8,
+    "text": {
+     "es": "Demuestra la seña, el saludo y el apretón de manos del Cub Scout. Muestra cómo se usa cada uno.",
+     "en": "Demonstrate the Cub Scout sign, Cub Scout salute, and Cub Scout handshake. Show how each is used."
+    }
+   },
+   "title": {
+    "es": "Ceremonia de Apertura con la Bandera",
+    "en": "Flag Opening"
+   },
+   "originalTitle": "Flag Opening",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "Participa en una ceremonia de apertura que incluya el uso del saludo, la seña y el apretón de manos del Cub Scout.",
+    "en": "Participate in an opening ceremony that includes the use of the Cub Scout salute, sign, and handshake."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p039.webp",
+    "width": 413,
+    "height": 563,
+    "page": 39,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-07-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 7,
+    "of": 8,
+    "text": {
+     "es": "Comparte con tu den o tu familia una ocasión en la que hayas demostrado el lema del Cub Scout: “Do Your Best”. Explica por qué es importante dar lo mejor de ti.",
+     "en": "Share with your den, or family, a time when you demonstrated the Cub Scout motto “Do Your Best.” Explain why it is important to do your best."
+    }
+   },
+   "title": {
+    "es": "Muestra tu Mejor Esfuerzo",
+    "en": "Do Your Best Showcase"
+   },
+   "originalTitle": "Do Your Best Showcase",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "Los Cub Scouts comparten una ocasión en la que dieron lo mejor de sí.",
+    "en": "Cub Scouts share a time when they did their best."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p041.webp",
+    "width": 413,
+    "height": 563,
+    "page": 41,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bobcat-08-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 8,
+    "of": 8,
+    "text": {
+     "es": "En casa, con tu padre, madre o tutor legal, realiza las actividades del folleto How to Protect Your Children from Child Abuse: A Parent’s Guide.",
+     "en": "At home, with your parent or legal guardian, do the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+    }
+   },
+   "title": {
+    "es": "Repaso de Protección contra el Abuso Infantil",
+    "en": "Child Abuse Protection Review"
+   },
+   "originalTitle": "Child Abuse Protection Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "Repasen las actividades del folleto How to Protect Your Children from Child Abuse: A Parent’s Guide.",
+    "en": "Review the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p043.webp",
+    "width": 413,
+    "height": 563,
+    "page": 43,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-bear-habitat",
+   "skin": "adventure",
+   "adventureId": "bear-habitat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p045.webp",
+    "width": 413,
+    "height": 563,
+    "page": 45,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-01-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 1,
+    "of": 9,
+    "text": {
+     "es": "Prepárate para una caminata de una milla reuniendo los Cub Scout Six Essentials y ropa y calzado apropiados para el clima.",
+     "en": "Prepare for a one-mile walk by gathering the Cub Scout Six Essentials and weather-appropriate clothing and shoes."
+    }
+   },
+   "title": {
+    "es": "Desafío de Empacar la Mochila",
+    "en": "Backpack Packing Challenge"
+   },
+   "originalTitle": "Backpack Packing Challenge",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Los Cub Scouts aprenden a empacar una mochila para una caminata.",
+    "en": "Cub Scouts learn to pack a backpack for a walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p047.webp",
+    "width": 413,
+    "height": 563,
+    "page": 47,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-02-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 2,
+    "of": 9,
+    "text": {
+     "es": "“Know Before You Go” (Infórmate antes de ir). Identifica en un mapa el lugar de tu caminata y confirma tu ruta de una milla.",
+     "en": "“Know Before You Go.” Identify the location of your walk on a map and confirm your one-mile route."
+    }
+   },
+   "title": {
+    "es": "Búsqueda de Ruta Digital",
+    "en": "Digital Path Finding"
+   },
+   "originalTitle": "Digital Path Finding",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Los Cub Scouts usan dispositivos digitales de mapas para ver una ruta de una milla.",
+    "en": "Cub Scouts use digital mapping devices to view a one-mile route."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p049.webp",
+    "width": 413,
+    "height": 563,
+    "page": 49,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-02-2",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 2,
+    "of": 9,
+    "text": {
+     "es": "“Know Before You Go” (Infórmate antes de ir). Identifica en un mapa el lugar de tu caminata y confirma tu ruta de una milla.",
+     "en": "“Know Before You Go.” Identify the location of your walk on a map and confirm your one-mile route."
+    }
+   },
+   "title": {
+    "es": "Rutas en Papel",
+    "en": "Paper Paths"
+   },
+   "originalTitle": "Paper Paths",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Los Cub Scouts usan mapas de papel para repasar la ruta de la caminata de una milla.",
+    "en": "Cub Scouts use paper maps to review the route of the one-mile walk."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p051.webp",
+    "width": 413,
+    "height": 563,
+    "page": 51,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-03-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 3,
+    "of": 9,
+    "text": {
+     "es": "“Choose the Right Path” (Elige el camino correcto). Aprende sobre el sendero y el área por donde vas a caminar.",
+     "en": "“Choose the Right Path.” Learn about the path and surrounding area you will be walking on."
+    }
+   },
+   "title": {
+    "es": "Pregúntale al Experto del Sendero",
+    "en": "Ask the Path Expert"
+   },
+   "originalTitle": "Ask the Path Expert",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "Inviten a un invitado con conocimiento del sendero para hablar sobre su historia.",
+    "en": "Invite a guest with knowledge of the path to speak about the history of the path."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p053.webp",
+    "width": 413,
+    "height": 563,
+    "page": 53,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-03-2",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 3,
+    "of": 9,
+    "text": {
+     "es": "“Choose the Right Path” (Elige el camino correcto). Aprende sobre el sendero y el área por donde vas a caminar.",
+     "en": "“Choose the Right Path.” Learn about the path and surrounding area you will be walking on."
+    }
+   },
+   "title": {
+    "es": "No Hay Dos Senderos Iguales",
+    "en": "No Two Trails Alike"
+   },
+   "originalTitle": "No Two Trails Alike",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "Los Cub Scouts aprenden sobre las características especiales de la ruta de la caminata Bear.",
+    "en": "Cub Scouts learn about special attributes of the Bear Walk route."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p055.webp",
+    "width": 413,
+    "height": 563,
+    "page": 55,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-04-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 4,
+    "of": 9,
+    "text": {
+     "es": "“Trash Your Trash” (Bota tu basura). Haz un plan de qué harás con tu basura personal o la basura que encuentres en el sendero.",
+     "en": "“Trash Your Trash.” Make a plan for what you will do with your personal trash or trash you find along the trail."
+    }
+   },
+   "title": {
+    "es": "Juego de la Línea del Tiempo de la Basura",
+    "en": "Trash Timeline Game"
+   },
+   "originalTitle": "Trash Timeline Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Jueguen a la línea del tiempo de la basura para entender el tiempo de descomposición y la necesidad de botar la basura.",
+    "en": "Play a trash timeline game to understand decomposition time and the need to trash the trash."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p057.webp",
+    "width": 413,
+    "height": 563,
+    "page": 57,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-05-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 5,
+    "of": 9,
+    "text": {
+     "es": "“Leave What You Find” (Deja lo que encuentres). Toma fotos durante tu caminata o lleva un cuaderno de dibujo para dibujar cinco cosas que quieras recordar.",
+     "en": "“Leave What You Find.” Take pictures along your walk or bring a sketchbook to draw five things that you want to remember on your walk."
+    }
+   },
+   "title": {
+    "es": "Llévate Solo Recuerdos",
+    "en": "Take Only Memories"
+   },
+   "originalTitle": "Take Only Memories",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Durante una caminata, los Cub Scouts toman fotos o llevan un cuaderno para dibujar cinco cosas que quieran recordar.",
+    "en": "While on a walk, Cub Scouts take pictures or bring a sketchbook to draw five things that they want to remember."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p059.webp",
+    "width": 413,
+    "height": 563,
+    "page": 59,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-06-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 6,
+    "of": 9,
+    "text": {
+     "es": "“Be Careful With Fire” (Ten cuidado con el fuego). Determina el nivel de peligro de incendio a lo largo de tu camino.",
+     "en": "“Be Careful With Fire.” Determine the fire danger rating along your path."
+    }
+   },
+   "title": {
+    "es": "Emparejar el Peligro de Incendio",
+    "en": "Fire Danger Matching"
+   },
+   "originalTitle": "Fire Danger Matching",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Jueguen a emparejar los niveles de peligro de incendio.",
+    "en": "Play a fire danger level matching game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p061.webp",
+    "width": 413,
+    "height": 563,
+    "page": 61,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-07-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 7,
+    "of": 9,
+    "text": {
+     "es": "“Respect Wildlife” (Respeta la vida silvestre). Desde una distancia segura, identifica seis señales de mamíferos, aves, insectos o reptiles.",
+     "en": "“Respect Wildlife.” From a safe distance, as you look up, down, and around you, identify six signs of any mammals, birds, insects, or reptiles."
+    }
+   },
+   "title": {
+    "es": "Instantánea de la Vida Silvestre",
+    "en": "Wildlife Snapshot"
+   },
+   "originalTitle": "Wildlife Snapshot",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Durante una caminata, los Cub Scouts identifican seis señales de mamíferos, aves, insectos o reptiles.",
+    "en": "While on a walk, Cub Scouts identify six signs of any mammals, birds, insects, or reptiles."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p063.webp",
+    "width": 413,
+    "height": 563,
+    "page": 63,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-08-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 8,
+    "of": 9,
+    "text": {
+     "es": "“Be Kind to Other Visitors” (Sé amable con otros visitantes). Identifica qué necesitan hacer como den para ser amables con los demás en el sendero.",
+     "en": "“Be Kind to Other Visitors.” Identify what you need to do as a den to be kind to others on the path."
+    }
+   },
+   "title": {
+    "es": "Considera a los Demás",
+    "en": "Consider Others"
+   },
+   "originalTitle": "Consider Others",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Durante una caminata, los Cub Scouts encuentran una manera de ser considerados con otros visitantes del sendero.",
+    "en": "While on a walk, Cub Scouts find one way to be considerate to other visitors on the path."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p065.webp",
+    "width": 413,
+    "height": 563,
+    "page": 65,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-habitat-09-1",
+   "skin": "activity",
+   "adventureId": "bear-habitat",
+   "requirement": {
+    "index": 9,
+    "of": 9,
+    "text": {
+     "es": "Haz tu caminata de una milla mientras practicas los Leave No Trace Principles for Kids.",
+     "en": "Go on your one-mile walk while practicing your Leave No Trace Principles for Kids."
+    }
+   },
+   "title": {
+    "es": "Caminata Leave No Trace",
+    "en": "Leave No Trace Walk"
+   },
+   "originalTitle": "Leave No Trace Walk",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts hacen una caminata de una milla mientras practican los Leave No Trace Principles for Kids.",
+    "en": "Cub Scouts go on a one-mile walk while practicing Leave No Trace Principles for Kids."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p067.webp",
+    "width": 413,
+    "height": 563,
+    "page": 67,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-bear-strong",
+   "skin": "adventure",
+   "adventureId": "bear-strong",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p069.webp",
+    "width": 413,
+    "height": 563,
+    "page": 69,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-01-1",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "Prueba alimentos de tres de los siguientes grupos: proteínas, verduras, frutas, lácteos y granos.",
+     "en": "Sample food from three of the following food groups: protein, vegetables, fruits, dairy, and grains."
+    }
+   },
+   "title": {
+    "es": "Delicias de Manzana",
+    "en": "Apple Delights"
+   },
+   "originalTitle": "Apple Delights",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Preparen refrigerios fáciles con manzana.",
+    "en": "Prepare easy apple snacks."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p071.webp",
+    "width": 413,
+    "height": 563,
+    "page": 71,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-01-2",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "Prueba alimentos de tres de los siguientes grupos: proteínas, verduras, frutas, lácteos y granos.",
+     "en": "Sample food from three of the following food groups: protein, vegetables, fruits, dairy, and grains."
+    }
+   },
+   "title": {
+    "es": "Pizza Fiesta",
+    "en": "Fiesta Pizza"
+   },
+   "originalTitle": "Fiesta Pizza",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Preparen una pizza que incluya los grupos de proteínas, verduras, lácteos y granos.",
+    "en": "Prepare a pizza that includes protein, vegetable, dairy, and grain food groups."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p073.webp",
+    "width": 413,
+    "height": 563,
+    "page": 73,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-01-3",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "Prueba alimentos de tres de los siguientes grupos: proteínas, verduras, frutas, lácteos y granos.",
+     "en": "Sample food from three of the following food groups: protein, vegetables, fruits, dairy, and grains."
+    }
+   },
+   "title": {
+    "es": "Diversión y Comida",
+    "en": "Fun and Food"
+   },
+   "originalTitle": "Fun and Food",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Prepara un refrigerio y llévalo a una reunión de den.",
+    "en": "Prepare a snack and bring it to a den meeting."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p075.webp",
+    "width": 413,
+    "height": 563,
+    "page": 75,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-02-1",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 30 minutos con tu den o con al menos otra persona, incluyendo estiramientos y movimiento.",
+     "en": "Be active for 30 minutes with your den or at least one other person that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "Desafío de Baloncesto",
+    "en": "Basketball Challenge"
+   },
+   "originalTitle": "Basketball Challenge",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Jueguen una partida de “HORSE” (Caballo).",
+    "en": "Play a game of “HORSE.”"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p077.webp",
+    "width": 413,
+    "height": 563,
+    "page": 77,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-02-2",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 30 minutos con tu den o con al menos otra persona, incluyendo estiramientos y movimiento.",
+     "en": "Be active for 30 minutes with your den or at least one other person that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "Titanes del Tenis",
+    "en": "Tennis Titans"
+   },
+   "originalTitle": "Tennis Titans",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Jueguen un partido de tenis.",
+    "en": "Play a game of tennis."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p079.webp",
+    "width": 413,
+    "height": 563,
+    "page": 79,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-02-3",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 30 minutos con tu den o con al menos otra persona, incluyendo estiramientos y movimiento.",
+     "en": "Be active for 30 minutes with your den or at least one other person that includes both stretching and moving."
+    }
+   },
+   "title": {
+    "es": "Juega Ultimate",
+    "en": "Play Ultimate"
+   },
+   "originalTitle": "Play Ultimate",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Jueguen una partida de Ultimate (frisbee).",
+    "en": "Play a game of Ultimate."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p081.webp",
+    "width": 413,
+    "height": 563,
+    "page": 81,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-03-1",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 15 minutos haciendo ejercicios personales que incluyan cardio, fuerza muscular y flexibilidad.",
+     "en": "Be active for 15 minutes doing personal exercises that include cardio, muscular strength, and flexibility."
+    }
+   },
+   "title": {
+    "es": "Ritmos de Memoria y Baile",
+    "en": "Dance Memory Grooves"
+   },
+   "originalTitle": "Dance Memory Grooves",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los concursos de memoria bailando son una forma divertida de ejercitarse que incluye cardio y memoria muscular.",
+    "en": "Dancing memory contests are a fun way to exercise that includes cardio and muscle memory."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p083.webp",
+    "width": 413,
+    "height": 563,
+    "page": 83,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-03-2",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 15 minutos haciendo ejercicios personales que incluyan cardio, fuerza muscular y flexibilidad.",
+     "en": "Be active for 15 minutes doing personal exercises that include cardio, muscular strength, and flexibility."
+    }
+   },
+   "title": {
+    "es": "Rutina Energizante",
+    "en": "Energizing Workout"
+   },
+   "originalTitle": "Energizing Workout",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts crean una rutina corta para explorar diferentes ejercicios.",
+    "en": "Cub Scouts create a short workout to explore different exercises."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p085.webp",
+    "width": 413,
+    "height": 563,
+    "page": 85,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-03-3",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "Mantente activo durante 15 minutos haciendo ejercicios personales que incluyan cardio, fuerza muscular y flexibilidad.",
+     "en": "Be active for 15 minutes doing personal exercises that include cardio, muscular strength, and flexibility."
+    }
+   },
+   "title": {
+    "es": "Experto en Acondicionamiento",
+    "en": "Fitness Expert"
+   },
+   "originalTitle": "Fitness Expert",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "Inviten a un profesional del acondicionamiento físico a su reunión de den para dirigir una actividad de 15 minutos.",
+    "en": "Invite a fitness professional to your Cub Scout den meeting to lead a 15-minute activity."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p087.webp",
+    "width": 413,
+    "height": 563,
+    "page": 87,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-04-1",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "Haz una actividad relajante durante 10 minutos.",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "Escuchar Música",
+    "en": "Listening to Music"
+   },
+   "originalTitle": "Listening to Music",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Escucha música relajante para crear un efecto calmante.",
+    "en": "Listen to relaxing music to create a calming effect."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p089.webp",
+    "width": 413,
+    "height": 563,
+    "page": 89,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-04-2",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "Haz una actividad relajante durante 10 minutos.",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "Escape de Lectura",
+    "en": "Reading Escape"
+   },
+   "originalTitle": "Reading Escape",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "Lee un libro.",
+    "en": "Read a book."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p091.webp",
+    "width": 413,
+    "height": 563,
+    "page": 91,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-04-3",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "Haz una actividad relajante durante 10 minutos.",
+     "en": "Do a relaxing activity for 10 minutes."
+    }
+   },
+   "title": {
+    "es": "Saludo de Yoga",
+    "en": "Yoga Salutation"
+   },
+   "originalTitle": "Yoga Salutation",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Practica yoga.",
+    "en": "Practice yoga."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p093.webp",
+    "width": 413,
+    "height": 563,
+    "page": 93,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-bear-strong-05-1",
+   "skin": "activity",
+   "adventureId": "bear-strong",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "Revisa tu Scouting America Annual Health and Medical Record con tu padre, madre o tutor. Conversa sobre tu capacidad para participar en actividades del den y del pack.",
+     "en": "Review your Scouting America Annual Health and Medical Record with your parent or guardian. Discuss your ability to participate in den and pack activities."
+    }
+   },
+   "title": {
+    "es": "Repaso del Registro de Salud y Médico",
+    "en": "Scouting America Health & Medical Record Review"
+   },
+   "originalTitle": "Scouting America Health & Medical Record Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts revisan su Registro Anual de Salud y Médico con su padre, madre o tutor legal.",
+    "en": "Cub Scouts review their Scouting America Annual Health and Medical Records with their parents or legal guardians."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p095.webp",
+    "width": 413,
+    "height": 563,
+    "page": 95,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-paws-for-action",
+   "skin": "adventure",
+   "adventureId": "paws-for-action",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p097.webp",
+    "width": 413,
+    "height": 563,
+    "page": 97,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-01-1",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Familiarízate con la bandera de los Estados Unidos, incluyendo su historia, demostrando cómo izarla y bajarla, cómo doblarla y exhibirla correctamente.",
+     "en": "Familiarize yourself with the flag of the United States of America, including the history, demonstrating how to raise and lower the flag, how to properly fold and display, and the United States etiquette."
+    }
+   },
+   "title": {
+    "es": "Ceremonia de la Bandera al Aire Libre",
+    "en": "Outdoor Flag Ceremony"
+   },
+   "originalTitle": "Outdoor Flag Ceremony",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "Aprende la etiqueta de la bandera y cómo manejarla jugando un juego de preguntas sobre la bandera.",
+    "en": "Learn about flag etiquette and how to work with a flag while playing a flag trivia game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p099.webp",
+    "width": 413,
+    "height": 563,
+    "page": 99,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-01-2",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Familiarízate con la bandera de los Estados Unidos, incluyendo su historia, demostrando cómo izarla y bajarla, cómo doblarla y exhibirla correctamente.",
+     "en": "Familiarize yourself with the flag of the United States of America, including the history, demonstrating how to raise and lower the flag, how to properly fold and display, and the United States etiquette."
+    }
+   },
+   "title": {
+    "es": "Invitado Patriótico",
+    "en": "Patriotic Guest Speaker"
+   },
+   "originalTitle": "Patriotic Guest Speaker",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "Aprende sobre la bandera de los Estados Unidos y cómo se usa, de la mano de un patriota local.",
+    "en": "Learn about the United States flag and how it’s used from a local patriot."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p101.webp",
+    "width": 413,
+    "height": 563,
+    "page": 101,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-02-1",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Identifica tres símbolos que representen a los Estados Unidos. Elige tu favorito y haz un modelo, obra de arte u otra manualidad que represente ese símbolo.",
+     "en": "Identify three symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+    }
+   },
+   "title": {
+    "es": "Pinta la Bandera",
+    "en": "Paint the Flag"
+   },
+   "originalTitle": "Paint the Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Pinta un cuadro de la bandera de los Estados Unidos.",
+    "en": "Paint a picture of the United States flag."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p103.webp",
+    "width": 413,
+    "height": 563,
+    "page": 103,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-02-2",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Identifica tres símbolos que representen a los Estados Unidos. Elige tu favorito y haz un modelo, obra de arte u otra manualidad que represente ese símbolo.",
+     "en": "Identify three symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+    }
+   },
+   "title": {
+    "es": "Estatua de la Libertad",
+    "en": "Statue of Liberty"
+   },
+   "originalTitle": "Statue of Liberty",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Aprende sobre la Estatua de la Libertad mientras construyes una réplica.",
+    "en": "Learn about the Statue of Liberty while building a replica."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p105.webp",
+    "width": 413,
+    "height": 563,
+    "page": 105,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-02-3",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Identifica tres símbolos que representen a los Estados Unidos. Elige tu favorito y haz un modelo, obra de arte u otra manualidad que represente ese símbolo.",
+     "en": "Identify three symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+    }
+   },
+   "title": {
+    "es": "Modelo de Símbolo de EE. UU.",
+    "en": "U.S.A. Symbol Model"
+   },
+   "originalTitle": "U.S.A. Symbol Model",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Con plastilina, crea un símbolo que represente a los Estados Unidos.",
+    "en": "Using modeling clay, create a symbol that represents the United States."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p107.webp",
+    "width": 413,
+    "height": 563,
+    "page": 107,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-02-4",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Identifica tres símbolos que representen a los Estados Unidos. Elige tu favorito y haz un modelo, obra de arte u otra manualidad que represente ese símbolo.",
+     "en": "Identify three symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+    }
+   },
+   "title": {
+    "es": "Dibujo de Símbolos de EE. UU.",
+    "en": "U.S.A. Symbols Drawing"
+   },
+   "originalTitle": "U.S.A. Symbols Drawing",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Aprende sobre los símbolos que representan a los Estados Unidos y haz un dibujo de tu favorito.",
+    "en": "Learn about symbols that represent the United States, and create a drawing of your favorite symbol."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p109.webp",
+    "width": 413,
+    "height": 563,
+    "page": 109,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-02-5",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Identifica tres símbolos que representen a los Estados Unidos. Elige tu favorito y haz un modelo, obra de arte u otra manualidad que represente ese símbolo.",
+     "en": "Identify three symbols that represent the United States. Pick your favorite and make a model, work of art, or other craft that depicts the symbol."
+    }
+   },
+   "title": {
+    "es": "Modelo de la Casa Blanca",
+    "en": "White House Model"
+   },
+   "originalTitle": "White House Model",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Aprende sobre los símbolos de los Estados Unidos y construye un modelo de la Casa Blanca.",
+    "en": "Learn about United States symbols, and build a model of the White House."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p111.webp",
+    "width": 413,
+    "height": 563,
+    "page": 111,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-03-1",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Aprende sobre la misión de cualquier organización sin fines de lucro. Averigua cómo financian sus actividades y cómo usan a los voluntarios para ayudar.",
+     "en": "Learn about the mission of any nonprofit. Find out how they fund their activities and how volunteers are used to help."
+    }
+   },
+   "title": {
+    "es": "Grupos que Ayudan",
+    "en": "Groups That Help"
+   },
+   "originalTitle": "Groups That Help",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Los Cub Scouts aprenden sobre una organización sin fines de lucro usando el internet.",
+    "en": "Cub Scouts learn about a nonprofit organization using the internet."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p113.webp",
+    "width": 413,
+    "height": 563,
+    "page": 113,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-03-2",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Aprende sobre la misión de cualquier organización sin fines de lucro. Averigua cómo financian sus actividades y cómo usan a los voluntarios para ayudar.",
+     "en": "Learn about the mission of any nonprofit. Find out how they fund their activities and how volunteers are used to help."
+    }
+   },
+   "title": {
+    "es": "Visita a una Organización Sin Fines de Lucro",
+    "en": "Nonprofit Visit"
+   },
+   "originalTitle": "Nonprofit Visit",
+   "place": "outing",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "Los Cub Scouts aprenden sobre una organización sin fines de lucro visitándola.",
+    "en": "Cub Scouts learn about a nonprofit by visiting the organization."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p115.webp",
+    "width": 413,
+    "height": 563,
+    "page": 115,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-04-1",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Participa en un proyecto de servicio.",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "Colecta de Anteojos",
+    "en": "Eyeglasses Donation Drive"
+   },
+   "originalTitle": "Eyeglasses Donation Drive",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 5
+   },
+   "description": {
+    "es": "Con tu den, organiza una colecta de anteojos usados para donarlos a una organización que los recicla para quienes los necesitan.",
+    "en": "With your den, host a used eyeglasses drive to donate to an organization that recycles them for those in need."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p117.webp",
+    "width": 413,
+    "height": 563,
+    "page": 117,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-04-2",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Participa en un proyecto de servicio.",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "Plantar Árboles",
+    "en": "Plant Trees"
+   },
+   "originalTitle": "Plant Trees",
+   "place": "outing",
+   "meters": {
+    "energy": 4,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "Los Cub Scouts plantan un árbol en su comunidad.",
+    "en": "Cub Scouts plant a tree in their community."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p119.webp",
+    "width": 413,
+    "height": 563,
+    "page": 119,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-paws-for-action-04-3",
+   "skin": "activity",
+   "adventureId": "paws-for-action",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Participa en un proyecto de servicio.",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "Scouting for Food",
+    "en": "Scouting for Food"
+   },
+   "originalTitle": "Scouting for Food",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "Participen en el evento Scouting for Food (colecta de alimentos) patrocinado por su concilio (council).",
+    "en": "Participate in your council-sponsored Scouting for Food event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p121.webp",
+    "width": 413,
+    "height": 563,
+    "page": 121,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-standing-tall",
+   "skin": "adventure",
+   "adventureId": "standing-tall",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p123.webp",
+    "width": 413,
+    "height": 563,
+    "page": 123,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-01-1",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Con permiso de tu padre, madre o tutor legal, mira el video de las Protect Yourself Rules del rango Bear.",
+     "en": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Bear rank."
+    }
+   },
+   "title": {
+    "es": "Video de las Protect Yourself Rules",
+    "en": "Protect Yourself Rules Video"
+   },
+   "originalTitle": "Protect Yourself Rules Video",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Mira el video de las Protect Yourself Rules con tu padre, madre o tutor legal.",
+    "en": "Watch the Protect Yourself Rules video with your parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p125.webp",
+    "width": 413,
+    "height": 563,
+    "page": 125,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-02-1",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Completa la hoja de trabajo “Personal Space Bubble” (Burbuja de Espacio Personal), parte de los recursos de las Protect Yourself Rules.",
+     "en": "Complete the Personal Space Bubble worksheet that is part of the Protect Yourself Rules resources."
+    }
+   },
+   "title": {
+    "es": "Burbuja Personal",
+    "en": "Personal Bubble"
+   },
+   "originalTitle": "Personal Bubble",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Identifica a las personas que caben dentro de las burbujas Íntima, Personal, Social y Pública.",
+    "en": "Identify people that fall within Intimate, Personal, Social, and Public bubbles."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p127.webp",
+    "width": 413,
+    "height": 563,
+    "page": 127,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-03-1",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Con tu padre, madre o tutor legal, establece una política familiar para los dispositivos digitales.",
+     "en": "With your parent or legal guardian, set up a family policy for digital devices."
+    }
+   },
+   "title": {
+    "es": "Política Familiar de Dispositivos Digitales",
+    "en": "Family Digital Device Policy"
+   },
+   "originalTitle": "Family Digital Device Policy",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Con tus padres o tutores legales, establece una política familiar para los dispositivos digitales.",
+    "en": "With parents and legal guardians, set up a family digital device policy."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p129.webp",
+    "width": 413,
+    "height": 563,
+    "page": 129,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-04-1",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Identifica el equipo de seguridad personal común para tu cabeza, ojos, boca, manos y pies. Demuestra el uso correcto del equipo para una actividad.",
+     "en": "Identify common personal safety gear for your head, eyes, mouth, hands, and feet. List how each of these items protects you. Demonstrate the proper use of personal safety gear for an activity."
+    }
+   },
+   "title": {
+    "es": "Equipo de Seguridad en la Cocina",
+    "en": "Kitchen Safety Gear"
+   },
+   "originalTitle": "Kitchen Safety Gear",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Aprende sobre la seguridad personal en la cocina.",
+    "en": "Learn about personal safety in the kitchen."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p131.webp",
+    "width": 413,
+    "height": 563,
+    "page": 131,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-04-2",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Identifica el equipo de seguridad personal común para tu cabeza, ojos, boca, manos y pies. Demuestra el uso correcto del equipo para una actividad.",
+     "en": "Identify common personal safety gear for your head, eyes, mouth, hands, and feet. List how each of these items protects you. Demonstrate the proper use of personal safety gear for an activity."
+    }
+   },
+   "title": {
+    "es": "Equipo de Seguridad para Ciencias",
+    "en": "Science Safety Gear"
+   },
+   "originalTitle": "Science Safety Gear",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "Aprende sobre el equipo de seguridad personal necesario para hacer un experimento científico.",
+    "en": "Learn about personal safety gear needed for conducting a science experiment."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p133.webp",
+    "width": 413,
+    "height": 563,
+    "page": 133,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-standing-tall-04-3",
+   "skin": "activity",
+   "adventureId": "standing-tall",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "Identifica el equipo de seguridad personal común para tu cabeza, ojos, boca, manos y pies. Demuestra el uso correcto del equipo para una actividad.",
+     "en": "Identify common personal safety gear for your head, eyes, mouth, hands, and feet. List how each of these items protects you. Demonstrate the proper use of personal safety gear for an activity."
+    }
+   },
+   "title": {
+    "es": "Equipo de Seguridad Deportiva",
+    "en": "Sport Safety Gear"
+   },
+   "originalTitle": "Sport Safety Gear",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Aprende sobre el equipo de seguridad personal necesario para cualquier tipo de patinaje.",
+    "en": "Learn about personal safety gear needed for any form of skating."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p135.webp",
+    "width": 413,
+    "height": 563,
+    "page": 135,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-fellowship",
+   "skin": "adventure",
+   "adventureId": "fellowship",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p137.webp",
+    "width": 413,
+    "height": 563,
+    "page": 137,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-01-1",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Con tu padre, madre o tutor legal, habla sobre las tradiciones de fe de tu familia. Haz una manualidad, obra de arte o un platillo que forme parte de una celebración familiar.",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "Ricos Bocados de Pavo",
+    "en": "Beary Happy Turkey Treats"
+   },
+   "originalTitle": "Beary Happy Turkey Treats",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Creen bocadillos para el Día de Acción de Gracias (Thanksgiving).",
+    "en": "Create Thanksgiving treats."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p139.webp",
+    "width": 413,
+    "height": 563,
+    "page": 139,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-01-2",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Con tu padre, madre o tutor legal, habla sobre las tradiciones de fe de tu familia. Haz una manualidad, obra de arte o un platillo que forme parte de una celebración familiar.",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "Celebración de Plastilina",
+    "en": "Clay Celebration"
+   },
+   "originalTitle": "Clay Celebration",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Crea una escultura de plastilina que puedas usar como parte de tu tradición de fe, festividad o celebración familiar favorita.",
+    "en": "Create a clay sculpture that can be used as part of your favorite family faith tradition, holiday, or celebration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p141.webp",
+    "width": 413,
+    "height": 563,
+    "page": 141,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-01-3",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "Con tu padre, madre o tutor legal, habla sobre las tradiciones de fe de tu familia. Haz una manualidad, obra de arte o un platillo que forme parte de una celebración familiar.",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Identify three holidays or celebrations that are part of your family’s faith traditions. Make a craft, work of art, or a food item that is part of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "Corazón de Arte con Hilos",
+    "en": "I Heart String Art"
+   },
+   "originalTitle": "I Heart String Art",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "Crea un corazón de arte con hilos (string art).",
+    "en": "Create a string art heart."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p143.webp",
+    "width": 413,
+    "height": 563,
+    "page": 143,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-02-1",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Con tu familia, asiste a un servicio religioso u otra reunión que muestre cómo tu familia expresa la reverencia.",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses reverence."
+    }
+   },
+   "title": {
+    "es": "Asiste a un Servicio Religioso",
+    "en": "Attend a Religious Service"
+   },
+   "originalTitle": "Attend a Religious Service",
+   "place": "outing",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "Asiste a un servicio religioso según la elección de tu familia.",
+    "en": "Attend a religious service based on your family’s choosing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p145.webp",
+    "width": 413,
+    "height": 563,
+    "page": 145,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-02-2",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Con tu familia, asiste a un servicio religioso u otra reunión que muestre cómo tu familia expresa la reverencia.",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses reverence."
+    }
+   },
+   "title": {
+    "es": "Celebración con la Organización Asociada",
+    "en": "Chartered Partner Celebration"
+   },
+   "originalTitle": "Chartered Partner Celebration",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 4
+   },
+   "description": {
+    "es": "Asiste a una celebración en tu organización asociada (chartered partner) basada en una tradición de fe.",
+    "en": "Attend a celebration at your chartered partner based on a faith tradition."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p147.webp",
+    "width": 413,
+    "height": 563,
+    "page": 147,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-02-3",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "Con tu familia, asiste a un servicio religioso u otra reunión que muestre cómo tu familia expresa la reverencia.",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses reverence."
+    }
+   },
+   "title": {
+    "es": "Celebración del Día de los Veteranos",
+    "en": "Veterans Day Celebration"
+   },
+   "originalTitle": "Veterans Day Celebration",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "Participa en una celebración del Día de los Veteranos (Veterans Day).",
+    "en": "Participate in a Veterans Day celebration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p149.webp",
+    "width": 413,
+    "height": 563,
+    "page": 149,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-03-1",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Realiza un acto de bondad.",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "Frasco de Bondad",
+    "en": "Kindness Jar"
+   },
+   "originalTitle": "Kindness Jar",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "Escribe palabras bonitas sobre tu padre, madre o tutor legal y ponlas en un frasco.",
+    "en": "Write nice words about your parent or legal guardian, and put them in a jar."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p151.webp",
+    "width": 413,
+    "height": 563,
+    "page": 151,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-03-2",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Realiza un acto de bondad.",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "Haz un Amigo",
+    "en": "Make a Friend"
+   },
+   "originalTitle": "Make a Friend",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 2
+   },
+   "description": {
+    "es": "Habla con alguien nuevo en la escuela.",
+    "en": "Talk to someone new at school."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p153.webp",
+    "width": 413,
+    "height": 563,
+    "page": 153,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-03-3",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "Realiza un acto de bondad.",
+     "en": "Carry out an act of kindness."
+    }
+   },
+   "title": {
+    "es": "Agradece a un Maestro",
+    "en": "Thank a Teacher"
+   },
+   "originalTitle": "Thank a Teacher",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "Escribe una tarjeta de agradecimiento para un maestro.",
+    "en": "Write a thank-you card for a teacher."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p155.webp",
+    "width": 413,
+    "height": 563,
+    "page": 155,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-fellowship-04-1",
+   "skin": "activity",
+   "adventureId": "fellowship",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, identify a religion or faith that is different from your own. Determine two things that it has in common with your family’s beliefs."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Common Faith Elements"
+   },
+   "originalTitle": "Common Faith Elements",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Learn about a religion different from your own, and name two things that it has in common with your family’s beliefs."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p157.webp",
+    "width": 413,
+    "height": 563,
+    "page": 157,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-let-s-camp",
+   "skin": "adventure",
+   "adventureId": "let-s-camp",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p159.webp",
+    "width": 413,
+    "height": 563,
+    "page": 159,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-01-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Review the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bear Buddies Rule"
+   },
+   "originalTitle": "Bear Buddies Rule",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review what to do while using the buddy system."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p161.webp",
+    "width": 413,
+    "height": 563,
+    "page": 161,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-01-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Review the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Standing Bear Buddies"
+   },
+   "originalTitle": "Standing Bear Buddies",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the buddy system by playing a game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p163.webp",
+    "width": 413,
+    "height": 563,
+    "page": 163,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-02-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Pack your Cub Scout Six Essentials for the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bear Backpack"
+   },
+   "originalTitle": "Bear Backpack",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p165.webp",
+    "width": 413,
+    "height": 563,
+    "page": 165,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-02-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Pack your Cub Scout Six Essentials for the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cub Scout Six Essentials Word Search"
+   },
+   "originalTitle": "Cub Scout Six Essentials Word Search",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review the Cub Scout Six Essentials with a word search puzzle."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p167.webp",
+    "width": 413,
+    "height": 563,
+    "page": 167,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-03-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "In addition to your Cub Scout Six Essentials, show the personal items you need for your campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Check It Off The List"
+   },
+   "originalTitle": "Check It Off The List",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts review items needed for a campout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p169.webp",
+    "width": 413,
+    "height": 563,
+    "page": 169,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-03-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "In addition to your Cub Scout Six Essentials, show the personal items you need for your campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Approval"
+   },
+   "originalTitle": "Den Approval",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about items needed for a campout other than their Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p171.webp",
+    "width": 413,
+    "height": 563,
+    "page": 171,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-03-3",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "In addition to your Cub Scout Six Essentials, show the personal items you need for your campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Musical Gear"
+   },
+   "originalTitle": "Musical Gear",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts choose extra gear needed for a campout outside of the Cub Scout Six Essentials by playing a game similar to musical chairs."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p173.webp",
+    "width": 413,
+    "height": 563,
+    "page": 173,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-04-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Help set up a tent. Determine a good spot for the tent. Explain why you picked the spot."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pitch It Fast"
+   },
+   "originalTitle": "Pitch It Fast",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice setting up a tent."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p175.webp",
+    "width": 413,
+    "height": 563,
+    "page": 175,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-04-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Help set up a tent. Determine a good spot for the tent. Explain why you picked the spot."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Tent SetUp"
+   },
+   "originalTitle": "Tent SetUp",
+   "place": "outdoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice setting up a tent outside."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p177.webp",
+    "width": 413,
+    "height": 563,
+    "page": 177,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-let-s-camp-05-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend a campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "originalTitle": "Let’s Camp",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will attend an overnight campout with your pack or at a council or district event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p179.webp",
+    "width": 413,
+    "height": 563,
+    "page": 179,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-race-time",
+   "skin": "adventure",
+   "adventureId": "race-time",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p181.webp",
+    "width": 413,
+    "height": 563,
+    "page": 181,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-01-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, build either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Car Build Day"
+   },
+   "originalTitle": "Pinewood Derby ® Car Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p183.webp",
+    "width": 413,
+    "height": 563,
+    "page": 183,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-01-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "With an adult, build either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Boat Build Day"
+   },
+   "originalTitle": "Raingutter Regatta™ Boat Build Day",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p185.webp",
+    "width": 413,
+    "height": 563,
+    "page": 185,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-02-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Rules"
+   },
+   "originalTitle": "Pinewood Derby ® Rules",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts complete a crossword puzzle to learn the Pinewood Derby ® rules."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p187.webp",
+    "width": 413,
+    "height": 563,
+    "page": 187,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-02-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Rules"
+   },
+   "originalTitle": "Raingutter Regatta™ Rules",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts complete a crossword puzzle to learn the Raingutter Regatta™ rules."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p189.webp",
+    "width": 413,
+    "height": 563,
+    "page": 189,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-03-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify how you could increase the speed of your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Boat Fine–Tune"
+   },
+   "originalTitle": "Boat Fine–Tune",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts identify three ways to make Raingutter Regatta™ boats faster."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p191.webp",
+    "width": 413,
+    "height": 563,
+    "page": 191,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-03-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Identify how you could increase the speed of your chosen vehicle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Car Need for Speed"
+   },
+   "originalTitle": "Car Need for Speed",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts identify three ways to make their Pinewood Derby ® cars faster."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p193.webp",
+    "width": 413,
+    "height": 563,
+    "page": 193,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-04-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Before the race, discuss with your den how you will demonstrate good sportsmanship during the race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Team Player"
+   },
+   "originalTitle": "Team Player",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn how to be good sports at their racing event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p195.webp",
+    "width": 413,
+    "height": 563,
+    "page": 195,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-05-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Race"
+   },
+   "originalTitle": "Pinewood Derby ® Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Pinewood Derby ® car race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p197.webp",
+    "width": 413,
+    "height": 563,
+    "page": 197,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-race-time-05-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 5,
+    "of": 5,
+    "text": {
+     "es": "",
+     "en": "Participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™"
+   },
+   "originalTitle": "Raingutter Regatta™",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p199.webp",
+    "width": 413,
+    "height": 563,
+    "page": 199,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-summertime-fun",
+   "skin": "adventure",
+   "adventureId": "summertime-fun",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p201.webp",
+    "width": 413,
+    "height": 563,
+    "page": 201,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-summertime-fun-01-1",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Council activity"
+   },
+   "originalTitle": "Council activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your council."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p203.webp",
+    "width": 413,
+    "height": 563,
+    "page": 203,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-summertime-fun-01-2",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den activity"
+   },
+   "originalTitle": "Den activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p205.webp",
+    "width": 413,
+    "height": 563,
+    "page": 205,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-summertime-fun-01-3",
+   "skin": "activity",
+   "adventureId": "summertime-fun",
+   "requirement": {
+    "index": 1,
+    "of": 1,
+    "text": {
+     "es": "",
+     "en": "Anytime during May through August, participate in a total of three Cub Scout activities."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pack activity"
+   },
+   "originalTitle": "Pack activity",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in an activity with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p207.webp",
+    "width": 413,
+    "height": 563,
+    "page": 207,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-adv-whittling",
+   "skin": "adventure",
+   "adventureId": "whittling",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p209.webp",
+    "width": 413,
+    "height": 563,
+    "page": 209,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-01-1",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Read, understand, and promise to abide by the Cub Scout knife safety rules."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Knife Safety Rules"
+   },
+   "originalTitle": "Knife Safety Rules",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn and explain the knife safety rules."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p211.webp",
+    "width": 413,
+    "height": 563,
+    "page": 211,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-01-2",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Read, understand, and promise to abide by the Cub Scout knife safety rules."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Knife Safety Rules Charades"
+   },
+   "originalTitle": "Knife Safety Rules Charades",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts learn about the knife safety rules by playing charades."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p213.webp",
+    "width": 413,
+    "height": 563,
+    "page": 213,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-02-1",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate the knife safety circle."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Knife Safety Circle"
+   },
+   "originalTitle": "Knife Safety Circle",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice the knife safety circle."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p215.webp",
+    "width": 413,
+    "height": 563,
+    "page": 215,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-03-1",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Demonstrate that you know how to care for and use your pocketknife safely."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pocketknife Sharpening Practice"
+   },
+   "originalTitle": "Pocketknife Sharpening Practice",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts practice sharpening their pocketknives."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p217.webp",
+    "width": 413,
+    "height": 563,
+    "page": 217,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-04-1",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Make two carvings with a pocketknife."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Potato Printing Press"
+   },
+   "originalTitle": "Potato Printing Press",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts carve a pattern into a potato and print a design."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p219.webp",
+    "width": 413,
+    "height": 563,
+    "page": 219,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "bear-a-whittling-04-2",
+   "skin": "activity",
+   "adventureId": "whittling",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Make two carvings with a pocketknife."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Soap Carving"
+   },
+   "originalTitle": "Soap Carving",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts carve a simple item out of soap."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/bear/p221.webp",
+    "width": 413,
+    "height": 563,
+    "page": 221,
+    "lang": "en"
+   }
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+ "$comment": "Las 7 barajas = 6 rangos Cub Scout + la baraja de planeación del pack (para líderes). No hay baraja Bobcat: Bobcat es la primera Aventura dentro de cada rango. Ver docs/content-pipeline.md.",
+ "decks": [
+  {
+   "id": "lion",
+   "rank": "Lion",
+   "grade": "Kindergarten",
+   "order": 1,
+   "audience": "family",
+   "name": {
+    "es": "Lion",
+    "en": "Lion"
+   },
+   "translation": "pendiente",
+   "cardIds": [],
+   "cardCount": 106,
+   "spanishRatio": 0.0
+  },
+  {
+   "id": "tiger",
+   "rank": "Tiger",
+   "grade": "1.er grado",
+   "order": 2,
+   "audience": "family",
+   "name": {
+    "es": "Tiger",
+    "en": "Tiger"
+   },
+   "translation": "pendiente",
+   "cardIds": [],
+   "cardCount": 105,
+   "spanishRatio": 0.0
+  },
+  {
+   "id": "wolf",
+   "rank": "Wolf",
+   "grade": "2.º grado",
+   "order": 3,
+   "audience": "family",
+   "name": {
+    "es": "Wolf",
+    "en": "Wolf"
+   },
+   "translation": "pendiente",
+   "cardIds": [],
+   "cardCount": 107,
+   "spanishRatio": 0.0
+  },
+  {
+   "id": "bear",
+   "rank": "Bear",
+   "grade": "3.er grado",
+   "order": 4,
+   "audience": "family",
+   "name": {
+    "es": "Bear",
+    "en": "Bear"
+   },
+   "translation": "parcial",
+   "cardIds": [],
+   "cardCount": 111,
+   "spanishRatio": 0.7
+  },
+  {
+   "id": "webelos",
+   "rank": "Webelos",
+   "grade": "4.º grado",
+   "order": 5,
+   "audience": "family",
+   "name": {
+    "es": "Webelos",
+    "en": "Webelos"
+   },
+   "translation": "pendiente",
+   "cardIds": [],
+   "cardCount": 111,
+   "spanishRatio": 0.0
+  },
+  {
+   "id": "arrow-of-light",
+   "rank": "Arrow of Light",
+   "grade": "5.º grado",
+   "order": 6,
+   "audience": "family",
+   "name": {
+    "es": "Arrow of Light",
+    "en": "Arrow of Light"
+   },
+   "translation": "pendiente",
+   "cardIds": []
+  },
+  {
+   "id": "pack-planning",
+   "rank": null,
+   "grade": null,
+   "order": 7,
+   "audience": "leader",
+   "name": {
+    "es": "Planificación del Pack",
+    "en": "Pack Program Planning"
+   },
+   "translation": "pendiente",
+   "cardIds": []
+  }
+ ]
+}

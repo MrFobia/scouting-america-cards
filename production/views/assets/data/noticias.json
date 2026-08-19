@@ -1,0 +1,27 @@
+{
+ "$comment": "Anuncios editoriales del equipo, no datos del líder ni del papá. Se cargan por API.getNoticias() y se muestran en el home de la familia, más nuevo primero.",
+ "noticias": [
+  {
+   "id": "guia-actualizada",
+   "date": "2026-08-08",
+   "icon": "book",
+   "category": { "es": "Guía", "en": "Guide" },
+   "title": { "es": "Guía de uso más corta y clara", "en": "A shorter, clearer how-it-works guide" },
+   "excerpt": {
+    "es": "Menos pasos para abrir la primera tarjeta que le mandó su líder. Sin cuenta, sin instalar nada.",
+    "en": "Fewer steps to open the first card your den leader sends. No account, nothing to install."
+   }
+  },
+  {
+   "id": "mantenimiento",
+   "date": "2026-08-03",
+   "icon": "bell",
+   "category": { "es": "Aviso", "en": "Notice" },
+   "title": { "es": "Mantenimiento breve el sábado a la noche", "en": "Brief maintenance Saturday night" },
+   "excerpt": {
+    "es": "La app puede tardar unos minutos en cargar el sábado después de las 10pm. Nada de lo suyo se pierde.",
+    "en": "The app may be slow to load Saturday after 10pm. Nothing of yours is lost."
+   }
+  }
+ ]
+}

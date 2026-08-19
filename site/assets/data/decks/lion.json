@@ -1,0 +1,3712 @@
+{
+ "$status": "106 tarjetas extraídas del PDF oficial. Español en 0/11 Adventures y 0/90 actividades; el resto cae a inglés con aviso.",
+ "id": "lion",
+ "rank": "Lion",
+ "grade": "Kindergarten",
+ "order": 1,
+ "audience": "family",
+ "translation": "pendiente",
+ "name": {
+  "es": "Lion",
+  "en": "Lion"
+ },
+ "intro": {
+  "es": "La primera baraja del camino: juegos cortos, mucho movimiento y las primeras salidas con el den.",
+  "en": ""
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [
+  {
+   "id": "bobcat",
+   "name": {
+    "es": "",
+    "en": "Bobcat"
+   },
+   "category": {
+    "es": "",
+    "en": "Character & Leadership"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "The Bobcat Adventure is the first required Adventure on the trail to earn the Lion badge of rank. Once the Bobcat Adventure is completed, Lions can start any other of the Adventures in any order. Bobcat is focused on character and introducing the values of Scouting America."
+   }
+  },
+  {
+   "id": "mountain-lion",
+   "name": {
+    "es": "",
+    "en": "Mountain Lion"
+   },
+   "category": {
+    "es": "",
+    "en": "Outdoors"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "The natural environment continues to be a great place to learn and discover. The value of being outdoors has been proven to have benefits for both youth and adults. For Lion Cub Scouts, this means simply taking a walk outside and noting what they see. Lions and adult partners will take a walk to explore the outdoors. Along the way, they will see and identify things that are natural and things that are man-made."
+   }
+  },
+  {
+   "id": "fun-on-the-run",
+   "name": {
+    "es": "",
+    "en": "Fun on the Run"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Fitness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Personal fitness is learning about proper nutrition, hygiene, exercise, and rest. Children who develop habits at an early age are more likely to continue those habits into adulthood. In this Adventure, Lions will explore the different food groups, have fun being active, and learn about the importance of rest."
+   }
+  },
+  {
+   "id": "king-of-the-jungle",
+   "name": {
+    "es": "",
+    "en": "King of the Jungle"
+   },
+   "category": {
+    "es": "",
+    "en": "Citizenship"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Citizenship is one of the four aims of the Scouting America program. For Lions, citizenship begins at home with those they live with. They will explore how they can contribute to their home and community. Citizenship is about actively participating with those around you to create a community. For Lion Cub Scouts, their community is their home and the people they live with. Learning that they, too, can contribute and have a part in their home is the objective of this Adventure."
+   }
+  },
+  {
+   "id": "lion-s-roar",
+   "name": {
+    "es": "",
+    "en": "Lion’s Roar"
+   },
+   "category": {
+    "es": "",
+    "en": "Personal Safety Awareness"
+   },
+   "required": true,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "In partnership with the Barbara Sinatra Children’s Center Foundation, Lions will learn about the Protect Yourself Rules and other skills needed to stay safe."
+   }
+  },
+  {
+   "id": "lion-s-pride",
+   "name": {
+    "es": "",
+    "en": "Lion’s Pride"
+   },
+   "category": {
+    "es": "",
+    "en": "Family & Reverence"
+   },
+   "required": true,
+   "requirementCount": 3,
+   "summary": {
+    "es": "",
+    "en": "In this Adventure, the Lions learn about their family by exploring the faith traditions and celebrations that make being part of their family special. This Adventure is commonly done at home with the Cub Scout’s family. If it is being done as a den, ensure that every parent and guardian is aware of the content and the activities that the den will do, and allow for parents to opt out of doing it as a den activity and choose to complete the requirement at home. This Adventure may be earned by completing the requirements OR by completing a religious emblem of the Cub Scout’s family’s choosing."
+   }
+  },
+  {
+   "id": "build-it-up-knock-it-down",
+   "name": {
+    "es": "",
+    "en": "Build It Up, Knock It Down"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 3,
+   "summary": {
+    "es": "",
+    "en": "Lions will have fun building a structure on their own and as a team."
+   }
+  },
+  {
+   "id": "count-on-me",
+   "name": {
+    "es": "",
+    "en": "Count on Me"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 3,
+   "summary": {
+    "es": "",
+    "en": "Lions, along with their adult partners, work with and identify geometric shapes."
+   }
+  },
+  {
+   "id": "let-s-camp",
+   "name": {
+    "es": "",
+    "en": "Let’s Camp"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "Here is the opportunity for Lions and their adult partners to go on an overnight campout."
+   }
+  },
+  {
+   "id": "on-your-mark",
+   "name": {
+    "es": "",
+    "en": "On Your Mark"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 3,
+   "summary": {
+    "es": "",
+    "en": "Play active games with your family and den, including a box derby race."
+   }
+  },
+  {
+   "id": "race-time",
+   "name": {
+    "es": "",
+    "en": "Race Time"
+   },
+   "category": {
+    "es": "",
+    "en": ""
+   },
+   "required": false,
+   "requirementCount": 4,
+   "summary": {
+    "es": "",
+    "en": "The most popular events in Cub Scouting are found in this Adventure: the Pinewood Derby ® and the Raingutter Regatta™. Lions and adult partners work together to build and race either a car or a boat."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "lion-r-instructions",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Instructions"
+   },
+   "body": {
+    "es": "",
+    "en": "This deck contains cards to help den leaders deliver a program to complete all requirements for earning the Lion rank. How to use this deck 1. Review the other resource cards (black border) in this deck, and review the contents. 2. Pick the Adventure you want to work on in your next den meeting. 3. Remove all cards associated with that Adventure. 4. Scan the Adventure card, and review the webpage for the Adventure you chose. Read and follow the Safety Moment for the Adventure. 5. Select one activity card for each requirement to do in your meeting. 6. Scan the QR code for each activity you selected, and follow the directions on the activity page. 7. When conducting your den meeting, have your cards on hand to use as a quick guide. Scan here for a video that shows you how to use this deck. ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p001.webp",
+    "width": 413,
+    "height": 563,
+    "page": 1,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-r-getting-started",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Getting Started"
+   },
+   "body": {
+    "es": "",
+    "en": "What is a den leader? What are we supposed to be doing? Where can I find this information?"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p003.webp",
+    "width": 413,
+    "height": 563,
+    "page": 3,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-r-welcome-new-den-leader",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Welcome, New Den Leader"
+   },
+   "body": {
+    "es": "",
+    "en": "WELCOME! NEW LION OR TIGER DEN LEADER B SCOUT CU LEADE R D EN There are actual instructions for this? ‣"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p005.webp",
+    "width": 413,
+    "height": 563,
+    "page": 5,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-r-safeguarding-youth",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Safeguarding Youth"
+   },
+   "body": {
+    "es": "",
+    "en": "Safeguarding Youth Training — all leaders are required to complete the training. Parents should too. Keeping everyone safe! Check the Guide to Safe Scouting. G U I D E TO SAFE SCOUTING Februar y 2022 Revision Four simple things to do before each activity: SAFE Checklist."
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p007.webp",
+    "width": 413,
+    "height": 563,
+    "page": 7,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-r-den-leader-training",
+   "skin": "resource",
+   "title": {
+    "es": "",
+    "en": "Den Leader Training"
+   },
+   "body": {
+    "es": "",
+    "en": "DONE IN TWO HOURS! Log on to my.scouting.org. If you don’t already have an account, you can create one to access training. This is the same place Safeguarding Youth training is located. Den leader position-specific training consists of 16 video modules that are, on average, 71/2 minutes long. Complete the training to earn your first patch!"
+   },
+   "steps": {
+    "es": [],
+    "en": []
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p009.webp",
+    "width": 413,
+    "height": 563,
+    "page": 9,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-bobcat",
+   "skin": "adventure",
+   "adventureId": "bobcat",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p011.webp",
+    "width": 413,
+    "height": 563,
+    "page": 11,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-01-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Doodle"
+   },
+   "originalTitle": "Den Doodle",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "The den doodle is a craft project that can be used to track attendance and completion of requirements and to reward good behavior."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p013.webp",
+    "width": 413,
+    "height": 563,
+    "page": 13,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-01-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Den Flag"
+   },
+   "originalTitle": "Den Flag",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "A den flag is a craft that can bring your den together by getting to know everyone’s name and having a symbol that everyone has a part in making."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p015.webp",
+    "width": 413,
+    "height": 563,
+    "page": 15,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-01-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Hand Puppet Introductions"
+   },
+   "originalTitle": "Hand Puppet Introductions",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts and adult partners make hand puppets that reflect themselves and use the puppets to share about themselves."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p017.webp",
+    "width": 413,
+    "height": 563,
+    "page": 17,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-01-4",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lions Talk and Lions Listen"
+   },
+   "originalTitle": "Lions Talk and Lions Listen",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "The Cub Scout sign is a way to help Cub Scouts learn good manners and communication skills."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p019.webp",
+    "width": 413,
+    "height": 563,
+    "page": 19,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-01-5",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Get to know the members of your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "The Wigalo Song"
+   },
+   "originalTitle": "The Wigalo Song",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Sing the Wigalo Song to get to know everyone’s name."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p021.webp",
+    "width": 413,
+    "height": 563,
+    "page": 21,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-02-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Have your Lion adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Friendship Zipper Pull"
+   },
+   "originalTitle": "Friendship Zipper Pull",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will make a friendship zipper pull for another Cub Scout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p023.webp",
+    "width": 413,
+    "height": 563,
+    "page": 23,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-02-2",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Have your Lion adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "The Colorful Scout Law"
+   },
+   "originalTitle": "The Colorful Scout Law",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Coloring activity for the Scout Law."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p025.webp",
+    "width": 413,
+    "height": 563,
+    "page": 25,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-02-3",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Have your Lion adult partner or den leader read the Scout Law to you. Demonstrate your understanding of being friendly."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "The Compliment Game"
+   },
+   "originalTitle": "The Compliment Game",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Everyone pays a compliment to each other in a game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p027.webp",
+    "width": 413,
+    "height": 563,
+    "page": 27,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-03-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Share with your Lion adult partner, during a den meeting or at home, a time when you have demonstrated the Cub Scout motto “Do Your Best.”"
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "When Am I Doing My Best?"
+   },
+   "originalTitle": "When Am I Doing My Best?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Activity to help Cub Scouts identify what it means to do their best."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p029.webp",
+    "width": 413,
+    "height": 563,
+    "page": 29,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-bobcat-04-1",
+   "skin": "activity",
+   "adventureId": "bobcat",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "At home, with your parent or legal guardian, do the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Child Abuse Protection Review"
+   },
+   "originalTitle": "Child Abuse Protection Review",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Review the activities in the booklet How to Protect Your Children from Child Abuse: A Parent’s Guide."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p031.webp",
+    "width": 413,
+    "height": 563,
+    "page": 31,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-mountain-lion",
+   "skin": "adventure",
+   "adventureId": "mountain-lion",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p033.webp",
+    "width": 413,
+    "height": 563,
+    "page": 33,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-01-1",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Guess the Cub Scout Six Essentials"
+   },
+   "originalTitle": "Guess the Cub Scout Six Essentials",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of charades to identify the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p035.webp",
+    "width": 413,
+    "height": 563,
+    "page": 35,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-01-2",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the Cub Scout Six Essentials. Show what you do with each item."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Kim’s Game — Cub Scout Six Essentials"
+   },
+   "originalTitle": "Kim’s Game — Cub Scout Six Essentials",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Play Kim’s Game to help Cub Scouts learn about the Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p037.webp",
+    "width": 413,
+    "height": 563,
+    "page": 37,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-02-1",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Lion adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "A Different Point of View"
+   },
+   "originalTitle": "A Different Point of View",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "During the walk, stop and change where you are looking by moving your body."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p039.webp",
+    "width": 413,
+    "height": 563,
+    "page": 39,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-02-2",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Lion adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "I Spy Something Natural"
+   },
+   "originalTitle": "I Spy Something Natural",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "While on a walk, play I Spy to identify natural items and things that are man-made."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p041.webp",
+    "width": 413,
+    "height": 563,
+    "page": 41,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-02-3",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your den, pack, or family, take a walk outside for at least 20 minutes, exploring the outdoors with your Cub Scout Six Essentials. While outside, identify things that you see with your Lion adult partner that are natural and things that are man-made."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Outdoor Scavenger Hunt"
+   },
+   "originalTitle": "Outdoor Scavenger Hunt",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "While on a walk, go on a scavenger hunt for things that are natural."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p043.webp",
+    "width": 413,
+    "height": 563,
+    "page": 43,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-03-1",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover what S.A.W. means."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Does My Whistle Work?"
+   },
+   "originalTitle": "Does My Whistle Work?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will blow whistles and demonstrate how to use the whistle if they get lost."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p045.webp",
+    "width": 413,
+    "height": 563,
+    "page": 45,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-03-2",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover what S.A.W. means."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Reverse Hide–and–Seek"
+   },
+   "originalTitle": "Reverse Hide–and–Seek",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a version of Hide-and-Seek where the idea is to be found."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p047.webp",
+    "width": 413,
+    "height": 563,
+    "page": 47,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-03-3",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Discover what S.A.W. means."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "S.A.W. Maze"
+   },
+   "originalTitle": "S.A.W. Maze",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Complete a maze that helps teach the S.A.W. method."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p049.webp",
+    "width": 413,
+    "height": 563,
+    "page": 49,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-04-1",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify common animals that are found where you live. Separate those animals into domesticated and wild."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Animal Craft"
+   },
+   "originalTitle": "Animal Craft",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using craft supplies, make a domesticated animal and a wild animal."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p051.webp",
+    "width": 413,
+    "height": 563,
+    "page": 51,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-04-2",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify common animals that are found where you live. Separate those animals into domesticated and wild."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Visit an Animal Rescue"
+   },
+   "originalTitle": "Visit an Animal Rescue",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "to an animal rescue that has both wild and domestic animals."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p053.webp",
+    "width": 413,
+    "height": 563,
+    "page": 53,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-mountain-lion-04-3",
+   "skin": "activity",
+   "adventureId": "mountain-lion",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify common animals that are found where you live. Separate those animals into domesticated and wild."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Wild or Domestic"
+   },
+   "originalTitle": "Wild or Domestic",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Matching activity for wild and domesticated animals."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p055.webp",
+    "width": 413,
+    "height": 563,
+    "page": 55,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-fun-on-the-run",
+   "skin": "adventure",
+   "adventureId": "fun-on-the-run",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p057.webp",
+    "width": 413,
+    "height": 563,
+    "page": 57,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-01-1",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Snack Time"
+   },
+   "originalTitle": "Snack Time",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts bring and share their favorite food from one of the five food groups."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p059.webp",
+    "width": 413,
+    "height": 563,
+    "page": 59,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-01-2",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "That Food is in the Wrong Group"
+   },
+   "originalTitle": "That Food is in the Wrong Group",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Activity for Cub Scouts to identify food groups and what doesn’t belong."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p061.webp",
+    "width": 413,
+    "height": 563,
+    "page": 61,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-01-3",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Identify the five different food groups."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Food Group Do I Belong To?"
+   },
+   "originalTitle": "What Food Group Do I Belong To?",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Use play food to help Cub Scouts identify the five different food groups."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p063.webp",
+    "width": 413,
+    "height": 563,
+    "page": 63,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-02-1",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice hand-washing. Point out when you should wash your hands."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Bubbles Good Clean Fun"
+   },
+   "originalTitle": "Bubbles Good Clean Fun",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts pop bubbles and wash their hands."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p065.webp",
+    "width": 413,
+    "height": 563,
+    "page": 65,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-02-2",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice hand-washing. Point out when you should wash your hands."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Happy Birthday Clean Hands"
+   },
+   "originalTitle": "Happy Birthday Clean Hands",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Practice hand-washing, and learn to wash your hands while singing “Happy Birthday.”"
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p067.webp",
+    "width": 413,
+    "height": 563,
+    "page": 67,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-02-3",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice hand-washing. Point out when you should wash your hands."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Steps To Washing Your Hands"
+   },
+   "originalTitle": "Steps To Washing Your Hands",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Practice hand-washing, and put the steps to washing hands in the right order."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p069.webp",
+    "width": 413,
+    "height": 563,
+    "page": 69,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-03-1",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 20 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "It’s Time for Lions to Dance"
+   },
+   "originalTitle": "It’s Time for Lions to Dance",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Have a dance party with Cub Scouts and adult partners."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p071.webp",
+    "width": 413,
+    "height": 563,
+    "page": 71,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-03-2",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 20 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Freeze Tag"
+   },
+   "originalTitle": "Lion Freeze Tag",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Freeze Tag."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p073.webp",
+    "width": 413,
+    "height": 563,
+    "page": 73,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-03-3",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Be active for 20 minutes."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lions Says"
+   },
+   "originalTitle": "Lions Says",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Simon Says."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p075.webp",
+    "width": 413,
+    "height": 563,
+    "page": 75,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-04-1",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice methods that help you rest."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Animals Sleep Just Like Me"
+   },
+   "originalTitle": "Animals Sleep Just Like Me",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Learn that animals sleep and rest too, but some do so during the day and some during the night."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p077.webp",
+    "width": 413,
+    "height": 563,
+    "page": 77,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-04-2",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice methods that help you rest."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Music Can Soothe the Savage Beast"
+   },
+   "originalTitle": "Music Can Soothe the Savage Beast",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Learn how music can influence your ability to rest and relax."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p079.webp",
+    "width": 413,
+    "height": 563,
+    "page": 79,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-fun-on-the-run-04-3",
+   "skin": "activity",
+   "adventureId": "fun-on-the-run",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Practice methods that help you rest."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Time is Bedtime?"
+   },
+   "originalTitle": "What Time is Bedtime?",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Adult partners work with Cub Scouts to establish good bedtime habits."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p081.webp",
+    "width": 413,
+    "height": 563,
+    "page": 81,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-king-of-the-jungle",
+   "skin": "adventure",
+   "adventureId": "king-of-the-jungle",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p083.webp",
+    "width": 413,
+    "height": 563,
+    "page": 83,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-01-1",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Draw a picture of the people you live with."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "My Lion Family"
+   },
+   "originalTitle": "My Lion Family",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Draw a picture of the people you live with."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p085.webp",
+    "width": 413,
+    "height": 563,
+    "page": 85,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-02-1",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, choose a job that will help your family. Follow through by doing that job at least once."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lions Can Help Too"
+   },
+   "originalTitle": "Lions Can Help Too",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts work with adult partners to identify how they can help their family."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p087.webp",
+    "width": 413,
+    "height": 563,
+    "page": 87,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-03-1",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Talk with a grandparent or other older adult about what citizenship means to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Grandparent Visit"
+   },
+   "originalTitle": "Grandparent Visit",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Identify a grandparent of one of the Cub Scouts to visit with the den to talk about citizenship."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p089.webp",
+    "width": 413,
+    "height": 563,
+    "page": 89,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-03-2",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Talk with a grandparent or other older adult about what citizenship means to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Visit From a Veteran"
+   },
+   "originalTitle": "Visit From a Veteran",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Invite a military veteran to discuss what citizenship means to them."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p091.webp",
+    "width": 413,
+    "height": 563,
+    "page": 91,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-03-3",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Talk with a grandparent or other older adult about what citizenship means to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Visiting Grandparents"
+   },
+   "originalTitle": "Visiting Grandparents",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Plan a trip to visit the elderly in a retirement or assisted-living facility."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p093.webp",
+    "width": 413,
+    "height": 563,
+    "page": 93,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-04-1",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Art Supply Drive"
+   },
+   "originalTitle": "Art Supply Drive",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct an art supply drive for children in a homeless shelter or transitional housing."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p095.webp",
+    "width": 413,
+    "height": 563,
+    "page": 95,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-04-2",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Book Drive"
+   },
+   "originalTitle": "Book Drive",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a book drive for a children’s hospital."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p097.webp",
+    "width": 413,
+    "height": 563,
+    "page": 97,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-king-of-the-jungle-04-3",
+   "skin": "activity",
+   "adventureId": "king-of-the-jungle",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Participate in a service project."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Scouting for Food"
+   },
+   "originalTitle": "Scouting for Food",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Participate in your council-sponsored Scouting for Food event."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p099.webp",
+    "width": 413,
+    "height": 563,
+    "page": 99,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-lion-s-roar",
+   "skin": "adventure",
+   "adventureId": "lion-s-roar",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p101.webp",
+    "width": 413,
+    "height": 563,
+    "page": 101,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-01-1",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With permission from your parent or legal guardian, watch the Protect Yourself Rules video for the Lion rank."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Protect Yourself Rules Video"
+   },
+   "originalTitle": "Protect Yourself Rules Video",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Watch the Protect Yourself Rules video with your parent or legal guardian."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p103.webp",
+    "width": 413,
+    "height": 563,
+    "page": 103,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-02-1",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, demonstrate Shout, Run, Tell as explained in the Protect Yourself Rules video."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Shout, Run, Tell Relay"
+   },
+   "originalTitle": "Shout, Run, Tell Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts demonstrate their own personal way to Shout, Run, and Tell."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p105.webp",
+    "width": 413,
+    "height": 563,
+    "page": 105,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-03-1",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, demonstrate how to access emergency services."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Home Security Emergency Services"
+   },
+   "originalTitle": "Home Security Emergency Services",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 5,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "At home, learn how to contact emergency services using a home alarm or a voice-activated device."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p107.webp",
+    "width": 413,
+    "height": 563,
+    "page": 107,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-03-2",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, demonstrate how to access emergency services."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Practice 911 and Five Trusted Adults"
+   },
+   "originalTitle": "Practice 911 and Five Trusted Adults",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Practice dialing 911."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p109.webp",
+    "width": 413,
+    "height": 563,
+    "page": 109,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-04-1",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, demonstrate how to safely cross a street or walk in a parking lot."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Green Means Go, Red Means Stop"
+   },
+   "originalTitle": "Green Means Go, Red Means Stop",
+   "place": "indoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Red Light, Green Light to reinforce how to safely cross a street."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p111.webp",
+    "width": 413,
+    "height": 563,
+    "page": 111,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-roar-04-2",
+   "skin": "activity",
+   "adventureId": "lion-s-roar",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, demonstrate how to safely cross a street or walk in a parking lot."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Make Believe Parking Lot"
+   },
+   "originalTitle": "Make Believe Parking Lot",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Set up a mock crosswalk and parking lot for Cub Scouts to learn about staying safe in these situations."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p113.webp",
+    "width": 413,
+    "height": 563,
+    "page": 113,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-lion-s-pride",
+   "skin": "adventure",
+   "adventureId": "lion-s-pride",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p115.webp",
+    "width": 413,
+    "height": 563,
+    "page": 115,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-pride-01-1",
+   "skin": "activity",
+   "adventureId": "lion-s-pride",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your parent or legal guardian, talk about your family’s faith traditions. Draw a picture of your family’s favorite faith tradition, holiday, or celebration."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Holiday Drawing"
+   },
+   "originalTitle": "Lion Holiday Drawing",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Draw and color a favorite faith tradition, holiday, or celebration."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p117.webp",
+    "width": 413,
+    "height": 563,
+    "page": 117,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-pride-02-1",
+   "skin": "activity",
+   "adventureId": "lion-s-pride",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Attend a Religious Celebration"
+   },
+   "originalTitle": "Attend a Religious Celebration",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts attend a religious celebration with their family."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p119.webp",
+    "width": 413,
+    "height": 563,
+    "page": 119,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-pride-02-2",
+   "skin": "activity",
+   "adventureId": "lion-s-pride",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Attend a Religious Service"
+   },
+   "originalTitle": "Attend a Religious Service",
+   "place": "outing",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a religious service with your family."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p121.webp",
+    "width": 413,
+    "height": 563,
+    "page": 121,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-pride-02-3",
+   "skin": "activity",
+   "adventureId": "lion-s-pride",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your family, attend a religious service or other gathering that shows how your family expresses Family & Reverence."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Family Reverence"
+   },
+   "originalTitle": "Family Reverence",
+   "place": "outing",
+   "meters": {
+    "energy": 3,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a Veterans Day event with your den."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p123.webp",
+    "width": 413,
+    "height": 563,
+    "page": 123,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-lion-s-pride-03-1",
+   "skin": "activity",
+   "adventureId": "lion-s-pride",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Make a cheerful card or a drawing for someone you love, and give it to them."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Note of Kindness"
+   },
+   "originalTitle": "Note of Kindness",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Make a card of kindness to give to someone special."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p125.webp",
+    "width": 413,
+    "height": 563,
+    "page": 125,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-build-it-up-knock-it-down",
+   "skin": "adventure",
+   "adventureId": "build-it-up-knock-it-down",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p127.webp",
+    "width": 413,
+    "height": 563,
+    "page": 127,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-01-1",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Building–Block House"
+   },
+   "originalTitle": "Building–Block House",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use LEGO ® building blocks to build a house."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p129.webp",
+    "width": 413,
+    "height": 563,
+    "page": 129,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-01-2",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cardboard Skyscraper"
+   },
+   "originalTitle": "Cardboard Skyscraper",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 4,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts work with their adult partners to build a shoebox skyscraper."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p131.webp",
+    "width": 413,
+    "height": 563,
+    "page": 131,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-01-3",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Gingerbread House"
+   },
+   "originalTitle": "Gingerbread House",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts work with their adult partner to make a gingerbread house."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p133.webp",
+    "width": 413,
+    "height": 563,
+    "page": 133,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-02-1",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your den or family, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Cup Pyramid"
+   },
+   "originalTitle": "Cup Pyramid",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Take turns building a cup pyramid."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p135.webp",
+    "width": 413,
+    "height": 563,
+    "page": 135,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-02-2",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your den or family, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pillow and Blanket Fort"
+   },
+   "originalTitle": "Pillow and Blanket Fort",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Build a pillow and blanket fort."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p137.webp",
+    "width": 413,
+    "height": 563,
+    "page": 137,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-02-3",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "With your den or family, build a structure."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "We Built This City Out of Card and Board"
+   },
+   "originalTitle": "We Built This City Out of Card and Board",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "The den will work together to make a cardboard city."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p139.webp",
+    "width": 413,
+    "height": 563,
+    "page": 139,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-03-1",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Build something that is designed to be knocked down."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Blow My House Down"
+   },
+   "originalTitle": "Blow My House Down",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using paper blocks, build a house to see if it can hold up to the wind."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p141.webp",
+    "width": 413,
+    "height": 563,
+    "page": 141,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-03-2",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Build something that is designed to be knocked down."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Build It Up and Knock It Down Relay"
+   },
+   "originalTitle": "Build It Up and Knock It Down Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a relay race to build it up and knock it down."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p143.webp",
+    "width": 413,
+    "height": 563,
+    "page": 143,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-build-it-up-knock-it-down-03-3",
+   "skin": "activity",
+   "adventureId": "build-it-up-knock-it-down",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Build something that is designed to be knocked down."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Down Go the Dominoes"
+   },
+   "originalTitle": "Down Go the Dominoes",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Build a domino maze designed to be knocked down."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p145.webp",
+    "width": 413,
+    "height": 563,
+    "page": 145,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-count-on-me",
+   "skin": "adventure",
+   "adventureId": "count-on-me",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p147.webp",
+    "width": 413,
+    "height": 563,
+    "page": 147,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-01-1",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Make a lion using only squares, triangles, and circles."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Clay Lion"
+   },
+   "originalTitle": "Clay Lion",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use craft clay to make a lion using basic shapes."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p149.webp",
+    "width": 413,
+    "height": 563,
+    "page": 149,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-01-2",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Make a lion using only squares, triangles, and circles."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Stencil Lion"
+   },
+   "originalTitle": "Stencil Lion",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Use stencils of basic shapes to draw a lion."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p151.webp",
+    "width": 413,
+    "height": 563,
+    "page": 151,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-01-3",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Make a lion using only squares, triangles, and circles."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Triangles, Circles, and Squares, Oh My!"
+   },
+   "originalTitle": "Triangles, Circles, and Squares, Oh My!",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cut out shapes and tape them together to make a lion."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p153.webp",
+    "width": 413,
+    "height": 563,
+    "page": 153,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-02-1",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your Lion adult partner or den that is based on counting or numbers."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Hop to it Lion"
+   },
+   "originalTitle": "Hop to it Lion",
+   "place": "outdoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of hopscotch."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p155.webp",
+    "width": 413,
+    "height": 563,
+    "page": 155,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-02-2",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your Lion adult partner or den that is based on counting or numbers."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Dominoes"
+   },
+   "originalTitle": "Lion Dominoes",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of dominoes."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p157.webp",
+    "width": 413,
+    "height": 563,
+    "page": 157,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-02-3",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your Lion adult partner or den that is based on counting or numbers."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lions, Dimes, Nickles, and Pennies"
+   },
+   "originalTitle": "Lions, Dimes, Nickles, and Pennies",
+   "place": "outdoor",
+   "meters": {
+    "energy": 4,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts count change in this relay game."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p159.webp",
+    "width": 413,
+    "height": 563,
+    "page": 159,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-03-1",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Organize a group of items based on shape, one based on color, and one other category. Count how many different shapes are in each category. After organizing them, build anything using only one category."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Count the Shapes in My Face"
+   },
+   "originalTitle": "Count the Shapes in My Face",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Identify the different shapes and count them in the lion face."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p161.webp",
+    "width": 413,
+    "height": 563,
+    "page": 161,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-count-on-me-03-2",
+   "skin": "activity",
+   "adventureId": "count-on-me",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Organize a group of items based on shape, one based on color, and one other category. Count how many different shapes are in each category. After organizing them, build anything using only one category."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Modular Building Blocks"
+   },
+   "originalTitle": "Modular Building Blocks",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Use modular building blocks to sort and build."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p163.webp",
+    "width": 413,
+    "height": 563,
+    "page": 163,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-let-s-camp",
+   "skin": "adventure",
+   "adventureId": "let-s-camp",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p165.webp",
+    "width": 413,
+    "height": 563,
+    "page": 165,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-01-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy or No Buddy?"
+   },
+   "originalTitle": "Buddy or No Buddy?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Using the Lion handbook, Cub Scouts learn the buddy system."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p167.webp",
+    "width": 413,
+    "height": 563,
+    "page": 167,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-01-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn about the buddy system and how it works in the outdoors."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Buddy Tic–Tac–Toe"
+   },
+   "originalTitle": "Buddy Tic–Tac–Toe",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Ask the Cub Scouts to “buddy up” with a fellow Scout of their choosing. Play tic-tac-toe."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p169.webp",
+    "width": 413,
+    "height": 563,
+    "page": 169,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-02-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Adult Partner Dress–Up"
+   },
+   "originalTitle": "Adult Partner Dress–Up",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Adult partners wear different clothes for different seasons, and Cub Scouts identify the season."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p171.webp",
+    "width": 413,
+    "height": 563,
+    "page": 171,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-02-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What Should Kat Wear?"
+   },
+   "originalTitle": "What Should Kat Wear?",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Identify proper clothing for the weather with a cutout activity."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p173.webp",
+    "width": 413,
+    "height": 563,
+    "page": 173,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-02-3",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Before going on the overnight campout, discuss what type of weather is expected and what type of clothes you should wear."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "What to Wear Relay"
+   },
+   "originalTitle": "What to Wear Relay",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts pick out clothes that are appropriate for different types of weather."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p175.webp",
+    "width": 413,
+    "height": 563,
+    "page": 175,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-03-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Pack up your Cub Scout Six Essentials for the campout."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Packing for the Campout"
+   },
+   "originalTitle": "Packing for the Campout",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 4,
+    "duration": 2
+   },
+   "description": {
+    "es": "",
+    "en": "This is an at-home activity. Adult partners will help their Cub Scouts pack their Cub Scout Six Essentials."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p177.webp",
+    "width": 413,
+    "height": 563,
+    "page": 177,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-04-1",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend an overnight campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Council Camping"
+   },
+   "originalTitle": "Lion Council Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Attend a district or council Cub Scout overnight campout."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p179.webp",
+    "width": 413,
+    "height": 563,
+    "page": 179,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-let-s-camp-04-2",
+   "skin": "activity",
+   "adventureId": "let-s-camp",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Attend a council or district Cub Scout overnight camp, or attend an overnight campout with your pack."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Pack Camping"
+   },
+   "originalTitle": "Lion Pack Camping",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Go camping with your pack."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p181.webp",
+    "width": 413,
+    "height": 563,
+    "page": 181,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-on-your-mark",
+   "skin": "adventure",
+   "adventureId": "on-your-mark",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p183.webp",
+    "width": 413,
+    "height": 563,
+    "page": 183,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-01-1",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Red Light, Green Light"
+   },
+   "originalTitle": "Lion Red Light, Green Light",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Red Light, Green Light."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p185.webp",
+    "width": 413,
+    "height": 563,
+    "page": 185,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-01-2",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Roll the Dice"
+   },
+   "originalTitle": "Roll the Dice",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Play a game of Yahtzee ® ."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p187.webp",
+    "width": 413,
+    "height": 563,
+    "page": 187,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-01-3",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 1,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Play a game with your den."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Speed Gaming"
+   },
+   "originalTitle": "Speed Gaming",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 3,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will sample different board games by playing them in a round-robin speed format."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p189.webp",
+    "width": 413,
+    "height": 563,
+    "page": 189,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-02-1",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Participate in an obstacle course relay."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Obstacle Course"
+   },
+   "originalTitle": "Lion Obstacle Course",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Create and run an obstacle course."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p191.webp",
+    "width": 413,
+    "height": 563,
+    "page": 191,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-02-2",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Participate in an obstacle course relay."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Playground Obstacle Course"
+   },
+   "originalTitle": "Playground Obstacle Course",
+   "place": "outing",
+   "meters": {
+    "energy": 5,
+    "prep": 1,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Use a local playground to create an obstacle course."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p193.webp",
+    "width": 413,
+    "height": 563,
+    "page": 193,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-02-3",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 2,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Participate in an obstacle course relay."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Portal Obstacle Course"
+   },
+   "originalTitle": "Portal Obstacle Course",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 2,
+    "duration": 3
+   },
+   "description": {
+    "es": "",
+    "en": "Make a portal-type obstacle course with painter’s tape."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p195.webp",
+    "width": 413,
+    "height": 563,
+    "page": 195,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-on-your-mark-03-1",
+   "skin": "activity",
+   "adventureId": "on-your-mark",
+   "requirement": {
+    "index": 3,
+    "of": 3,
+    "text": {
+     "es": "",
+     "en": "Build a box derby and participate in a race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Lion Box Derby"
+   },
+   "originalTitle": "Lion Box Derby",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 3,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Lion box derby."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p197.webp",
+    "width": 413,
+    "height": 563,
+    "page": 197,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-adv-race-time",
+   "skin": "adventure",
+   "adventureId": "race-time",
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p199.webp",
+    "width": 413,
+    "height": 563,
+    "page": 199,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-01-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Car Build Day Lion"
+   },
+   "originalTitle": "Pinewood Derby ® Car Build Day Lion",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 5,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p201.webp",
+    "width": 413,
+    "height": 563,
+    "page": 201,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-01-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 1,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, assemble and decorate either a Pinewood Derby ® car or a Raingutter Regatta™ boat."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™ Build Day Lion"
+   },
+   "originalTitle": "Raingutter Regatta™ Build Day Lion",
+   "place": "indoor",
+   "meters": {
+    "energy": 3,
+    "prep": 2,
+    "duration": 4
+   },
+   "description": {
+    "es": "",
+    "en": "Den or pack provides a build day for Cub Scouts."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p203.webp",
+    "width": 413,
+    "height": 563,
+    "page": 203,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-02-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 2,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Learn the rules of the race for the vehicle chosen in requirement 1."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Arrow of Light Scouts Explain the Rules"
+   },
+   "originalTitle": "Arrow of Light Scouts Explain the Rules",
+   "place": "indoor",
+   "meters": {
+    "energy": 1,
+    "prep": 2,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Invite Arrow of Light Scouts to come and explain the rules of the race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p205.webp",
+    "width": 413,
+    "height": 563,
+    "page": 205,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-03-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 3,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "Before the race, discuss with your Lion adult partner how you will demonstrate good sportsmanship during the race."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Good Sportsmanship for the Race"
+   },
+   "originalTitle": "Good Sportsmanship for the Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 2,
+    "prep": 1,
+    "duration": 1
+   },
+   "description": {
+    "es": "",
+    "en": "Cub Scouts will act out through role playing how to be a good sport during the race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p207.webp",
+    "width": 413,
+    "height": 563,
+    "page": 207,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-04-1",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Pinewood Derby ® Race"
+   },
+   "originalTitle": "Pinewood Derby ® Race",
+   "place": "indoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Pinewood Derby ® car race."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p209.webp",
+    "width": 413,
+    "height": 563,
+    "page": 209,
+    "lang": "en"
+   }
+  },
+  {
+   "id": "lion-a-race-time-04-2",
+   "skin": "activity",
+   "adventureId": "race-time",
+   "requirement": {
+    "index": 4,
+    "of": 4,
+    "text": {
+     "es": "",
+     "en": "With your Lion adult partner, participate in a Pinewood Derby ® or a Raingutter Regatta™."
+    }
+   },
+   "title": {
+    "es": "",
+    "en": "Raingutter Regatta™"
+   },
+   "originalTitle": "Raingutter Regatta™",
+   "place": "outdoor",
+   "meters": {
+    "energy": 5,
+    "prep": 5,
+    "duration": 5
+   },
+   "description": {
+    "es": "",
+    "en": "Conduct a Raingutter Regatta™."
+   },
+   "links": [],
+   "image": {
+    "src": "/site/assets/img/cards/lion/p211.webp",
+    "width": 413,
+    "height": 563,
+    "page": 211,
+    "lang": "en"
+   }
+  }
+ ]
+}

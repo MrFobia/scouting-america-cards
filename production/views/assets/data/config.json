@@ -1,0 +1,13 @@
+{
+  "$comment": "Reglas de negocio cambiables sin tocar código. Ver docs/data-model.md.",
+  "activation": {
+    "mode": "on-demand",
+    "cardsPerRelease": 1,
+    "$modes": ["on-demand", "daily", "scheduled"]
+  },
+  "rewards": {
+    "enabled": false,
+    "$note": "No hay premio digital al completar una baraja. El reconocimiento lo maneja el líder por fuera."
+  },
+  "languages": { "default": "es", "available": ["es", "en"] }
+}

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Den Leader Console · Cub Scouts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="/site/manifest.webmanifest">
+<meta name="theme-color" content="#003F87">
+<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+</head>
+<body>
+
+<!--
+  Familia Índice · macroestructura 13 Index-First · nav N9 · footer Ft2
+  El brief mide el éxito en tiempo: compartir la tarjeta de la semana en menos de
+  un minuto. La firma sale de su cuenta, así que la pantalla tiene un solo
+  camino: armar el mazo y mandarlo.
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header id="pagehead"></header>
+
+<main class="page page--glow" id="main" style="max-width:46rem">
+
+  <!-- Lo primero es la acción: el líder entra a mandar el mazo de esta semana,
+       no a leer qué es la consola. Lo explicativo queda debajo, para quien
+       llega sin contexto la primera vez. -->
+  <section class="progresscard rise" style="--i:0; margin-bottom:var(--space-5)">
+    <p class="tile__label" style="color:var(--text-muted); margin:0 0 var(--space-2)">
+      This week's deck
+    </p>
+    <p style="margin:0 0 var(--space-4)" id="paso2-ayuda">
+      Build the deck with this week's activities. You can mix decks, and each
+      deck gets its own link to send on WhatsApp.
+    </p>
+    <p class="actions" style="margin-bottom:var(--space-4)">
+      <a class="btn btn--primary" href="/site/lider/mazo-nuevo.html">Create a deck</a>
+    </p>
+    <div id="mis-mazos"></div>
+  </section>
+
+  <!-- Qué es esto. Lo primero que ve alguien que llega sin contexto. -->
+  <section class="progresscard rise" style="--i:1; margin-bottom:var(--space-5)">
+    <p class="tile__label" style="color:var(--text-muted); margin:0 0 var(--space-2)">
+      What this section is
+    </p>
+    <p style="margin:0 0 var(--space-3)">
+      This is for the <strong>den leader</strong>: the person who lets pack
+      families know each week what activity their child will be doing.
+    </p>
+    <p style="margin:0; color:var(--text-muted)">
+      <a href="/site/lider/perfil.html">Your profile</a> · to change your name, your photo, or sign out of the console.
+    </p>
+  </section>
+
+  <!-- Los tres pasos, antes de pedir nada. -->
+  <section class="rise" style="--i:2; margin-bottom:var(--space-6)">
+    <p class="page__label" style="margin-top:0">How it works</p>
+    <ol class="steps-lite">
+      <li><b>Build the deck.</b> Give it a name and pick 1 to 15 activities from any decks you want.</li>
+      <li><b>Send it on WhatsApp.</b> One tap and it goes out with your signature.</li>
+      <li><b>See who opened it.</b> In Shares, without knowing which family is which.</li>
+    </ol>
+  </section>
+
+  <!-- Las barajas, para consultarlas -->
+  <section class="rise" style="--i:3; margin-bottom:var(--space-6)">
+    <h2 class="page__label">The decks</h2>
+    <p style="margin:0 0 var(--space-4); color:var(--text-muted)">
+      To browse the content. What gets sent to families is a deck.
+    </p>
+    <ul class="bento" id="decks"></ul>
+  </section>
+
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script>
+(async () => {
+  // Puerta del prototipo: sin sesión, a entrar. No es seguridad (ver api.js),
+  // pero evita que un papá caiga acá por un enlace y crea que se equivocó de app.
+  if (!API.haySesionLider()) {
+    location.replace('/site/lider/entrar.html?volver=' + encodeURIComponent(location.pathname + location.search));
+    return;
+  }
+
+  // La consola del líder es en inglés siempre (pedido 20-ago): no lee la
+  // preferencia guardada en el dispositivo, que puede venir de haber probado
+  // el lado de familia en español en el mismo teléfono.
+  const lang = 'en';
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: 'For den leaders',
+    title: "Send this week's deck",
+    accent: 'this week',
+    sub: "Here you build the deck with this week's activities and send it to your pack's WhatsApp group.",
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+  /* La firma no se pide acá: nombre y pack vienen de la CUENTA. Pedírselos a
+     alguien que acaba de identificarse es un paso de más.
+
+     Única excepción: un correo que no está en el directorio de líderes entra
+     igual —es un prototipo, no un muro— con un nombre provisional sacado del
+     correo. En ese caso, y solo en ese, se ofrece corregirlo, porque ese nombre
+     es lo que van a ver los papás. */
+  const perfil = API.getProfile();
+  if (!perfil.cuentaConocida) {
+    document.querySelector('main').insertAdjacentHTML('afterbegin', Shell.notice({
+      icono: 'persona',
+      html: `You'll sign as <strong>${perfil.leader}</strong>${
+        perfil.pack ? ` · ${perfil.pack}` : ''}, which is what families will see.
+        <a href="/site/lider/perfil.html">Fix it</a>`
+    }));
+    document.querySelector('main .notice').style.marginBottom = 'var(--space-5)';
+  }
+
+
+  /* ---------- Mis mazos ----------
+     Recién creado llega con ?mazo=<id>: se destaca arriba para que el líder
+     sepa cuál acaba de armar, en vez de buscarlo en una lista igual a sí misma. */
+  const recien = new URLSearchParams(location.search).get('mazo');
+
+  const pintarMazos = () => {
+    const mazos = API.getMazos().slice().reverse();
+    const caja = document.getElementById('mis-mazos');
+    if (!mazos.length) {
+      caja.innerHTML = Shell.notice({
+        icono: 'info',
+        html: "You haven't built a deck yet. Start with the button above — it takes a minute."
+      });
+      return;
+    }
+    caja.innerHTML = mazos.map(m => {
+      const n = m.cardIds.length;
+      const esNuevo = m.id === recien;
+      const f = new Date(m.createdAt).toLocaleDateString('en', { day: 'numeric', month: 'short' });
+      return `<div class="mazocard${esNuevo ? ' mazocard--nuevo' : ''}">
+        <div class="mazocard__head">
+          <p class="mazocard__nombre">${m.nombre}</p>
+          ${esNuevo ? '<span class="mazocard__badge">Just built</span>' : ''}
+        </div>
+        <p class="mazocard__meta">${f} · ${n} ${n === 1 ? 'activity' : 'activities'}</p>
+        <p class="mazocard__primaria">
+          <button class="btn btn--primary btn--block" type="button" data-wa="${m.id}">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.1 2.4 1.5 2.7 1.6.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.7.8c.2.1.4.2.5.3.1.2.1.9-.1 1.6Z"/>
+            </svg>
+            Send on WhatsApp
+          </button>
+        </p>
+        <p class="mazocard__secundarias">
+          <button class="card__accion" type="button" data-copiar="${m.id}">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10 14a4 4 0 0 0 5.7 0l2.6-2.6a4 4 0 0 0-5.7-5.7l-1 1"/>
+              <path d="M14 10a4 4 0 0 0-5.7 0L5.7 12.6a4 4 0 0 0 5.7 5.7l1-1"/>
+            </svg>
+            Copy link
+          </button>
+          <button class="card__accion card__accion--danger" type="button" data-borrar="${m.id}">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m2 0-.8 12a2 2 0 0 1-2 1.8H9.8a2 2 0 0 1-2-1.8L7 7"/>
+            </svg>
+            Delete
+          </button>
+        </p>
+        <p class="form-msg" data-msg="${m.id}" aria-live="polite"></p>
+      </div>`;
+    }).join('');
+  };
+
+  document.getElementById('mis-mazos').addEventListener('click', async e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const id = b.dataset.wa || b.dataset.copiar || b.dataset.borrar;
+    if (!id) return;
+    const msg = document.querySelector(`[data-msg="${id}"]`);
+
+    if (b.dataset.borrar) {
+      // Sin diálogo de confirmación: se borra y se puede deshacer, que es más
+      // barato para el líder que un "¿estás seguro?" en cada toque.
+      const copia = API.getMazo(id);
+      API.deleteMazo(id);
+      pintarMazos();
+      document.getElementById('mis-mazos').insertAdjacentHTML('afterbegin', Shell.notice({
+        icono: 'borrar',
+        html: `Deleted "${copia.nombre}". <button type="button" id="deshacer" class="linklike">Undo</button>`
+      }));
+      document.getElementById('deshacer').addEventListener('click', () => {
+        API.createMazo({ nombre: copia.nombre, cardIds: copia.cardIds, packId: copia.packId, lang: copia.lang });
+        pintarMazos();
+      });
+      return;
+    }
+
+    const share = API.createShare({ mazoId: id, packId: API.getProfile().pack || null, lang: 'en' });
+    if (b.dataset.wa) {
+      const p = API.getProfile();
+      const firma = [p.leader, p.pack].filter(Boolean).join(' · ');
+      const texto = firma
+        ? `Here's what the kids are doing this week (${firma}):`
+        : "Here's what the kids are doing this week:";
+      window.open(API.whatsappUrl(share, texto), '_blank', 'noopener');
+    } else {
+      try {
+        await navigator.clipboard.writeText(API.shareUrl(share));
+        msg.textContent = "Link copied. Paste it in your pack's group.";
+      } catch {
+        msg.textContent = API.shareUrl(share);
+      }
+    }
+  });
+
+  pintarMazos();
+
+  /* Las barajas del líder: mismas fotos oficiales que en barajas.html. */
+  const cont = document.getElementById('decks');
+  const FOTO = {
+    lion: 'pesca', tiger: 'bicis', wolf: 'brujula', bear: 'agua',
+    webelos: 'cascos', 'arrow-of-light': 'canoa', 'pack-planning': 'derby'
+  };
+  const GLYPH = {
+    lion: 'L', tiger: 'T', wolf: 'W', bear: 'B',
+    webelos: 'W', 'arrow-of-light': 'A', 'pack-planning': 'P'
+  };
+  try {
+    const decks = await API.getDecks();
+    cont.innerHTML = decks.map(d => {
+      const foto = FOTO[d.id];
+      return `<li>
+        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/site/baraja.html?d=${d.id}&lang=${lang}&lider=1">
+          ${foto ? `<img src="/projects/scouting-america/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
+                width="1200" height="800" loading="lazy" decoding="async">` : ''}
+          <span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>
+          ${d.translation === 'pendiente' ? '<span class="tile__pill">English only</span>' : '<span></span>'}
+          <span>
+            <span class="tile__name" style="display:block">${d.name.en}</span>
+            <span class="tile__label">${d.grade ?? 'Annual plan'}</span>
+          </span>
+        </a></li>`;
+    }).join('');
+  } catch {
+    cont.innerHTML = '';
+    cont.hidden = true;
+    cont.closest('section').insertAdjacentHTML('beforeend', Shell.estado({
+      titulo: "We couldn't load the decks",
+      texto: 'Check your connection and try again.',
+      tono: 'error'
+    }));
+  }
+})();
+</script>
+</body>
+</html>

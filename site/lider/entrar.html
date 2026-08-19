@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · Den Leader Console</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=vffaf126a">
+</head>
+<body>
+
+<!--
+  ATENCIÓN — ESTO NO ES SEGURIDAD.
+
+  Es la puerta del prototipo. No hay backend: la "sesión" es una marca en
+  localStorage y cualquiera que la borre entra igual. Sirve para que la demo
+  muestre que la consola es privada y para que el líder tenga dónde entrar,
+  no para proteger nada.
+
+  Cuando exista la Capa B, esto se reemplaza por autenticación real contra la
+  API. Hasta entonces no debe presentarse al cliente como una zona protegida.
+
+  La contraseña NO se guarda, ni siquiera en el prototipo: se valida y se
+  descarta. Un campo de contraseña guardado en claro en el navegador es un
+  patrón que sobrevive al prototipo, y la gente reutiliza sus contraseñas.
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="pagehead"></header>
+
+<main class="page" id="main" style="max-width:28rem">
+  <section class="progresscard rise" style="--i:0">
+    <p style="margin:0 0 var(--space-4); color:var(--text-muted)">
+      This part is for den leaders. Families don't need to sign in:
+      the deck reaches them on WhatsApp.
+    </p>
+    <form id="acceso">
+      <label class="field">
+        <span class="field__label">Email</span>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+      </label>
+      <label class="field">
+        <span class="field__label">Password</span>
+        <input id="clave" name="clave" type="password" autocomplete="current-password"
+               required minlength="6" aria-describedby="clave-ayuda">
+      </label>
+      <p id="clave-ayuda" style="margin:0 0 var(--space-4); font-size:var(--step--1); color:var(--text-muted)">
+        Prototype: the password is validated and never stored anywhere.
+      </p>
+      <p class="form-msg" id="msg" aria-live="polite"></p>
+      <p class="actions">
+        <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+      </p>
+    </form>
+    <p style="margin:var(--space-4) 0 0; font-size:var(--step--1); color:var(--text-muted)">
+      Are you a parent? <a href="/site/index.html">Go to the home page</a>.
+    </p>
+  </section>
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/site/assets/js/api.js?v=vffaf126a"></script>
+<script src="/site/assets/js/shell.js?v=vffaf126a"></script>
+<script>
+(async () => {
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: 'For den leaders',
+    title: 'Sign in to your console',
+    accent: 'your console',
+    sub: "From here you build this week's deck and see who opened it."
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+
+  const form = document.getElementById('acceso');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const correo = form.correo.value.trim();
+    if (!correo || form.clave.value.length < 6) {
+      document.getElementById('msg').textContent =
+        'Enter your email and a password of at least 6 characters.';
+      return;
+    }
+    // Entrar es identificarse. El nombre y el pack vienen con la cuenta; no se
+    // le preguntan a alguien que se está identificando.
+    // La contraseña muere acá: no se guarda ni se compara contra nada.
+    await API.entrarComoLider(correo);
+    const destino = new URLSearchParams(location.search).get('volver') || '/site/lider/index.html';
+    location.href = destino;
+  });
+})();
+</script>
+</body>
+</html>

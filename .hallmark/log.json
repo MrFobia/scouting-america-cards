@@ -1,0 +1,39 @@
+[
+  {
+    "date": "2026-08-17",
+    "scope": "app",
+    "macrostructure": "Photographic + Index-First + Long Document (+ app shell)",
+    "theme": "Scouting America (marca bloqueada)",
+    "genre": "editorial",
+    "nav": "tabbar de 4 destinos + N9",
+    "footer": "Ft1 mast-headed (portada) · Ft2 inline (resto)",
+    "motion": "por capas A/B — A: vista del papá, microtransiciones ≤160ms · B: entrada orquestada + tick + press + hover lift + acordeón + view transitions",
+    "enrichment": "fotografía oficial ampliada a 12 (brandbook pdfimages) + tile--foto con velo",
+    "designed_as_app": true,
+    "brief": "Refresh 2026: capa de motion por niveles, sombra de papel, tile--foto, microinteracciones"
+  },
+  {
+    "date": "2026-08-13",
+    "scope": "app",
+    "macrostructure": "Photographic + Index-First + Long Document (+ app shell)",
+    "theme": "Scouting America (marca bloqueada, hex del manual 2024)",
+    "genre": "editorial",
+    "nav": "tabbar de 4 destinos (abajo en móvil, arriba ≥64rem) + N6/N9",
+    "footer": "Ft1 mast-headed (portada) · Ft2 inline (resto)",
+    "enrichment": "none — la lámina oficial es la imagen",
+    "designed_as_app": true,
+    "brief": "Capa de webapp: navegación persistente, esqueletos, estados vacío/error, PWA instalable y offline"
+  },
+  {
+    "date": "2026-08-13",
+    "scope": "app",
+    "macrostructure": "Photographic + Index-First + Long Document",
+    "theme": "Scouting America (marca bloqueada, hex del manual 2024)",
+    "genre": "editorial",
+    "nav": "N6 masthead (portada) · N9 edge-aligned (resto)",
+    "footer": "Ft1 mast-headed (portada) · Ft2 inline (resto)",
+    "enrichment": "none — la lámina oficial es la imagen",
+    "designed_as_app": true,
+    "brief": "Scouting America · rediseño completo, 7 páginas, sistema en design.md"
+  }
+]

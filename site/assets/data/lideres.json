@@ -1,0 +1,9 @@
+{
+  "$comment": "Cuentas de líder para el prototipo. En la Capa B esto lo devuelve el servidor al autenticar: el nombre y el pack son datos de la CUENTA, no algo que se pregunte al entrar. Ver docs/data-model.md.",
+  "lideres": [
+    { "correo": "marta@pack77.org",  "nombre": "Marta Rivas Gómez",  "pack": "Pack 77", "councilId": "c-05" },
+    { "correo": "ana@pack77.org",    "nombre": "Ana María Solís",    "pack": "Pack 77", "councilId": "c-05" },
+    { "correo": "nicolas@pack12.org","nombre": "Nicolás Barrios",    "pack": "Pack 12", "councilId": "c-05" },
+    { "correo": "demo@scouting.org", "nombre": "Líder de demostración", "pack": "Pack 1", "councilId": "c-05" }
+  ]
+}
