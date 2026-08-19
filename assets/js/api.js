@@ -10,7 +10,7 @@
  */
 const API = (() => {
   const MODE = 'local';           // 'local' | 'remote'
-  const BASE = '/projects/scouting-america/assets/data';  // los JSON viajan con los assets
+  const BASE = '/projects/scouting-america-cards/assets/data';  // los JSON viajan con los assets
   const REMOTE = '';              // base de la API real, se llena en Capa B
   const NS = 'sa:';               // prefijo de localStorage
 
