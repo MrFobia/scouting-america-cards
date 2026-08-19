@@ -150,11 +150,14 @@ def build(check: bool = False) -> int:
                 shutil.rmtree(dest)
             shutil.copytree(SITE / "assets", dest)
             # api.js lleva la ruta de los JSON escrita adentro; el reemplazo
-            # que se le hace al HTML tiene que alcanzarla también.
-            for js in dest.rglob("*.js"):
-                txt = js.read_text()
+            # que se le hace al HTML tiene que alcanzarla también. Y los JSON
+            # de las barajas traen la ruta de CADA lámina adentro (img.src) —
+            # sin esto las tarjetas se veían perfecto en local y rotas acá
+            # (bug real, 20-ago-2026: se detectó recién probando en el preview).
+            for f in list(dest.rglob("*.js")) + list(dest.rglob("*.json")):
+                txt = f.read_text()
                 if "/site/assets" in txt:
-                    js.write_text(txt.replace("/site/assets", ASSET_BASE))
+                    f.write_text(txt.replace("/site/assets", ASSET_BASE))
         print(f"  assets → production/views/assets y assets/")
     print(f"  service worker sellado: {version}")
 
