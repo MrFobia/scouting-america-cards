@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#003F87">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -46,10 +46,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/app.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   const q = App.params();
@@ -92,11 +92,11 @@
       sub: card.requirement
         ? `${es ? 'Requisito' : 'Requirement'} ${card.requirement.index} ${es ? 'de' : 'of'} ${card.requirement.of}`
         : '',
-      back: `/site/baraja.html?d=${deck.id}&lang=${lang}${asLeader ? '&lider=1' : ''}`,
+      back: `/preview/947?d=${deck.id}&lang=${lang}${asLeader ? '&lider=1' : ''}`,
       crumbs: [
-        { label: es ? 'Barajas' : 'Decks', href: `/site/barajas.html?lang=${lang}` },
-        { label: deck.name[lang] || deck.name.es, href: `/site/baraja.html?d=${deck.id}&lang=${lang}` },
-        ...(adv ? [{ label: Card.t(adv.name, lang), href: `/site/baraja.html?d=${deck.id}&a=${adv.id}&lang=${lang}` }] : []),
+        { label: es ? 'Barajas' : 'Decks', href: `/preview/942?lang=${lang}` },
+        { label: deck.name[lang] || deck.name.es, href: `/preview/947?d=${deck.id}&lang=${lang}` },
+        ...(adv ? [{ label: Card.t(adv.name, lang), href: `/preview/947?d=${deck.id}&a=${adv.id}&lang=${lang}` }] : []),
         { label: Card.t(card.title, lang) }
       ],
       compact: true,
@@ -125,7 +125,7 @@
         html: `${es
           ? 'Para mandarles esto a los papás, agrégala a un mazo: lo que se comparte es la selección de la semana, no una tarjeta suelta.'
           : 'To send this to families, add it to a deck: what gets shared is the week’s selection, not a single card.'}
-          <a href="/site/lider/mazo-nuevo.html">${es ? 'Armar el mazo' : 'Build the deck'}</a>`
+          <a href="/preview/953">${es ? 'Armar el mazo' : 'Build the deck'}</a>`
       });
     }
 
@@ -136,11 +136,11 @@
 
     /* ---------- salidas · una primaria, el resto enlaces ---------- */
     document.getElementById('cta').innerHTML = asLeader ? `
-      <a class="link-arrow" href="/site/lider/index.html">
+      <a class="link-arrow" href="/preview/951">
         ${es ? 'Volver a mi consola' : 'Back to my console'} →</a>` : `
-      <a class="btn btn--primary" href="/site/baraja.html?d=${deck.id}&lang=${lang}">
+      <a class="btn btn--primary" href="/preview/947?d=${deck.id}&lang=${lang}">
         ${es ? 'Ver toda la baraja' : 'See the whole deck'}</a>
-      <a class="link-arrow" href="/site/como-usar.html?lang=${lang}">
+      <a class="link-arrow" href="/preview/946?lang=${lang}">
         ${es ? '¿Qué es esto?' : 'What is this?'} →</a>`;
 
   } catch (err) {

@@ -208,7 +208,7 @@ const Shell = (() => {
       <div class="aura__greet">
         ${flecha}
         <a class="pagehead__brand" href="${inicioHref}" aria-label="${es ? 'Inicio' : 'Home'}">
-          <img src="/projects/scouting-america/assets/img/scouting-america-signature${sobreFoto ? '-white' : ''}.png"
+          <img src="/projects/scouting-america-cards/assets/img/scouting-america-signature${sobreFoto ? '-white' : ''}.png"
                alt="Scouting America" width="900" height="110" class="pagehead__logo">
         </a>
         ${esConsolaLider ? '' : `

@@ -35,7 +35,7 @@ VIEWS = ROOT / "production" / "views"
 MIRROR = ROOT / "assets"
 PREVIEW_MAP = ROOT / "scripts" / "preview_ids.json"
 
-PROJECT_SLUG = "scouting-america"
+PROJECT_SLUG = "scouting-america-cards"
 ASSET_BASE = f"/projects/{PROJECT_SLUG}/assets"
 
 # Directivas de Blade que pueden aparecer en texto o en JSON-LD y hay que escapar.

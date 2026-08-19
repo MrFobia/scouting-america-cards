@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#F4F3EF">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -41,13 +41,13 @@
   <!-- Hero editorial: foto a sangre + titular grande. Le da personalidad a la
        portada sin salirse de la paleta ni usar gradientes de moda. -->
   <section class="hero rise" style="--i:0" aria-labelledby="hero-titulo">
-    <img src="/projects/scouting-america/assets/img/photos/bicis.webp" alt="" aria-hidden="true"
+    <img src="/projects/scouting-america-cards/assets/img/photos/bicis.webp" alt="" aria-hidden="true"
          width="1200" height="800" loading="eager" decoding="async">
     <span class="hero__eyebrow" id="hero-e">Cub Scouts · en español</span>
     <h1 class="hero__title" id="hero-titulo"><span class="hero__line">Qué hace <em>su hijo</em></span> <span class="hero__line">esta semana</span></h1>
     <p class="hero__sub" id="hero-s">Su líder le manda por WhatsApp las actividades de la semana. Las abre y las hacen juntos. Sin cuenta y sin instalar nada.</p>
     <p class="hero__cta">
-      <a class="btn btn--primary" href="/site/como-usar.html" id="hero-a">Cómo funciona →</a>
+      <a class="btn btn--primary" href="/preview/946" id="hero-a">Cómo funciona →</a>
     </p>
   </section>
 
@@ -70,10 +70,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/app.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   const lang = API.getLang();
@@ -85,7 +85,7 @@
   // Bug 20-ago: el href estático nunca llevaba el idioma — en español pasaba
   // desapercibido porque es el default, pero en inglés mandaba de vuelta a
   // la Guía en español sin avisar.
-  document.getElementById('hero-a').href = `/site/como-usar.html?lang=${lang}`;
+  document.getElementById('hero-a').href = `/preview/946?lang=${lang}`;
   if (!es) {
     document.getElementById('hero-e').textContent = 'Cub Scouts · in English';
     document.getElementById('hero-titulo').innerHTML = '<span class="hero__line">What <em>your child</em></span> <span class="hero__line">does this week</span>';
@@ -132,7 +132,7 @@
 
     bento.innerHTML = mazo ? `
       <li class="is-wide">
-        <a class="tile tile--navy is-wide" href="/site/mazo.html?m=${mazo.id}&lang=${lang}">
+        <a class="tile tile--navy is-wide" href="/preview/948?m=${mazo.id}&lang=${lang}">
           <span class="tile__label">${es ? 'De su líder' : 'From your leader'}</span>
           <span class="tile__name">${mazo.nombre}</span>
           <span class="tile__label">${nCartas} ${es

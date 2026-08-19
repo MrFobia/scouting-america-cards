@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#003F87">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -33,10 +33,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/app.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   const q = App.params();
@@ -73,12 +73,12 @@
       eyebrow: adv ? `${deckName} · ${Card.categoria(adv, lang)}` : `Cub Scouts · ${T.decks}`,
       title: adv ? Card.t(adv.name, lang) : deckName,
       sub: adv ? Card.t(adv.summary, lang) : Card.t(deck.intro, lang),
-      back: adv ? `/site/baraja.html?${qs({ d: deckId })}` : `/site/barajas.html?${qs()}`,
+      back: adv ? `/preview/947?${qs({ d: deckId })}` : `/preview/942?${qs()}`,
       crumbs: adv
-        ? [{ label: T.decks, href: `/site/barajas.html?${qs()}` },
-           { label: deckName, href: `/site/baraja.html?${qs({ d: deckId })}` },
+        ? [{ label: T.decks, href: `/preview/942?${qs()}` },
+           { label: deckName, href: `/preview/947?${qs({ d: deckId })}` },
            { label: Card.t(adv.name, lang) }]
-        : [{ label: T.decks, href: `/site/barajas.html?${qs()}` },
+        : [{ label: T.decks, href: `/preview/942?${qs()}` },
            { label: deckName }],
       compact: true,
       soloIngles: asLeader
@@ -106,7 +106,7 @@
             <p style="margin:0 0 var(--space-4); max-width:var(--measure)">${Card.t(list[0].requirement.text, lang)}</p>
             <div class="cardgrid">
               ${list.map(c => `
-                <a class="deckcard rise-io" href="/site/carta.html?${qs({ c: c.id })}">
+                <a class="deckcard rise-io" href="/preview/954?${qs({ c: c.id })}">
                   ${c.image
                     ? `<img src="${c.image.src}" alt="" aria-hidden="true"
                            width="${c.image.width}" height="${c.image.height}"
@@ -138,7 +138,7 @@
         texto: es
           ? 'Las tarjetas se cargan cuando llega el material del programa. La baraja Bear ya está disponible y funciona igual que esta.'
           : 'Cards load once the program material arrives. The Bear deck is already available and works just like this one.',
-        accion: `<a class="btn btn--primary" href="/site/baraja.html?${qs({ d: 'bear' })}">${
+        accion: `<a class="btn btn--primary" href="/preview/947?${qs({ d: 'bear' })}">${
           es ? 'Ver la baraja Bear' : 'See the Bear deck'}</a>`
       });
       return;
@@ -164,7 +164,7 @@
             const n = activities.filter(c => c.adventureId === a.id).length;
             const tono = ['tile--navy', 'tile--tan', 'tile--blue', 'tile--pale'][i % 4];
             return `<li>
-              <a class="tile ${tono}" href="/site/baraja.html?${qs({ d: deckId, a: a.id })}">
+              <a class="tile ${tono}" href="/preview/947?${qs({ d: deckId, a: a.id })}">
                 <span class="tile__label">${Card.categoria(a, lang)}</span>
                 <span>
                   <span class="tile__name" style="display:block">${Card.t(a.name, lang)}</span>
@@ -180,7 +180,7 @@
         <p class="page__label">${T.resources}</p>
         <div class="cardgrid">
           ${resources.map(c => `
-            <a class="deckcard rise-io" href="/site/carta.html?${qs({ c: c.id })}">
+            <a class="deckcard rise-io" href="/preview/954?${qs({ c: c.id })}">
               ${c.image
                 ? `<img src="${c.image.src}" alt="" aria-hidden="true"
                        width="${c.image.width}" height="${c.image.height}"
@@ -200,7 +200,7 @@
         ${cycled ? Shell.notice({ icono: 'reciclar', html: es
           ? 'Ya vieron todas las actividades de esta baraja. Empezamos otra vuelta.'
           : 'You have seen every activity in this deck. Starting over.' }) : ''}
-        <a class="tile tile--navy rise" href="/site/carta.html?${qs({ c: card.id })}" style="min-height:8rem">
+        <a class="tile tile--navy rise" href="/preview/954?${qs({ c: card.id })}" style="min-height:8rem">
           <span class="tile__label">${es ? 'Les tocó' : 'You got'}</span>
           <span>
             <span class="tile__name" style="display:block">${Card.t(card.title, lang)}</span>

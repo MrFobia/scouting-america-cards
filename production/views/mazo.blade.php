@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#003F87">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -43,10 +43,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/app.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   const lang = API.getLang();
@@ -78,7 +78,7 @@
       es ? 'No encontramos este mazo' : 'We couldn’t find this deck',
       es ? 'Puede que el enlace sea viejo. Pídele a tu líder que te lo reenvíe.'
          : 'The link may be old. Ask your leader to resend it.',
-      `<a class="btn btn--primary" href="/site/index.html?lang=${lang}">${es ? 'Ir al inicio' : 'Go home'}</a>`
+      `<a class="btn btn--primary" href="/preview/945?lang=${lang}">${es ? 'Ir al inicio' : 'Go home'}</a>`
     );
     return;
   }
@@ -113,7 +113,7 @@
     sub: total === 1
       ? (es ? '1 actividad' : '1 activity')
       : `${total} ${es ? 'actividades' : 'activities'}`,
-    back: `/site/index.html?lang=${lang}`,
+    back: `/preview/945?lang=${lang}`,
     compact: true
   });
   Shell.mountFooter(document.getElementById('pagefoot'));

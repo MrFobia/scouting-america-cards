@@ -10,11 +10,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#003F87">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
 
 <main class="page page--glow" id="main" style="max-width:46rem">
   <div class="photoband rise" style="--i:0; margin-bottom:var(--space-6)" id="pb">
-      <img src="/projects/scouting-america/assets/img/photos/pinewood.webp" alt="" aria-hidden="true"
+      <img src="/projects/scouting-america-cards/assets/img/photos/pinewood.webp" alt="" aria-hidden="true"
            width="1200" height="800" loading="eager" decoding="async">
       <span class="photoband__label" id="pb-label">Cub Scouts · en español</span>
       <span class="photoband__title" id="pb-title">Un toque, y ya está</span>
@@ -43,9 +43,9 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
 <script>
 /* Pedido 20-ago: esta parada del tab bar la comparten familia y líder, pero
    ya no puede ser el mismo texto para los dos — el líder no necesita que le
@@ -94,7 +94,7 @@ const PROSE_LIDER = `
 
   <h2>See who opened it</h2>
   <p>
-    <a href="/site/envios.html">Sent</a> shows how many families opened each
+    <a href="/preview/949">Sent</a> shows how many families opened each
     deck you sent, without knowing which family is which — same as the app
     shows the family.
   </p>
@@ -277,8 +277,8 @@ if (!asLeader) {
   const pie = document.createElement('p');
   pie.style.cssText = 'margin-top:var(--space-6); font-size:var(--step--1); color:var(--text-muted)';
   pie.innerHTML = es
-    ? '¿Eres líder de den? Esta guía es para las familias — los pasos para armar y mandar el mazo están en <a href="/site/lider/index.html">tu consola</a>.'
-    : 'Are you a den leader? This guide is for families — the steps to build and send the deck are in <a href="/site/lider/index.html">your console</a>.';
+    ? '¿Eres líder de den? Esta guía es para las familias — los pasos para armar y mandar el mazo están en <a href="/preview/951">tu consola</a>.'
+    : 'Are you a den leader? This guide is for families — the steps to build and send the deck are in <a href="/preview/951">your console</a>.';
   document.getElementById('prose').appendChild(pie);
 }
 </script>

@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -57,15 +57,15 @@
       </p>
     </form>
     <p style="margin:var(--space-4) 0 0; font-size:var(--step--1); color:var(--text-muted)">
-      Are you a parent? <a href="/site/index.html">Go to the home page</a>.
+      Are you a parent? <a href="/preview/945">Go to the home page</a>.
     </p>
   </section>
 </main>
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   Shell.mountHeader(document.getElementById('pagehead'), {
@@ -90,7 +90,7 @@
     // le preguntan a alguien que se está identificando.
     // La contraseña muere acá: no se guarda ni se compara contra nada.
     await API.entrarComoLider(correo);
-    const destino = new URLSearchParams(location.search).get('volver') || '/site/lider/index.html';
+    const destino = new URLSearchParams(location.search).get('volver') || '/preview/951';
     location.href = destino;
   });
 })();

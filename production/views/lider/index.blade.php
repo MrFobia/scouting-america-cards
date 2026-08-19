@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="manifest" href="/site/manifest.webmanifest">
 <meta name="theme-color" content="#003F87">
-<link rel="apple-touch-icon" href="/projects/scouting-america/assets/img/app-icon-192.png">
+<link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 </head>
 <body>
 
@@ -42,7 +42,7 @@
       deck gets its own link to send on WhatsApp.
     </p>
     <p class="actions" style="margin-bottom:var(--space-4)">
-      <a class="btn btn--primary" href="/site/lider/mazo-nuevo.html">Create a deck</a>
+      <a class="btn btn--primary" href="/preview/953">Create a deck</a>
     </p>
     <div id="mis-mazos"></div>
   </section>
@@ -57,7 +57,7 @@
       families know each week what activity their child will be doing.
     </p>
     <p style="margin:0; color:var(--text-muted)">
-      <a href="/site/lider/perfil.html">Your profile</a> · to change your name, your photo, or sign out of the console.
+      <a href="/preview/952">Your profile</a> · to change your name, your photo, or sign out of the console.
     </p>
   </section>
 
@@ -84,14 +84,14 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
 <script>
 (async () => {
   // Puerta del prototipo: sin sesión, a entrar. No es seguridad (ver api.js),
   // pero evita que un papá caiga acá por un enlace y crea que se equivocó de app.
   if (!API.haySesionLider()) {
-    location.replace('/site/lider/entrar.html?volver=' + encodeURIComponent(location.pathname + location.search));
+    location.replace('/preview/950?volver=' + encodeURIComponent(location.pathname + location.search));
     return;
   }
 
@@ -119,7 +119,7 @@
       icono: 'persona',
       html: `You'll sign as <strong>${perfil.leader}</strong>${
         perfil.pack ? ` · ${perfil.pack}` : ''}, which is what families will see.
-        <a href="/site/lider/perfil.html">Fix it</a>`
+        <a href="/preview/952">Fix it</a>`
     }));
     document.querySelector('main .notice').style.marginBottom = 'var(--space-5)';
   }
@@ -238,8 +238,8 @@
     cont.innerHTML = decks.map(d => {
       const foto = FOTO[d.id];
       return `<li>
-        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/site/baraja.html?d=${d.id}&lang=${lang}&lider=1">
-          ${foto ? `<img src="/projects/scouting-america/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
+        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/preview/947?d=${d.id}&lang=${lang}&lider=1">
+          ${foto ? `<img src="/projects/scouting-america-cards/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
                 width="1200" height="800" loading="lazy" decoding="async">` : ''}
           <span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>
           ${d.translation === 'pendiente' ? '<span class="tile__pill">English only</span>' : '<span></span>'}

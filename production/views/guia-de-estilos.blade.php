@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
 <style>
   /* Solo lo que es exclusivo de este documento interno. El resto vive en app.css. */
   .guide { max-width: 64rem; margin-inline: auto; padding: 0 var(--page-gutter) var(--space-8); }
@@ -25,12 +25,12 @@
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
 <header class="nav-edge">
-  <a class="nav-edge__brand" href="/site/index.html">
-    <img class="nav-edge__logo" src="/projects/scouting-america/assets/img/scouting-america-signature.png"
+  <a class="nav-edge__brand" href="/preview/945">
+    <img class="nav-edge__logo" src="/projects/scouting-america-cards/assets/img/scouting-america-signature.png"
          alt="Scouting America" width="900" height="110">
     <span class="nav-edge__title">Guía de estilos</span>
   </a>
-  <a class="nav-edge__back" href="/site/index.html">Inicio</a>
+  <a class="nav-edge__back" href="/preview/945">Inicio</a>
 </header>
 
 <main id="main" class="guide">
@@ -52,7 +52,7 @@
     <div class="cols">
       <div>
         <div class="logo-box">
-          <img src="/projects/scouting-america/assets/img/scouting-america-signature.png"
+          <img src="/projects/scouting-america-cards/assets/img/scouting-america-signature.png"
                alt="Firma de Scouting America" width="900" height="110">
         </div>
         <p class="prose-note" style="margin-top:var(--space-3)">
@@ -63,7 +63,7 @@
       </div>
       <div>
         <div class="logo-box">
-          <img src="/projects/scouting-america/assets/img/cub-scouts-trademark.png"
+          <img src="/projects/scouting-america-cards/assets/img/cub-scouts-trademark.png"
                alt="Trademark de Cub Scouts" width="600" height="618"
                style="width:min(14rem,70%)">
         </div>
@@ -291,11 +291,11 @@
 
 <footer class="foot-line">
   <p>Derivado del Scouting America Brand Guidelines 2024 · Preparados para el futuro.®</p>
-  <a href="/site/index.html">Inicio</a>
+  <a href="/preview/945">Inicio</a>
 </footer>
 
-<script src="/projects/scouting-america/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america/assets/js/card.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
 <script>
 (async () => {
 
