@@ -156,8 +156,17 @@ def build(check: bool = False) -> int:
             # (bug real, 20-ago-2026: se detectó recién probando en el preview).
             for f in list(dest.rglob("*.js")) + list(dest.rglob("*.json")):
                 txt = f.read_text()
-                if "/site/assets" in txt:
-                    f.write_text(txt.replace("/site/assets", ASSET_BASE))
+                nuevo_txt = txt.replace("/site/assets", ASSET_BASE)
+                # Y los links a PÁGINAS que viven dentro del JS. shell.js tiene
+                # ahí toda la barra de navegación, el destino del logo, la
+                # puerta del líder y los redirects de salida: dieciocho enlaces
+                # que el build no tocaba porque solo reescribía los assets.
+                # Resultado: en el preview la barra entera daba 404 y nadie lo
+                # había notado porque en local funciona perfecto.
+                nuevo_txt, faltan = rewrite_links(nuevo_txt, preview_ids)
+                all_missing.update(faltan)
+                if nuevo_txt != txt:
+                    f.write_text(nuevo_txt)
         print(f"  assets → production/views/assets y assets/")
     print(f"  service worker sellado: {version}")
 

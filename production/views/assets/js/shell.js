@@ -23,7 +23,9 @@ const Shell = (() => {
     envios: '<path d="M3.5 6.5h17v11h-17z"/><path d="m3.5 7.5 8.5 6 8.5-6"/>',
     barajas: '<rect x="3.5" y="6.5" width="11" height="14" rx="1"/><path d="M7.5 3.5h9a1 1 0 0 1 1 1v12"/>',
     guia: '<circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .9-1 1.6v.4"/><path d="M12 17.2h.01"/>',
-    lider: '<circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>'
+    lider: '<circle cx="12" cy="8" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>',
+    tablero: '<path d="M3.5 19.5h17"/><rect x="5" y="11" width="3.5" height="6" rx=".6"/><rect x="10.2" y="7" width="3.5" height="10" rx=".6"/><rect x="15.4" y="13" width="3.5" height="4" rx=".6"/>',
+    lideres: '<circle cx="9" cy="9" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 6.3a3 3 0 0 1 0 5.4M17.5 19a6 6 0 0 0-2-4.5"/>'
   };
 
   // Progreso salió el 14-ago-2026: sin login no se puede acumular y el SOW
@@ -34,16 +36,35 @@ const Shell = (() => {
   // necesite recorrer. barajas.html/baraja.html/carta.html siguen en disco
   // para quien llegue por un enlace directo, solo que sin tab que los anuncie.
   const TABS_FAMILIA = [
-    { id: 'inicio',  href: '/site/index.html',     es: 'Inicio',  en: 'Home',  match: ['/site/index.html', '/site/mazo.html'] },
-    { id: 'guia',    href: '/site/como-usar.html', es: 'Guía',    en: 'Help',  match: ['/site/como-usar.html'] }
+    { id: 'inicio',  href: '/preview/945',     es: 'Inicio',  en: 'Home',  match: ['/preview/945', '/preview/948'] },
+    { id: 'guia',    href: '/preview/946', es: 'Guía',    en: 'Help',  match: ['/preview/946'] }
   ];
 
   const TABS_LIDER = [
-    { id: 'enviar',  href: '/site/lider/index.html', es: 'Enviar',  en: 'Send',   match: ['/site/lider/'] },
-    { id: 'barajas', href: '/site/barajas.html',       es: 'Barajas', en: 'Decks',  match: ['/site/barajas.html', '/site/baraja.html', '/site/carta.html'] },
-    { id: 'envios',  href: '/site/envios.html',      es: 'Envíos',  en: 'Sent',   match: ['/site/envios.html'] },
-    { id: 'guia',    href: '/site/como-usar.html',   es: 'Guía',    en: 'Help',   match: ['/site/como-usar.html'] }
+    { id: 'enviar',  href: '/preview/951', es: 'Enviar',  en: 'Send',
+      // Páginas explícitas, no el prefijo '/site/lider/': en ai.backbone cada
+      // vista se sirve en /preview/{id} y no hay carpeta que prefijar, así que
+      // el prefijo no casaba nunca y la pestaña no se encendía.
+      match: ['/preview/951', '/preview/953', '/preview/952'] },
+    { id: 'barajas', href: '/preview/942',       es: 'Barajas', en: 'Decks',  match: ['/preview/942', '/preview/947', '/preview/954'] },
+    { id: 'envios',  href: '/preview/949',      es: 'Envíos',  en: 'Sent',   match: ['/preview/949'] },
+    { id: 'guia',    href: '/preview/946',   es: 'Guía',    en: 'Help',   match: ['/preview/946'] }
   ];
+
+  /* La consola del ADMIN (Scouting America) es una tercera navegación, no una
+     variante de la del líder: son dos personas distintas con dos trabajos
+     distintos. El admin no arma mazos ni los manda — mira el programa entero.
+     Va siempre en inglés, mismo criterio que la consola del líder. */
+  const TABS_ADMIN = [
+    { id: 'tablero', href: '/site/admin/index.html',   es: 'Tablero', en: 'Overview', match: ['/site/admin/index.html'] },
+    { id: 'lideres', href: '/site/admin/lideres.html', es: 'Líderes', en: 'Leaders',  match: ['/site/admin/lideres.html'] },
+    { id: 'lider',   href: '/site/admin/perfil.html',  es: 'Perfil',  en: 'Profile',  match: ['/site/admin/perfil.html'] }
+  ];
+  /* Tres paradas, no cinco. "Barajas" y "Guía" salieron el 20-ago: el catálogo
+     y el instructivo son material del LÍDER —quien arma y manda mazos—, y el
+     admin no hace ninguna de las dos cosas. Ofrecerle esas dos puertas era
+     llenarle la barra con el trabajo de otro. En su lugar entra su perfil, que
+     es lo único suyo que le faltaba. */
 
   const svg = paths =>
     `<svg class="tab__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -60,7 +81,8 @@ const Shell = (() => {
     if (document.querySelector('.tabbar')) return;
     const es = lang !== 'en';
     const path = location.pathname;
-    const TABS = modo === 'lider' ? TABS_LIDER : TABS_FAMILIA;
+    const TABS = modo === 'admin' ? TABS_ADMIN
+              : modo === 'lider' ? TABS_LIDER : TABS_FAMILIA;
 
     const nav = document.createElement('nav');
     nav.className = 'tabbar';
@@ -145,11 +167,26 @@ const Shell = (() => {
     const p = API.getProfile();
     const inicial = (p.leader || '?').trim().charAt(0).toUpperCase();
     return `
-      <a class="avatar avatar--sm" href="/site/lider/perfil.html"
+      <a class="avatar avatar--sm" href="${(window.API && API.haySesionAdmin())
+         ? '/site/admin/index.html' : '/preview/952'}"
          aria-label="${es ? 'Tu perfil' : 'Your profile'}">
         ${p.photo
           ? `<img src="${p.photo}" alt="">`
           : inicial}
+      </a>`;
+  }
+
+  /* Pedido 20-ago (Carlos y equipo): el ingreso del líder vivía solo en el
+     pie de cada página — nadie "estudia toda la página" buscando dónde
+     loguearse. Sube a la cabecera, junto al selector de idioma, visible sin
+     scroll. Solo aparece sin sesión: con sesión abierta ya está el avatar. */
+  function loginLink(es) {
+    return `
+      <a class="avatar avatar--sm avatar--empty" href="/preview/950"
+         aria-label="${es ? 'Líder: entra a tu consola' : 'Leader: sign in'}">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+             aria-hidden="true" focusable="false">${ICON.lider}</svg>
       </a>`;
   }
 
@@ -158,14 +195,21 @@ const Shell = (() => {
      grande y las internas una barra blanca distinta: parecían dos productos.
      Cualquier página que quiera cabecera llama a esto y nada más. */
 
-  function mountHeader(el, { eyebrow, title, accent, sub, crumbs, compact, back, sobreFoto, soloIngles } = {}) {
+  function mountHeader(el, { eyebrow, title, accent, sub, crumbs, compact, back, sobreFoto, soloIngles, tinte } = {}) {
     // Pedido 20-ago: la consola del líder es en inglés siempre, sin selector —
     // solo el papá elige idioma. Toda página bajo /site/lider/ ya cae acá sola
     // por la ruta. Pero cuatro paradas del tab bar del líder (Barajas, Envíos,
     // Guía) viven en archivos COMPARTIDOS con la familia —barajas.html,
     // envios.html, como-usar.html— así que esas páginas mandan `soloIngles`
     // explícito según su propio `asLeader`, y esto no puede adivinarlo por ruta.
-    const esConsolaLider = soloIngles ?? location.pathname.startsWith('/site/lider/');
+    /* Qué consola es esto NO se deduce de la ruta. En local las páginas viven
+       en /site/admin/ y /site/lider/, pero en ai.backbone cada vista se sirve
+       en /preview/{id} y esos `startsWith` daban false: la consola del líder
+       salía con selector de idioma y con el pie de familia. La página lo
+       declara en el <body data-consola="...">, que viaja con el marcado. */
+    const consola = document.body.dataset.consola || '';
+    const esConsolaAdmin = consola === 'admin' || (window.API && API.haySesionAdmin());
+    const esConsolaLider = soloIngles ?? (esConsolaAdmin || consola === 'lider');
     const lang = esConsolaLider ? 'en' : ((window.API && API.getLang()) || 'es');
     const es = lang !== 'en';
     // El idioma del documento se fija acá: corre en todas las pantallas.
@@ -183,9 +227,32 @@ const Shell = (() => {
     // reversado sobre fondo oscuro (pág. 11: "Do not reproduce in color on
     // a dark background" / "Reversed: white must be used") — no es un
     // capricho de color, es la única forma permitida ahí.
+    // tinte: la interna de una baraja (pedido 20-ago, 3.ª pasada). El color del
+    // rank deja de ser una imagen debajo del texto y pasa a ser EL FONDO de la
+    // cabecera, con la información encima. Otro modificador del mismo
+    // componente, igual que sobreFoto — no una cabecera nueva.
+    //
+    // `tinte.on` NO se elige acá: viene medido desde el PDF del estuche
+    // (render_deck_art.py, WCAG 2.2). Sobre el dorado del Lion el texto va
+    // oscuro; sobre el rojo del Wolf, blanco. Elegirlo a ojo en el CSS era
+    // garantizar que un rank quedara ilegible.
+    const tintaClara = tinte && tinte.on === '#FFFFFF';
     el.className = 'aura pagehead'
       + (compact ? ' aura--compact' : '')
-      + (sobreFoto ? ' pagehead--sobre-foto' : '');
+      + (sobreFoto ? ' pagehead--sobre-foto' : '')
+      + (tinte ? ' pagehead--tinte' : '');
+    if (tinte) {
+      el.style.setProperty('--deck-ink', tinte.ink);
+      el.style.setProperty('--deck-dot', tinte.dot);
+      el.style.setProperty('--deck-on', tinte.on);
+      // La portada es el arte del cliente entero (trama, tagline, wordmark y
+      // mascota), no piezas recompuestas por nosotros. El color plano queda
+      // igual como fondo debajo: es lo que se ve mientras la imagen carga y en
+      // la parte de la cabecera que la portada no alcanza a cubrir.
+      if (tinte.portada) {
+        el.style.setProperty('--deck-portada', `url("${tinte.portada.src}")`);
+      }
+    }
     // Botón de volver explícito. Un chip no se lee como "atrás": si la pantalla
     // no es un destino de primer nivel, tiene que haber una flecha con nombre.
     const flecha = back ? `
@@ -197,18 +264,24 @@ const Shell = (() => {
         </svg>
       </a>` : '';
 
-    // Bug 20-ago: el logo llevaba SIEMPRE a /site/index.html (la portada de
+    // Bug 20-ago: el logo llevaba SIEMPRE a /preview/945 (la portada de
     // familia), aunque quien lo tocara fuera un líder con sesión abierta —
     // el gesto universal de "logo = ir a mi inicio" lo mandaba fuera de su
     // propia consola sin avisar, a una pantalla que no es la suya. Con sesión
     // de líder, "inicio" es su consola.
-    const inicioHref = (window.API && API.haySesionLider())
-      ? '/site/lider/index.html' : '/site/index.html';
+    const inicioHref = (window.API && API.haySesionAdmin()) ? '/site/admin/index.html'
+      : (window.API && API.haySesionLider()) ? '/preview/951'
+      : '/preview/945';
+    // El manual exige la firma reversada en blanco sobre fondo oscuro (pág. 11).
+    // Con tinte eso ya no depende de la página sino del rank: sobre Wolf o
+    // Webelos va la blanca, sobre Lion o Bear la de color. La misma medición
+    // que decide el color del texto decide esto.
+    const logoBlanco = sobreFoto || tintaClara;
     el.innerHTML = `
       <div class="aura__greet">
         ${flecha}
         <a class="pagehead__brand" href="${inicioHref}" aria-label="${es ? 'Inicio' : 'Home'}">
-          <img src="/projects/scouting-america-cards/assets/img/scouting-america-signature${sobreFoto ? '-white' : ''}.png"
+          <img src="/projects/scouting-america-cards/assets/img/scouting-america-signature${logoBlanco ? '-white' : ''}.png"
                alt="Scouting America" width="900" height="110" class="pagehead__logo">
         </a>
         ${esConsolaLider ? '' : `
@@ -218,7 +291,9 @@ const Shell = (() => {
           <button class="lang__btn" type="button" data-lang="en"
                   aria-pressed="${lang === 'en'}">EN</button>
         </div>`}
-        ${(window.API && API.haySesionLider()) ? avatarLink(es) : ''}
+        ${(window.API && API.haySesionLider())
+          ? avatarLink(es)
+          : (esConsolaLider ? '' : loginLink(es))}
       </div>
       ${crumbs && crumbs.length ? `<nav aria-label="${es ? 'Migas de pan' : 'Breadcrumb'}">
         <ol class="crumbs">${crumbs.map((c, i) => {
@@ -258,7 +333,8 @@ const Shell = (() => {
     // seguía leyendo API.getLang() derecho, así que en /site/lider/* podía
     // quedar en español mientras el resto de la pantalla estaba en inglés.
     // Mismo criterio que mountHeader: ruta primero, idioma guardado después.
-    const esConsolaLider = location.pathname.startsWith('/site/lider/');
+    const esConsolaAdmin = (window.API && API.haySesionAdmin());
+    const esConsolaLider = esConsolaAdmin || document.body.dataset.consola === 'lider';
     const es = !esConsolaLider && (((window.API && API.getLang()) || 'es') !== 'en');
     const anio = new Date().getFullYear();
     el.className = 'pagefoot';
@@ -267,19 +343,26 @@ const Shell = (() => {
       <p>${es
         ? 'Traducción al español no oficial. No guardamos datos de menores.'
         : 'Unofficial Spanish translation. We never store data about minors.'}</p>
-      <p>${(window.API && API.haySesionLider())
-        ? `<button class="linklike" type="button" data-salir>${
-            es ? 'Salir de la consola de líder' : 'Sign out of the leader console'}</button>`
-        : `<a class="linklike" href="/site/lider/entrar.html">${
-            es ? '¿Eres líder de den? Entra a tu consola' : 'Den leader? Sign in to your console'}</a>`
-      }</p>`;
+      ${esConsolaAdmin
+        ? `<p><button class="linklike" type="button" data-salir-admin>Sign out of the admin dashboard</button></p>`
+        : (window.API && API.haySesionLider())
+        ? `<p><button class="linklike" type="button" data-salir>${
+            es ? 'Salir de la consola de líder' : 'Sign out of the leader console'}</button></p>`
+        : ''}`;
+    // El ingreso del líder vive en la cabecera (loginLink), no acá — 20-ago:
+    // repetirlo en el pie era ruido, nadie mira ahí primero.
 
     // Ya no se "cambia de modo": el líder entra a su consola y sale de ella.
     // El papá no tiene nada que elegir — llega por el enlace de WhatsApp.
     const bs = el.querySelector('[data-salir]');
     if (bs) bs.addEventListener('click', () => {
       API.salir();
-      location.href = '/site/index.html';
+      location.href = '/preview/945';
+    });
+    const ba = el.querySelector('[data-salir-admin]');
+    if (ba) ba.addEventListener('click', () => {
+      API.salirAdmin();
+      location.href = '/preview/945';
     });
   }
 
@@ -360,7 +443,14 @@ const Shell = (() => {
     const fmt = formato || (n => new Intl.NumberFormat(
       (window.API && API.getLang()) === 'en' ? 'en-US' : 'es').format(Math.round(n)));
     el.setAttribute('aria-live', 'polite');
-    if (reduceMotion() || !window.requestAnimationFrame) {
+    /* Sin animación posible → el valor final, ya.
+       `visibilityState` importa de verdad: requestAnimationFrame NO corre en
+       una pestaña en segundo plano, y abrir un enlace en pestaña nueva para
+       mirarlo después es de lo más común. Sin esta salida, el contador se
+       quedaba clavado en el número con el que arrancó —un 0— y el tablero
+       mostraba "0 %" de apertura hasta que alguien recargara. */
+    if (reduceMotion() || !window.requestAnimationFrame
+        || document.visibilityState !== 'visible') {
       el.textContent = fmt(valor);
       return;
     }
@@ -407,11 +497,15 @@ const Shell = (() => {
     // ofrecía "Enviar" y "Envíos" a alguien que al tocarlos rebota al login.
     // Ofrecer una puerta que no abre es peor que no ofrecerla.
     const esLider = (window.API && API.getMode() === 'lider' && API.haySesionLider());
-    const modo = (esEnlaceCompartido || !esLider) ? 'familia' : 'lider';
+    // El admin manda sobre el modo guardado: si hay sesión de admin, la app
+    // es su tablero, aunque en este teléfono se haya usado antes como líder.
+    const esAdmin = (window.API && API.haySesionAdmin());
+    const modo = esAdmin ? 'admin'
+               : (esEnlaceCompartido || !esLider) ? 'familia' : 'lider';
     // Pedido 20-ago: el tab bar del líder (Send/Decks/Sent/Help) es inglés
     // siempre, igual que el resto de su consola — no lee la preferencia
     // guardada, que puede venir de haber probado el lado de familia antes.
-    montarTabs(modo === 'lider' ? 'en' : lang, modo);
+    montarTabs(modo === 'familia' ? lang : 'en', modo);
     montarAvisoRed(lang);
     montarInstalacion(lang);
 

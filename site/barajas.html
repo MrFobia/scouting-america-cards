@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" href="/site/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/site/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/site/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=v4f83ebeb">
 </head>
 <body>
 
@@ -40,9 +40,9 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/site/assets/js/api.js?v=vffaf126a"></script>
-<script src="/site/assets/js/app.js?v=vffaf126a"></script>
-<script src="/site/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/site/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/app.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   // La cabecera también cambia según quién mira: al papá no le sirve saber que
@@ -69,6 +69,9 @@
   });
   Shell.mountFooter(document.getElementById('pagefoot'));
 
+  /** Grado escolar de una baraja, tolerando el string suelto de antes. */
+  const grado = g => (typeof g === 'string' ? g : (g && (g[lang] || g.es)) || '');
+
   const cont = document.getElementById('decks');
   cont.innerHTML = Array.from({length:6},()=>'<li><div class="skel" style="min-height:10.5rem;border-radius:var(--radius-card)"></div></li>').join('');
   try {
@@ -85,12 +88,14 @@
       });
       return;
     }
-    /* Una foto oficial por baraja (brandbook 2024, design.md § Fotografía).
-       El velo de .tile--foto garantiza el contraste del nombre encima. */
-    const FOTO = {
-      lion: 'pesca', tiger: 'bicis', wolf: 'brujula', bear: 'agua',
-      webelos: 'cascos', 'arrow-of-light': 'canoa', 'pack-planning': 'derby'
-    };
+    /* La ficha de cada baraja es su PORTADA (`d.art`), no una foto. Antes iba
+       una foto del brandbook por baraja: correctas, pero intercambiables —
+       ninguna decía cuál baraja era, y la grilla entera se veía igual de azul.
+       La portada sí identifica, y hace juego con la interna, que abre con ella.
+
+       La foto queda de respaldo para la baraja de planeación del pack, que no
+       tiene estuche impreso. */
+    const FOTO = { 'pack-planning': 'derby' };
     const GLYPH = {
       lion: 'L', tiger: 'T', wolf: 'W', bear: 'B',
       webelos: 'W', 'arrow-of-light': 'A', 'pack-planning': 'P'
@@ -138,18 +143,31 @@
       // 70 % es tan engañoso como no decir nada en uno que no lo está.
       const sello = { pendiente: es ? 'Solo inglés' : 'English only',
                       parcial:   es ? 'Español parcial' : 'Partly translated' }[d.translation];
-      const foto = FOTO[d.id];
+      const art = d.art;
+      const foto = art ? null : FOTO[d.id];
+      const clase = art ? 'tile--deck' : (foto ? 'tile--foto' : 'tile--navy');
+      const estilo = art
+        ? ` style="--deck-ink:${art.ink}; --deck-on:${art.on}"` : '';
       return `<li>
-        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/site/baraja.html?d=${d.id}&lang=${lang}">
+        <a class="tile ${clase}"${estilo} href="/site/baraja.html?d=${d.id}&lang=${lang}">
+          ${art ? `<img src="${art.portada.src}" alt="" aria-hidden="true"
+                width="${art.portada.width}" height="${art.portada.height}"
+                loading="lazy" decoding="async">` : ''}
           ${foto ? `<img src="/site/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
                 width="1200" height="800" loading="lazy" decoding="async">` : ''}
-          <span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>
+          ${art ? '' : `<span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>`}
           ${sello ? `<span class="tile__pill">${sello}</span>` : '<span></span>'}
           <span>
             <span class="tile__name" style="display:block">${d.name[lang] || d.name.es}</span>
             <span class="tile__label">${(() => {
               const r = recibidasPorId.get(d.id);
-              if (!r) return d.grade ?? (es ? 'Para líderes' : 'For leaders');
+              // El grado es bilingüe desde el 20-ago; la baraja de planeación
+              // no tiene grado porque no es de un rank. Se aceptan las dos
+              // formas a propósito: el SW sirve el índice cacheado mientras
+              // revalida, así que en la primera carga después de publicar el
+              // teléfono todavía tiene el `grade` viejo, que era un string.
+              // Sin esto esa carga pintaba "undefined" debajo de cada baraja.
+              if (!r) return grado(d.grade) || (es ? 'Para líderes' : 'For leaders');
               // Para la familia manda cuántas lleva, no en qué grado va: el
               // grado ya lo sabe, el conteo es lo que no puede ver en otro lado.
               return `${r.recibidas} ${es ? 'de' : 'of'} ${r.total}`;

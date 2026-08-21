@@ -2,7 +2,10 @@
  "$status": "111 tarjetas extraídas del PDF oficial. Español en 6/10 Adventures y 67/96 actividades; el resto cae a inglés con aviso.",
  "id": "bear",
  "rank": "Bear",
- "grade": "3.er grado",
+ "grade": {
+  "es": "3.er grado",
+  "en": "3rd grade"
+ },
  "order": 4,
  "audience": "family",
  "translation": "parcial",
@@ -3898,5 +3901,27 @@
     "lang": "en"
    }
   }
- ]
+ ],
+ "pdf": {
+  "src": "/projects/scouting-america-cards/assets/pdf/bear-en.pdf",
+  "pages": 111,
+  "bytes": 3743924,
+  "lang": "en"
+ },
+ "carton": {
+  "src": "/projects/scouting-america-cards/assets/img/decks/bear-carton.webp",
+  "width": 734,
+  "height": 1034
+ },
+ "art": {
+  "ink": "#9FCFED",
+  "dot": "#86AFC9",
+  "on": "#232528",
+  "onRatio": 9.24,
+  "portada": {
+   "src": "/projects/scouting-america-cards/assets/img/decks/bear-portada.webp",
+   "width": 734,
+   "height": 798
+  }
+ }
 }

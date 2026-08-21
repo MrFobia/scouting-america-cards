@@ -1,21 +1,40 @@
 {
-  "$status": "EN PREPARACIÓN — el contenido llega cuando el cliente entregue el PDF de esta baraja.",
-  "id": "arrow-of-light",
-  "rank": "Arrow of Light",
-  "grade": "5.º grado",
-  "order": 6,
-  "audience": "family",
-  "translation": "pendiente",
-  "estado": "en-preparacion",
-  "name": {
-    "es": "Arrow of Light",
-    "en": "Arrow of Light"
-  },
-  "intro": {
-    "es": "La última baraja de Cub Scouts: liderazgo, campamento y el paso a Scouts BSA.",
-    "en": ""
-  },
-  "copyright": "©2025 Scouting America · Traducción al español",
-  "adventures": [],
-  "cards": []
+ "$status": "EN PREPARACIÓN — el contenido llega cuando el cliente entregue el PDF de esta baraja.",
+ "id": "arrow-of-light",
+ "rank": "Arrow of Light",
+ "grade": {
+  "es": "5.º grado",
+  "en": "5th grade"
+ },
+ "order": 6,
+ "audience": "family",
+ "translation": "pendiente",
+ "estado": "en-preparacion",
+ "name": {
+  "es": "Arrow of Light",
+  "en": "Arrow of Light"
+ },
+ "intro": {
+  "es": "La última baraja de Cub Scouts: liderazgo, campamento y el paso a Scouts BSA.",
+  "en": ""
+ },
+ "copyright": "©2025 Scouting America · Traducción al español",
+ "adventures": [],
+ "cards": [],
+ "carton": {
+  "src": "/site/assets/img/decks/arrow-of-light-carton.webp",
+  "width": 734,
+  "height": 1034
+ },
+ "art": {
+  "ink": "#502208",
+  "dot": "#321505",
+  "on": "#FFFFFF",
+  "onRatio": 13.35,
+  "portada": {
+   "src": "/site/assets/img/decks/arrow-of-light-portada.webp",
+   "width": 734,
+   "height": 798
+  }
+ }
 }

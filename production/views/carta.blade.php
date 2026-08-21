@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=v4f83ebeb">
 </head>
 <body>
 
@@ -46,10 +46,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america-cards/assets/js/card.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america-cards/assets/js/app.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   const q = App.params();

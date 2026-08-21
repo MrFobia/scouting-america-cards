@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=v4f83ebeb">
 </head>
-<body>
+<body data-consola="lider">
 
 <!--
   ATENCIÓN — ESTO NO ES SEGURIDAD.
@@ -64,8 +64,8 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   Shell.mountHeader(document.getElementById('pagehead'), {
@@ -89,7 +89,13 @@
     // Entrar es identificarse. El nombre y el pack vienen con la cuenta; no se
     // le preguntan a alguien que se está identificando.
     // La contraseña muere acá: no se guarda ni se compara contra nada.
-    await API.entrarComoLider(correo);
+    // Puede devolver false: el admin dio de baja esta cuenta.
+    const ok = await API.entrarComoLider(correo);
+    if (!ok) {
+      document.getElementById('msg').textContent =
+        'This account is no longer active. Contact Scouting America.';
+      return;
+    }
     const destino = new URLSearchParams(location.search).get('volver') || '/preview/951';
     location.href = destino;
   });

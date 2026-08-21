@@ -174,6 +174,140 @@ material nuevo, se le pide al cliente.
   mismo filtro: actividad real de chicos, buena luz, recortable a horizontal
   sin cortar caras. El listado vigente está en `site/assets/img/photos/`.
 
+## El banner de la baraja — el color del rank, y hasta dónde llega
+
+Añadido el 20-ago-2026. **Enmienda explícita a la regla de paleta.** Hasta acá
+este documento decía que solo entran los cinco colores Scouting America y que
+el dorado de Cub Scouts vive únicamente dentro del trademark. La interna de una
+baraja es la excepción, decidida en la revisión del 20-ago: se probó primero
+con el estuche como foto de producto sobre campo neutro y **no alcanzaba** —
+la pantalla seguía siendo la app con una cajita adentro, no la baraja.
+
+La interna abre con la **cabecera tintada**: el fondo de `.pagehead` es **la
+portada del estuche tal como la mandó el cliente**. No es un bloque de imagen
+debajo del texto — eso se probó y se descartó: la pantalla seguía leyéndose
+como la app con una estampa pegada.
+
+**Sobre el arte va solo la miga de pan.** El eyebrow y la descripción bajan al
+cuerpo de la página. El hero se lee como la portada del mazo, no como una
+cabecera con fondo, y de paso desaparece el problema que lo ensuciaba todo: con
+la descripción encima había que taparle hasta el 94 % del ancho con velo para
+que fuera legible sobre la mascota, y eso lavaba justo el arte que el cliente
+quiere mostrar. Con una línea corta arriba a la izquierda, el velo es mínimo.
+
+**El arte es del cliente, no se recompone.** Se llegó acá después de armar el
+fondo con piezas sueltas (mascota recortada + trama dibujada en CSS) y
+descartarlo: era arte nuestro imitando el suyo. `scripts/render_portadas.py`
+usa la cara frontal del troquel entera —trama, "DEN MEETING DECK / FOR
+LEADERS", wordmark y mascota— y solo quita las dos franjas amarillas que el
+cliente pidió sacar ("Fun, Simple, Easy" arriba y "Plan a den meeting in
+minutes!" abajo).
+
+Del PDF salen además el color plano, el de la trama y el de texto, que viajan
+en `deck.art` como variables (`--deck-ink`, `--deck-dot`, `--deck-on`).
+**Ningún color de rank está escrito a mano en el CSS**: una baraja nueva trae
+el suyo desde su estuche.
+
+**El nombre del rank no se escribe dos veces.** Con la portada de fondo, el
+wordmark impreso ES el nombre; el `<h1>` existe igual pero oculto, porque es el
+encabezado del documento y lo único que lee un lector de pantalla. (Antes de
+tener la portada, cuando el fondo era solo color, el titular iba visible.)
+
+La misma portada es la **ficha de la baraja en el índice** (`.tile--deck`, en
+`barajas.html` y en la consola del líder). Antes iba una foto del brandbook por
+baraja: correctas, pero intercambiables — ninguna decía cuál baraja era y la
+grilla entera se veía igual de azul. El encuadre de la ficha va sobre la
+mascota, que es lo que se reconoce de un vistazo; el wordmark a ese tamaño sale
+recortado e ilegible, así que el nombre sigue yendo como texto. El velo de la
+ficha es del color del rank, no el navy de `.tile--foto`: un velo azul sobre
+una portada dorada o celeste las volvía a igualar a todas.
+
+La foto sigue en pie para la baraja de planeación del pack, que no tiene
+estuche impreso, y para las bandas de las demás pantallas.
+
+Tres reglas que no se negocian acá:
+
+1. **El color del rank vive en la cabecera y no sale de ahí.** Botones, tiles,
+   pills y texto del resto de la interna siguen en paleta Scouting America.
+2. **El color del texto se mide, no se elige.** `--deck-on` viene calculado
+   (WCAG 2.2) contra el plano: blanco sobre Wolf y Webelos, tinta oscura sobre
+   Lion y Bear. Y **sin opacidad encima** — bajar el eyebrow al 72 % dejaba a
+   Lion, el rank de más contraste, en 4.50:1 clavado y al resto por debajo.
+3. **Sobre el arte, solo la miga.** Todo lo demás va debajo. El velo que queda
+   es el mínimo para esa línea, más una franja arriba porque la firma reversada
+   en blanco caía sobre las letras blancas del wordmark en Wolf y se borraba.
+
+## La firma no se deforma. Nunca.
+
+Añadido el 20-ago-2026 tras encontrarla comprimida un 19 % en la cabecera de
+las internas (relación 8.18 → 6.60, medida en pantalla). El manual lo prohíbe
+explícitamente, así que no es cuestión de que "casi no se note".
+
+La causa fue una combinación inocente: `.pagehead__logo` fija `height: 20px` y
+una regla posterior le puso `max-width: 100%`. En una cabecera angosta el ancho
+se recortaba y el alto no, o sea estirón horizontal. **La imagen de la firma
+lleva `object-fit: contain`**: si la caja no le da, se escala; no se estira.
+Cualquier regla nueva que toque su ancho o su alto tiene que dejar eso en pie.
+
+## Tablas en el teléfono: fichas, no scroll lateral
+
+Añadido el 20-ago-2026 con la tabla de líderes del admin. Siete columnas no
+entran en 430 px. Con `overflow-x` la tabla scrolleaba de costado y las dos
+últimas columnas —el índice de apertura y el botón de baja, o sea lo que el
+admin viene a usar— quedaban fuera de cuadro sin nada que avisara que había
+más. **Un scroll horizontal escondido dentro de una página que ya scrollea en
+vertical es de las cosas que menos se descubren en un teléfono.**
+
+El patrón: por debajo de 40rem cada fila se apila como una ficha, con el
+nombre de título y los datos como pares etiqueta-valor. La etiqueta sale del
+`data-label` de cada celda, así que no se escribe dos veces ni se puede
+desincronizar del `<thead>`, que pasa a estar oculto.
+
+**Y la trampa que hay que recordar:** cambiar el `display` de una tabla le
+borra al navegador los roles implícitos (table / row / cell), y un lector de
+pantalla deja de poder recorrerla por filas y columnas — queda una pila de
+divs con pinta de tabla. Por eso el marcado lleva `role="table"`, `role="row"`,
+`role="rowheader"` y `role="cell"` explícitos. Si se replica este patrón en
+otra tabla, esos roles van sí o sí.
+
+## Un solo eje por página
+
+Añadido el 20-ago-2026. `.page` y `.pagefoot` tenían cada uno su `max-width`
+escrito a mano (60rem los dos), y funcionó mientras todas las páginas midieran
+lo mismo. Con el tablero del admin a 78rem —88 con barra lateral— el copyright
+arrancaba ~180 px más adentro que las tarjetas: dos ejes distintos en la misma
+pantalla.
+
+Ahora el ancho se declara **una vez**, en `--page-max` sobre el `<body>`, y lo
+leen el cuerpo y el pie. Va en el body y no en `.page` porque **el pie es
+hermano del `<main>`, no hijo**: declarado más adentro no hay forma de que
+suba hasta él. Cualquier pantalla que cambie de ancho cambia esa variable, no
+el `max-width` de un componente suelto.
+
+## Microinteracciones — qué se anima y qué no
+
+Ampliación del § Motion, 20-ago-2026. El sistema (entrada `.rise`, reveal
+`.rise-io`, tokens `--dur-*` / `--ease-*`) ya existía; faltaba aplicarlo a los
+componentes de datos, que entraban en seco. La capa nueva usa **los mismos
+tokens** — no hay una segunda escala de tiempos.
+
+- **Las barras crecen desde la base** con `transform: scaleY()`, no animando
+  el alto: el alto sale del dato en porcentaje y animarlo obliga al navegador
+  a rehacer el layout en cada fotograma.
+- **Los números cuentan** hasta su valor (`Shell.tick`, que estaba escrito
+  para esto y no lo usaba nadie).
+- **Lo que no es cliqueable no se levanta.** La fila de tabla solo cambia de
+  fondo: levantarla prometería un clic que no existe.
+- **El punto de estado late una vez** al entrar, no en bucle: un parpadeo
+  permanente en una tabla es ruido, no información.
+
+**Trampa a recordar con los contadores:** `requestAnimationFrame` no corre en
+una pestaña en segundo plano, y abrir un enlace en pestaña nueva para mirarlo
+después es de lo más común. El marcado tiene que traer **el valor final**, no
+un cero de arranque, y `Shell.tick` sale por lo corto si
+`document.visibilityState !== 'visible'`. Sin eso el tablero mostraba "0 %" de
+apertura hasta que alguien recargara.
+
 ## Profundidad
 
 **Por capas, con una sombra de papel fina.** El manual prohíbe sombras sobre

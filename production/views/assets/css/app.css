@@ -627,7 +627,11 @@ a { color: var(--sa-blue); text-underline-offset: 0.18em; }
    ================================================================ */
 
 .field { display: grid; gap: var(--space-2); margin-bottom: var(--space-4); max-width: 24rem; }
-.field label {
+/* Se acepta `label` anidado y `.field__label`. El marcado real de los
+   formularios usa `<label class="field"><span class="field__label">`, así que
+   el selector de elemento no pegaba en ninguno: las etiquetas de la puerta del
+   líder venían saliendo en cuerpo de texto, sin versalitas. */
+.field label, .field .field__label {
   font-family: var(--font-ui); font-weight: var(--fw-bold);
   font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase;
 }
@@ -1401,7 +1405,7 @@ body { background: var(--canvas); }
   inset-block-end: -6%; inset-inline-end: -2%;
   inline-size: auto; max-inline-size: none;
 }
-.tile--foto { min-height: 12.5rem; }
+.tile--foto, .tile--deck { min-height: 12.5rem; }
 .tile__pill {
   justify-self: start;
   display: inline-flex; align-items: center;
@@ -1630,7 +1634,11 @@ body { background: var(--canvas); }
      como cierre, ya no como un salto vacío. */
   padding: var(--space-5) var(--page-gutter) var(--space-7);
   display: grid; gap: var(--space-1);
-  max-width: 60rem; margin-inline: auto;
+  /* El pie comparte eje con el cuerpo. Tenía 60rem escritas a mano mientras el
+     tablero del admin mide 78 (88 con lateral), así que el copyright arrancaba
+     ~180 px más adentro que las tarjetas de arriba: dos ejes distintos en la
+     misma página. Ahora los dos leen la misma variable. */
+  max-width: var(--page-max); margin-inline: auto;
 }
 .pagefoot p {
   margin: 0;
@@ -1642,7 +1650,7 @@ body { background: var(--canvas); }
 /* El cuerpo de cada página comparte medida y aire con el home. */
 .page {
   padding: 0 var(--page-gutter) var(--space-6);
-  max-width: 60rem;
+  max-width: var(--page-max);
   margin-inline: auto;
 }
 .page__label {
@@ -1672,7 +1680,12 @@ body { background: var(--canvas); }
 .backbtn:active { background: var(--sa-tan); }
 .aura__greet { gap: var(--space-3); }
 .pagehead__brand { display: inline-flex; align-items: center; min-height: var(--tap-min); flex: 1 1 auto; min-width: 0; }
-.pagehead__logo { max-width: 100%; }
+/* La firma NUNCA se deforma — el manual de marca lo prohíbe explícitamente,
+   no es una preferencia. `max-width: 100%` recortaba el ancho mientras el
+   `height: 20px` de arriba quedaba fijo, así que en cabeceras angostas la
+   firma se comprimía un 19 % (relación 8.18 → 6.60, medido). `object-fit:
+   contain` la escala en vez de estirarla, pase lo que pase con la caja. */
+.pagehead__logo { max-width: 100%; object-fit: contain; object-position: left center; }
 
 /* Banda de fotografía — imagen a sangre con esquinas del sistema. */
 .photoband {
@@ -1698,6 +1711,114 @@ body { background: var(--canvas); }
 }
 .photoband__title { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.1; margin: 0; }
 .photoband__text { margin: 0; font-size: var(--step--1); max-width: 40ch; }
+
+/* ---------- Cabecera tintada de baraja (20-ago-2026, 3.ª pasada) ----------
+   El banner dejó de ser una imagen debajo del texto: ahora el color del rank
+   ES el fondo de la cabecera y la información va encima. Migas, eyebrow,
+   titular y descripción viven sobre el plano del estuche, con la mascota
+   asomando por la derecha.
+
+   Nada de esto está escrito por rank: --deck-ink, --deck-dot y --deck-on los
+   pone shell.js desde `deck.art`, muestreados del PDF oficial. --deck-on viene
+   MEDIDO (WCAG 2.2): blanco sobre Wolf y Webelos, tinta oscura sobre Lion y
+   Bear. Ver scripts/render_deck_art.py. */
+.pagehead--tinte {
+  position: relative; isolation: isolate; overflow: hidden;
+  background-color: var(--deck-ink);
+  background-image: var(--deck-portada);
+  /* La portada es vertical y la cabecera apaisada: el arte se recorta sí o sí.
+     Se probó ampliarlo al 145 % para poder correr la mascota a la derecha y
+     dejar limpia la columna del texto, pero a ese zoom se salían de cuadro el
+     wordmark y media cabeza. Se vuelve a `cover` —que encuadra bien— y el
+     contraste del texto lo resuelve el velo, que es lo que corresponde. */
+  background-size: cover;
+  background-position: center 24%;
+  color: var(--deck-on);
+  border-end-start-radius: var(--radius-card);
+  border-end-end-radius: var(--radius-card);
+  padding-bottom: var(--space-6);
+  min-height: 24rem;
+}
+.pagehead--tinte::before,
+.pagehead--tinte::after { display: none; }   /* sin auras: el arte manda */
+
+/* Velo mínimo, del color del propio rank. La primera versión lo puso al 88 %
+   sobre media portada y el arte quedó lavado: se perdía justo lo que el
+   cliente quería mostrar. No hace falta tanto — el texto vive en la columna
+   izquierda, y ahí abajo solo hay plano (8.37:1 en Lion) o las letras blancas
+   del wordmark (15:1). Lo único que no aguanta texto encima es la mascota, y
+   la mascota está a la derecha. El velo queda de refuerzo para el recorte
+   ancho, donde el arte se corre. */
+.pagehead--tinte > .aura__greet::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    /* Franja de arriba: la firma Scouting America va reversada en blanco y en
+       Wolf caía justo sobre las letras blancas del wordmark — se borraba. El
+       velo le devuelve el plano de color detrás. */
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--deck-ink) 78%, transparent) 0%,
+      color-mix(in srgb, var(--deck-ink) 55%, transparent) 4.5rem,
+      transparent 7rem),
+    /* Columna de la miga de pan. Chico a propósito: desde que el eyebrow y la
+       descripción bajaron al cuerpo (20-ago), lo único que se escribe sobre el
+       arte es la miga, que es una línea corta y arriba a la izquierda. Antes
+       había que tapar hasta el 94 % del ancho para que la descripción fuera
+       legible sobre la mascota, y eso lavaba la portada entera. */
+    linear-gradient(100deg,
+      color-mix(in srgb, var(--deck-ink) 78%, transparent) 0%,
+      color-mix(in srgb, var(--deck-ink) 40%, transparent) 30%,
+      transparent 56%);
+  pointer-events: none;
+}
+
+/* El nombre del rank ya lo dice el wordmark impreso de la portada, así que el
+   titular no se repite en pantalla — pero el <h1> tiene que existir igual:
+   es el encabezado del documento y lo único que lee un lector de pantalla. */
+.pagehead--tinte .bigtype {
+  position: absolute; inline-size: 1px; block-size: 1px;
+  margin: -1px; padding: 0; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+/* Todo lo que va encima del plano hereda la tinta medida. Los tokens de gris
+   del tema no sirven acá: fueron calculados contra el lienzo claro. */
+.pagehead--tinte .aura__hello,
+.pagehead--tinte .aura__sub,
+.pagehead--tinte .bigtype { color: var(--deck-on); }
+/* Las migas se tiñen más abajo, junto al bloque .pagehead .crumbs: ese bloque
+   viene después en el archivo y con la misma especificidad, así que acá se
+   pisaban solas y quedaban gris sobre el plano del rank. */
+/* Sin opacidad. Bajar el eyebrow y las migas al 72 % dejaba a Lion —el rank
+   de MÁS contraste— en 4.50:1 clavado, o sea el resto por debajo de AA. La
+   jerarquía la dan el cuerpo y las versalitas, que no cuestan contraste. */
+.pagehead--tinte .bigtype em { color: inherit; }
+/* La miga es lo último que queda sobre el arte, y va pegada abajo: así el
+   hero se lee como portada y no como una cabecera con fondo. */
+.pagehead--tinte .crumbs { margin-block-end: 0; }
+
+/* La descripción de la baraja, ya en el cuerpo de la página y no sobre el
+   arte. Medida de anotación, no de documento: es una línea de contexto. */
+.deckintro {
+  margin: var(--space-3) 0 var(--space-5);
+  font-size: var(--step-0);
+  color: var(--text-muted);
+  max-width: var(--measure-note);
+}
+
+/* Datos duros de la baraja, debajo del banner: grado · cartas · Adventures. */
+.deckfacts {
+  margin: var(--space-4) 0 0;
+  display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4);
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted);
+}
+/* El peso y el idioma van en el botón, no escondidos abajo: el líder puede
+   estar con datos, y 4 MB en inglés es justo lo que necesita saber antes de
+   tocar, no después. Esta nota es el detalle, no el aviso. */
+.deckfacts__note {
+  margin: var(--space-3) 0 0; font-size: var(--step--1);
+  color: var(--text-muted); max-width: var(--measure-note);
+}
 
 /* ---------- Hero editorial (home) ----------
    Foto a sangre, titular grande, acción clara. Rompe la monotonía de la
@@ -1812,6 +1933,16 @@ body { background: var(--canvas); }
 .pagehead .crumbs a:hover { color: var(--sa-blue); text-decoration: underline; }
 .pagehead .crumbs [aria-current="page"] { color: var(--text-strong); font-weight: var(--fw-bold); }
 
+/* Migas sobre el plano del rank. Van acá y no arriba con el resto del tinte
+   porque estas tres reglas tienen la misma especificidad que las de arriba y
+   el orden del archivo decide: puestas antes, las migas quedaban gris de tema
+   sobre el rojo del Wolf. */
+.pagehead--tinte .crumbs a,
+.pagehead--tinte .crumbs [aria-current="page"],
+.pagehead--tinte .crumbs li + li::before { color: var(--deck-on); }
+.pagehead--tinte .crumbs a { text-decoration: underline; text-underline-offset: .2em; }
+.pagehead--tinte .crumbs a:hover { color: var(--deck-on); }
+
 /* Pasos numerados en texto — sin círculos decorativos en fila.
    El li va en bloque con sangría francesa: con display:grid los nodos de texto
    sueltos caen en la celda del número y se parte todo. */
@@ -1836,6 +1967,16 @@ body { background: var(--canvas); }
   text-decoration: underline; text-underline-offset: .18em;
   cursor: pointer; min-height: var(--tap-min);
 }
+
+/* Ingreso del líder en la cabecera (20-ago, pedido de Carlos): mismo círculo
+   que .avatar, pero "vacío" — sin sesión no hay foto ni inicial que mostrar.
+   Fondo propio translúcido (como .lang) para leerse igual sobre la foto del
+   hero que sobre fondo blanco, sin depender de qué haya detrás. */
+.avatar--empty {
+  background: rgb(255 255 255 / 0.9);
+  color: var(--sa-blue);
+}
+.avatar--empty:hover { background: var(--sa-white); }
 
 /* Nota que explica la equivalencia QR impreso → enlace digital. */
 .card__qrnote {
@@ -2317,6 +2458,73 @@ details[open] > .acordeon { grid-template-rows: 1fr; }
   background: linear-gradient(180deg, var(--scrim-tile-a) 0%, var(--scrim-tile-b) 100%);
 }
 .tile--foto .tile__label { color: var(--sa-pale-blue); opacity: 1; }
+
+/* Ficha de baraja (20-ago-2026): la portada del estuche, no una foto suelta.
+   El índice mostraba una foto del brandbook por baraja —chicos en actividad,
+   correctas pero intercambiables: nada decía CUÁL baraja era—. La portada sí,
+   y además hace juego con la interna, que ya abre con ella.
+
+   El velo es del color del propio rank y no el navy de .tile--foto: encima de
+   una portada dorada o celeste, un velo azul las convertía a todas en la misma
+   ficha azul, que es justo lo que veníamos a arreglar. El color de texto llega
+   medido desde el JSON (`art.on`), igual que en la cabecera. */
+.tile--deck {
+  border: 0;
+  color: var(--deck-on, var(--sa-white));
+  background: var(--deck-ink, var(--sa-dark-blue));
+}
+.tile--deck img {
+  position: absolute; inset: 0; z-index: -2;
+  width: 100%; height: 100%; object-fit: cover;
+  /* La ficha es apaisada y la portada vertical: se ve una tira. Se encuadra
+     sobre la MASCOTA, que es lo que identifica la baraja de un vistazo — más
+     arriba entraba el wordmark recortado, ilegible a este tamaño, y Wolf y
+     Bear quedaban de color plano sin nada adentro. */
+  object-position: 50% 58%;
+}
+.tile--deck::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  /* Transparente arriba —ahí se ve el arte— y firme abajo, que es donde van el
+     nombre y el grado. En Webelos y Arrow of Light el texto cruza el parche
+     bordado y sin esto quedaba blanco sobre dorado. Empieza recién al 42 %
+     para no lavar la mitad de arriba, como pasaba con el velo parejo. */
+  background: linear-gradient(180deg,
+    transparent 0%,
+    transparent 42%,
+    color-mix(in srgb, var(--deck-ink) 55%, transparent) 62%,
+    color-mix(in srgb, var(--deck-ink) 97%, transparent) 100%);
+}
+.tile--deck .tile__label { color: var(--deck-on, var(--sa-white)); opacity: .78; }
+
+/* El mazo de la semana en el home del papá es una ficha ANCHA, y ahí el texto
+   no vive solo abajo: el remitente arriba, el nombre al medio y el conteo
+   abajo. Con el velo vertical de las fichas normales, el nombre caía justo
+   sobre la mascota —"Semana 3 · Pack 77" sobre la cabeza del oso, tinta
+   oscura sobre tinta oscura—. Acá el velo es lateral, como en la cabecera:
+   firme en la columna del texto y abierto a la derecha, donde está la
+   mascota. Las dos capas conviven; esta se suma a la de abajo. */
+/* El nombre del mazo se queda en su columna: aunque el velo lo respalde, un
+   titular grande cruzando la cara de la mascota se lee peor y se ve peor. */
+.tile--deck.is-wide .tile__name { max-width: 68%; }
+
+.tile--deck.is-wide::after {
+  background:
+    linear-gradient(100deg,
+      color-mix(in srgb, var(--deck-ink) 96%, transparent) 0%,
+      color-mix(in srgb, var(--deck-ink) 86%, transparent) 52%,
+      transparent 86%),
+    linear-gradient(180deg,
+      transparent 0%,
+      transparent 55%,
+      color-mix(in srgb, var(--deck-ink) 70%, transparent) 100%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tile--deck img { transition: transform var(--dur-long) var(--ease-out); }
+}
+@media (hover: hover) and (pointer: fine) {
+  a.tile--deck:hover { transform: none; box-shadow: var(--shadow-paper); }
+  a.tile--deck:hover img { transform: scale(1.03); }
+}
 @media (prefers-reduced-motion: no-preference) {
   .tile--foto img { transition: transform var(--dur-long) var(--ease-out); }
 }
@@ -2325,4 +2533,429 @@ details[open] > .acordeon { grid-template-rows: 1fr; }
      una ficha no acumula dos efectos de hover a la vez. */
   a.tile--foto:hover { transform: none; box-shadow: var(--shadow-paper); }
   a.tile--foto:hover img { transform: scale(1.03); }
+}
+
+/* ================================================================
+   Tablero del admin — Scouting America
+   ================================================================
+   Añadido el 20-ago-2026. Es la única pantalla del proyecto que NO es
+   mobile-first, y por pedido explícito: el líder usa el teléfono en la
+   reunión del den, pero quien lee analítica está sentado en un escritorio.
+   Igual responde en móvil —una columna—, porque nadie va a prometer que
+   Eduardo nunca la va a abrir desde el celular.
+   ================================================================ */
+
+.metrics {
+  display: grid; gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  margin: 0 0 var(--space-6);
+}
+.metric {
+  display: grid; gap: var(--space-1); align-content: start;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+}
+.metric__label {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted);
+}
+.metric__value {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1;
+  color: var(--text-strong);
+}
+.metric__note { font-size: var(--step--1); color: var(--text-muted); margin: 0; }
+/* El acento va en la métrica que el brief pide mirar primero. Uno por tablero:
+   si todo se resalta, no se resalta nada. */
+.metric--clave { background: var(--sa-dark-blue); border-color: var(--sa-dark-blue); }
+.metric--clave .metric__label { color: var(--sa-pale-blue); }
+.metric--clave .metric__value,
+.metric--clave .metric__note { color: var(--sa-white); }
+
+/* Serie mensual. Barras en CSS puro: son seis valores, no justifica traer una
+   librería de gráficas a una app que se mide en KB para 3G. */
+.serie { display: grid; gap: var(--space-4); }
+.serie__grid {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+  gap: var(--space-3); align-items: stretch;
+  /* Alto DEFINIDO, no min-height. Las barras se dibujan con `block-size` en
+     porcentaje, y un porcentaje contra un alto automático no resuelve: las
+     seis barras colapsaban a su min-block-size de 2 px y el gráfico salía
+     como seis rayitas. */
+  block-size: 11rem;
+}
+.serie__col {
+  display: grid; grid-template-rows: auto 1fr auto;
+  gap: var(--space-2); justify-items: center;
+  block-size: 100%;
+}
+.serie__barra {
+  inline-size: 100%; max-inline-size: 3.5rem;
+  align-self: end;
+  /* Radio corto, no el de tarjeta: con 1.5rem en una barra de 3.5rem de ancho
+     las seis salían como cúpulas y el alto dejaba de leerse. */
+  border-radius: .375rem .375rem 0 0;
+  background: var(--sa-blue);
+  min-block-size: 2px;
+  /* La parte abierta se apoya abajo, como se llena un vaso. */
+  display: flex; flex-direction: column; justify-content: flex-end;
+  overflow: hidden;
+}
+/* La parte abierta se dibuja DENTRO de la barra de envíos, no al lado: lo que
+   se compara es la proporción, y dos barras hermanas obligan a hacer la
+   división a ojo. */
+.serie__barra--abierta {
+  background: var(--sa-red); border-radius: 0;
+  inline-size: 100%; max-inline-size: none; min-block-size: 0;
+  align-self: stretch;
+}
+.serie__mes {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  color: var(--text-muted); letter-spacing: .04em;
+}
+.serie__dato { font-family: var(--font-ui); font-size: var(--step--1); color: var(--text-strong); }
+.serie__leyenda {
+  display: flex; flex-wrap: wrap; gap: var(--space-4);
+  font-family: var(--font-ui); font-size: var(--step--1); color: var(--text-muted);
+  margin: 0;
+}
+.serie__llave { display: inline-flex; align-items: center; gap: var(--space-2); }
+.serie__punto { inline-size: .75rem; block-size: .75rem; border-radius: 2px; }
+
+/* Tabla de líderes. Tabla de verdad, no una grilla de divs: son datos
+   tabulares y un lector de pantalla tiene que poder navegarlos por columna. */
+.tabla-wrap { overflow-x: auto; margin: 0 0 var(--space-6); }
+.tabla {
+  inline-size: 100%; border-collapse: collapse;
+  font-size: var(--step-0);
+}
+.tabla th, .tabla td {
+  text-align: left; padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+/* La primera columna sí envuelve: lleva nombre y correo, y con `nowrap` era la
+   que empujaba la tabla fuera de su caja. Las demás son números y fechas
+   cortas, que partidas en dos líneas se leen peor. */
+.tabla th:first-child, .tabla td:first-child { white-space: normal; min-width: 12rem; }
+.tabla th {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted);
+  font-weight: var(--fw-bold);
+}
+.tabla td.num, .tabla th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.tabla tbody tr:hover { background: var(--surface-alt); }
+.tabla__nombre { font-weight: var(--fw-medium); color: var(--text-strong); }
+.tabla__sub { display: block; font-size: var(--step--1); color: var(--text-muted); }
+
+/* Estado del líder. No es un adorno: distingue "no ha entrado nunca" de
+   "lo dimos de baja", que para el admin son dos problemas distintos. */
+.estado {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .04em;
+}
+.estado::before {
+  content: ""; inline-size: .5rem; block-size: .5rem; border-radius: 50%;
+  background: currentColor;
+}
+.estado--activo { color: var(--sa-blue); }
+.estado--dormido { color: var(--text-muted); }
+.estado--baja { color: var(--sa-red); }
+
+/* Barra de reparto (idioma, barajas). Una sola línea, sin torta: comparar
+   ángulos es más difícil que comparar largos, y acá siempre son dos o seis. */
+.reparto { display: grid; gap: var(--space-3); }
+.reparto__barra {
+  display: flex; overflow: hidden;
+  block-size: 1.5rem; border-radius: var(--radius-pill);
+  background: var(--surface-alt);
+}
+.reparto__parte { block-size: 100%; }
+.reparto__leyenda {
+  display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5);
+  font-family: var(--font-ui); font-size: var(--step--1); color: var(--text-muted);
+  margin: 0;
+}
+
+/* Lista ordenada de contenido (top de actividades). */
+.ranking { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.ranking li {
+  display: grid; grid-template-columns: 2rem 1fr auto; gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border); border-radius: var(--radius-card);
+  background: var(--surface);
+}
+.ranking__pos {
+  font-family: var(--font-ui); font-weight: var(--fw-bold);
+  color: var(--sa-red); font-variant-numeric: tabular-nums;
+}
+.ranking__nombre { color: var(--text-strong); }
+.ranking__meta { display: block; font-size: var(--step--1); color: var(--text-muted); }
+.ranking__veces {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  color: var(--text-muted); font-variant-numeric: tabular-nums;
+}
+
+/* Dos columnas desde tablet: el tablero es de escritorio. */
+.panel-cols { display: grid; gap: var(--space-6); }
+@media (min-width: 56rem) {
+  .panel-cols { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+/* Panel: la caja que envuelve un gráfico. La serie y los repartos flotaban
+   sueltos sobre el lienzo mientras las métricas de arriba sí eran tarjetas —
+   el tablero se leía como dos sistemas distintos apilados. Mismo borde, mismo
+   radio y misma sombra que .metric, para que sea uno solo. */
+.panel {
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-paper);
+}
+.panel + .panel { margin-top: var(--space-5); }
+/* El rótulo pasa a ser el título del panel, así que no arrastra el margen
+   superior que usa cuando abre una sección suelta de la página. */
+.panel > .page__label:first-child { margin-top: 0; }
+
+/* Ritmo en el teléfono. El tablero es de escritorio, pero en móvil se veía
+   desahogado de más: tarjetas de 7 rem para un número de dos dígitos y aire de
+   sección de 3 rem entre bloques, así que había que hacer scroll para llegar
+   al segundo dato. Se aprieta sin tocar el área táctil de nada. */
+@media (max-width: 40rem) {
+  .page--admin .metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+  }
+  /* La métrica principal ocupa el ancho: es la que el brief manda mirar. */
+  .page--admin .metric--clave { grid-column: 1 / -1; }
+  .page--admin .metric { padding: var(--space-4); }
+  .page--admin .metric__value { font-size: 1.75rem; }
+  /* En dos columnas la nota estorba más de lo que aclara; queda en la clave. */
+  .page--admin .metric:not(.metric--clave) .metric__note { display: none; }
+
+  .page--admin .panel { padding: var(--space-4); }
+  .page--admin .page__label { margin-top: var(--space-5); }
+  .page--admin .panel-cols { gap: var(--space-4); }
+  .serie__grid { block-size: 8.5rem; gap: var(--space-2); }
+  .serie__barra { max-inline-size: 2.5rem; }
+  /* La tabla de líderes ya scrollea sola; el margen lateral la hacía ver
+     cortada antes de tiempo. */
+  .page--admin .tabla th, .page--admin .tabla td {
+    padding: var(--space-3);
+  }
+}
+
+/* Ficha de datos de solo lectura (perfil). <dl> de verdad, no una tabla ni
+   pares de <p>: son pares etiqueta-valor y así los anuncia un lector de
+   pantalla. Una fila por dato, etiqueta arriba en versalitas. */
+.datalist { display: grid; gap: var(--space-4); margin: 0; }
+.datalist > div { display: grid; gap: var(--space-1); }
+.datalist dt {
+  font-family: var(--font-ui); font-size: var(--step--1);
+  letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted);
+}
+.datalist dd { margin: 0; color: var(--text-strong); }
+@media (min-width: 32rem) {
+  .datalist > div { grid-template-columns: 12rem 1fr; align-items: baseline; gap: var(--space-4); }
+}
+
+/* Dos columnas asimétricas: el contenido manda y la barra lateral acompaña.
+   `panel-cols` parte por la mitad, que sirve para dos bloques equivalentes
+   (top de actividades / idioma) pero no para una tabla con notas al lado. */
+/* La barra lateral se abre SOLO cuando sobra ancho de verdad (80rem), no a las
+   56rem del resto del tablero. Con la tabla de líderes al lado de una columna
+   a 56rem quedaban escondidas detrás del scroll las dos últimas columnas —el
+   índice de apertura y el botón de baja—, que es justo lo que el admin viene a
+   usar. Debajo de eso, la lateral baja y la tabla se queda con la pantalla. */
+@media (min-width: 80rem) {
+  .panel-cols--aside { grid-template-columns: minmax(0, 2.6fr) minmax(16rem, 1fr); }
+}
+/* La tabla dentro de un panel no lleva el padding del panel a los lados: la
+   fila tiene que llegar al borde para que la línea divisoria se lea entera. */
+.panel--tabla { padding: var(--space-5) 0; }
+.panel--tabla > .page__label { padding-inline: var(--space-5); }
+.panel--tabla .tabla th:first-child,
+.panel--tabla .tabla td:first-child { padding-inline-start: var(--space-5); }
+.panel--tabla .tabla th:last-child,
+.panel--tabla .tabla td:last-child { padding-inline-end: var(--space-5); }
+.panel--tabla .tabla tr:last-child td,
+.panel--tabla .tabla tr:last-child th { border-bottom: 0; }
+@media (max-width: 40rem) {
+  .page--admin .panel--tabla { padding: var(--space-4) 0; }
+  .panel--tabla > .page__label { padding-inline: var(--space-4); }
+  .panel--tabla .tabla th:first-child,
+  .panel--tabla .tabla td:first-child { padding-inline-start: var(--space-4); }
+  .panel--tabla .tabla th:last-child,
+  .panel--tabla .tabla td:last-child { padding-inline-end: var(--space-4); }
+}
+
+/* ---------------------------------------------------------------
+   La tabla en el teléfono: una tarjeta por fila, no scroll lateral
+   ---------------------------------------------------------------
+   Siete columnas no entran en 430 px de ancho. Con `overflow-x` la tabla
+   scrolleaba de costado y el índice de apertura y el botón de baja —lo que
+   el admin viene a mirar— quedaban fuera de cuadro, sin nada que avisara que
+   había más. Un scroll horizontal escondido dentro de una página que ya
+   scrollea en vertical es de las cosas que menos se descubren en un teléfono.
+
+   Cada fila pasa a ser una ficha con el nombre de título y los datos como
+   pares etiqueta-valor. La etiqueta sale del `data-label` de cada celda, así
+   que el encabezado de la tabla no hace falta repetirlo a mano ni se puede
+   desincronizar del `<thead>`.
+
+   OJO con la accesibilidad: cambiar el `display` de una tabla le borra al
+   navegador los roles implícitos (table/row/cell) y un lector de pantalla
+   deja de poder recorrerla por columnas. Por eso el marcado lleva los roles
+   explícitos — ver el atributo role en lideres.html. Sin eso esto sería una
+   pila de divs con pinta de tabla.
+   --------------------------------------------------------------- */
+@media (max-width: 40rem) {
+  .tabla-wrap { overflow-x: visible; }
+
+  .tabla, .tabla tbody, .tabla tr, .tabla td { display: block; }
+  .tabla thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+  .tabla tr {
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+  .tabla tr:last-child { border-bottom: 0; }
+  .tabla tbody tr:hover { background: transparent; }
+
+  /* El nombre es el título de la ficha. */
+  .tabla th:first-child,
+  .tabla td:first-child {
+    display: block; padding: 0 0 var(--space-3);
+    border-bottom: 0; min-width: 0;
+  }
+  .tabla__nombre { font-size: var(--step-0); }
+
+  /* Cada dato: etiqueta a la izquierda, valor a la derecha. */
+  .tabla td {
+    padding: var(--space-2) 0; border-bottom: 0;
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: var(--space-4);
+    text-align: right;
+  }
+  .tabla td::before {
+    content: attr(data-label);
+    font-family: var(--font-ui); font-size: var(--step--1);
+    letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted);
+    text-align: left;
+  }
+  .tabla td.num { text-align: right; }
+
+  /* La acción no es un dato: va sola, alineada al borde, con área táctil. */
+  .tabla td.tabla__accion {
+    justify-content: flex-end;
+    padding-top: var(--space-3);
+    margin-top: var(--space-2);
+    border-top: 1px solid var(--border);
+  }
+  .tabla td.tabla__accion::before { content: none; }
+  .tabla td.tabla__accion .linklike {
+    min-height: var(--tap-min); display: inline-flex; align-items: center;
+  }
+}
+
+/* Aire entre la navegación y el contenido del tablero.
+   `.page` no trae padding superior: en el resto de la app el contenido abre
+   con un `.page__label` o una banda que traen su propio margen, así que nunca
+   se notó. Las tres pantallas del admin abren con `.metrics` o un `.panel`,
+   que tienen margen 0 arriba, y quedaban pegadas a la barra —en escritorio
+   contra la línea de la nav, y en el teléfono contra el borde del dock. */
+/* El ancho del lienzo se declara UNA vez y lo leen el cuerpo y el pie. Va en
+   el <body> —no en .page— porque el pie es hermano del main, no hijo: puesto
+   más adentro no habría manera de que subiera hasta él. */
+body { --page-max: 60rem; }
+body:has(.page--admin) { --page-max: 78rem; }
+body:has(.panel-cols--aside) { --page-max: 88rem; }
+
+.page--admin { padding-top: var(--space-6); }
+@media (min-width: 64rem) {
+  /* En escritorio la barra es sticky y se queda arriba mientras se scrollea,
+     así que el aire tiene que ser mayor: si no, las tarjetas pasan rozando la
+     línea de la nav todo el recorrido. */
+  .page--admin { padding-top: var(--space-7); }
+}
+
+/* ================================================================
+   Microinteracciones — capa 20-ago-2026
+   ================================================================
+   El sistema de motion ya existía (entrada orquestada `.rise`, reveal
+   `.rise-io`, tokens de duración y ease), pero los componentes nuevos del
+   tablero entraban en seco: las barras aparecían dibujadas, los números
+   puestos y las listas de golpe. Se completa acá, con los MISMOS tokens —
+   no se inventa una segunda escala de tiempos.
+
+   Todo vive dentro de prefers-reduced-motion, como el resto: quien pidió
+   menos movimiento ve el estado final, no una versión a medias.
+   ================================================================ */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Las barras crecen desde la base, como se llena un vaso. Se anima el
+     `transform`, no el alto: el alto lo calcula el dato en porcentaje y
+     animarlo obligaría al navegador a rehacer el layout en cada fotograma. */
+  html.fx .serie__barra {
+    transform-origin: bottom;
+    animation: crece-y 520ms var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+  @keyframes crece-y { from { transform: scaleY(0); } to { transform: none; } }
+
+  /* El reparto se llena de izquierda a derecha, en el orden en que se lee. */
+  html.fx .reparto__parte {
+    transform-origin: left;
+    animation: crece-x 620ms var(--ease-out) both;
+  }
+  @keyframes crece-x { from { transform: scaleX(0); } to { transform: none; } }
+
+  /* Filas y fichas: realce al pasar por encima. La fila de tabla NO se
+     levanta —no es cliqueable, y levantarla prometería un clic que no
+     existe—; solo cambia el fondo, que es ayuda de lectura. */
+  .tabla tbody tr { transition: background-color var(--dur-short) var(--ease-out); }
+
+  /* El punto de estado late una vez al entrar: dice "esto está vivo" sin
+     quedarse parpadeando, que sería ruido permanente en una tabla. */
+  html.fx .estado--activo::before { animation: latido 900ms var(--ease-out) 1; }
+  @keyframes latido {
+    0%   { transform: scale(0.4); opacity: 0; }
+    60%  { transform: scale(1.25); opacity: 1; }
+    100% { transform: none; opacity: 1; }
+  }
+
+  /* Campos de formulario: el foco no aparece de golpe. */
+  .field input {
+    transition: border-color var(--dur-short) var(--ease-out),
+                background-color var(--dur-short) var(--ease-out),
+                box-shadow var(--dur-short) var(--ease-out);
+  }
+  .field input:focus-visible { box-shadow: 0 0 0 3px rgb(0 63 135 / 0.14); }
+
+  /* Enlaces de texto: el subrayado engorda en vez de saltar. */
+  .linklike {
+    transition: color var(--dur-short) var(--ease-out),
+                text-decoration-thickness var(--dur-micro) var(--ease-out),
+                text-underline-offset var(--dur-short) var(--ease-out);
+  }
+  .linklike:hover { text-decoration-thickness: 2px; text-underline-offset: .22em; }
+
+  /* Migas: el paso al hover se acompaña, no se corta. */
+  .pagehead .crumbs a { transition: color var(--dur-short) var(--ease-out); }
+
+  /* Avatar y botón de perfil: presión física, igual que .btn y .tab. */
+  .avatar { transition: transform var(--dur-micro) var(--ease-out); }
+  .avatar:active { transform: scale(0.94); }
+
+  /* Aviso y estado vacío: entran con el mismo gesto que el resto. */
+  html.fx .notice, html.fx .state {
+    animation: rise-in var(--dur-mid) var(--ease-out) both;
+  }
 }

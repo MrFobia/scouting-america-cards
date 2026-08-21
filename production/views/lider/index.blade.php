@@ -12,10 +12,10 @@
 <link rel="apple-touch-icon" href="/projects/scouting-america-cards/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=v4f83ebeb">
 </head>
-<body>
+<body data-consola="lider">
 
 <!--
   Familia Índice · macroestructura 13 Index-First · nav N9 · footer Ft2
@@ -84,8 +84,8 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/projects/scouting-america-cards/assets/js/api.js?v=vffaf126a"></script>
-<script src="/projects/scouting-america-cards/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   // Puerta del prototipo: sin sesión, a entrar. No es seguridad (ver api.js),
@@ -223,12 +223,10 @@
 
   pintarMazos();
 
-  /* Las barajas del líder: mismas fotos oficiales que en barajas.html. */
+  /* Las barajas del líder: su portada, igual que en barajas.html. La foto
+     queda solo para la de planeación del pack, que no tiene estuche. */
   const cont = document.getElementById('decks');
-  const FOTO = {
-    lion: 'pesca', tiger: 'bicis', wolf: 'brujula', bear: 'agua',
-    webelos: 'cascos', 'arrow-of-light': 'canoa', 'pack-planning': 'derby'
-  };
+  const FOTO = { 'pack-planning': 'derby' };
   const GLYPH = {
     lion: 'L', tiger: 'T', wolf: 'W', bear: 'B',
     webelos: 'W', 'arrow-of-light': 'A', 'pack-planning': 'P'
@@ -236,16 +234,26 @@
   try {
     const decks = await API.getDecks();
     cont.innerHTML = decks.map(d => {
-      const foto = FOTO[d.id];
+      const art = d.art;
+      const foto = art ? null : FOTO[d.id];
+      const clase = art ? 'tile--deck' : (foto ? 'tile--foto' : 'tile--navy');
+      const estilo = art ? ` style="--deck-ink:${art.ink}; --deck-on:${art.on}"` : '';
       return `<li>
-        <a class="tile ${foto ? 'tile--foto' : 'tile--navy'}" href="/preview/947?d=${d.id}&lang=${lang}&lider=1">
+        <a class="tile ${clase}"${estilo} href="/preview/947?d=${d.id}&lang=${lang}&lider=1">
+          ${art ? `<img src="${art.portada.src}" alt="" aria-hidden="true"
+                width="${art.portada.width}" height="${art.portada.height}"
+                loading="lazy" decoding="async">` : ''}
           ${foto ? `<img src="/projects/scouting-america-cards/assets/img/photos/${foto}.webp" alt="" aria-hidden="true"
                 width="1200" height="800" loading="lazy" decoding="async">` : ''}
-          <span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>
+          ${art ? '' : `<span class="tile__glyph tile__glyph--text">${GLYPH[d.id] || ''}</span>`}
           ${d.translation === 'pendiente' ? '<span class="tile__pill">English only</span>' : '<span></span>'}
           <span>
             <span class="tile__name" style="display:block">${d.name.en}</span>
-            <span class="tile__label">${d.grade ?? 'Annual plan'}</span>
+            <span class="tile__label">${
+              // Bilingüe desde el 20-ago; el string suelto de antes sigue
+              // entrando porque el SW puede servir el índice cacheado.
+              (typeof d.grade === 'string' ? d.grade : d.grade?.en) || 'Annual plan'
+            }</span>
           </span>
         </a></li>`;
     }).join('');

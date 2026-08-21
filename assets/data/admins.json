@@ -1,0 +1,7 @@
+{
+ "$comment": "Cuentas de ADMIN para el prototipo (Capa A). El admin es Scouting America — la organización dueña de la aplicación—, no un líder. Ve a todos los líderes y la analítica del sistema entero. En la Capa B esto lo devuelve el servidor al autenticar, con rol. Ver docs/data-model.md.",
+ "admins": [
+  { "correo": "eduardo@scouting.org", "nombre": "Eduardo Ramírez", "organizacion": "Scouting America", "rol": "admin" },
+  { "correo": "admin@scouting.org",   "nombre": "Administración",  "organizacion": "Scouting America", "rol": "admin" }
+ ]
+}

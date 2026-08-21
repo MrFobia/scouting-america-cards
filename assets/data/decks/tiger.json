@@ -2,7 +2,10 @@
  "$status": "105 tarjetas extraídas del PDF oficial. Español en 0/10 Adventures y 0/90 actividades; el resto cae a inglés con aviso.",
  "id": "tiger",
  "rank": "Tiger",
- "grade": "1.er grado",
+ "grade": {
+  "es": "1.er grado",
+  "en": "1st grade"
+ },
  "order": 2,
  "audience": "family",
  "translation": "pendiente",
@@ -3678,5 +3681,27 @@
     "lang": "en"
    }
   }
- ]
+ ],
+ "pdf": {
+  "src": "/projects/scouting-america-cards/assets/pdf/tiger-en.pdf",
+  "pages": 116,
+  "bytes": 4290165,
+  "lang": "en"
+ },
+ "carton": {
+  "src": "/projects/scouting-america-cards/assets/img/decks/tiger-carton.webp",
+  "width": 734,
+  "height": 1034
+ },
+ "art": {
+  "ink": "#F68B19",
+  "dot": "#C87014",
+  "on": "#232528",
+  "onRatio": 6.31,
+  "portada": {
+   "src": "/projects/scouting-america-cards/assets/img/decks/tiger-portada.webp",
+   "width": 734,
+   "height": 798
+  }
+ }
 }

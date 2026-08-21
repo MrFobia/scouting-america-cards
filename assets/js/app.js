@@ -17,7 +17,7 @@ const App = (() => {
     const volver = lang === 'es' ? 'Volver' : 'Back';
     el.className = 'nav-edge';
     el.innerHTML = `
-      <a class="nav-edge__brand" href="${back ?? '/site/index.html'}">
+      <a class="nav-edge__brand" href="${back ?? '/preview/945'}">
         <img class="nav-edge__logo" src="/projects/scouting-america-cards/assets/img/scouting-america-signature.png"
              alt="Scouting America" width="900" height="110">
         <span class="nav-edge__title">${title ?? 'Cub Scouts'}</span>

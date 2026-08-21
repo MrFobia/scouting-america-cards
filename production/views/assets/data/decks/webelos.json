@@ -2,7 +2,10 @@
  "$status": "111 tarjetas extraídas del PDF oficial. Español en 0/11 Adventures y 0/95 actividades; el resto cae a inglés con aviso.",
  "id": "webelos",
  "rank": "Webelos",
- "grade": "4.º grado",
+ "grade": {
+  "es": "4.º grado",
+  "en": "4th grade"
+ },
  "order": 5,
  "audience": "family",
  "translation": "pendiente",
@@ -3888,5 +3891,27 @@
     "lang": "en"
    }
   }
- ]
+ ],
+ "pdf": {
+  "src": "/projects/scouting-america-cards/assets/pdf/webelos-en.pdf",
+  "pages": 116,
+  "bytes": 4331727,
+  "lang": "en"
+ },
+ "carton": {
+  "src": "/projects/scouting-america-cards/assets/img/decks/webelos-carton.webp",
+  "width": 734,
+  "height": 1034
+ },
+ "art": {
+  "ink": "#46701E",
+  "dot": "#2A4312",
+  "on": "#FFFFFF",
+  "onRatio": 5.84,
+  "portada": {
+   "src": "/projects/scouting-america-cards/assets/img/decks/webelos-portada.webp",
+   "width": 734,
+   "height": 798
+  }
+ }
 }

@@ -2,7 +2,10 @@
  "$status": "106 tarjetas extraídas del PDF oficial. Español en 0/11 Adventures y 0/90 actividades; el resto cae a inglés con aviso.",
  "id": "lion",
  "rank": "Lion",
- "grade": "Kindergarten",
+ "grade": {
+  "es": "Kindergarten",
+  "en": "Kindergarten"
+ },
  "order": 1,
  "audience": "family",
  "translation": "pendiente",
@@ -3708,5 +3711,27 @@
     "lang": "en"
    }
   }
- ]
+ ],
+ "pdf": {
+  "src": "/projects/scouting-america-cards/assets/pdf/lion-en.pdf",
+  "pages": 116,
+  "bytes": 4066311,
+  "lang": "en"
+ },
+ "carton": {
+  "src": "/projects/scouting-america-cards/assets/img/decks/lion-carton.webp",
+  "width": 734,
+  "height": 1034
+ },
+ "art": {
+  "ink": "#FAB214",
+  "dot": "#CB9110",
+  "on": "#232528",
+  "onRatio": 8.37,
+  "portada": {
+   "src": "/projects/scouting-america-cards/assets/img/decks/lion-portada.webp",
+   "width": 734,
+   "height": 798
+  }
+ }
 }

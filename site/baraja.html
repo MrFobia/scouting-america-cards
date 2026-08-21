@@ -12,8 +12,8 @@
 <link rel="apple-touch-icon" href="/site/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/site/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/site/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=v4f83ebeb">
 </head>
 <body>
 
@@ -33,10 +33,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/site/assets/js/api.js?v=vffaf126a"></script>
-<script src="/site/assets/js/card.js?v=vffaf126a"></script>
-<script src="/site/assets/js/app.js?v=vffaf126a"></script>
-<script src="/site/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/site/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/card.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/app.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   const q = App.params();
@@ -61,18 +61,47 @@
     pending:    es ? 'Esta baraja todavía no está traducida. Se muestra en inglés.'
                    : 'This deck is not translated yet.',
     home:       es ? 'Inicio' : 'Home',
-    decks:      es ? 'Barajas' : 'Decks'
+    decks:      es ? 'Barajas' : 'Decks',
+    adventuresN: es ? 'Adventures' : 'Adventures',
+    pdf:        es ? 'Descargar la baraja' : 'Download full deck',
+    pdfLabel:   es ? 'La baraja completa' : 'The whole deck',
+    pdfNote:    es
+      ? 'Las mismas tarjetas impresas, en un PDF que se abre de corrido. En inglés, como vienen de imprenta.'
+      : 'The same printed cards in one PDF you can page through. English, as printed.',
+    pages:      es ? 'páginas' : 'pages'
   };
+
+  /* Peso en MB con una decimal: el líder puede estar con datos y 4 MB no es
+     lo mismo que 400 KB. Se muestra ANTES de tocar, no después. */
+  const mb = bytes => `${(bytes / 1e6).toFixed(1)} MB`;
+
+  /* El grado se volvió bilingüe el 20-ago. Se acepta también el string suelto
+     de antes: el SW sirve el JSON cacheado mientras revalida, así que la
+     primera carga después de publicar todavía trae la forma vieja. */
+  const grado = g => (typeof g === 'string' ? g : Card.t(g, lang));
 
   try {
     const deck = await API.getDeck(deckId);
     const deckName = deck.name[lang] || deck.name.es;
     const adv = advId && deck.adventures.find(a => a.id === advId);
 
+    // El arte del estuche es el fondo de la cabecera, no un bloque aparte.
+    const tinte = (!adv && deck.art) ? deck.art : null;
+
+    /* Sobre el arte va SOLO la miga de pan (pedido 20-ago). El eyebrow y la
+       descripción bajan al cuerpo de la página:
+       - el hero se lee como la portada del mazo y no como una tarjeta con
+         texto encima;
+       - y de paso desaparece el problema de contraste que obligaba a tapar
+         media portada con velo para que la descripción fuera legible sobre
+         la mascota. Con solo la miga arriba, el velo puede ser mínimo. */
+    const intro = tinte ? '' : Card.t(deck.intro, lang);
+
     Shell.mountHeader(document.getElementById('pagehead'), {
-      eyebrow: adv ? `${deckName} · ${Card.categoria(adv, lang)}` : `Cub Scouts · ${T.decks}`,
+      eyebrow: adv ? `${deckName} · ${Card.categoria(adv, lang)}`
+                   : (tinte ? null : `Cub Scouts · ${T.decks}`),
       title: adv ? Card.t(adv.name, lang) : deckName,
-      sub: adv ? Card.t(adv.summary, lang) : Card.t(deck.intro, lang),
+      sub: adv ? Card.t(adv.summary, lang) : intro,
       back: adv ? `/site/baraja.html?${qs({ d: deckId })}` : `/site/barajas.html?${qs()}`,
       crumbs: adv
         ? [{ label: T.decks, href: `/site/barajas.html?${qs()}` },
@@ -81,7 +110,8 @@
         : [{ label: T.decks, href: `/site/barajas.html?${qs()}` },
            { label: deckName }],
       compact: true,
-      soloIngles: asLeader
+      soloIngles: asLeader,
+      tinte
     });
     Shell.mountFooter(document.getElementById('pagefoot'));
 
@@ -123,10 +153,15 @@
     }
 
     /* ---------- nivel 1 · el rank ---------- */
-    // El título y la intro ya los pinta Shell.mountHeader(): acá solo el aviso.
-    // El aviso de idioma solo aplica si hay contenido que mostrar.
-    document.getElementById('head').innerHTML =
-      (deck.translation === 'pendiente' && deck.cards.length) ? Shell.notice({ icono: 'traducir', html: T.pending }) : '';
+    // El arte lo pinta la cabecera. Acá arranca el contenido: el rótulo y la
+    // descripción que antes iban encima del arte, y después el aviso.
+    document.getElementById('head').innerHTML = `
+      ${tinte ? `
+        <p class="page__label" style="margin-top:var(--space-5)">Cub Scouts · ${T.decks}</p>
+        ${Card.t(deck.intro, lang)
+          ? `<p class="deckintro">${Card.t(deck.intro, lang)}</p>` : ''}` : ''}
+      ${(deck.translation === 'pendiente' && deck.cards.length)
+        ? Shell.notice({ icono: 'traducir', html: T.pending }) : ''}`;
 
     const activities = deck.cards.filter(c => c.skin === 'activity');
     const resources = deck.cards.filter(c => ['cover', 'legend', 'resource'].includes(c.skin));
@@ -144,9 +179,35 @@
       return;
     }
 
+    /* Los datos duros de la baraja: van pegados al banner, como el pie de una
+       ficha de producto. Sin el estuche: el banner ya muestra el arte, y una
+       segunda imagen de lo mismo era decirlo dos veces. */
+    const esLiderVista = API.getMode() === 'lider';
+    const pdf = esLiderVista ? deck.pdf : null;
+    const facts = `
+      <p class="deckfacts rise" style="--i:0">
+        ${grado(deck.grade) ? `<span>${grado(deck.grade)}</span>` : ''}
+        <span>${activities.length} ${T.cards}</span>
+        <span>${deck.adventures.length} ${T.adventuresN}</span>
+      </p>`;
+
+    /* La descarga va DESPUÉS de las Adventures (pedido 20-ago): el líder entra
+       a elegir la actividad de la semana, no a bajarse la baraja entera. Lo
+       segundo es la salida para cuando lo primero no le alcanza, y una salida
+       va al final del camino, no en la puerta. */
+    const descarga = pdf ? `
+      <section class="rise" style="--i:3; margin-top:var(--space-7)">
+        <p class="page__label">${T.pdfLabel}</p>
+        <a class="btn btn--primary" href="${pdf.src}" download>
+          ${T.pdf} · ${mb(pdf.bytes)}
+        </a>
+        <p class="deckfacts__note">${pdf.pages} ${T.pages} · ${T.pdfNote}</p>
+      </section>` : '';
+
     document.getElementById('content').innerHTML = `
+      ${facts}
       ${API.getMode() !== 'lider' ? `
-      <section class="rise" style="--i:0; margin-top:var(--space-5)">
+      <section class="rise" style="--i:1; margin-top:var(--space-5)">
         <button class="btn btn--accent btn--block" id="sortear" type="button">
           ${es ? '¿Qué hacemos hoy? Sacar una carta' : 'What today? Draw a card'}
         </button>
@@ -157,7 +218,7 @@
         <div id="sorteada" aria-live="polite" style="margin-top:var(--space-4)"></div>
       </section>` : ''}
 
-      <section class="rise" style="--i:1; margin-top:var(--space-7)">
+      <section class="rise" style="--i:2; margin-top:var(--space-7)">
         <p class="page__label">${T.adventures}</p>
         <ul class="bento">
           ${deck.adventures.map((a, i) => {
@@ -175,8 +236,10 @@
         </ul>
       </section>
 
+      ${descarga}
+
       ${API.getMode() === 'lider' && resources.length ? `
-      <section class="rise" style="--i:2; margin-top:var(--space-7)">
+      <section class="rise" style="--i:4; margin-top:var(--space-7)">
         <p class="page__label">${T.resources}</p>
         <div class="cardgrid">
           ${resources.map(c => `

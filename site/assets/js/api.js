@@ -236,6 +236,35 @@ const API = (() => {
     return { mazo, cards: out };
   }
 
+  /**
+   * La baraja que MÁS aporta a un mazo.
+   *
+   * El mazo del líder puede mezclar cartas de varias barajas, pero casi siempre
+   * es "el mazo de Bear con un par de sueltas". Esa baraja mayoritaria es la
+   * que le da identidad visual al mazo del lado de la familia: su portada, su
+   * color y su tinta de texto, en vez de un bloque azul igual para todos.
+   *
+   * Se cuenta por el PREFIJO del id de carta (`bear-a-bobcat-01`), que ya es
+   * como resolveDeckId() ubica una carta, y se lee del índice —no de los mazos
+   * completos—: la vista que lo usa es el home del papá, que tiene que pintar
+   * en menos de dos segundos en 3G y no puede bajar 100 KB de JSON para elegir
+   * un color. Empate: gana la baraja de menor `order`, que es el rank más
+   * chico, para que el criterio sea estable y no dependa del orden del array.
+   */
+  async function getMazoBaraja(mazoId) {
+    const mazo = getMazo(mazoId);
+    if (!mazo || !mazo.cardIds.length) return null;
+    const decks = await getDecks();
+    let mejor = null, mejorN = 0;
+    for (const d of decks) {
+      const n = mazo.cardIds.filter(id => id.startsWith(d.id + '-')).length;
+      if (n > mejorN || (n === mejorN && n > 0 && d.order < mejor.order)) {
+        mejor = d; mejorN = n;
+      }
+    }
+    return mejor ? { deck: mejor, cartas: mejorN, total: mazo.cardIds.length } : null;
+  }
+
   /* ---------- Envíos y aperturas ---------- */
 
   /**
@@ -306,6 +335,256 @@ const API = (() => {
       opened: shares.filter(s => openIds.has(s.id)).length,
       openRate: shares.length ? shares.filter(s => openIds.has(s.id)).length / shares.length : 0
     };
+  }
+
+  /* ================================================================
+     CAPA ADMIN — Scouting America, el dueño de la aplicación
+     ================================================================
+     Pedido de la alineación del 20-ago-2026. Hasta acá toda la analítica era
+     del LÍDER: qué mandé yo y cuántos lo abrieron. Falta la capa de arriba —la
+     que el brief pide y la que nadie estaba viendo—: la analítica de la
+     APLICACIÓN, para la organización. Eduardo no es un líder; no puede entrar
+     por la puerta del líder ni quedarse sin tablero.
+
+     Lo que se responde acá y por qué, textual de la reunión:
+       · cuántos líderes hay y cuáles están activos
+       · cuántos mazos se mandaron, en total y POR MES — "no es solo la foto de
+         hoy, sino cómo se ha ido comportando en el tiempo"
+       · el ÍNDICE de apertura, no el conteo crudo — "más importante que decir
+         abrieron nueve es el índice de apertura, lo calculamos"
+       · qué líder comparte más y cuál tiene mejor apertura
+       · las actividades más compartidas — el top del contenido
+       · el reparto de idioma, que es la razón de ser del producto
+
+     Todo sale de datos que YA se guardan (`shares`, `opens`, `mazos`): no se
+     agrega ni un dato del papá ni del niño. La regla de cero datos de menores
+     no se toca para hacer un tablero. */
+
+  /* ---------- Sesión del admin ----------
+     Misma advertencia que la del líder: NO es autenticación. Es una marca en
+     localStorage para que el tablero tenga puerta y la demo muestre que es
+     privado. En la Capa B lo reemplaza auth real con rol.
+
+     Se guarda aparte de `lider` a propósito. Con una sola llave, entrar como
+     admin dejaba sesión de líder abierta y el tab bar mezclaba las dos
+     consolas; y peor, `haySesionLider()` es lo que decide medio shell. */
+
+  async function entrarComoAdmin(correo) {
+    const mail = (correo || '').trim().toLowerCase();
+    let cuenta = null;
+    try {
+      const { admins } = await loadJSON(`${BASE}/admins.json`);
+      cuenta = admins.find(a => a.correo.toLowerCase() === mail) || null;
+    } catch { /* sin archivo, no hay admins */ }
+    if (!cuenta) return false;      // acá SÍ hay muro: el admin ve a todos
+    store.set('admin', {
+      correo: cuenta.correo, nombre: cuenta.nombre,
+      organizacion: cuenta.organizacion, desde: new Date().toISOString()
+    });
+    return true;
+  }
+
+  function haySesionAdmin() { return Boolean(store.get('admin', null)); }
+  function getAdmin() { return store.get('admin', null); }
+  function salirAdmin() { store.set('admin', null); }
+
+  /* ---------- Registro de líderes ----------
+     El alta de líderes (registro, validación documental, aprobación) quedó
+     FUERA del MVP: se marcó en la reunión que no está estimada y que hay que
+     validarla con el cliente. Lo que sí hace falta ya es que el admin VEA a
+     sus líderes y pueda desactivar a los que se fueron.
+
+     El registro se arma con dos fuentes:
+       · `lideres.json` — las cuentas que existen
+       · `lideresVistos` — quien haya entrado alguna vez, aunque no esté en el
+         archivo (la puerta del líder deja pasar cualquier correo en Capa A)
+     El estado activo/inactivo vive en localStorage; en Capa B es un campo. */
+
+  function recordarLider(perfil, correo) {
+    const vistos = store.get('lideresVistos', []);
+    const i = vistos.findIndex(v => v.id === perfil.id);
+    const fila = {
+      id: perfil.id,
+      correo: correo || null,
+      nombre: perfil.leader || '',
+      pack: perfil.pack || '',
+      council: perfil.council || '',
+      ultimaEntrada: new Date().toISOString(),
+      entradas: (i >= 0 ? vistos[i].entradas || 0 : 0) + 1,
+      alta: i >= 0 ? vistos[i].alta : new Date().toISOString()
+    };
+    if (i >= 0) vistos[i] = fila; else vistos.push(fila);
+    store.set('lideresVistos', vistos);
+  }
+
+  function setLiderActivo(leaderId, activo) {
+    const bajas = new Set(store.get('lideresBaja', []));
+    if (activo) bajas.delete(leaderId); else bajas.add(leaderId);
+    store.set('lideresBaja', [...bajas]);
+    return activo;
+  }
+
+  /**
+   * Los líderes con sus métricas, más activo primero.
+   *
+   * El índice de apertura es por MAZO enviado, no por apertura: un envío que
+   * se abrió catorce veces en un grupo de catorce familias sigue siendo UN
+   * envío abierto. Contar aperturas crudas premiaba al grupo grande, no al
+   * líder que comunica bien.
+   */
+  async function getLideres() {
+    let cuentas = [];
+    try { ({ lideres: cuentas } = await loadJSON(`${BASE}/lideres.json`)); }
+    catch { /* sin archivo */ }
+
+    const vistos = store.get('lideresVistos', []);
+    const bajas = new Set(store.get('lideresBaja', []));
+    const shares = store.get('shares', []);
+    const opens = store.get('opens', []);
+    const abiertos = new Set(opens.map(o => o.shareId));
+    const mazos = store.get('mazos', []);
+
+    // Una fila por líder. Las cuentas del archivo entran aunque nunca hayan
+    // entrado: un líder dado de alta que no usa la app es justo el dato que el
+    // admin necesita ver, no una fila que falta.
+    const filas = new Map();
+    for (const c of cuentas) {
+      filas.set(c.correo, {
+        id: c.correo, correo: c.correo, nombre: c.nombre, pack: c.pack,
+        council: c.councilId || '', entradas: 0, ultimaEntrada: null, alta: null
+      });
+    }
+    for (const v of vistos) {
+      const clave = v.correo || v.id;
+      filas.set(clave, { ...(filas.get(clave) || {}), ...v, id: v.id, correo: v.correo || clave });
+    }
+
+    const salida = [...filas.values()].map(f => {
+      // Se empareja por id, por correo y por nombre: los envíos guardados
+      // antes de derivar el id del correo llevan la llave vieja, y los de las
+      // primeras versiones llevaban el nombre. Ninguno se pierde del conteo.
+      const llaves = new Set([f.id, f.correo, f.nombre].filter(Boolean));
+      const suyos = shares.filter(s => llaves.has(s.leaderId));
+      const abiertosSuyos = suyos.filter(s => abiertos.has(s.id));
+      const misMazos = mazos.filter(m => llaves.has(m.leaderId));
+      return {
+        ...f,
+        activo: !bajas.has(f.id),
+        mazos: misMazos.length,
+        envios: suyos.length,
+        abiertos: abiertosSuyos.length,
+        aperturas: opens.filter(o => suyos.some(s => s.id === o.shareId)).length,
+        indice: suyos.length ? abiertosSuyos.length / suyos.length : null,
+        ultimoEnvio: suyos.length
+          ? suyos.map(s => s.sentAt).sort().at(-1) : null
+      };
+    });
+
+    return salida.sort((a, b) => b.envios - a.envios || (b.entradas || 0) - (a.entradas || 0));
+  }
+
+  /* ---------- Analítica del sistema ---------- */
+
+  const mesDe = iso => (iso || '').slice(0, 7);      // 2026-08
+
+  /** Foto del sistema hoy. */
+  async function getAdminStats() {
+    const lideres = await getLideres();
+    const shares = store.get('shares', []);
+    const opens = store.get('opens', []);
+    const abiertos = new Set(opens.map(o => o.shareId));
+    const conEnvio = shares.filter(s => abiertos.has(s.id)).length;
+    // El idioma se cuenta sobre APERTURAS, no sobre envíos: el envío lleva el
+    // idioma que eligió el líder; la apertura, el que usó la familia. Lo que el
+    // producto quiere saber es en qué idioma LEEN, que es su razón de existir.
+    const es = opens.filter(o => o.lang === 'es').length;
+    return {
+      lideres: lideres.length,
+      lideresActivos: lideres.filter(l => l.activo).length,
+      lideresConEnvios: lideres.filter(l => l.envios > 0).length,
+      mazos: store.get('mazos', []).length,
+      envios: shares.length,
+      abiertos: conEnvio,
+      aperturas: opens.length,
+      indice: shares.length ? conEnvio / shares.length : null,
+      idioma: { es, en: opens.length - es, total: opens.length }
+    };
+  }
+
+  /**
+   * Progresión por mes. El punto explícito de la reunión: un tablero sin serie
+   * es una foto y no deja comparar. Devuelve los últimos `meses` con envíos,
+   * aperturas e índice, del más viejo al más nuevo, sin huecos.
+   */
+  function getSerieMensual(meses = 6) {
+    const shares = store.get('shares', []);
+    const opens = store.get('opens', []);
+    const abiertos = new Set(opens.map(o => o.shareId));
+
+    const hoy = new Date();
+    const claves = [];
+    for (let i = meses - 1; i >= 0; i--) {
+      const d = new Date(hoy.getFullYear(), hoy.getMonth() - i, 1);
+      claves.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
+    }
+    return claves.map(mes => {
+      const delMes = shares.filter(s => mesDe(s.sentAt) === mes);
+      const abiertosMes = delMes.filter(s => abiertos.has(s.id)).length;
+      return {
+        mes,
+        envios: delMes.length,
+        abiertos: abiertosMes,
+        aperturas: opens.filter(o => mesDe(o.at) === mes).length,
+        indice: delMes.length ? abiertosMes / delMes.length : null
+      };
+    });
+  }
+
+  /**
+   * Las actividades más compartidas. Es contenido, no personas: dice qué del
+   * catálogo está funcionando y qué nadie usa, que es lo que el programa
+   * necesita para decidir qué producir.
+   */
+  async function getTopCartas(n = 10) {
+    const mazos = store.get('mazos', []);
+    const shares = store.get('shares', []);
+    // Una carta cuenta una vez por ENVÍO, no por mazo guardado: un mazo que se
+    // armó y nunca se mandó no compartió nada.
+    const cuenta = new Map();
+    for (const sh of shares) {
+      const mazo = mazos.find(m => m.id === sh.mazoId);
+      const ids = mazo ? mazo.cardIds : (sh.cardId ? [sh.cardId] : []);
+      for (const id of ids) cuenta.set(id, (cuenta.get(id) || 0) + 1);
+    }
+    const top = [...cuenta.entries()].sort((a, b) => b[1] - a[1]).slice(0, n);
+    const salida = [];
+    for (const [cardId, veces] of top) {
+      try {
+        const { card, deck } = await getCard(cardId);
+        salida.push({ card, deck, veces });
+      } catch { /* carta retirada del contenido */ }
+    }
+    return salida;
+  }
+
+  /** Reparto de envíos por baraja: qué ranks se están moviendo. */
+  async function getEnviosPorBaraja() {
+    const decks = await getDecks();
+    const mazos = store.get('mazos', []);
+    const shares = store.get('shares', []);
+    const cuenta = new Map(decks.map(d => [d.id, 0]));
+    for (const sh of shares) {
+      const mazo = mazos.find(m => m.id === sh.mazoId);
+      if (!mazo) continue;
+      for (const d of decks) {
+        const n = mazo.cardIds.filter(id => id.startsWith(d.id + '-')).length;
+        if (n) cuenta.set(d.id, cuenta.get(d.id) + n);
+      }
+    }
+    return decks
+      .map(d => ({ deck: d, cartas: cuenta.get(d.id) }))
+      .filter(x => x.cartas > 0)
+      .sort((a, b) => b.cartas - a.cartas);
   }
 
   /* ---------- Modo de uso ----------
@@ -451,6 +730,12 @@ const API = (() => {
    */
   async function entrarComoLider(correo) {
     const mail = (correo || '').trim().toLowerCase();
+    /* Un líder dado de baja por el admin no entra. Sin esto, la pantalla del
+       admin decía "closes their access" y no cerraba nada: el líder seguía
+       entrando y mandando mazos como si nada. Devuelve `false` para que la
+       puerta lo diga en vez de dejarlo pasar en silencio. */
+    const bajas = new Set(store.get('lideresBaja', []));
+    if (mail && bajas.has('ld-' + mail.replace(/[^a-z0-9]+/g, '-'))) return false;
     let cuenta = null;
     try {
       const { lideres } = await loadJSON(`${BASE}/lideres.json`);
@@ -462,12 +747,23 @@ const API = (() => {
       .replace(/\b\p{L}/gu, c => c.toUpperCase());
 
     store.set('lider', { correo: mail || null, desde: new Date().toISOString() });
+    /* La identidad del líder se deriva del CORREO, no del navegador.
+       `getProfile()` inventa un id por dispositivo, y eso alcanzaba mientras
+       cada líder miraba solo sus propios envíos. Con el tablero del admin dejó
+       de alcanzar: en la Capa A los cuatro líderes de la demo comparten un
+       navegador, así que compartían id — el admin veía el total correcto y
+       CERO en cada fila. Derivarlo del correo le da a cada uno su identidad,
+       que es lo que la Capa B va a devolver de todos modos. */
     setProfile({
+      id: mail ? 'ld-' + mail.replace(/[^a-z0-9]+/g, '-') : getProfile().id,
       leader: cuenta ? cuenta.nombre : nombreProvisional,
       pack: cuenta ? cuenta.pack : (getProfile().pack || ''),
       council: cuenta ? cuenta.councilId : (getProfile().council || ''),
       cuentaConocida: Boolean(cuenta)
     });
+    // El admin necesita ver a los líderes que existen de verdad, no solo a
+    // los del archivo: en Capa A la puerta deja pasar cualquier correo.
+    recordarLider(getProfile(), mail || null);
     setMode('lider');
     return true;
   }
@@ -511,10 +807,13 @@ const API = (() => {
     getDecks, getDeck, getCard, drawCard, markSeen, markDone, isDone, getProgress, getConfig,
     getProfile, setProfile, shareUrl, whatsappUrl,
     getMazos, getMazo, createMazo, updateMazo, deleteMazo, getMazoCards,
+    getMazoBaraja,
     createShare, trackOpen, getLeaderStats, getOrgStats,
     getLang, setLang, getMode, setMode, getRank, setRank,
     entrarComoLider, haySesionLider, salir,
-    recordarMazo, getUltimoMazo, getPersonaMazo, getMazosRecibidos, getRecibidasPorBaraja
+    recordarMazo, getUltimoMazo, getPersonaMazo, getMazosRecibidos, getRecibidasPorBaraja,
+    entrarComoAdmin, haySesionAdmin, getAdmin, salirAdmin,
+    getLideres, setLiderActivo, getAdminStats, getSerieMensual, getTopCartas, getEnviosPorBaraja
   };
 })();
 

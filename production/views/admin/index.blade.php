@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview · Scouting America Admin</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="manifest" href="/site/manifest.webmanifest">
+<meta name="theme-color" content="#003F87">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/projects/scouting-america-cards/assets/css/app.css?v=v4f83ebeb">
+</head>
+<body data-consola="admin">
+
+<!--
+  Tablero de la ORGANIZACIÓN, no del líder.
+
+  El líder ya tenía su analítica ("qué mandé yo y cuántos lo abrieron"). Lo que
+  faltaba —y lo que el brief pide— es la capa de arriba: cómo se está usando la
+  aplicación en el programa entero. Es la pantalla de Eduardo.
+
+  Dos criterios que salieron de la alineación del 20-ago y que no hay que
+  perder al tocar esto:
+    · manda el ÍNDICE de apertura, no el conteo crudo;
+    · sin serie de tiempo es una foto, y una foto no deja comparar.
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="pagehead"></header>
+
+<main class="page page--admin" id="main">
+  <div id="contenido">
+    <div class="metrics">
+      <div class="skel" style="min-height:7rem;border-radius:var(--radius-card)"></div>
+      <div class="skel" style="min-height:7rem;border-radius:var(--radius-card)"></div>
+      <div class="skel" style="min-height:7rem;border-radius:var(--radius-card)"></div>
+      <div class="skel" style="min-height:7rem;border-radius:var(--radius-card)"></div>
+    </div>
+  </div>
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/projects/scouting-america-cards/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/card.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/app.js?v=v4f83ebeb"></script>
+<script src="/projects/scouting-america-cards/assets/js/shell.js?v=v4f83ebeb"></script>
+<script>
+(async () => {
+  if (!API.haySesionAdmin()) {
+    location.replace('/site/admin/entrar.html?volver=' + encodeURIComponent(location.pathname));
+    return;
+  }
+  const admin = API.getAdmin();
+  document.documentElement.lang = 'en';
+
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: admin.organizacion,
+    title: 'Program overview',
+    accent: 'overview',
+    sub: 'How den leaders are using the app across the program.',
+    compact: true,
+    soloIngles: true
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+
+  const cont = document.getElementById('contenido');
+
+  // Porcentaje sin decimales de más: un índice de apertura con dos decimales
+  // finge una precisión que estos volúmenes no tienen.
+  const pct = v => v === null ? '—' : `${Math.round(v * 100)}%`;
+  const mesCorto = mes => {
+    const [a, m] = mes.split('-');
+    return new Date(a, m - 1, 1).toLocaleDateString('en-US', { month: 'short' });
+  };
+
+  try {
+    const [stats, serie, top, porBaraja] = await Promise.all([
+      API.getAdminStats(), API.getSerieMensual(6), API.getTopCartas(10), API.getEnviosPorBaraja()
+    ]);
+
+    if (!stats.envios && !stats.lideres) {
+      cont.innerHTML = Shell.estado({
+        titulo: 'Nothing to report yet',
+        texto: 'Once den leaders sign in and start sending decks, their activity shows up here.',
+        accion: `<a class="btn btn--primary" href="/site/admin/lideres.html">See leaders</a>`
+      });
+      return;
+    }
+
+    const maxEnvios = Math.max(1, ...serie.map(m => m.envios));
+    const idioma = stats.idioma;
+    const pesoEs = idioma.total ? (idioma.es / idioma.total) * 100 : 0;
+
+    cont.innerHTML = `
+      <section class="rise" style="--i:0">
+        <div class="metrics">
+          <div class="metric metric--clave">
+            <span class="metric__label">Open rate</span>
+            <span class="metric__value" data-tick="${Math.round((stats.indice || 0) * 100)}" data-tick-suffix="%">${pct(stats.indice)}</span>
+            <p class="metric__note">${stats.abiertos} of ${stats.envios} decks sent were opened</p>
+          </div>
+          <div class="metric">
+            <span class="metric__label">Decks sent</span>
+            <span class="metric__value" data-tick="${stats.envios}">${stats.envios}</span>
+            <p class="metric__note">${stats.aperturas} opens in total</p>
+          </div>
+          <div class="metric">
+            <span class="metric__label">Leaders</span>
+            <span class="metric__value" data-tick="${stats.lideresActivos}">${stats.lideresActivos}</span>
+            <p class="metric__note">Active, of ${stats.lideres} registered ·
+              ${stats.lideresConEnvios} have sent at least one deck</p>
+          </div>
+          <div class="metric">
+            <span class="metric__label">Decks built</span>
+            <span class="metric__value" data-tick="${stats.mazos}">${stats.mazos}</span>
+            <p class="metric__note">Includes decks built but not sent</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="rise panel" style="--i:1">
+        <h2 class="page__label">Last six months</h2>
+        <div class="serie">
+          <div class="serie__grid">
+            ${serie.map((m, i) => `
+              <div class="serie__col" style="--i:${i}">
+                <span class="serie__dato">${m.envios ? pct(m.indice) : '—'}</span>
+                <span class="serie__barra" style="block-size:${
+                  Math.round((m.envios / maxEnvios) * 100)}%" role="img"
+                  aria-label="${mesCorto(m.mes)}: ${m.envios} sent, ${m.abiertos} opened">
+                  <span class="serie__barra serie__barra--abierta" style="display:block; block-size:${
+                    m.envios ? Math.round((m.abiertos / m.envios) * 100) : 0}%"></span>
+                </span>
+                <span class="serie__mes">${mesCorto(m.mes)}</span>
+              </div>`).join('')}
+          </div>
+          <p class="serie__leyenda">
+            <span class="serie__llave"><span class="serie__punto" style="background:var(--sa-blue)"></span> Sent</span>
+            <span class="serie__llave"><span class="serie__punto" style="background:var(--sa-red)"></span> Opened</span>
+            <span>Percentage on top is that month's open rate.</span>
+          </p>
+        </div>
+      </section>
+
+      <div class="panel-cols rise" style="--i:2; margin-top:var(--space-7)">
+        <section class="panel">
+          <h2 class="page__label">Most shared activities</h2>
+          ${top.length ? `<ol class="ranking">
+            ${top.map((t, i) => `
+              <li class="rise-io" style="--i:${Math.min(i, 6)}">
+                <span class="ranking__pos">${i + 1}</span>
+                <span>
+                  <span class="ranking__nombre">${Card.t(t.card.title, 'en') || t.card.originalTitle || t.card.id}</span>
+                  <span class="ranking__meta">${t.deck.name.en}</span>
+                </span>
+                <span class="ranking__veces">${t.veces}×</span>
+              </li>`).join('')}
+          </ol>` : '<p class="metric__note">No activities shared yet.</p>'}
+        </section>
+
+        <section class="panel">
+          <h2 class="page__label">Reading language</h2>
+          <div class="reparto">
+            <div class="reparto__barra" role="img"
+                 aria-label="${idioma.es} opens in Spanish, ${idioma.en} in English">
+              <span class="reparto__parte" style="inline-size:${pesoEs}%; background:var(--sa-blue)"></span>
+              <span class="reparto__parte" style="inline-size:${100 - pesoEs}%; background:var(--sa-dark-tan)"></span>
+            </div>
+            <p class="reparto__leyenda">
+              <span>Spanish · ${idioma.es}</span>
+              <span>English · ${idioma.en}</span>
+            </p>
+            <p class="metric__note">
+              Measured on opens, not on sends: what matters is the language
+              families actually read in.
+            </p>
+          </div>
+
+          <h2 class="page__label">Cards shared by deck</h2>
+          ${porBaraja.length ? `<ol class="ranking">
+            ${porBaraja.map((b, i) => `
+              <li class="rise-io" style="--i:${Math.min(i, 6)}">
+                <span class="ranking__pos">${i + 1}</span>
+                <span class="ranking__nombre">${b.deck.name.en}</span>
+                <span class="ranking__veces">${b.cartas}</span>
+              </li>`).join('')}
+          </ol>` : '<p class="metric__note">No decks shared yet.</p>'}
+        </section>
+      </div>
+
+      <section class="rise" style="--i:3; margin-top:var(--space-7)">
+        <p class="metric__note">
+          Open rate counts a deck as opened once, however many people in the
+          WhatsApp group tapped it. Nothing here identifies a family or a child.
+        </p>
+      </section>`;
+    /* Los números cuentan de 0 a su valor. `Shell.tick` ya existía en el shell
+       —se escribió para esto— y no lo usaba nadie; respeta reduced-motion solo,
+       pintando el valor final. El porcentaje lleva su propio formato para que
+       no cuente "0 %, 1 %, 2 %..." como si fueran unidades sueltas. */
+    cont.querySelectorAll('[data-tick]').forEach(el => {
+      const valor = Number(el.dataset.tick);
+      const sufijo = el.dataset.tickSuffix || '';
+      Shell.tick(el, valor, { formato: n => Math.round(n) + sufijo });
+    });
+    Shell.reveals(cont);
+  } catch (err) {
+    App.fail(cont, err);
+  }
+})();
+</script>
+</body>
+</html>

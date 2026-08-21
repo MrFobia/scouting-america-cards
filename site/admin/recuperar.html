@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reset password · Scouting America Admin</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=v4f83ebeb">
+</head>
+<body data-consola="admin">
+
+<!--
+  Recuperar contraseña — LAS PANTALLAS DEL FLUJO, no el flujo real.
+
+  No hay backend: no se manda ningún correo y no hay token que verificar. Se
+  construye porque la reunión pidió que existiera la pantalla y porque el flujo
+  hay que acordarlo antes de que haya API, no después.
+
+  Dos decisiones que sí son de verdad y hay que conservar cuando llegue la
+  Capa B:
+
+  1. La respuesta es la MISMA exista o no la cuenta. Decir "ese correo no está
+     registrado" le confirma a cualquiera qué correos son cuentas válidas; es
+     enumeración de usuarios, y en una plataforma de una organización que
+     atiende menores no se regala.
+  2. No se pide nada más que el correo. Ni el pack, ni el nombre: cada dato
+     extra en una pantalla pública es un dato que se puede tantear.
+-->
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="pagehead"></header>
+
+<main class="page" id="main" style="max-width:28rem">
+  <section class="progresscard rise" style="--i:0" id="tarjeta">
+    <p style="margin:0 0 var(--space-4); color:var(--text-muted)">
+      Enter the email for your account. If it exists, we'll send a link to set
+      a new password.
+    </p>
+    <form id="form">
+      <label class="field">
+        <span class="field__label">Email</span>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+      </label>
+      <p class="form-msg" id="msg" aria-live="polite"></p>
+      <p class="actions">
+        <button class="btn btn--primary btn--block" type="submit">Send reset link</button>
+      </p>
+    </form>
+    <p style="margin:var(--space-4) 0 0; font-size:var(--step--1); color:var(--text-muted)">
+      <a href="/site/admin/entrar.html">Back to sign in</a>
+    </p>
+  </section>
+</main>
+
+<footer id="pagefoot"></footer>
+
+<script src="/site/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/shell.js?v=v4f83ebeb"></script>
+<script>
+(async () => {
+  Shell.mountHeader(document.getElementById('pagehead'), {
+    eyebrow: 'Scouting America',
+    title: 'Reset your password',
+    accent: 'password',
+    sub: 'We send a link to the email on the account.',
+    back: '/site/admin/entrar.html',
+    compact: true,
+    soloIngles: true
+  });
+  Shell.mountFooter(document.getElementById('pagefoot'));
+
+  const form = document.getElementById('form');
+  const tarjeta = document.getElementById('tarjeta');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const correo = form.correo.value.trim();
+    if (!correo) return;
+
+    /* Misma respuesta exista o no la cuenta: no se confirma qué correos están
+       registrados. Y se dice claro que es un prototipo — prometer un correo
+       que nunca llega hace que la gente espere sentada. */
+    tarjeta.innerHTML = `
+      ${Shell.estado({
+        titulo: 'Check that inbox',
+        texto: `If ${correo} belongs to an account, a link to set a new password `
+             + 'is on its way. The link expires in one hour.',
+        accion: '<a class="btn btn--primary" href="/site/admin/entrar.html">Back to sign in</a>'
+      })}
+      ${Shell.notice({ icono: 'info', html:
+        'Prototype: no email is actually sent. This screen exists so the flow '
+        + 'is agreed before the backend is built.' })}`;
+  });
+})();
+</script>
+</body>
+</html>

@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" href="/site/assets/img/app-icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<link rel="stylesheet" href="/site/assets/css/tokens.css?v=vffaf126a">
-<link rel="stylesheet" href="/site/assets/css/app.css?v=vffaf126a">
+<link rel="stylesheet" href="/site/assets/css/tokens.css?v=v4f83ebeb">
+<link rel="stylesheet" href="/site/assets/css/app.css?v=v4f83ebeb">
 </head>
 <body>
 
@@ -70,10 +70,10 @@
 
 <footer id="pagefoot"></footer>
 
-<script src="/site/assets/js/api.js?v=vffaf126a"></script>
-<script src="/site/assets/js/card.js?v=vffaf126a"></script>
-<script src="/site/assets/js/app.js?v=vffaf126a"></script>
-<script src="/site/assets/js/shell.js?v=vffaf126a"></script>
+<script src="/site/assets/js/api.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/card.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/app.js?v=v4f83ebeb"></script>
+<script src="/site/assets/js/shell.js?v=v4f83ebeb"></script>
 <script>
 (async () => {
   const lang = API.getLang();
@@ -130,14 +130,40 @@
     const mazo = ultimoId ? API.getMazo(ultimoId) : null;
     const nCartas = mazo ? mazo.cardIds.length : 0;
 
+    /* El mazo de la semana se viste con la baraja que más aporta (pedido
+       20-ago). Era un bloque azul liso, igual para todos los mazos y para
+       todas las semanas: no decía de qué van las actividades ni se parecía
+       en nada al mazo físico que el chico tiene en el den. Ahora lleva la
+       portada del estuche, su color y su tinta medida, como la interna de la
+       baraja y como las fichas del índice.
+
+       Si el mazo mezcla barajas, manda la mayoritaria; abajo se dice cuántas
+       cartas son de ella, para no dar a entender que el mazo entero es de un
+       solo rank. */
+    const dominante = mazo ? await API.getMazoBaraja(mazo.id) : null;
+    const art = dominante && dominante.deck.art;
+    const persona = mazo ? API.getPersonaMazo(mazo.id) : null;
+    const nombreDeck = dominante ? (dominante.deck.name[lang] || dominante.deck.name.es) : '';
+    const mezcla = dominante && dominante.cartas < dominante.total;
+
     bento.innerHTML = mazo ? `
       <li class="is-wide">
-        <a class="tile tile--navy is-wide" href="/site/mazo.html?m=${mazo.id}&lang=${lang}">
-          <span class="tile__label">${es ? 'De su líder' : 'From your leader'}</span>
+        <a class="tile ${art ? 'tile--deck' : 'tile--navy'} is-wide"${
+            art ? ` style="--deck-ink:${art.ink}; --deck-on:${art.on}"` : ''}
+           href="/site/mazo.html?m=${mazo.id}&lang=${lang}">
+          ${art ? `<img src="${art.portada.src}" alt="" aria-hidden="true"
+                width="${art.portada.width}" height="${art.portada.height}"
+                loading="eager" decoding="async">` : ''}
+          <span class="tile__label">${persona && persona.leader
+            ? (es ? `De ${persona.leader}` : `From ${persona.leader}`)
+            : (es ? 'De su líder' : 'From your leader')}</span>
           <span class="tile__name">${mazo.nombre}</span>
           <span class="tile__label">${nCartas} ${es
             ? (nCartas === 1 ? 'actividad' : 'actividades')
-            : (nCartas === 1 ? 'activity' : 'activities')}</span>
+            : (nCartas === 1 ? 'activity' : 'activities')}${
+            nombreDeck ? ` · ${mezcla
+              ? `${dominante.cartas} ${es ? 'de' : 'from'} ${nombreDeck}`
+              : nombreDeck}` : ''}</span>
         </a>
       </li>
 ` : `

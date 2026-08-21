@@ -173,3 +173,30 @@ getProgress(deckId) · markSeen(cardId)
 createShare({ cardId, leaderId, lang }) · trackOpen(shareId)
 getLeaderStats(leaderId) · getOrgStats({ packId, councilId })
 ```
+
+
+## Admin — Scouting America (añadido 20-ago-2026)
+
+Tercer rol, además de familia y líder. Es la organización dueña de la
+aplicación, no un líder con más permisos.
+
+```
+admins.json      cuentas de admin (Capa A). En Capa B: rol devuelto al autenticar.
+lideresVistos    localStorage · quién entró alguna vez, con fecha y conteo
+lideresBaja      localStorage · ids dados de baja por el admin
+```
+
+El registro de líderes se arma con dos fuentes —`lideres.json` (las cuentas que
+existen) y `lideresVistos` (quien haya entrado, aunque no esté en el archivo,
+porque en Capa A la puerta del líder deja pasar cualquier correo)—. Un líder
+del archivo que nunca entró aparece igual: es justo el dato que el admin
+necesita, no una fila que falta.
+
+**Identidad del líder.** `profile.id` se deriva del correo
+(`ld-<correo-normalizado>`), no del navegador. Antes era un id por dispositivo
+y en la Capa A todos los líderes de la demo compartían uno.
+
+**Métricas.** Todas salen de `shares` y `opens`, que ya existían. No se agrega
+ni un dato del papá ni del niño: un envío guarda a quién lo mandó (el líder) y
+cuándo; una apertura guarda que ocurrió, en qué idioma y en qué tipo de
+dispositivo. Nada identifica a una familia.

@@ -17,7 +17,7 @@
  *     guardado y refresca en segundo plano.
  */
 
-const VERSION = 'vffaf126a';
+const VERSION = 'v4f83ebeb';
 const SHELL = `shell-${VERSION}`;
 const CARDS = `cards-${VERSION}`;
 const DATA  = `data-${VERSION}`;
@@ -35,6 +35,11 @@ const SHELL_URLS = [
   '/site/progreso.html',
   '/site/lider/index.html',
   '/site/lider/perfil.html',
+  '/site/admin/index.html',
+  '/site/admin/lideres.html',
+  '/site/admin/entrar.html',
+  '/site/admin/perfil.html',
+  '/site/admin/recuperar.html',
   '/site/assets/css/tokens.css',
   '/site/assets/css/app.css',
   '/site/assets/js/api.js',
@@ -158,7 +163,15 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request));
-  } else if (url.pathname.includes('/assets/img/cards/')) {
+  } else if (url.pathname.includes('/assets/pdf/')) {
+    // La baraja completa pesa ~4 MB y es una DESCARGA, no un recurso de la app:
+    // el líder la guarda en su teléfono, no la vuelve a pedir. Sin esta rama
+    // caía en la genérica de abajo y se copiaba entera al caché del shell —
+    // 20 MB de PDFs comiéndose la cuota de un Android viejo para nada.
+    return;
+  } else if (url.pathname.includes('/assets/img/cards/') ||
+             url.pathname.includes('/assets/img/decks/')) {
+    // Láminas y caras de estuche: arte impreso, inmutable. Se baja una vez.
     event.respondWith(cacheFirst(request, CARDS));
   } else if (url.pathname.includes('/assets/data/')) {
     // Los barajas viven con los assets para quedar dentro del scope del SW: en

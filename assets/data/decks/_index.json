@@ -4,7 +4,10 @@
   {
    "id": "lion",
    "rank": "Lion",
-   "grade": "Kindergarten",
+   "grade": {
+    "es": "Kindergarten",
+    "en": "Kindergarten"
+   },
    "order": 1,
    "audience": "family",
    "name": {
@@ -14,12 +17,26 @@
    "translation": "pendiente",
    "cardIds": [],
    "cardCount": 106,
-   "spanishRatio": 0.0
+   "spanishRatio": 0.0,
+   "art": {
+    "ink": "#FAB214",
+    "dot": "#CB9110",
+    "on": "#232528",
+    "onRatio": 8.37,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/lion-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "tiger",
    "rank": "Tiger",
-   "grade": "1.er grado",
+   "grade": {
+    "es": "1.er grado",
+    "en": "1st grade"
+   },
    "order": 2,
    "audience": "family",
    "name": {
@@ -29,12 +46,26 @@
    "translation": "pendiente",
    "cardIds": [],
    "cardCount": 105,
-   "spanishRatio": 0.0
+   "spanishRatio": 0.0,
+   "art": {
+    "ink": "#F68B19",
+    "dot": "#C87014",
+    "on": "#232528",
+    "onRatio": 6.31,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/tiger-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "wolf",
    "rank": "Wolf",
-   "grade": "2.º grado",
+   "grade": {
+    "es": "2.º grado",
+    "en": "2nd grade"
+   },
    "order": 3,
    "audience": "family",
    "name": {
@@ -44,12 +75,26 @@
    "translation": "pendiente",
    "cardIds": [],
    "cardCount": 107,
-   "spanishRatio": 0.0
+   "spanishRatio": 0.0,
+   "art": {
+    "ink": "#E51635",
+    "dot": "#910D21",
+    "on": "#FFFFFF",
+    "onRatio": 4.67,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/wolf-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "bear",
    "rank": "Bear",
-   "grade": "3.er grado",
+   "grade": {
+    "es": "3.er grado",
+    "en": "3rd grade"
+   },
    "order": 4,
    "audience": "family",
    "name": {
@@ -59,12 +104,26 @@
    "translation": "parcial",
    "cardIds": [],
    "cardCount": 111,
-   "spanishRatio": 0.7
+   "spanishRatio": 0.7,
+   "art": {
+    "ink": "#9FCFED",
+    "dot": "#86AFC9",
+    "on": "#232528",
+    "onRatio": 9.24,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/bear-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "webelos",
    "rank": "Webelos",
-   "grade": "4.º grado",
+   "grade": {
+    "es": "4.º grado",
+    "en": "4th grade"
+   },
    "order": 5,
    "audience": "family",
    "name": {
@@ -74,12 +133,26 @@
    "translation": "pendiente",
    "cardIds": [],
    "cardCount": 111,
-   "spanishRatio": 0.0
+   "spanishRatio": 0.0,
+   "art": {
+    "ink": "#46701E",
+    "dot": "#2A4312",
+    "on": "#FFFFFF",
+    "onRatio": 5.84,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/webelos-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "arrow-of-light",
    "rank": "Arrow of Light",
-   "grade": "5.º grado",
+   "grade": {
+    "es": "5.º grado",
+    "en": "5th grade"
+   },
    "order": 6,
    "audience": "family",
    "name": {
@@ -87,7 +160,18 @@
     "en": "Arrow of Light"
    },
    "translation": "pendiente",
-   "cardIds": []
+   "cardIds": [],
+   "art": {
+    "ink": "#502208",
+    "dot": "#321505",
+    "on": "#FFFFFF",
+    "onRatio": 13.35,
+    "portada": {
+     "src": "/projects/scouting-america-cards/assets/img/decks/arrow-of-light-portada.webp",
+     "width": 734,
+     "height": 798
+    }
+   }
   },
   {
    "id": "pack-planning",
