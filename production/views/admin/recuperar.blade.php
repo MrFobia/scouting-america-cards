@@ -51,7 +51,7 @@
       </p>
     </form>
     <p style="margin:var(--space-4) 0 0; font-size:var(--step--1); color:var(--text-muted)">
-      <a href="/site/admin/entrar.html">Back to sign in</a>
+      <a href="/preview/1002">Back to sign in</a>
     </p>
   </section>
 </main>
@@ -67,7 +67,7 @@
     title: 'Reset your password',
     accent: 'password',
     sub: 'We send a link to the email on the account.',
-    back: '/site/admin/entrar.html',
+    back: '/preview/1002',
     compact: true,
     soloIngles: true
   });
@@ -89,7 +89,7 @@
         titulo: 'Check that inbox',
         texto: `If ${correo} belongs to an account, a link to set a new password `
              + 'is on its way. The link expires in one hour.',
-        accion: '<a class="btn btn--primary" href="/site/admin/entrar.html">Back to sign in</a>'
+        accion: '<a class="btn btn--primary" href="/preview/1002">Back to sign in</a>'
       })}
       ${Shell.notice({ icono: 'info', html:
         'Prototype: no email is actually sent. This screen exists so the flow '

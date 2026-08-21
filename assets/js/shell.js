@@ -56,9 +56,9 @@ const Shell = (() => {
      distintos. El admin no arma mazos ni los manda — mira el programa entero.
      Va siempre en inglés, mismo criterio que la consola del líder. */
   const TABS_ADMIN = [
-    { id: 'tablero', href: '/site/admin/index.html',   es: 'Tablero', en: 'Overview', match: ['/site/admin/index.html'] },
-    { id: 'lideres', href: '/site/admin/lideres.html', es: 'Líderes', en: 'Leaders',  match: ['/site/admin/lideres.html'] },
-    { id: 'lider',   href: '/site/admin/perfil.html',  es: 'Perfil',  en: 'Profile',  match: ['/site/admin/perfil.html'] }
+    { id: 'tablero', href: '/preview/1003',   es: 'Tablero', en: 'Overview', match: ['/preview/1003'] },
+    { id: 'lideres', href: '/preview/1004', es: 'Líderes', en: 'Leaders',  match: ['/preview/1004'] },
+    { id: 'lider',   href: '/preview/1006',  es: 'Perfil',  en: 'Profile',  match: ['/preview/1006'] }
   ];
   /* Tres paradas, no cinco. "Barajas" y "Guía" salieron el 20-ago: el catálogo
      y el instructivo son material del LÍDER —quien arma y manda mazos—, y el
@@ -168,7 +168,7 @@ const Shell = (() => {
     const inicial = (p.leader || '?').trim().charAt(0).toUpperCase();
     return `
       <a class="avatar avatar--sm" href="${(window.API && API.haySesionAdmin())
-         ? '/site/admin/index.html' : '/preview/952'}"
+         ? '/preview/1003' : '/preview/952'}"
          aria-label="${es ? 'Tu perfil' : 'Your profile'}">
         ${p.photo
           ? `<img src="${p.photo}" alt="">`
@@ -269,7 +269,7 @@ const Shell = (() => {
     // el gesto universal de "logo = ir a mi inicio" lo mandaba fuera de su
     // propia consola sin avisar, a una pantalla que no es la suya. Con sesión
     // de líder, "inicio" es su consola.
-    const inicioHref = (window.API && API.haySesionAdmin()) ? '/site/admin/index.html'
+    const inicioHref = (window.API && API.haySesionAdmin()) ? '/preview/1003'
       : (window.API && API.haySesionLider()) ? '/preview/951'
       : '/preview/945';
     // El manual exige la firma reversada en blanco sobre fondo oscuro (pág. 11).

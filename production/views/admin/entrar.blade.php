@@ -54,7 +54,7 @@
       </p>
     </form>
     <p style="margin:var(--space-4) 0 0; font-size:var(--step--1); color:var(--text-muted)">
-      <a href="/site/admin/recuperar.html">Forgot your password?</a>
+      <a href="/preview/1005">Forgot your password?</a>
     </p>
   </section>
 </main>
@@ -91,7 +91,7 @@
       return;
     }
     location.href = new URLSearchParams(location.search).get('volver')
-      || '/site/admin/index.html';
+      || '/preview/1003';
   });
 })();
 </script>

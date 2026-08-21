@@ -40,7 +40,7 @@
 <script>
 (async () => {
   if (!API.haySesionAdmin()) {
-    location.replace('/site/admin/entrar.html?volver=' + encodeURIComponent(location.pathname));
+    location.replace('/preview/1002?volver=' + encodeURIComponent(location.pathname));
     return;
   }
   document.documentElement.lang = 'en';

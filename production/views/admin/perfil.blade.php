@@ -39,7 +39,7 @@
 <script>
 (async () => {
   if (!API.haySesionAdmin()) {
-    location.replace('/site/admin/entrar.html?volver=' + encodeURIComponent(location.pathname));
+    location.replace('/preview/1002?volver=' + encodeURIComponent(location.pathname));
     return;
   }
   const admin = API.getAdmin();
@@ -107,7 +107,7 @@
         </p>
       </form>
       <p class="metric__note">
-        Forgot it? <a href="/site/admin/recuperar.html">Reset it by email</a>.
+        Forgot it? <a href="/preview/1005">Reset it by email</a>.
       </p>
     </section>
 

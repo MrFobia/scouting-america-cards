@@ -1,7 +1,8 @@
 {
-  "$comment": "Mapa vista → preview id de ai.backbone. Proyecto 100 (scouting-america-cards), clonado 20-ago-2026.",
+  "$comment": "Mapa vista → preview id de ai.backbone. Proyecto 100 (scouting-america-cards), clonado 20-ago-2026. Los ids de admin/ y guia-de-estilos se leyeron de Generated Views el 21-ago-2026, después del Scan for new files.",
   "barajas.html": 942,
   "progreso.html": 943,
+  "guia-de-estilos.html": 944,
   "index.html": 945,
   "como-usar.html": 946,
   "baraja.html": 947,
@@ -11,5 +12,10 @@
   "lider/index.html": 951,
   "lider/perfil.html": 952,
   "lider/mazo-nuevo.html": 953,
-  "carta.html": 954
+  "carta.html": 954,
+  "admin/entrar.html": 1002,
+  "admin/index.html": 1003,
+  "admin/lideres.html": 1004,
+  "admin/recuperar.html": 1005,
+  "admin/perfil.html": 1006
 }

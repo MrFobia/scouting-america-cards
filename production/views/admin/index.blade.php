@@ -51,7 +51,7 @@
 <script>
 (async () => {
   if (!API.haySesionAdmin()) {
-    location.replace('/site/admin/entrar.html?volver=' + encodeURIComponent(location.pathname));
+    location.replace('/preview/1002?volver=' + encodeURIComponent(location.pathname));
     return;
   }
   const admin = API.getAdmin();
@@ -86,7 +86,7 @@
       cont.innerHTML = Shell.estado({
         titulo: 'Nothing to report yet',
         texto: 'Once den leaders sign in and start sending decks, their activity shows up here.',
-        accion: `<a class="btn btn--primary" href="/site/admin/lideres.html">See leaders</a>`
+        accion: `<a class="btn btn--primary" href="/preview/1004">See leaders</a>`
       });
       return;
     }
