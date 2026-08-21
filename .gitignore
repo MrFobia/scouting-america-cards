@@ -4,3 +4,11 @@ node_modules/
 reference/*.pdf
 reference/*.txt
 reference/
+
+# Escrito por la plataforma en cada corrida, no por el proyecto: config de los
+# servidores MCP, con tokens adentro. Es 0700/0600 a propósito. NUNCA se commitea.
+secrets/
+
+# Scaffold que deja la plataforma al clonar. Commitearlo hace divergir la rama
+# (regla 8 de CLAUDE.md). El mapa de memoria es estado de la plataforma, no del sitio.
+production/memory/
